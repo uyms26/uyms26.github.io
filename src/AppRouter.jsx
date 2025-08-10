@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Kayıt from "./pages/Kayıt";
@@ -17,7 +17,7 @@ import Iletisim from "./pages/Iletisim";
 
 function App() {
   return (
-    <BrowserRouter>
+    <Router>
       <Navbar />
       <Routes>
         <Route path="/kayit" element={<Kayıt />} />
@@ -35,7 +35,7 @@ function App() {
         <Route path="/" element={<Anasayfa />} />
       </Routes>
       <Footer />
-    </BrowserRouter>
+    </Router>
   );
 }
 
