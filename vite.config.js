@@ -6,4 +6,5 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   base: '/uyms26.github.io/',
   plugins: [tailwindcss(), react()],
+  
 })
