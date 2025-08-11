@@ -1,5 +1,9 @@
+
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
+import UYMSLogo from '../assets/UYMS-logo-150x150.png';
+import Logo1 from '../assets/logo1.png';
+import LandingHero from '../assets/landinghero.png';
 
 const Anasayfa = () => {
   const [timeLeft, setTimeLeft] = useState({
@@ -74,7 +78,7 @@ const Anasayfa = () => {
   ];
 
   const supporters = [
-    { name: "Muğla Üniversitesi", logo: (
+    { name: "Muğla Sıtkı Koçman Üniversitesi", logo: (
       <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5z" />
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
@@ -107,38 +111,47 @@ const Anasayfa = () => {
 
   const importantDates = [
     
-    { event: "Bildiri Gönderimi", date: "15 Ocak 2026", status: "active" },
-    { event: "Bildiri Kabul Bildirimi", date: "1 Şubat 2026", status: "upcoming" },
-    { event: "Erken Kayıt Son Gün", date: "20 Şubat 2026", status: "upcoming" },
-    { event: "Program Yayınlanması", date: "1 Mart 2026", status: "upcoming" },
+//    { event: "Bildiri Gönderimi", date: "15 Ocak 2026", status: "active" },
+ //   { event: "Bildiri Kabul Bildirimi", date: "1 Şubat 2026", status: "upcoming" },
+  //  { event: "Erken Kayıt Son Gün", date: "20 Şubat 2026", status: "upcoming" },
+   // { event: "Program Yayınlanması", date: "1 Mart 2026", status: "upcoming" },
     { event: "Sempozyum", date: "14-16 Mayıs 2026", status: "main" }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white py-20">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="flex justify-center mb-8 gap-x-32">
-            <img 
-              src="/src/assets/UYMS-logo-150x150.png" 
+      <div
+        className="py-20 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${LandingHero})` }}
+      >
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center  bg-opacity-30 shadow-lg p-8 backdrop-blur-sm">
+          <div className="flex justify-center mb-8 gap-x-64">
+
+          <div className='bg-white p-4 rounded-lg shadow-md'>
+                        <img 
+              src={UYMSLogo} 
               alt="UYMS 26 Logo" 
-              className="h-24 w-24 md:h-48 md:w-40"
-            />
-            <img 
-              src="/src/assets/logo1.png" 
-              alt="UYMS 26 Logo" 
-              className="h-24 w-24 md:h-48 md:w-40"
+              className="h-24 w-24 md:h-64 md:w-40"
             />
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
+
+          <div className='bg-white p-4 rounded-lg shadow-md'>
+              <img 
+              src={Logo1} 
+              alt="MSKÜ Logo" 
+              className="h-24 w-24 md:h-64 md:w-40"
+            />
+          </div>
+          </div>
+          <h1 className="text-4xl md:text-6xl text-white font-bold mb-6">
             UYMS 26
           </h1>
-          <p className="text-xl md:text-2xl mb-4 opacity-90">
+          <p className="text-xl md:text-2xl  text-white mb-4 opacity-90">
             Ulusal Yazılım Mühendisliği Sempozyumu
           </p>
-          <p className="text-lg md:text-xl mb-8 opacity-80">
-            14-16 Mayıs 2026 • Muğla Üniversitesi
+          <p className="text-lg md:text-xl text-white mb-8 opacity-80">
+            14-16 Mayıs 2026 • Muğla Sıtkı Koçman Üniversitesi
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <NavLink to="/kayit">
@@ -175,7 +188,7 @@ const Anasayfa = () => {
               </div>
             </div>
 
-            {/* Supporters Section */}
+            {/* Supporters Section 
             <div className="bg-white rounded-2xl shadow-xl p-8">
               <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">
                 Destekleyenler
@@ -189,8 +202,8 @@ const Anasayfa = () => {
                 ))}
               </div>
             </div>
-
-            {/* Announcements Section */}
+*/}
+            {/* Announcements Section 
             <div className="bg-white rounded-2xl shadow-xl p-8">
               <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">
                 Duyurular
@@ -237,7 +250,7 @@ const Anasayfa = () => {
                 </button>
               </div>
             </div>
-
+*/}
             {/* Countdown Section */}
             <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-2xl shadow-xl p-8 text-center">
               <h2 className="text-3xl font-bold mb-8">

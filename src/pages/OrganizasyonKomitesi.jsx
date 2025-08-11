@@ -9,6 +9,9 @@ const OrganizasyonKomitesi = () => {
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Organizasyon Komitesi
           </h1>
+           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            UYMS 26 Sempozyumu'nun başarıyla gerçekleştirilmesi için çalışan değerli komite üyelerimiz
+          </p>
           
         </div>
 
@@ -236,7 +239,7 @@ const OrganizasyonKomitesi = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-800">Adres</h3>
-                    <p className="text-gray-600">Muğla Üniversitesi<br />Muğla, Türkiye</p>
+                    <p className="text-gray-600">Muğla Sıtkı Koçman Üniversitesi<br />Muğla, Türkiye</p>
                   </div>
                 </div>
 
@@ -248,7 +251,7 @@ const OrganizasyonKomitesi = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-800">Tarih</h3>
-                    <p className="text-gray-600">26-28 Haziran 2024</p>
+                    <p className="text-gray-600">14-16 Mayıs 2026</p>
                   </div>
                 </div>
               </div>

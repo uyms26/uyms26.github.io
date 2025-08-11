@@ -3,8 +3,16 @@ import React from 'react';
 const Konaklama = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-8 px-4 sm:px-6 lg:px-8">
-      <div className="w-full max-w-6xl mx-auto">
-        {/* Header Section */}
+      <div className="text-center mb-12">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-800 mb-4">
+            Konaklama Bilgileri
+          </h1>
+          <p className="text-xl sm:text-2xl text-gray-600 mt-32 max-w-4xl mx-auto">
+            UYMS 26 Sempozyumu için  konaklama seçenekleri duyurulacaktır.
+          </p>
+        </div>
+     {/**  <div className="w-full max-w-6xl mx-auto">
+        
         <div className="text-center mb-12">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-800 mb-4">
             Konaklama Bilgileri
@@ -14,11 +22,11 @@ const Konaklama = () => {
           </p>
         </div>
 
-        {/* Main Content Grid */}
+        
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Left Column - Main Content */}
+        
           <div className="lg:col-span-2 space-y-8">
-            {/* Anlaşmalı Oteller */}
+        
             <div className="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-blue-500">
               <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-6 flex items-center">
                                 <svg className="w-8 h-8 text-blue-600 mr-3" viewBox="0 0 512 512" fill="currentColor">
@@ -37,7 +45,7 @@ const Konaklama = () => {
                 Anlaşmalı Oteller
               </h2>
               <div className="space-y-6">
-                {/* Otel 1 */}
+        
                 <div className="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl p-6 border border-blue-200">
                   <div className="flex flex-col md:flex-row md:items-center justify-between">
                     <div className="flex-1">
@@ -53,14 +61,7 @@ const Konaklama = () => {
                         <strong>Telefon:</strong> +90 252 123 45 67
                       </p>
                       
-                      {/*}
-                      <div className="flex flex-wrap gap-2 mb-3">
-                        <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Ücretsiz WiFi</span>
-                        <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Restoran</span>
-                        <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Spor Salonu</span>
-                        <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Havuz</span>
-                      </div>
-                      */}
+                      
                     </div>
                     <div className="text-right mt-4 md:mt-0">
                       <div className="text-3xl font-bold text-blue-600 mb-2">₺450</div>
@@ -69,7 +70,7 @@ const Konaklama = () => {
                   </div>
                 </div>
 
-                {/* Otel 2 */}
+                
                 <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl p-6 border border-green-200">
                   <div className="flex flex-col md:flex-row md:items-center justify-between">
                     <div className="flex-1">
@@ -81,7 +82,7 @@ const Konaklama = () => {
                         </div>
                       </div>
                       <p className="text-gray-700 mb-3">
-                        <strong>Adres:</strong> Kötekli Mahallesi, Muğla Üniversitesi Yanı<br />
+                        <strong>Adres:</strong> Kötekli Mahallesi, Muğla Sıtkı Koçman Üniversitesi Yanı<br />
                         <strong>Telefon:</strong> +90 252 234 56 78
                       </p>
                       
@@ -94,7 +95,7 @@ const Konaklama = () => {
                   </div>
                 </div>
 
-                {/* Otel 3 */}
+                
                 <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl p-6 border border-purple-200">
                   <div className="flex flex-col md:flex-row md:items-center justify-between">
                     <div className="flex-1">
@@ -121,7 +122,7 @@ const Konaklama = () => {
               </div>
             </div>
 
-            {/* Konaklama Paketleri */}
+            
             <div className="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-green-500">
               <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-6 flex items-center">
               <svg className="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -130,7 +131,7 @@ const Konaklama = () => {
                 Konaklama Paketleri
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {/* Paket 1 */}
+                
                 <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 border-2 border-blue-300 text-center">
                   
                   <h3 className="text-xl font-bold text-gray-800 mb-2">Üç Kişilik Oda</h3>
@@ -153,7 +154,7 @@ const Konaklama = () => {
                   
                 </div>
 
-                {/* Paket 2 */}
+                
                 <div className="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-xl p-6 border-2 border-yellow-400 text-center relative">
                   
                   
@@ -178,7 +179,7 @@ const Konaklama = () => {
                   
                 </div>
 
-                {/* Paket 3 */}
+                
                 <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 border-2 border-purple-300 text-center">
                   
                   <h3 className="text-xl font-bold text-gray-800 mb-2">Tek Kişilik Oda</h3>
@@ -204,7 +205,6 @@ const Konaklama = () => {
               </div>
             </div>
 
-            {/* Rezervasyon Bilgileri */}
             <div className="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-indigo-500">
               <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-6 flex items-center">
               <svg className="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -260,11 +260,11 @@ const Konaklama = () => {
             </div>
           </div>
 
-          {/* Right Column - Sidebar */}
+          
           <div className="space-y-8">
            
 
-            {/* İletişim Bilgileri */}
+            
             <div className="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-yellow-500">
               <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-6 flex items-center">
                 <span className="text-yellow-600 mr-3">📞</span>
@@ -298,21 +298,8 @@ const Konaklama = () => {
           </div>
         </div>
 
-        {/* Bottom CTA 
-        <div className="text-center mt-16">
-          <div className="bg-gradient-to-r from-green-600 to-blue-600 text-white rounded-2xl p-8 shadow-xl">
-            <h3 className="text-2xl sm:text-3xl font-bold mb-4">
-              Konaklama Rezervasyonu
-            </h3>
-            <p className="text-xl opacity-90 mb-6">
-              Sempozyum süresince konforlu bir konaklama için hemen rezervasyon yapın
-            </p>
-            <button className="bg-white text-green-600 px-8 py-3 rounded-xl font-bold text-lg hover:bg-gray-50 transition-all transform hover:scale-105 shadow-lg">
-              Rezervasyon Yap
-            </button>
-          </div>
-        </div>*/}
-      </div>
+        
+      </div>*/}
     </div>
   );
 };

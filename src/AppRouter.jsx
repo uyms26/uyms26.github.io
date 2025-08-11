@@ -14,6 +14,7 @@ import MuglaHakkinda from "./pages/MuglaHakkinda";
 import Program from "./pages/Program";
 import Anasayfa from "./pages/Anasayfa";
 import Iletisim from "./pages/Iletisim";
+import Tarihce from "./pages/Tarihce";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         <Route path="/konaklama" element={<Konaklama />} />
         <Route path="/mugla-hakkinda" element={<MuglaHakkinda />} />
         <Route path="/iletisim" element={<Iletisim />} />
+        <Route path="/tarihce" element={<Tarihce />} />
         {/* Diğer sayfalar için Route ekleyebilirsiniz */}
         <Route path="/" element={<Anasayfa />} />
       </Routes>

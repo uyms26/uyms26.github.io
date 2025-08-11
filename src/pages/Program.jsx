@@ -1,17 +1,25 @@
+
 import React from 'react';
+import { Link } from 'react-router-dom';
+import UYMSLogo from '../assets/UYMS-logo-150x150.png';
+import LandingHero from '../assets/landinghero.png';
 
 const Program = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700 text-white py-20 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-black opacity-20"></div>
-        <div className="relative container mx-auto px-4 text-center">
+      
+      
+      
+      <div
+        className="py-20 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${LandingHero})` }}
+      >
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center bg-opacity-30 shadow-lg p-8 backdrop-blur-sm">
           <div className="flex justify-center mb-8">
             <img 
-              src="/src/assets/UYMS-logo-150x150.png" 
+              src={UYMSLogo} 
               alt="UYMS 26 Logo" 
-              className="w-24 h-24 lg:w-32 lg:h-32 rounded-full shadow-2xl"
+              className="w-24 h-24 lg:w-32 lg:h-48 rounded-lg  bg-white shadow-2xl"
             />
           </div>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
@@ -22,26 +30,27 @@ const Program = () => {
           </p>
           <div className="bg-white bg-opacity-20 backdrop-blur-sm rounded-2xl p-6 md:p-8 inline-block">
             <p className="text-2xl md:text-3xl font-bold mb-2 text-black">14-16 Mayıs 2026</p>
-            <p className="text-lg md:text-xl text-blue-600">Muğla Üniversitesi, Kötekli Kampüsü</p>
+            <p className="text-lg md:text-xl text-blue-600">Muğla Sıtkı Koçman Üniversitesi, Kötekli Kampüsü</p>
           </div>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="/kayit" 
+            <Link 
+              to="/kayit" 
               className="bg-white text-blue-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-blue-50 transition-all transform hover:scale-105 shadow-lg"
             >
               Hemen Kayıt Ol
-            </a>
-            <a 
-              href="/bildiri-cagrisi" 
+            </Link>
+            <Link
+              to="/bildiri-cagrisi"
               className="border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-blue-600 transition-all transform hover:scale-105"
             >
               Bildiri Gönder
-            </a>
+            </Link>
           </div>
         </div>
-      </section>
-
-      {/* Important Dates Section */}
+      </div>
+      <p className='text-center text-3xl mt-100'>UMYS 26 Sempozyumunun programı yakında duyurulacaktır </p>
+{/**
+      
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">
@@ -70,7 +79,7 @@ const Program = () => {
         </div>
       </section>
 
-      {/* About Section */}
+      
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -82,7 +91,7 @@ const Program = () => {
                 Ulusal Yazılım Mühendisliği Sempozyumu (UYMS), Türkiye yazılım sektörü ile yazılım alanında çalışmalar yapan akademisyenleri bir araya getirerek yazılım mühendisliğindeki son gelişmelerin ve araştırmaların paylaşılmasını sağlayan bir platformdur. 2003 yılından bu yana gerçekleştirilen UYMS, araştırma sonuçlarının paylaşıldığı bir ortam sağlamasının ötesinde, ulusal yazılım mühendisliği araştırmalarının geleceğinin şekillenmesinde etkin rol oynamaktadır. Sempozyumun bu sene de tüm katılımcıların yararlanacağı geniş bir içerik taşıması hedeflenmektedir.
               </p>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                Bu yıl 26. kez düzenlenen sempozyum, Muğla Üniversitesi ev sahipliğinde, 
+                Bu yıl 26. kez düzenlenen sempozyum, Muğla Sıtkı Koçman Üniversitesi ev sahipliğinde, 
                 güzel Muğla şehrinde gerçekleştirilecektir.
               </p>
               <div className="grid grid-cols-2 gap-4">
@@ -98,7 +107,7 @@ const Program = () => {
             </div>
             <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl p-8 text-white text-center">
               <div className="text-6xl mb-6">🎓</div>
-              <h3 className="text-2xl font-bold mb-4">Muğla Üniversitesi</h3>
+              <h3 className="text-2xl font-bold mb-4">Muğla Sıtkı Koçman Üniversitesi</h3>
               <p className="text-blue-100 mb-6">
                 Kötekli Kampüsü, Muğla'nın kalbinde yer alan modern eğitim kurumu
               </p>
@@ -128,7 +137,7 @@ const Program = () => {
 
 
    
-      {/* Contact Section */}
+      
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">
@@ -170,6 +179,8 @@ const Program = () => {
           </div>
         </div>
       </section>
+
+       */}
     </div>
   );
 };

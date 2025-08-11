@@ -1,4 +1,7 @@
+
 import React from 'react';
+import RoadIcon from '../assets/road-svgrepo-com.svg';
+import ClockIcon from '../assets/clock-square-svgrepo-com.svg';
 
 const Ulasim = () => {
   return (
@@ -34,17 +37,17 @@ const Ulasim = () => {
                   Sempozyum Yeri
                 </h3>
                   <p className="text-gray-700 mb-3">
-                    <strong>Muğla Üniversitesi</strong><br />
+                    <strong>Muğla Sıtkı Koçman Üniversitesi</strong><br />
                     Kötekli Mahallesi, 48000 Menteşe/Muğla
                   </p>
                   <p className="text-gray-600 text-sm">
-                    Sempozyum, Muğla Üniversitesi'nin ana kampüsünde gerçekleştirilecektir.
+                    Sempozyum, Muğla Sıtkı Koçman Üniversitesi'nin ana kampüsünde gerçekleştirilecektir.
                   </p>
                 </div>
                 
                 <div className="bg-green-50 rounded-xl p-6">
                   <h3 className="text-xl font-bold text-green-800 mb-3 flex items-center">
-                  <img src="/src/assets/clock-square-svgrepo-com.svg" alt="Road" className="w-6 h-6" />
+                  <img src={ClockIcon} alt="Saat" className="w-6 h-6" />
                     Sempozyum Saatleri</h3>
                   <p className="text-gray-700">
                     <strong>Başlangıç:</strong> 09:00<br />
@@ -92,7 +95,7 @@ const Ulasim = () => {
                 <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-6 border border-green-200">
                   <div className="flex items-center mb-4">
                     <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white mr-3">
-                      <img src="/src/assets/road-svgrepo-com.svg" alt="Road" className="w-6 h-6" />
+                      <img src={RoadIcon} alt="Road" className="w-6 h-6" />
                     </div>
                     <h3 className="text-lg font-bold text-gray-800">Karayolu</h3>
                   </div>
@@ -129,7 +132,7 @@ const Ulasim = () => {
               <div className="space-y-4">
                 <div className="bg-red-50 rounded-lg p-4">
                   <p className="text-sm text-gray-700 mb-4 text-center">
-                    <strong>Muğla Üniversitesi</strong><br />
+                    <strong>Muğla Sıtkı Koçman Üniversitesi</strong><br />
                     Kötekli Kampüsü, 48000 Menteşe/Muğla
                   </p>
                   <div className="w-full h-96 bg-gray-200 rounded-lg overflow-hidden">
@@ -141,7 +144,7 @@ const Ulasim = () => {
                       allowFullScreen=""
                       loading="lazy"
                       referrerPolicy="no-referrer-when-downgrade"
-                      title="Muğla Üniversitesi Konumu"
+                      title="Muğla Sıtkı Koçman Üniversitesi Konumu"
                     ></iframe>
                   </div>
                 </div>

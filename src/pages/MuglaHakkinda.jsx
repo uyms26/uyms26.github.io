@@ -293,7 +293,7 @@ const MuglaHakkinda = () => {
                 <div className="bg-yellow-50 rounded-lg p-4">
                   <h3 className="font-bold text-yellow-800 mb-2">Mart 2025</h3>
                   <p className="text-sm text-gray-700 mb-2">15-17: UYMS 26 Sempozyumu</p>
-                  <p className="text-xs text-gray-600">Muğla Üniversitesi</p>
+                  <p className="text-xs text-gray-600">Muğla Sıtkı Koçman Üniversitesi</p>
                 </div>
                 
               </div>

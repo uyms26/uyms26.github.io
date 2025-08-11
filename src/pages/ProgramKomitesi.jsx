@@ -187,7 +187,7 @@ const ProgramKomitesi = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-800">Adres</h3>
-                    <p className="text-gray-600">Muğla Üniversitesi<br />Muğla, Türkiye</p>
+                    <p className="text-gray-600">Muğla Sıtkı Koçman Üniversitesi<br />Muğla, Türkiye</p>
                   </div>
                 </div>
 

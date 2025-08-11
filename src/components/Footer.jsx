@@ -1,5 +1,5 @@
 import React from "react";
-
+import UYMSLogo from "../assets/UYMS-logo-150x150.png";
 const Footer = () => (
   <footer className="bg-gradient-to-r from-gray-900 via-blue-900 to-gray-900 text-gray-200">
     {/* Main Footer Content */}
@@ -9,7 +9,7 @@ const Footer = () => (
         <div className="space-y-4">
           <div className="flex items-center space-x-3">
             <img 
-              src="/src/assets/UYMS-logo-150x150.png" 
+              src={UYMSLogo}
               alt="UYMS Logo" 
               className="w-12 h-12 rounded-full"
             />
@@ -87,7 +87,7 @@ const Footer = () => (
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
               </svg>
               <span className="text-sm text-gray-300">
-                Muğla Üniversitesi<br />
+                Muğla Sıtkı Koçman Üniversitesi<br />
                 Kötekli Kampüsü, Muğla
               </span>
             </div>
@@ -136,7 +136,7 @@ const Footer = () => (
               © {new Date().getFullYear()} UYMS 26. Tüm hakları saklıdır.
             </p>
             <p className="text-xs text-gray-500 mt-1">
-              Muğla Üniversitesi Yazılım Mühendisliği Bölümü tarafından düzenlenmektedir.
+              Muğla Sıtkı Koçman Üniversitesi Yazılım Mühendisliği Bölümü tarafından düzenlenmektedir.
             </p>
           </div>
           

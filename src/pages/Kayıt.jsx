@@ -2,8 +2,17 @@ import React from "react";
 
 const Kayıt = () => (
 	<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-8 px-4 sm:px-6 lg:px-8">
+
+
+		<h1 className="text-center text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-800 mb-4">
+					Kayıt Bilgileri
+				</h1>
+				<p className="text-3xl text-center sm:text-2xl text-gray-600 mt-32 max-w-4xl mx-auto">
+					UYMS 26 Sempozyumu'na katılım için gerekli tüm bilgiler yakında duyurulacaktır.
+				</p>
+{/*
 		<div className="w-full max-w-6xl mx-auto">
-			{/* Header Section */}
+		
 			<div className="text-center mb-12">
 				<h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-800 mb-4">
 					Kayıt Bilgileri
@@ -13,11 +22,11 @@ const Kayıt = () => (
 				</p>
 			</div>
 
-			{/* Main Content Grid */}
+		
 			<div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-				{/* Left Column - Important Notes */}
+				
 				<div className="lg:col-span-2 space-y-8">
-					{/* Important Information Card */}
+				
 					<div className="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-blue-500">
 						<h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-6 flex items-center">
 							<svg className="w-8 h-8 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -46,7 +55,7 @@ const Kayıt = () => (
 						</ul>
 					</div>
 
-					{/* Bank Account Information Card */}
+					
 					<div className="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-green-500">
 						<h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-6 flex items-center">
 							<svg className="w-8 h-8 text-green-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -79,7 +88,7 @@ const Kayıt = () => (
 						</div>
 					</div>
 
-					{/* Transfer Format Card */}
+					
 					<div className="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-purple-500">
 						<h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-6 flex items-center">
 							<svg className="w-8 h-8 text-purple-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -97,7 +106,7 @@ const Kayıt = () => (
 						</div>
 					</div>
 
-					{/* Invoice Information Card */}
+					
 					<div className="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-orange-500">
 						<h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-6 flex items-center">
 							<svg className="w-8 h-8 text-orange-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -111,9 +120,9 @@ const Kayıt = () => (
 					</div>
 				</div>
 
-				{/* Right Column - Pricing and Contact */}
+				
 				<div className="space-y-8">
-					{/* Pricing Card */}
+					
 					<div className="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-indigo-500">
 						<h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-6 flex items-center">
 							<span className="text-indigo-600 mr-3">💰</span>
@@ -136,7 +145,7 @@ const Kayıt = () => (
 						</div>
 					</div>
 
-					{/* Contact Information Card */}
+					
 					<div className="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-teal-500">
 						<h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-6 flex items-center">
 							<span className="text-teal-600 mr-3">📞</span>
@@ -166,22 +175,8 @@ const Kayıt = () => (
 					</div>
 				</div>
 			</div>
-
-			{/* Bottom CTA 
-			<div className="text-center mt-16">
-				<div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-2xl p-8 shadow-xl">
-					<h3 className="text-2xl sm:text-3xl font-bold mb-4">
-						UYMS 26 Sempozyumu'na Katılım
-					</h3>
-					<p className="text-xl opacity-90 mb-6">
-						Bilimsel çalışmalarınızı paylaşmak ve alanında uzman akademisyenlerle buluşmak için hemen kayıt olun!
-					</p>
-					<button className="bg-white text-blue-600 px-8 py-3 rounded-xl font-bold text-lg hover:bg-gray-50 transition-all transform hover:scale-105 shadow-lg">
-						Kayıt Ol
-					</button>
-				</div>
-			</div>*/}
-		</div>
+		
+		</div>*/}
 	</div>
 );
 

@@ -14,15 +14,19 @@ const BildiriCagrisi = () => {
 
         <div>
           {/* Main Content - Committee Structure */}
-          <div className="lg:col-span-2 text-2xl ">
-            <p className="mb-6">
+          <div className="lg:col-span-2 text-2xl roounde">
+           
+           <div className='bg-white rounded-2xl shadow-lg p-8 mb-32'>
+             <p className="mb-6">
               Ulusal Yazılım Mühendisliği Sempozyumu (UYMS), Türkiye yazılım sektörü ile yazılım alanında çalışmalar yapan akademisyenleri bir araya getirerek yazılım mühendisliğindeki son gelişmelerin ve araştırmaların paylaşılmasını sağlayan bir platformdur. 2003 yılından bu yana gerçekleştirilen UYMS, araştırma sonuçlarının paylaşıldığı bir ortam sağlamasının ötesinde, ulusal yazılım mühendisliği araştırmalarının geleceğinin şekillenmesinde etkin rol oynamaktadır. Sempozyumun bu sene de tüm katılımcıların yararlanacağı geniş bir içerik taşıması hedeflenmektedir. 17. UYMS, 14-16 Mayıs 2026 tarihleri arasında Muğla Sıtkı Koçman Üniversitesi merkez yerleşkesinde gerçekleştirilecektir.
               <br /><br />
               Sempozyuma Yazılım Mühendisliği alanına ilişkin, özgün sonuçlar içeren tüm kavramsal, kuramsal ve uygulamalı çalışmalar davetlidir. Bu kapsamda teknik-bilimsel ve deneyim kategorilerinde bildirilerinizi bekliyoruz. Sempozyumun bildiri ve sunum dili Türkçe ya da İngilizce olup bildirilerin başına İngilizce ve Türkçe özetlerin eklenmesi beklenmektedir.
             </p>
+           </div>
             <h2 className="text-2xl font-semibold mb-4 text-center">UYMS 2026’nın ana ilgi alanları</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-2xl">
-              <ul className="list-disc pl-6 space-y-1 text-gray-800">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-2xl mt-16">
+              <div className='bg-white rounded-2xl shadow-lg p-8'>
+                <ul className="list-disc pl-6 space-y-1 text-gray-800">
                 <li>Yazılım Evrimi ve Bakımı</li>
                 <li>Çevik Yaklaşımlar ve Çevik Yazılım</li>
                 <li>Yazılım Ölçümü Geliştirme</li>
@@ -38,11 +42,13 @@ const BildiriCagrisi = () => {
                 <li>Yenilikçi Yazılım Uygulamaları ve Çözümleri</li>
                 <li>Yazılım Mühendisliğinde Disiplinler Arası Yaklaşımlar</li>
                 <li>Yazılım Gereksinim Mühendisliği</li>
-                <li>Yazılım Risk Yönetimi</li>
+                
               </ul>
+              </div>
+              <div className='bg-white rounded-2xl shadow-lg p-8'>
               <ul className="list-disc pl-6 space-y-1 text-gray-800">
                 
-                
+                <li>Yazılım Risk Yönetimi</li>
                 <li>Yazılım Mimarisi</li>
                 <li>Mikro-servis Mimarileri</li>
                 <li>Yazılım Konfigürasyon Yönetimi</li>
@@ -58,6 +64,7 @@ const BildiriCagrisi = () => {
                 <li>Yazılım Üretim Hatları</li>
                 <li>Açık Kaynak Yazılım Teknolojileri</li>
               </ul>
+              </div>
             </div>
           </div>
         </div>

@@ -130,7 +130,7 @@ const Navbar = () => {
                             </div>
                         </div>
 
-                        <NavLink to="#" onClick={closeMenu}>
+                        <NavLink to="/tarihce" onClick={closeMenu}>
                             Tarihçe
                         </NavLink>
                         <NavLink to="/iletisim" onClick={closeMenu}>
@@ -265,7 +265,9 @@ const Navbar = () => {
                     </div>
                 </div>
             </div>
+        
         </nav>
+        
     );
 };
 
