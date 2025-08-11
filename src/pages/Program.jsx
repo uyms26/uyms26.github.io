@@ -6,7 +6,7 @@ import LandingHero from '../assets/landinghero.png';
 
 const Program = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
+    <div className="min-h-screen font-serif bg-gradient-to-br from-blue-50 via-white to-indigo-50">
       
       
       
@@ -14,7 +14,7 @@ const Program = () => {
         className="py-20 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${LandingHero})` }}
       >
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center bg-opacity-30 shadow-lg p-8 backdrop-blur-sm">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center bg-opacity-30 shadow-lg p-8 ">
           <div className="flex justify-center mb-8">
             <img 
               src={UYMSLogo} 
@@ -22,16 +22,17 @@ const Program = () => {
               className="w-24 h-24 lg:w-32 lg:h-48 rounded-lg  bg-white shadow-2xl"
             />
           </div>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+          <div className='backdrop-blur-md w-full max-w-2xl mx-auto p-6 rounded-lg'>
+            <h1 className="text-4xl md:text-6xl text-white lg:text-7xl font-bold mb-6 leading-tight">
             UYMS 26
           </h1>
           <p className="text-xl md:text-2xl lg:text-3xl mb-8 text-blue-100 max-w-4xl mx-auto">
             17. Ulusal Yazılım Mühendisliği Sempozyumu
           </p>
-          <div className="bg-white bg-opacity-20 backdrop-blur-sm rounded-2xl p-6 md:p-8 inline-block">
-            <p className="text-2xl md:text-3xl font-bold mb-2 text-black">14-16 Mayıs 2026</p>
+            <p className="text-2xl md:text-3xl font-bold mb-2 text-white">14-16 Mayıs 2026</p>
             <p className="text-lg md:text-xl text-blue-600">Muğla Sıtkı Koçman Üniversitesi, Kötekli Kampüsü</p>
-          </div>
+
+          
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               to="/kayit" 
@@ -45,6 +46,7 @@ const Program = () => {
             >
               Bildiri Gönder
             </Link>
+          </div>
           </div>
         </div>
       </div>

@@ -1,7 +1,7 @@
 import React from "react";
 
 const Kayıt = () => (
-	<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-8 px-4 sm:px-6 lg:px-8">
+	<div className="min-h-screen font-serif bg-gradient-to-br from-blue-50 to-indigo-100 py-8 px-4 sm:px-6 lg:px-8">
 
 
 		<h1 className="text-center text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-800 mb-4">

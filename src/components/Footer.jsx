@@ -1,7 +1,7 @@
 import React from "react";
 import UYMSLogo from "../assets/UYMS-logo-150x150.png";
 const Footer = () => (
-  <footer className="bg-gradient-to-r from-gray-900 via-blue-900 to-gray-900 text-gray-200">
+  <footer className="bg-gradient-to-r font-serif from-gray-900 via-blue-900 to-gray-900 text-gray-200">
     {/* Main Footer Content */}
     <div className="container mx-auto px-4 py-12">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

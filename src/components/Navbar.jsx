@@ -25,7 +25,7 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="bg-white/95 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-gray-200">
+        <nav className="bg-white/95 font-serif backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-gray-200">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16 md:h-18 lg:h-20">
                     {/* Logo Section */}
@@ -264,7 +264,14 @@ const Navbar = () => {
                         </MobileNavLink>
                     </div>
                 </div>
+         
+
             </div>
+                       <div className="w-full">
+                           <p className="text-center font-serif mt-2 text-3xl" > Sempozyum <span className="text-blue-600"> 14-16 Mayıs</span> </p>
+                            <p  className="text-center mb-4 text-2xl">yüz yüze olarak gerçekleştirilecektir.</p>
+            
+                    </div>
         
         </nav>
         
