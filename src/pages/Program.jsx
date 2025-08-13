@@ -6,51 +6,18 @@ import LandingHero from '../assets/landinghero.png';
 
 const Program = () => {
   return (
+    
     <div className="min-h-screen font-serif bg-gradient-to-br from-blue-50 via-white to-indigo-50">
       
-      
-      
-      <div
-        className="py-20 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${LandingHero})` }}
-      >
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center bg-opacity-30 shadow-lg p-8 ">
-          <div className="flex justify-center mb-8">
-            <img 
-              src={UYMSLogo} 
-              alt="UYMS 26 Logo" 
-              className="w-24 h-24 lg:w-32 lg:h-48 rounded-lg  bg-white shadow-2xl"
-            />
-          </div>
-          <div className='backdrop-blur-md w-full max-w-2xl mx-auto p-6 rounded-lg'>
-            <h1 className="text-4xl md:text-6xl text-white lg:text-7xl font-bold mb-6 leading-tight">
-            UYMS 26
+    <div className="text-center mb-12">
+          <h1 className="text-4xl mt-12 font-bold text-gray-900 mb-4">
+            Program
           </h1>
-          <p className="text-xl md:text-2xl lg:text-3xl mb-8 text-blue-100 max-w-4xl mx-auto">
-            17. Ulusal Yazılım Mühendisliği Sempozyumu
-          </p>
-            <p className="text-2xl md:text-3xl font-bold mb-2 text-white">14-16 Mayıs 2026</p>
-            <p className="text-lg md:text-xl text-blue-600">Muğla Sıtkı Koçman Üniversitesi, Kötekli Kampüsü</p>
-
           
-          <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/kayit" 
-              className="bg-white text-blue-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-blue-50 transition-all transform hover:scale-105 shadow-lg"
-            >
-              Hemen Kayıt Ol
-            </Link>
-            <Link
-              to="/bildiri-cagrisi"
-              className="border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-blue-600 transition-all transform hover:scale-105"
-            >
-              Bildiri Gönder
-            </Link>
-          </div>
-          </div>
         </div>
-      </div>
+      
       <p className='text-center text-3xl mt-100'>UMYS 26 Sempozyumunun programı yakında duyurulacaktır </p>
+      
 {/**
       
       <section className="py-16 bg-white">

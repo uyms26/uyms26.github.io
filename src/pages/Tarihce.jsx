@@ -20,7 +20,7 @@ const Tarihce = () => {
 	return (
 		<div className="min-h-screen font-serif bg-gradient-to-br from-blue-50 to-indigo-100 py-8 px-4 sm:px-6 lg:px-8">
 			<div className="w-full max-w-6xl mx-auto">
-				<h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-800 mb-12 text-center">Tarihçe</h1>
+				<h1 className="text-4xl font-bold text-gray-800 mb-12 text-center">Tarihçe</h1>
 				<div className="overflow-x-auto rounded-2xl shadow-xl bg-white">
 					<table className="min-w-full divide-y divide-blue-200">
 						<thead className="bg-gradient-to-r from-blue-600 to-indigo-600">

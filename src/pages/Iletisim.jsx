@@ -87,7 +87,7 @@ const Iletisim = () => {
       <div className="max-w-6xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-800 mb-6">
+          <h1 className="text-4xl  font-bold text-gray-800 mb-6">
             İletişim
           </h1>
           <p className="text-xl sm:text-2xl text-gray-600 max-w-3xl mx-auto">

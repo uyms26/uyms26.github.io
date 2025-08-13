@@ -9,7 +9,7 @@ const Ulasim = () => {
       <div className="w-full max-w-6xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-800 mb-4">
+          <h1 className="text-4xl font-bold text-gray-800 mb-4">
             Ulaşım Bilgileri
           </h1>
           <p className="text-xl sm:text-2xl text-gray-600 max-w-4xl mx-auto">
