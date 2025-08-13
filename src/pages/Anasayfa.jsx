@@ -121,7 +121,7 @@ const Anasayfa = () => {
   return (
     <div className="min-h-screen font-serif   bg-gradient-to-br from-blue-50 to-indigo-100">
       
-      <div className="py-105 bg-cover  bg-center bg-no-repeat" style={{ backgroundImage: `url(${LandingHero})` }}>
+  <div className="bg-cover bg-center bg-no-repeat min-h-[300px] sm:min-h-[400px] md:min-h-[500px] lg:min-h-[600px] xl:min-h-[700px] flex items-end" style={{ backgroundImage: `url(${LandingHero})` }}>
         <div className="absolute  top-7/11 left-5/12">
         {/* Hero Section 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
