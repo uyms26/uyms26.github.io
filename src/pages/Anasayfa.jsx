@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import UYMSLogo from '../assets/UYMS-logo-150x150.png';
 import Logo1 from '../assets/logo1.png';
-import LandingHero from '../assets/landinghero.png';
+import LandingHero from '../assets/banner.png';
 
 const Anasayfa = () => {
   const [timeLeft, setTimeLeft] = useState({
@@ -119,57 +119,27 @@ const Anasayfa = () => {
   ];
 
   return (
-    <div className="min-h-screen font-serif bg-gradient-to-br from-blue-50 to-indigo-100">
-      {/* Hero Section */}
-      <div
-        className="py-20 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${LandingHero})` }}
-      >
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center  bg-opacity-30 shadow-lg p-8 ">
-          <div className="flex justify-center mb-8 gap-x-64">
-
-          <div className='bg-white p-4 rounded-lg shadow-md'>
-                        <img 
-              src={UYMSLogo} 
-              alt="UYMS 26 Logo" 
-              className="h-24 w-24 md:h-64 md:w-40"
-            />
-          </div>
-
-          <div className='bg-white p-4 rounded-lg shadow-md'>
-              <img 
-              src={Logo1} 
-              alt="MSKÜ Logo" 
-              className="h-24 w-24 md:h-64 md:w-40"
-            />
-          </div>
-          </div>
-          <div className='backdrop-blur-md w-full max-w-2xl mx-auto p-6 rounded-lg'>
-            <h1 className="text-4xl md:text-6xl text-white font-bold mb-6 " >
-            UYMS 26
-          </h1>
-          <p className="text-xl md:text-2xl  text-white mb-4 opacity-90">
-            Ulusal Yazılım Mühendisliği Sempozyumu
-          </p>
-          <p className="text-lg md:text-xl text-white mb-8 opacity-80">
-            14-16 Mayıs 2026 • Muğla Sıtkı Koçman Üniversitesi
-          </p>
-          
+    <div className="min-h-screen font-serif   bg-gradient-to-br from-blue-50 to-indigo-100">
+      
+      <div className="py-105 bg-cover  bg-center bg-no-repeat" style={{ backgroundImage: `url(${LandingHero})` }}>
+        <div className="absolute  top-7/11 left-5/12">
+        {/* Hero Section 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            
             <NavLink to="/kayit">
-              <button className="bg-white text-blue-600 px-8 py-3 rounded-xl font-bold text-lg hover:bg-gray-50 transition-all transform hover:scale-105 shadow-lg">
-                Hemen Kayıt Ol
-              </button>
+                <button className="bg-white text-blue-600 px-8 py-3 rounded-xl font-bold text-lg hover:bg-gray-50 transition-all transform hover:scale-105 shadow-lg">
+                  Hemen Kayıt Ol
+                </button>
             </NavLink>
             <NavLink to="/bildiri-gonderimi">
-              <button className="border-2 border-white text-white px-8 py-3 rounded-xl font-bold text-lg hover:bg-white hover:text-blue-600 transition-all transform hover:scale-105">
-                Bildiri Gönder
-              </button>
+                <button className="border-2 border-white text-white px-8 py-3 rounded-xl font-bold text-lg hover:bg-white hover:text-blue-600 transition-all transform hover:scale-105">
+                  Bildiri Gönder
+                </button>
             </NavLink>
           </div>
-          </div>
+          */}
         </div>
-      </div>
+    </div>
 
       {/* Main Content */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">

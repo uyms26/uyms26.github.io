@@ -27,14 +27,14 @@ const Navbar = () => {
     return (
         <nav className="bg-white/95 font-serif backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-gray-200">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex items-center justify-between h-16 md:h-18 lg:h-20">
+                <div className="flex items-center justify-between h-20 md:h-24 lg:h-32">
                     {/* Logo Section */}
                     <div className="flex items-center space-x-3">
                        <a href="https://www.mu.edu.tr" className="flex items-center">
                         <img 
                             src={UniLogo} 
                             alt="University Logo" 
-                            className="h-10 md:h-12 lg:h-14 w-auto transition-transform hover:scale-105" 
+                            className="h-14 md:h-16 lg:h-24 w-auto transition-transform hover:scale-105" 
                         /></a>
                         <div className="hidden md:block">
                             <div className="h-6 w-px bg-gradient-to-b from-transparent via-gray-300 to-transparent"></div>
@@ -42,7 +42,7 @@ const Navbar = () => {
                     </div>
 
                     {/* Desktop Navigation */}
-                    <div className="hidden lg:flex items-center space-x-1">
+                    <div className="hidden text-xl lg:flex items-center space-x-1">
                         <NavLink to="/" onClick={closeMenu}>
                             Anasayfa
                         </NavLink>
@@ -143,7 +143,7 @@ const Navbar = () => {
                         <img 
                             src={UYMSLogo} 
                             alt="UYMS Logo" 
-                            className="h-10 md:h-12 lg:h-14 w-auto transition-transform hover:scale-105" 
+                            className="h-10 md:h-16 lg:h-24 w-auto transition-transform hover:scale-105" 
                         />
                         
                         {/* Mobile Menu Button */}
@@ -267,12 +267,7 @@ const Navbar = () => {
          
 
             </div>
-                       <div className="w-full">
-                           <p className="text-center font-serif mt-2 text-3xl" > Sempozyum <span className="text-blue-600"> 14-16 Mayıs</span> </p>
-                            <p  className="text-center mb-4 text-2xl">yüz yüze olarak gerçekleştirilecektir.</p>
             
-                    </div>
-        
         </nav>
         
     );
