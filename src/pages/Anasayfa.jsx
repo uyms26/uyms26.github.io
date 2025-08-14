@@ -156,7 +156,7 @@ const Anasayfa = () => {
                   Ulusal Yazılım Mühendisliği Sempozyumu (UYMS), Türkiye yazılım sektörü ile yazılım alanında çalışmalar yapan akademisyenleri bir araya getirerek yazılım mühendisliğindeki son gelişmelerin ve araştırmaların paylaşılmasını sağlayan bir platformdur. 2003 yılından bu yana gerçekleştirilen UYMS, araştırma sonuçlarının paylaşıldığı bir ortam sağlamasının ötesinde, ulusal yazılım mühendisliği araştırmalarının geleceğinin şekillenmesinde etkin rol oynamaktadır. Sempozyumun bu sene de tüm katılımcıların yararlanacağı geniş bir içerik taşıması hedeflenmektedir.
                 </p>
                 <p className="text-lg leading-relaxed text-justify">
-                  Muğla Sıtkı Koçman Üniversitesi Yazılım Mühendisliği Bölümü işbirliği ile düzenlenecek olan 17. UYMS, 14-16 Mayıs 2026 tarihlerinde Muğla Sıtkı Koçman Üniversitesi Atatürk Kültür Merkezi'nde yüz yüze olarak gerçekleştirilecektir.
+                  <span className='font-bold'>Muğla Sıtkı Koçman Üniversitesi</span> işbirliği ile düzenlenecek olan 17. UYMS, <span className='font-bold' >14-16 Mayıs 2026</span> tarihlerinde Muğla Sıtkı Koçman Üniversitesi Atatürk Kültür Merkezi'nde yüz yüze olarak gerçekleştirilecektir.
                 </p>
               </div>
             </div>

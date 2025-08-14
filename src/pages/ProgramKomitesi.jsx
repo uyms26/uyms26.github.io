@@ -108,7 +108,7 @@ const ProgramKomitesi = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-800">E-posta</h3>
-                    <p className="text-gray-600">uymsempozyumu@gmail.com</p>
+                    <p className="text-gray-600">uyms26@mu.edu.tr</p>
                   </div>
                 </div>
 

@@ -25,7 +25,7 @@ const Iletisim = () => {
       // Simulate form submission delay
       await new Promise(resolve => setTimeout(resolve, 1500));
       
-      const mailto = `mailto:uymsempozyumu@gmail.com?subject=${encodeURIComponent(form.konu)}&body=${encodeURIComponent(
+      const mailto = `mailto:uyms26@mu.edu.tr?subject=${encodeURIComponent(form.konu)}&body=${encodeURIComponent(
         `Ad: ${form.ad}\nE-mail: ${form.email}\n\nMesaj: ${form.mesaj}`
       )}`;
       window.location.href = mailto;
@@ -57,7 +57,7 @@ const Iletisim = () => {
         </svg>
       ),
       title: "E-posta",
-      content: "uymsempozyumu@gmail.com",
+      content: "uyms26@mu.edu.tr",
       color: "green"
     },
     {

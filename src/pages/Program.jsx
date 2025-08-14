@@ -122,7 +122,7 @@ const Program = () => {
         </div>  
               </div>
               <h3 className="text-xl font-bold text-gray-800 mb-2">E-posta</h3>
-              <p className="text-blue-600">uymsempozyumu@gmail.com</p>
+              <p className="text-blue-600">uyms26@mu.edu.tr</p>
             </div>
             <div className="text-center p-6 bg-green-50 rounded-xl">
               <div className="text-4xl mb-4">
