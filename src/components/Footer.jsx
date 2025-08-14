@@ -105,22 +105,22 @@ const Footer = () => (
             </div>
           </div>
         </div>
-
         {/* Important Dates */}
         <div className="space-y-4">
           <h3 className="text-lg font-bold text-white border-b border-blue-600 pb-2">Önemli Tarihler</h3>
           <div className="space-y-3">
             <div className="bg-gray-800 rounded-lg p-3">
-              <p className="text-xs text-blue-400 font-semibold">Bildiri Gönderimi</p>
-              <p className="text-sm text-gray-300">15 Şubat 2026</p>
+              <p className="text-xs text-blue-400 font-semibold">Bildiri Gönderimi Son Tarihi</p>
+              <p className="text-sm text-gray-300">27 Ocak 2026</p>
+            </div>
+
+            <div className="bg-gray-800 rounded-lg p-3">
+              <p className="text-xs text-blue-400 font-semibold">Kayıt</p>
+              <p className="text-sm text-gray-300">1 Nisan 2026</p>
             </div>
             <div className="bg-gray-800 rounded-lg p-3">
               <p className="text-xs text-blue-400 font-semibold">Sempozyum</p>
               <p className="text-sm text-gray-300">14-16 Mayıs 2026</p>
-            </div>
-            <div className="bg-gray-800 rounded-lg p-3">
-              <p className="text-xs text-blue-400 font-semibold">Kayıt</p>
-              <p className="text-sm text-gray-300">1 Mart 2026</p>
             </div>
           </div>
         </div>

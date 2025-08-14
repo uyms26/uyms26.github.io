@@ -111,9 +111,9 @@ const Anasayfa = () => {
 
   const importantDates = [
     
-//    { event: "Bildiri Gönderimi", date: "15 Ocak 2026", status: "active" },
- //   { event: "Bildiri Kabul Bildirimi", date: "1 Şubat 2026", status: "upcoming" },
-  //  { event: "Erken Kayıt Son Gün", date: "20 Şubat 2026", status: "upcoming" },
+      { event: "Bildiri Gönderimi Son Tarihi", date: "27 Ocak 2026", status: "upcoming" },
+      { event: "Bildiri Kabul Bildirimi", date: "20 Mart 2026", status: "upcoming" },
+      { event: "Kayıtarın Son Gün", date: "1 Nisan 2026", status: "upcoming" },
    // { event: "Program Yayınlanması", date: "1 Mart 2026", status: "upcoming" },
     { event: "Sempozyum", date: "14-16 Mayıs 2026", status: "main" }
   ];
@@ -152,10 +152,10 @@ const Anasayfa = () => {
                 UYMS Hakkında
               </h2>
               <div className="prose prose-lg max-w-none text-gray-700 space-y-6">
-                <p className="text-lg leading-relaxed">
+                <p className="text-lg leading-relaxed text-justify">
                   Ulusal Yazılım Mühendisliği Sempozyumu (UYMS), Türkiye yazılım sektörü ile yazılım alanında çalışmalar yapan akademisyenleri bir araya getirerek yazılım mühendisliğindeki son gelişmelerin ve araştırmaların paylaşılmasını sağlayan bir platformdur. 2003 yılından bu yana gerçekleştirilen UYMS, araştırma sonuçlarının paylaşıldığı bir ortam sağlamasının ötesinde, ulusal yazılım mühendisliği araştırmalarının geleceğinin şekillenmesinde etkin rol oynamaktadır. Sempozyumun bu sene de tüm katılımcıların yararlanacağı geniş bir içerik taşıması hedeflenmektedir.
                 </p>
-                <p className="text-lg leading-relaxed">
+                <p className="text-lg leading-relaxed text-justify">
                   Muğla Sıtkı Koçman Üniversitesi Yazılım Mühendisliği Bölümü işbirliği ile düzenlenecek olan 17. UYMS, 14-16 Mayıs 2026 tarihlerinde Muğla Sıtkı Koçman Üniversitesi Atatürk Kültür Merkezi'nde yüz yüze olarak gerçekleştirilecektir.
                 </p>
               </div>
@@ -225,7 +225,7 @@ const Anasayfa = () => {
             </div>
 */}
             {/* Countdown Section */}
-            <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-2xl shadow-xl p-8 text-center">
+            <div className="bg-gradient-to-r from-cyan-600 to-cyan-800 text-white rounded-2xl shadow-xl p-8 text-center">
               <h2 className="text-3xl font-bold mb-8">
                 Sempozyuma Kalan Süre
               </h2>

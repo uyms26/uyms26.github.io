@@ -281,7 +281,7 @@ const Iletisim = () => {
                     Bildiri gönderimi için son tarih nedir?
                   </h3>
                   <p className="text-gray-600">
-                    Bildiri gönderimi için son tarih 15 Ocak 2025'tir.
+                    Bildiri gönderimi için son tarih 27 Ocak 2026'dır.
                   </p>
                 </div>
                 <div className="border-l-4 border-orange-500 pl-6">

@@ -17,7 +17,7 @@ const BildiriCagrisi = () => {
           <div className="lg:col-span-2 text-2xl roounde">
            
            <div className='bg-white rounded-2xl shadow-lg p-8 mb-32'>
-             <p className="mb-6">
+             <p className="mb-6 text-justify" >
               Ulusal Yazılım Mühendisliği Sempozyumu (UYMS), Türkiye yazılım sektörü ile yazılım alanında çalışmalar yapan akademisyenleri bir araya getirerek yazılım mühendisliğindeki son gelişmelerin ve araştırmaların paylaşılmasını sağlayan bir platformdur. 2003 yılından bu yana gerçekleştirilen UYMS, araştırma sonuçlarının paylaşıldığı bir ortam sağlamasının ötesinde, ulusal yazılım mühendisliği araştırmalarının geleceğinin şekillenmesinde etkin rol oynamaktadır. Sempozyumun bu sene de tüm katılımcıların yararlanacağı geniş bir içerik taşıması hedeflenmektedir. 17. UYMS, 14-16 Mayıs 2026 tarihleri arasında Muğla Sıtkı Koçman Üniversitesi merkez yerleşkesinde gerçekleştirilecektir.
               <br /><br />
               Sempozyuma Yazılım Mühendisliği alanına ilişkin, özgün sonuçlar içeren tüm kavramsal, kuramsal ve uygulamalı çalışmalar davetlidir. Bu kapsamda teknik-bilimsel ve deneyim kategorilerinde bildirilerinizi bekliyoruz. Sempozyumun bildiri ve sunum dili Türkçe ya da İngilizce olup bildirilerin başına İngilizce ve Türkçe özetlerin eklenmesi beklenmektedir.

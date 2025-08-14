@@ -6,17 +6,17 @@ import LandingHero from '../assets/landinghero.png';
 
 const Program = () => {
   return (
+    <div className="min-h-screen font-serif bg-gradient-to-br from-blue-50 to-indigo-100 py-8 px-4 sm:px-6 lg:px-8">
+
+
+		<h1 className="text-center text-4xl  font-bold text-gray-800 mb-4">
+					Program
+				</h1>
+				<p className="text-3xl text-center sm:text-2xl text-gray-600 mt-32 max-w-4xl mx-auto">
+					UYMS 26 Sempozyumunun programı yakında duyurulacaktır 
+				</p>
     
-    <div className="min-h-screen font-serif bg-gradient-to-br from-blue-50 via-white to-indigo-50">
-      
-    <div className="text-center mb-12">
-          <h1 className="text-4xl mt-12 font-bold text-gray-900 mb-4">
-            Program
-          </h1>
-          
-        </div>
-      
-      <p className='text-center text-3xl mt-100'>UMYS 26 Sempozyumunun programı yakında duyurulacaktır </p>
+   
       
 {/**
       
