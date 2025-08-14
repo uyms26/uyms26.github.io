@@ -26,28 +26,28 @@ const ProgramKomitesi = () => {
                   </svg>
                   Program Komitesi Eş Başkanları
                 </h2>
-              {/*   <div className="space-y-2">
+                 <div className="space-y-2">
                   <div className="flex items-center p-3 bg-blue-50 rounded-lg">
                     <div className="w-3 h-3 bg-blue-500 rounded-full mr-3"></div>
-                    <span className="text-gray-800">Ahmet Coşkunçay, Atatürk Üniversitesi</span>
+                    <span className="text-gray-800">Deniz Akdur, Aselsan</span>
                   </div>
                   <div className="flex items-center p-3 bg-blue-50 rounded-lg">
                     <div className="w-3 h-3 bg-blue-500 rounded-full mr-3"></div>
-                    <span className="text-gray-800">Barış Özyer, Atatürk Üniversitesi</span>
+                    <span className="text-gray-800">Hasan Sözer, Özyeğin Üniversitesi</span>
                   </div>
                 </div>
-                */}
+                
               </div>
 
               
-              <div className="mb-8">
+             {/* <div className="mb-8">
                 <h2 className="text-2xl font-bold text-green-600 mb-4 flex items-center">
                   <svg className="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z" />
                   </svg>
                   Program Komitesi
                 </h2>
-                {/*<div className="space-y-2">
+                <div className="space-y-2">
                   <div className="flex items-center p-3 bg-green-50 rounded-lg">
                     <div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
                     <span className="text-gray-800">Bilal Usanmaz, Atatürk Üniversitesi</span>
@@ -76,8 +76,8 @@ const ProgramKomitesi = () => {
                     <div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
                     <span className="text-gray-800">Mete Yağanoğlu, Atatürk Üniversitesi</span>
                   </div>
-                </div>*/}
-              </div>
+                </div>
+              </div>*/}
 
           
 

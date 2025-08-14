@@ -4,7 +4,7 @@ const ProgramKomitesi = () => {
   return (
     <div className="min-h-screen font-serif bg-gray-50 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
+        
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Yönlendirme Komitesi
@@ -15,13 +15,10 @@ const ProgramKomitesi = () => {
         </div>
 
         <div >
-          {/* Main Content - Committee Structure */}
+        
           <div className="lg:col-span-2">
             <div className="bg-white rounded-2xl shadow-xl p-8">
-              {/* Eş Başkanlar */}
-         
-
-              {/* Organizasyon Komitesi */}
+        
               <div className="mb-8">
                 <h2 className="text-2xl font-bold text-green-600 mb-4 flex items-center">
                   <svg className="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20">
@@ -60,13 +57,6 @@ const ProgramKomitesi = () => {
                   </div>
                 </div>
               </div>
-
-          
-
-            
-
-           
-
 
             </div>
           </div>

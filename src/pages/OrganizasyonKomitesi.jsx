@@ -30,11 +30,11 @@ const OrganizasyonKomitesi = () => {
                 <div className="space-y-2">
                   <div className="flex items-center p-3 bg-blue-50 rounded-lg">
                     <div className="w-3 h-3 bg-blue-500 rounded-full mr-3"></div>
-                    <span className="text-gray-800">Ahmet Coşkunçay, Atatürk Üniversitesi</span>
+                    <span className="text-gray-800">Cihat Çetinkaya, Muğla Sıtkı Koçman Üniversitesi</span>
                   </div>
                   <div className="flex items-center p-3 bg-blue-50 rounded-lg">
                     <div className="w-3 h-3 bg-blue-500 rounded-full mr-3"></div>
-                    <span className="text-gray-800">Barış Özyer, Atatürk Üniversitesi</span>
+                    <span className="text-gray-800">Selim Yımaz, Muğla Sıtkı Koçman Üniversitesi</span>
                   </div>
                 </div>
               </div>
@@ -50,36 +50,21 @@ const OrganizasyonKomitesi = () => {
                 <div className="space-y-2">
                   <div className="flex items-center p-3 bg-green-50 rounded-lg">
                     <div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
-                    <span className="text-gray-800">Bilal Usanmaz, Atatürk Üniversitesi</span>
+                    <span className="text-gray-800">Cihat Çetinkaya, Muğla Sıtkı Koçman Üniversitesi</span>
                   </div>
                   <div className="flex items-center p-3 bg-green-50 rounded-lg">
                     <div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
-                    <span className="text-gray-800">Bülent Çavuşoğlu, Atatürk Üniversitesi</span>
+                    <span className="text-gray-800">Selim Yılmaz, Muğla Sıtkı Koçman Üniversitesi</span>
                   </div>
                   <div className="flex items-center p-3 bg-green-50 rounded-lg">
                     <div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
-                    <span className="text-gray-800">Duygu Fındık Coşkunçay, Atatürk Üniversitesi</span>
+                    <span className="text-gray-800">Hasan Ali Özkan, Muğla Sıtkı Koçman Üniversitesi</span>
                   </div>
-                  <div className="flex items-center p-3 bg-green-50 rounded-lg">
-                    <div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
-                    <span className="text-gray-800">Faruk Baturalp Günay, Atatürk Üniversitesi</span>
-                  </div>
-                  <div className="flex items-center p-3 bg-green-50 rounded-lg">
-                    <div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
-                    <span className="text-gray-800">Ferhat Bozkurt, Atatürk Üniversitesi</span>
-                  </div>
-                  <div className="flex items-center p-3 bg-green-50 rounded-lg">
-                    <div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
-                    <span className="text-gray-800">Gülşah Tümüklü Özyer, Atatürk Üniversitesi</span>
-                  </div>
-                  <div className="flex items-center p-3 bg-green-50 rounded-lg">
-                    <div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
-                    <span className="text-gray-800">Mete Yağanoğlu, Atatürk Üniversitesi</span>
-                  </div>
+                
                 </div>
               </div>
 
-              {/* Yayınlama Sorumlusu */}
+              {/* Yayınlama Sorumlusu 
               <div className="mb-8">
                 <h2 className="text-2xl font-bold text-purple-600 mb-4 flex items-center">
                   <svg className="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20">
@@ -98,8 +83,8 @@ const OrganizasyonKomitesi = () => {
                   </div>
                 </div>
               </div>
-
-              {/* Web Yönetimi */}
+*/}
+              {/* Web Yönetimi 
               <div className="mb-8">
                 <h2 className="text-2xl font-bold text-indigo-600 mb-4 flex items-center">
                   <svg className="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20">
@@ -117,9 +102,9 @@ const OrganizasyonKomitesi = () => {
                     <span className="text-gray-800">Satuk Buğrahan Öztürk, Atatürk Üniversitesi</span>
                   </div>
                 </div>
-              </div>
+              </div>*/}
 
-              {/* Tanıtım - İletişim */}
+              {/* Tanıtım - İletişim
               <div className="mb-8">
                 <h2 className="text-2xl font-bold text-pink-600 mb-4 flex items-center">
                   <svg className="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20">
@@ -134,9 +119,9 @@ const OrganizasyonKomitesi = () => {
                     <span className="text-gray-800">Mete Yağanoğlu, Atatürk Üniversitesi</span>
                   </div>
                 </div>
-              </div>
+              </div> */}
 
-              {/* Bütçe - Sponsorluk Sorumlusu */}
+              {/* Bütçe - Sponsorluk Sorumlusu 
               <div className="mb-8">
                 <h2 className="text-2xl font-bold text-yellow-600 mb-4 flex items-center">
                   <svg className="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20">
@@ -159,9 +144,9 @@ const OrganizasyonKomitesi = () => {
                     <span className="text-gray-800">Faruk Baturalp Günay, Atatürk Üniversitesi</span>
                   </div>
                 </div>
-              </div>
+              </div>*/}
 
-              {/* Yerel Düzenleme Ekibi */}
+              {/* Yerel Düzenleme Ekibi 
               <div className="mb-8">
                 <h2 className="text-2xl font-bold text-red-600 mb-4 flex items-center">
                   <svg className="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20">
@@ -203,7 +188,7 @@ const OrganizasyonKomitesi = () => {
                     <span className="text-gray-800">Satuk Buğrahan Öztürk, Atatürk Üniversitesi</span>
                   </div>
                 </div>
-              </div>
+              </div>*/}
             </div>
           </div>
 

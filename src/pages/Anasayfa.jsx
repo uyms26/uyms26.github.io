@@ -111,9 +111,9 @@ const Anasayfa = () => {
 
   const importantDates = [
     
-      { event: "Bildiri Gönderimi Son Tarihi", date: "27 Ocak 2026", status: "upcoming" },
+      { event: "Bildiri Gönderimi Son Günü", date: "27 Ocak 2026", status: "upcoming" },
       { event: "Bildiri Kabul Bildirimi", date: "20 Mart 2026", status: "upcoming" },
-      { event: "Kayıtarın Son Gün", date: "1 Nisan 2026", status: "upcoming" },
+      { event: "Kayıtların Son Günü", date: "1 Nisan 2026", status: "upcoming" },
    // { event: "Program Yayınlanması", date: "1 Mart 2026", status: "upcoming" },
     { event: "Sempozyum", date: "14-16 Mayıs 2026", status: "main" }
   ];
