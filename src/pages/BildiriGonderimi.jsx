@@ -3,7 +3,7 @@ import informationIcon from '../assets/information.svg';
 
 const BildiriGonderimi = () => {
   return (
-    <div className="min-h-screen font-serif bg-gray-50 py-12">
+    <div className="min-h-screen  bg-gray-50 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           
@@ -20,7 +20,7 @@ const BildiriGonderimi = () => {
           </div>
 
 
-    <div className="lg:col-span-2 text-2xl rounded text-justify ">
+    <div>
       
                   <p>
                   The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.                    

@@ -20,49 +20,46 @@ const BildiriCagrisi = () => {
              <p className="mb-6 text-justify" >
               Ulusal Yazılım Mühendisliği Sempozyumu (UYMS), Türkiye yazılım sektörü ile yazılım alanında çalışmalar yapan akademisyenleri bir araya getirerek yazılım mühendisliğindeki son gelişmelerin ve araştırmaların paylaşılmasını sağlayan bir platformdur. 2003 yılından bu yana gerçekleştirilen UYMS, araştırma sonuçlarının paylaşıldığı bir ortam sağlamasının ötesinde, ulusal yazılım mühendisliği araştırmalarının geleceğinin şekillenmesinde etkin rol oynamaktadır. Sempozyumun bu sene de tüm katılımcıların yararlanacağı geniş bir içerik taşıması hedeflenmektedir. 17. UYMS, 14-16 Mayıs 2026 tarihleri arasında Muğla Sıtkı Koçman Üniversitesi merkez yerleşkesinde gerçekleştirilecektir.
               <br /><br />
-              Sempozyuma Yazılım Mühendisliği alanına ilişkin, özgün sonuçlar içeren tüm kavramsal, kuramsal ve uygulamalı çalışmalar davetlidir. Bu kapsamda teknik-bilimsel ve deneyim kategorilerinde bildirilerinizi bekliyoruz. Sempozyumun bildiri ve sunum dili Türkçe ya da İngilizce olup bildirilerin başına İngilizce ve Türkçe özetlerin eklenmesi beklenmektedir.
+            Sempozyumun bildiri ve sunum dili Türkçe olup, bildirilere İngilizce özet de dahil edilecektir. Sempozyuma Yazılım Mühendisliği alanına ilişkin, özgün sonuçlar içeren tüm kavramsal, kuramsal ve uygulamalı çalışmalar davetlidir. UYMS 2026’nın ana ilgi alanları, tartışılabilecek konular bunlarla sınırlı olmamakla birlikte, aşağıda listelenmiştir:
             </p>
            </div>
+
             <h2 className="text-2xl font-semibold mb-4 text-center">UYMS 2026’nın ana ilgi alanları</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-2xl mt-16">
               <div className='bg-white rounded-2xl shadow-lg p-8'>
                 <ul className="list-disc pl-6 space-y-1 text-gray-800">
-                <li>Yazılım Evrimi ve Bakımı</li>
-                <li>Çevik Yaklaşımlar ve Çevik Yazılım</li>
-                <li>Yazılım Ölçümü Geliştirme</li>
-                <li>Yazılım Analitiği</li>
-                <li>Yazılım Geliştirme Araçları</li>
-                <li>Deneysel Yazılım Mühendisliği</li>
-                <li>Yazılım Proje Yönetimi</li>
-                <li>Yazılım Mühendisliği Eğitimi</li>
-                <li>Yazılım Süreçleri, Süreç İyileştirme</li>
-                <li>Yazılım Politikaları ve Yazılım Etiği</li>
-                <li>Yazılım Mühendisliğinde Yapay Zekâ Uygulamaları</li>
-                <li>Yazılım Mühendisliği ve Blokzincir</li>
-                <li>Yenilikçi Yazılım Uygulamaları ve Çözümleri</li>
-                <li>Yazılım Mühendisliğinde Disiplinler Arası Yaklaşımlar</li>
-                <li>Yazılım Gereksinim Mühendisliği</li>
-                
+        <li>Yazılım Gereksinim Mühendisliği</li>
+  <li>Yazılım Tasarımı</li>
+  <li>Yazılım Mimarisi</li>
+  <li>Model Güdümlü Yazılım Geliştirme</li>
+  <li>Nesneye Dayalı Teknolojiler</li>
+  <li>İlgiye (Aspect) Yönelik Yazılım Geliştirme</li>
+  <li>Gömülü ve Gerçek Zamanlı Yazılım Sistemleri Mühendisliği</li>
+  <li>Dağıtık Yazılım Mühendisliği</li>
+  <li>Çevik Yaklaşımlar ve Çevik Yazılım Geliştirme</li>
+  <li>Yenilikçi Yazılım Uygulamaları ve Çözümleri</li>
+  <li>Yazılım Çerçeveleri ve Desenleri</li>
+  <li>Yazılım Bileşenleri ve Tekrar Kullanım</li>
+  <li>Yazılım Üretim Hatları</li>
+  <li>Yazılım Geliştirme Araçları</li>
               </ul>
               </div>
               <div className='bg-white rounded-2xl shadow-lg p-8'>
               <ul className="list-disc pl-6 space-y-1 text-gray-800">
                 
-                <li>Yazılım Risk Yönetimi</li>
-                <li>Yazılım Mimarisi</li>
-                <li>Mikro-servis Mimarileri</li>
-                <li>Yazılım Konfigürasyon Yönetimi</li>
-                <li>Gömülü ve Gerçek Zamanlı Yazılım</li>
-                <li>Yazılım Kalite Güvencesi ve Yönetimi Sistemleri Mühendisliği</li>
-                <li>Yazılım Sınama ve Doğrulama</li>
-                <li>Dağıtık Yazılım Mühendisliği</li>
-                <li>Yazılım Kalite Özellikleri</li>
-                <li>Mobil Yazılım Mühendisliği</li>
-                <li>Yazılım Güvenliği</li>
-                <li>Model Güdümlü Yazılım Geliştirme</li>
-                <li>İnsan-Bilgisayar Etkileşimi</li>
-                <li>Yazılım Üretim Hatları</li>
-                <li>Açık Kaynak Yazılım Teknolojileri</li>
+                 <li>Yazılım Proje Yönetimi</li>
+  <li>Yazılım Süreçleri, Süreç İyileştirme Modelleri</li>
+  <li>Yazılım Sınama ve Doğrulama</li>
+  <li>Yazılım Kalite Güvencesi ve Yönetimi</li>
+  <li>Konfigürasyon Yönetimi</li>
+  <li>Yazılım Ölçümleri</li>
+  <li>Deneysel Yazılım Mühendisliği</li>
+  <li>Yazılım Bakımı</li>
+  <li>Servise Yönelik Yöntemler</li>
+  <li>Web Teknolojileri</li>
+  <li>Yazılım Mühendisliği Eğitimi</li>
+  <li>Yazılım Politikaları ve Yazılım Etiği</li>
+  <li>İnsan Bilgisayar Etkileşimi</li>
               </ul>
               </div>
             </div>
