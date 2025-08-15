@@ -21,20 +21,14 @@ const BildiriGonderimi = () => {
 
 
     <div className="lg:col-span-2 text-2xl rounded text-justify ">
-      <div className="bg-blue-50 rounded-xl p-6 ">
-                <h3 className="text-xl font-bold text-blue-800 mb-3 flex items-center">
-                  <img src={informationIcon} alt="Bilgi" className="w-6 h-6 mr-2" />
-                    ACKNOWLEDGMENT</h3>   
-                  <p className="text-gray-700 mb-16">
+      
+                  <p>
                   The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.                    
                   </p>
-                 <h3 className="text-xl font-bold text-blue-800 mb-3 flex items-center">
-                  <img src={informationIcon} alt="Bilgi" className="w-6 h-6 mr-2" />
-                    BİLGİLENDİRME</h3>
-                  <p className="text-gray-700">
+                  <p>
                 Konferansın hakem değerlendirme sürecinin yönetimi için Microsoft CMT hizmeti kullanılmıştır. Bu hizmet Microsoft tarafından ücretsiz olarak sağlanmıştır ve Azure bulut hizmetleri ile yazılım geliştirme ve destek masrafları da dahil olmak üzere tüm giderler Microsoft tarafından karşılanmıştır.
                   </p>
-                </div>
+                
     </div>
 
 

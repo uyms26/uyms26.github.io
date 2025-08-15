@@ -282,7 +282,7 @@ const Anasayfa = () => {
                   </p>
                  <h3 className="text-xl font-bold text-blue-800 mb-3 flex items-center">
                   <img src={informationIcon} alt="Bilgi" className="w-6 h-6 mr-2" />
-                    BİLGİLENDİRME</h3>
+                    TEŞEKKÜR</h3>
                   <p className="text-gray-700">
                 Konferansın hakem değerlendirme sürecinin yönetimi için Microsoft CMT hizmeti kullanılmıştır. Bu hizmet Microsoft tarafından ücretsiz olarak sağlanmıştır ve Azure bulut hizmetleri ile yazılım geliştirme ve destek masrafları da dahil olmak üzere tüm giderler Microsoft tarafından karşılanmıştır.
                   </p>
