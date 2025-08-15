@@ -1,4 +1,5 @@
 import React from 'react';
+import informationIcon from '../assets/information.svg';
 
 const BildiriGonderimi = () => {
   return (
@@ -13,7 +14,30 @@ const BildiriGonderimi = () => {
             <p> 
               UYMS 26 Sempozyumu'na bildiri göndermek için gerekli bilgiler ve yönergeler yakında paylaşılacaktır.
             </p>
+
+  
+                
           </div>
+
+
+    <div className="lg:col-span-2 text-2xl rounded text-justify ">
+      <div className="bg-blue-50 rounded-xl p-6 ">
+                <h3 className="text-xl font-bold text-blue-800 mb-3 flex items-center">
+                  <img src={informationIcon} alt="Bilgi" className="w-6 h-6 mr-2" />
+                    ACKNOWLEDGMENT</h3>   
+                  <p className="text-gray-700 mb-16">
+                  The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.                    
+                  </p>
+                 <h3 className="text-xl font-bold text-blue-800 mb-3 flex items-center">
+                  <img src={informationIcon} alt="Bilgi" className="w-6 h-6 mr-2" />
+                    BİLGİLENDİRME</h3>
+                  <p className="text-gray-700">
+                Konferansın hakem değerlendirme sürecinin yönetimi için Microsoft CMT hizmeti kullanılmıştır. Bu hizmet Microsoft tarafından ücretsiz olarak sağlanmıştır ve Azure bulut hizmetleri ile yazılım geliştirme ve destek masrafları da dahil olmak üzere tüm giderler Microsoft tarafından karşılanmıştır.
+                  </p>
+                </div>
+    </div>
+
+
           {/*
           <div className="space-y-8 flex flex-col lg:flex-row mb-16 lg:space-y-0 lg:space-x-8 col-span-1 lg:col-span-2">
             <div className="flex-1 space-y-8">
