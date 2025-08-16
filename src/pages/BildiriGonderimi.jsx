@@ -3,6 +3,10 @@ import informationIcon from '../assets/information.svg';
 
 const BildiriGonderimi = () => {
   return (
+        <body>The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.</body>
+  )};
+
+              {/*
     <div className="min-h-screen  bg-gray-50 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -32,7 +36,7 @@ const BildiriGonderimi = () => {
     </div>
 
 
-          {/*
+
           <div className="space-y-8 flex flex-col lg:flex-row mb-16 lg:space-y-0 lg:space-x-8 col-span-1 lg:col-span-2">
             <div className="flex-1 space-y-8">
                 <div className="bg-white  rounded-2xl shadow-lg p-2 h-3/4">
@@ -70,13 +74,13 @@ const BildiriGonderimi = () => {
                 </p>
               </div>
             </div>
-          </div>*/}
+          </div>
 
           
         </div>
       </div>
     </div>
   );
-};
+};*/}
 
 export default BildiriGonderimi;
