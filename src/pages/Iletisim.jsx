@@ -15,27 +15,20 @@ const Iletisim = () => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     setError("");
     setSent(false);
     setIsSubmitting(true);
 
-    try {
-      // Simulate form submission delay
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      
-      const mailto = `mailto:uyms26@mu.edu.tr?subject=${encodeURIComponent(form.konu)}&body=${encodeURIComponent(
-        `Ad: ${form.ad}\nE-mail: ${form.email}\n\nMesaj: ${form.mesaj}`
-      )}`;
-      window.location.href = mailto;
-      setSent(true);
-      setForm({ ad: "", email: "", konu: "", mesaj: "" });
-    } catch (err) {
-      setError("Bir hata oluştu. Lütfen tekrar deneyin.");
-    } finally {
-      setIsSubmitting(false);
-    }
+    // Mailto link
+    const mailto = `mailto:uyms26@mu.edu.tr?subject=${encodeURIComponent(form.konu)}&body=${encodeURIComponent(
+      `Ad: ${form.ad}\nE-mail: ${form.email}\n\nMesaj: ${form.mesaj}`
+    )}`;
+    window.location.href = mailto;
+    setSent(true);
+    setForm({ ad: "", email: "", konu: "", mesaj: "" });
+    setIsSubmitting(false);
   };
 
   const contactInfo = [
@@ -57,7 +50,7 @@ const Iletisim = () => {
         </svg>
       ),
       title: "E-posta",
-      content: "uyms26@mu.edu.tr",
+  content: <a href="mailto:uyms26@mu.edu.tr" className="text-blue-700 underline hover:text-blue-900">uyms26@mu.edu.tr</a>,
       color: "green"
     },
     {
