@@ -1,10 +1,10 @@
 
-import React, { useState, useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
-import UYMSLogo from '../assets/UYMS-logo-150x150.png';
-import Logo1 from '../assets/logo1.png';
+import { useState, useEffect } from 'react';
+
+
+
 import LandingHero from '../assets/banner.png';
-import informationIcon from '../assets/information.svg';
+
 const Anasayfa = () => {
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
