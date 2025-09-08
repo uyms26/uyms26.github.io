@@ -34,8 +34,9 @@ const OrganizasyonKomitesi = () => {
                   </div>
                   <div className="flex items-center p-3 bg-blue-50 rounded-lg">
                     <div className="w-3 h-3 bg-blue-500 rounded-full mr-3"></div>
-                    <span className="text-gray-800">Selim Yımaz, Muğla Sıtkı Koçman Üniversitesi</span>
+                    <span className="text-gray-800">Selim Yılmaz, Muğla Sıtkı Koçman Üniversitesi</span>
                   </div>
+                  
                 </div>
               </div>
 
@@ -55,6 +56,10 @@ const OrganizasyonKomitesi = () => {
                   <div className="flex items-center p-3 bg-green-50 rounded-lg">
                     <div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
                     <span className="text-gray-800">Selim Yılmaz, Muğla Sıtkı Koçman Üniversitesi</span>
+                  </div>
+                  <div className="flex items-center p-3 bg-green-50 rounded-lg">
+                    <div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
+                    <span className="text-gray-800">Emine Elif Tülay, Muğla Sıtkı Koçman Üniversitesi</span>
                   </div>
                   <div className="flex items-center p-3 bg-green-50 rounded-lg">
                     <div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
