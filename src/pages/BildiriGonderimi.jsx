@@ -16,16 +16,55 @@ const BildiriGonderimi = () => {
               </h2>
              
               <p className='text-xl'>
-                  Bildiri gönderimi <a href="https://cmt3.research.microsoft.com/UYMS2026" target="_blank" rel="noopener noreferrer" className="text-blue-700 underline hover:text-blue-900">CMT (Conference Management Toolkit)</a> sistemi üzerinden gerçekleştirilecektir. Bildiri gönderebilmek için öncelikle CMT sistemine <a href="https://cmt3.research.microsoft.com/docs/help/general/account-creation.html" target="_blank" rel="noopener noreferrer" className="text-blue-700 underline hover:text-blue-900">hesap oluşturmanız</a> gerekmektedir. Hesap oluşturma ve başvuru süreciyle ilgili detaylı bilgiye <a href="https://cmt3.research.microsoft.com/docs/help/author/author-submission-form.html" target="_blank" rel="noopener noreferrer" className="text-blue-700 underline hover:text-blue-900">buradan</a> ulaşabilirsiniz. Bildiriler Türkçe veya İngilizce olarak, bildiri kitabı şablonuna uygun şekilde hazırlanmalıdır. Her bildiride hem Türkçe hem de İngilizce başlık, özet ve anahtar kelimeler bulunmalıdır. Bildirilere üstbilgi (header), altbilgi (footer) ve sayfa numarası eklenmemelidir. Bildiriler MS-Word formatında sisteme yüklenmelidir. Kabul edilen bildirilerin yazarlarından en az birinin konferansa kayıt olması ve bildiriyi sunması zorunludur. Kabul edilen ve sunulan tüm bildiriler sempozyum bildiri kitabında yayımlanacaktır.
+                  Bildiri gönderimi <a href="https://cmt3.research.microsoft.com/UYMS2026" target="_blank" rel="noopener noreferrer" className="text-blue-700 underline hover:text-blue-900">CMT (Conference Management Toolkit)</a> sistemi üzerinden gerçekleştirilecektir. Bildiri gönderebilmek için öncelikle CMT sistemine <a href="https://cmt3.research.microsoft.com/docs/help/general/account-creation.html" target="_blank" rel="noopener noreferrer" className="text-blue-700 underline hover:text-blue-900">hesap oluşturmanız</a> gerekmektedir. Hesap oluşturma ve başvuru süreciyle ilgili detaylı bilgiye <a href="https://cmt3.research.microsoft.com/docs/help/author/author-submission-form.html" target="_blank" rel="noopener noreferrer" className="text-blue-700 underline hover:text-blue-900">buradan</a> ulaşabilirsiniz. 
               </p>
-              <p className="mb-2 text-xl text-blue-900 font-semibold">
+              
+              <p className='text-xl mt-4'>
+                Bildiriler Türkçe veya İngilizce olarak, bildiri kitabı şablonuna uygun şekilde hazırlanmalıdır. Her bildiride hem Türkçe hem de İngilizce başlık, özet ve anahtar kelimeler bulunmalıdır. Bildirilere üstbilgi (header), altbilgi (footer) ve sayfa numarası eklenmemelidir.
+              </p>
+
+             {/* <p className="mb-2 text-xl text-blue-900 font-semibold">
                   Bildirinizi göndermek için <a href="https://cmt3.research.microsoft.com/UYMS2026" target="_blank" rel="noopener noreferrer" className="text-blue-700 underline hover:text-blue-900">UYMS 2026 CMT başvuru sayfasını</a> kullanabilirsiniz.
+                </p>*/}
+                <p className='text-xl mt-4'>
+                  Bildiriler, konular bölümünde listelenenlerle sınırlı olmaksızın, yazılım mühendisliği alanında yapılan araştırma ve uygulama çalışmalarını içermelidir. En az 5, en fazla 10 sayfa olması gereken bildiriler tam metin üzerinden değerlendirilecektir. Bildiriler PDF formatında gönderilmeli ve aşağıda paylaşılan şablonlar ile uyumlu olmalıdır.
                 </p>
+   <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+                  <li className="bg-white rounded-lg p-4 shadow-sm flex items-start space-x-3">
+                    
+                    <div>
+                      <a href="http://ceur-ws.org/Vol-XXX/CEURART.zip" target="_blank" rel="noopener noreferrer" className="text-blue-700 font-medium underline hover:text-blue-900">
+                        LaTeX Şablonu
+                      </a>
+                      
+                    </div>
+                  </li>
+
+                  <li className="bg-white rounded-lg p-4 shadow-sm flex items-start space-x-3">
+                    
+                    <div>
+                      <a href="https://www.overleaf.com/latex/templates/template-for-submissions-to-ceur-workshop-proceedings-ceur-ws-dot-org/wqyfdgftmcfw" target="_blank" rel="noopener noreferrer" className="text-blue-700 font-medium underline hover:text-blue-900">
+                        LaTeX Şablonu (Overleaf)
+                      </a>
+                      
+                    </div>
+                  </li>
+
+                  <li className="bg-white rounded-lg p-4 shadow-sm flex items-start space-x-3">
+                    
+                    <div>
+                      <a href="https://ceur-ws.org/Vol-XXX/CEUR-Template-1col.odt" target="_blank" rel="noopener noreferrer" className="text-blue-700 font-medium underline hover:text-blue-900">
+                        LibreOffice Şablonu
+                      </a>
+                      
+                    </div>
+                  </li>
+                </ul>
             </div>
             {/* 3 cards in a row below */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-center">
               <div className="col-span-3 flex justify-center">
-                <p className="text-center text-xl">Bildiri formatına ilişkin kurallar daha sonra duyurulacaktır.</p>
+               
               </div>
              
 
