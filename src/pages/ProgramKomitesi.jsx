@@ -110,6 +110,15 @@ const ProgramKomitesi = () => {
 <div className="flex items-center p-3 bg-green-50 rounded-r-lg"><div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span className="text-gray-800">Murat Osman Ünalır, Ege Üniversitesi</span></div>
 <div className="flex items-center p-3 bg-green-50 rounded-l-lg"><div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span className="text-gray-800">Hüseyin Ünlü, İzmir Yüksek Teknoloji Enstitüsü</span></div>
 <div className="flex items-center p-3 bg-green-50 rounded-r-lg"><div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span className="text-gray-800">Ali Yazıcı, Atılım Üniversitesi</span></div>
+<div className="flex items-center p-3 bg-green-50 rounded-l-lg"><div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span className="text-gray-800">Cemal	Yılmaz, Sabancı Üniversitesi</span></div>
+<div className="flex items-center p-3 bg-green-50 rounded-r-lg"><div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span className="text-gray-800">Murat	Yılmaz, Gazi Üniversitesi</span></div>
+<div className="flex items-center p-3 bg-green-50 rounded-l-lg"><div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span className="text-gray-800">Gokcen	Yilmaz, University of Exeter</span></div>
+<div className="flex items-center p-3 bg-green-50 rounded-r-lg"><div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span className="text-gray-800">Celal	Ziftci	Google</span></div>
+
+
+
+
+
 
 
                 </div>
