@@ -1,6 +1,75 @@
 import React from 'react';
 
 const ProgramKomitesi = () => {
+  const members = [
+    "Mehmet Aksit, University of Twente (Emeritus) & Waddem",
+    "Mehmet Aktaş, Yıldız Teknik Üniversitesi & Finnet",
+    "Baris Aktemur, Intel",
+    "Onur Aktuğ, ASELSAN",
+    "Haluk Altunel, Dgpays",
+    "Merve Astekin, SINTEF",
+    "Tolga Ayav, İzmir Yüksek Teknoloji Enstitüsü",
+    "Fatma Basak Aydemir, Utrecht University",
+    "Önder Babur, Wageningen University & Research",
+    "Selami Bağrıyanık, İstanbul Sağlık ve Teknoloji Üniversitesi",
+    "Tuna Başıbüyük, ASELSAN",
+    "Fevzi Belli, İzmir Yüksek Teknoloji Enstitüsü",
+    "Aysu Betin Can, Colorado School of Mines",
+    "Feza Buzluca, İstanbul Teknik Üniversitesi",
+    "Çağatay Çatal, Qatar University",
+    "Moharram Challenger, University of Antwerp",
+    "Ahmet Coşkunçay, Atatürk Üniversitesi",
+    "Cihat Çetinkaya, Muğla Sıtkı Koçman Üniversitesi",
+    "Onur Demirors, İzmir Yüksek Teknoloji Enstitüsü",
+    "Ali Dogru, Orta Doğu Teknik Üniversitesi & UT San Antonio",
+    "Mustafa Dursun, ASELSAN",
+    "Ferhat Erata, Yale University",
+    "R. Cenk Erdur, Ege Üniversitesi",
+    "Ersin Ersoy, Paycell & Alanya Üniversitesi",
+    "Yusuf Erten, İzmir Ekonomi Üniversitesi",
+    "Vahid Garousi, Queen's University Belfast",
+    "Cagdas Gerede, Ankara Yıldırım Beyazıt Üniversitesi",
+    "Sinem Getir Yaman, Ege Üniversitesi, University of York",
+    "Bahar Gezici Geçer, Osmaniye Korkut Ata Üniversitesi",
+    "Görkem Giray, Independent Researcher",
+    "Arda Goknil, SINTEF",
+    "Mehmet Göktürk, Gebze Teknik Üniversitesi",
+    "Tugba Gurgen Erdogan, Hacettepe Üniversitesi",
+    "Selçuk Güceğlioğlu, T.C. Başbakanlık",
+    "Önder Gürcan, NORCE",
+    "Tuna Hacaloglu, ETS",
+    "Emrah Inan, İzmir Yüksek Teknoloji Enstitüsü",
+    "Oya Kalıpsız, Yıldız Teknik Üniversitesi",
+    "Pinar Karagoz, Orta Doğu Teknik Üniversitesi",
+    "Geylani Kardas, Ege Üniversitesi",
+    "Karani Kardaş, Udemy",
+    "Kamer Kaya, Sabancı Üniversitesi",
+    "Onur Kilincceker, University of Antwerp",
+    "Altan Kocyigit, Orta Doğu Teknik Üniversitesi",
+    "Ayça Kolukısa, Hacettepe Üniversitesi",
+    "Hasan Konya, ASELSAN",
+    "Neslihan Küçükateş Ömüral, Borgwarner",
+    "Alptekin Küpçü, Koç Üniversitesi",
+    "Emel Küpçü, Istanbul Bilgi Üniversitesi",
+    "Tolga Ovatman, İstanbul Teknik Üniversitesi",
+    "Mert Özkaya, Yeditepe Üniversitesi",
+    "Rana Özakıncı, HAVELSAN",
+    "Bilge Say, Independent Researcher",
+    "Alper Şen, Boğaziçi Üniversitesi",
+    "Bedir Tekinerdogan, Wageningen University and Research",
+    "Barış Tezel, Dokuz Eylül Üniversitesi",
+    "Yasemin Topaloglu, Ege Üniversitesi",
+    "Ayse Tosun, İstanbul Teknik Üniversitesi",
+    "Tugkan Tuglular, İzmir Yüksek Teknoloji Enstitüsü",
+    "Eray Tuzun, Bilkent Üniversitesi",
+    "Murat Osman Ünalır, Ege Üniversitesi",
+    "Hüseyin Ünlü, İzmir Yüksek Teknoloji Enstitüsü",
+    "Ali Yazıcı, Atılım Üniversitesi",
+    "Cemal Yılmaz, Sabancı Üniversitesi",
+    "Murat Yılmaz, Gazi Üniversitesi",
+    "Gokcen Yilmaz, University of Exeter",
+    "Celal Ziftci, Google",
+  ];
   return (
     <div className="min-h-screen font-serif bg-gray-50 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -48,74 +117,17 @@ const ProgramKomitesi = () => {
                   Program Komitesi
                 </h2>
                 <div className="space-y-2 grid grid-cols-2">
-                  <div className="flex items-center p-3 bg-green-50 rounded-l-lg "><div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span className="text-gray-800">Mehmet Aksit, University of Twente (Emeritus) & Waddem</span></div>
-<div className="flex items-center p-3 bg-green-50 rounded-r-lg"><div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span className="text-gray-800">Mehmet Aktaş, Yıldız Teknik Üniversitesi & Finnet</span></div>
-<div className="flex items-center p-3 bg-green-50 rounded-l-lg"><div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span className="text-gray-800">Baris Aktemur, Intel</span></div>
-<div className="flex items-center p-3 bg-green-50 rounded-r-lg"><div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span className="text-gray-800">Onur Aktuğ, ASELSAN</span></div>
-<div className="flex items-center p-3 bg-green-50 rounded-l-lg"><div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span className="text-gray-800">Haluk Altunel, Dgpays</span></div>
-<div className="flex items-center p-3 bg-green-50 rounded-r-lg"><div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span className="text-gray-800">Merve Astekin, SINTEF</span></div>
-<div className="flex items-center p-3 bg-green-50 rounded-l-lg"><div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span className="text-gray-800">Tolga Ayav, İzmir Yüksek Teknoloji Enstitüsü</span></div>
-<div className="flex items-center p-3 bg-green-50 rounded-r-lg"><div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span className="text-gray-800">Fatma Basak Aydemir, Utrecht University</span></div>
-<div className="flex items-center p-3 bg-green-50 rounded-l-lg"><div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span className="text-gray-800">Önder Babur, Wageningen University & Research</span></div>
-<div className="flex items-center p-3 bg-green-50 rounded-r-lg"><div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span className="text-gray-800">Selami Bağrıyanık, İstanbul Sağlık ve Teknoloji Üniversitesi</span></div>
-<div className="flex items-center p-3 bg-green-50 rounded-l-lg"><div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span className="text-gray-800">Tuna Başıbüyük, ASELSAN</span></div>
-<div className="flex items-center p-3 bg-green-50 rounded-r-lg"><div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span className="text-gray-800">Fevzi Belli, İzmir Yüksek Teknoloji Enstitüsü</span></div>
-<div className="flex items-center p-3 bg-green-50 rounded-l-lg"><div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span className="text-gray-800">Aysu Betin Can, Colorado School of Mines</span></div>
-<div className="flex items-center p-3 bg-green-50 rounded-r-lg"><div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span className="text-gray-800">Feza Buzluca, İstanbul Teknik Üniversitesi</span></div>
-<div className="flex items-center p-3 bg-green-50 rounded-l-lg"><div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span className="text-gray-800">Çağatay Çatal, Qatar University</span></div>
-<div className="flex items-center p-3 bg-green-50 rounded-r-lg"><div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span className="text-gray-800">Moharram Challenger, University of Antwerp</span></div>
-<div className="flex items-center p-3 bg-green-50 rounded-l-lg"><div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span className="text-gray-800">Ahmet Coşkunçay, Atatürk Üniversitesi</span></div>
-<div className="flex items-center p-3 bg-green-50 rounded-r-lg"><div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span className="text-gray-800">Cihat Çetinkaya, Muğla Sıtkı Koçman Üniversitesi</span></div>
-<div className="flex items-center p-3 bg-green-50 rounded-l-lg"><div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span className="text-gray-800">Onur Demirors, İzmir Yüksek Teknoloji Enstitüsü</span></div>
-<div className="flex items-center p-3 bg-green-50 rounded-r-lg"><div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span className="text-gray-800">Ali Dogru, Orta Doğu Teknik Üniversitesi & UT San Antonio</span></div>
-<div className="flex items-center p-3 bg-green-50 rounded-l-lg"><div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span className="text-gray-800">Mustafa Dursun, ASELSAN</span></div>
-<div className="flex items-center p-3 bg-green-50 rounded-r-lg"><div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span className="text-gray-800">Ferhat Erata, Yale University</span></div>
-<div className="flex items-center p-3 bg-green-50 rounded-l-lg"><div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span className="text-gray-800">R. Cenk Erdur, Ege Üniversitesi</span></div>
-<div className="flex items-center p-3 bg-green-50 rounded-r-lg"><div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span className="text-gray-800">Ersin Ersoy, Paycell & Alanya Üniversitesi</span></div>
-<div className="flex items-center p-3 bg-green-50 rounded-l-lg"><div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span className="text-gray-800">Yusuf Erten, İzmir Ekonomi Üniversitesi</span></div>
-<div className="flex items-center p-3 bg-green-50 rounded-r-lg"><div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span className="text-gray-800">Vahid Garousi, Queen's University Belfast</span></div>
-<div className="flex items-center p-3 bg-green-50 rounded-l-lg"><div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span className="text-gray-800">Cagdas Gerede, Ankara Yıldırım Beyazıt Üniversitesi</span></div>
-<div className="flex items-center p-3 bg-green-50 rounded-r-lg"><div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span className="text-gray-800">Sinem Getir Yaman, Ege Üniversitesi, University of York</span></div>
-<div className="flex items-center p-3 bg-green-50 rounded-l-lg"><div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span className="text-gray-800">Bahar Gezici Geçer, Osmaniye Korkut Ata Üniversitesi</span></div>
-<div className="flex items-center p-3 bg-green-50 rounded-r-lg"><div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span className="text-gray-800">Görkem Giray, Independent Researcher</span></div>
-<div className="flex items-center p-3 bg-green-50 rounded-l-lg"><div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span className="text-gray-800">Arda Goknil, SINTEF</span></div>
-<div className="flex items-center p-3 bg-green-50 rounded-r-lg"><div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span className="text-gray-800">Mehmet Göktürk, Gebze Teknik Üniversitesi</span></div>
-<div className="flex items-center p-3 bg-green-50 rounded-l-lg"><div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span className="text-gray-800">Tugba Gurgen Erdogan, Hacettepe Üniversitesi</span></div>
-<div className="flex items-center p-3 bg-green-50 rounded-r-lg"><div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span className="text-gray-800">Selçuk Güceğlioğlu, T.C. Başbakanlık</span></div>
-<div className="flex items-center p-3 bg-green-50 rounded-l-lg"><div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span className="text-gray-800">Önder Gürcan, NORCE</span></div>
-<div className="flex items-center p-3 bg-green-50 rounded-r-lg"><div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span className="text-gray-800">Tuna Hacaloglu, ETS</span></div>
-<div className="flex items-center p-3 bg-green-50 rounded-l-lg"><div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span className="text-gray-800">Emrah Inan, İzmir Yüksek Teknoloji Enstitüsü</span></div>
-<div className="flex items-center p-3 bg-green-50 rounded-r-lg"><div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span className="text-gray-800">Oya Kalıpsız, Yıldız Teknik Üniversitesi</span></div>
-<div className="flex items-center p-3 bg-green-50 rounded-l-lg"><div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span className="text-gray-800">Pinar Karagoz, Orta Doğu Teknik Üniversitesi</span></div>
-<div className="flex items-center p-3 bg-green-50 rounded-r-lg"><div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span className="text-gray-800">Geylani Kardas, Ege Üniversitesi</span></div>
-<div className="flex items-center p-3 bg-green-50 rounded-l-lg"><div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span className="text-gray-800">Karani Kardaş, Udemy</span></div>
-<div className="flex items-center p-3 bg-green-50 rounded-r-lg"><div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span className="text-gray-800">Kamer Kaya, Sabancı Üniversitesi</span></div>
-<div className="flex items-center p-3 bg-green-50 rounded-l-lg"><div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span className="text-gray-800">Onur Kilincceker, University of Antwerp</span></div>
-<div className="flex items-center p-3 bg-green-50 rounded-r-lg"><div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span className="text-gray-800">Altan Kocyigit, Orta Doğu Teknik Üniversitesi</span></div>
-<div className="flex items-center p-3 bg-green-50 rounded-l-lg"><div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span className="text-gray-800">Ayça Kolukısa, Hacettepe Üniversitesi</span></div>
-<div className="flex items-center p-3 bg-green-50 rounded-r-lg"><div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span className="text-gray-800">Hasan Konya, ASELSAN</span></div>
-<div className="flex items-center p-3 bg-green-50 rounded-l-lg"><div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span className="text-gray-800">Neslihan Küçükateş Ömüral, Borgwarner</span></div>
-<div className="flex items-center p-3 bg-green-50 rounded-r-lg"><div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span className="text-gray-800">Alptekin Küpçü, Koç Üniversitesi</span></div>
-<div className="flex items-center p-3 bg-green-50 rounded-l-lg"><div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span className="text-gray-800">Emel Küpçü, Istanbul Bilgi Üniversitesi</span></div>
-<div className="flex items-center p-3 bg-green-50 rounded-r-lg"><div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span className="text-gray-800">Tolga Ovatman, İstanbul Teknik Üniversitesi</span></div>
-<div className="flex items-center p-3 bg-green-50 rounded-l-lg"><div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span className="text-gray-800">Rana Özakıncı, HAVELSAN</span></div>
-<div className="flex items-center p-3 bg-green-50 rounded-r-lg"><div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span className="text-gray-800">Bilge Say, Independent Researcher</span></div>
-<div className="flex items-center p-3 bg-green-50 rounded-l-lg"><div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span className="text-gray-800">Alper Şen, Boğaziçi Üniversitesi</span></div>
-<div className="flex items-center p-3 bg-green-50 rounded-r-lg"><div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span className="text-gray-800">Bedir Tekinerdogan, Wageningen University and Research</span></div>
-<div className="flex items-center p-3 bg-green-50 rounded-l-lg"><div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span className="text-gray-800">Barış Tezel, Dokuz Eylül Üniversitesi</span></div>
-<div className="flex items-center p-3 bg-green-50 rounded-r-lg"><div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span className="text-gray-800">Yasemin Topaloglu, Ege Üniversitesi</span></div>
-<div className="flex items-center p-3 bg-green-50 rounded-l-lg"><div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span className="text-gray-800">Ayse Tosun, İstanbul Teknik Üniversitesi</span></div>
-<div className="flex items-center p-3 bg-green-50 rounded-r-lg"><div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span className="text-gray-800">Tugkan Tuglular, İzmir Yüksek Teknoloji Enstitüsü</span></div>
-<div className="flex items-center p-3 bg-green-50 rounded-l-lg"><div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span className="text-gray-800">Eray Tuzun, Bilkent Üniversitesi</span></div>
-<div className="flex items-center p-3 bg-green-50 rounded-r-lg"><div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span className="text-gray-800">Murat Osman Ünalır, Ege Üniversitesi</span></div>
-<div className="flex items-center p-3 bg-green-50 rounded-l-lg"><div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span className="text-gray-800">Hüseyin Ünlü, İzmir Yüksek Teknoloji Enstitüsü</span></div>
-<div className="flex items-center p-3 bg-green-50 rounded-r-lg"><div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span className="text-gray-800">Ali Yazıcı, Atılım Üniversitesi</span></div>
-<div className="flex items-center p-3 bg-green-50 rounded-l-lg"><div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span className="text-gray-800">Cemal	Yılmaz, Sabancı Üniversitesi</span></div>
-<div className="flex items-center p-3 bg-green-50 rounded-r-lg"><div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span className="text-gray-800">Murat	Yılmaz, Gazi Üniversitesi</span></div>
-<div className="flex items-center p-3 bg-green-50 rounded-l-lg"><div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span className="text-gray-800">Gokcen	Yilmaz, University of Exeter</span></div>
-<div className="flex items-center p-3 bg-green-50 rounded-r-lg"><div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span className="text-gray-800">Celal	Ziftci	Google</span></div>
-
-
+    {members.map((member, index) => (
+        <div
+          key={index}
+          className={`flex items-center p-3 bg-green-50 ${
+            index % 2 === 0 ? "rounded-l-lg" : "rounded-r-lg"
+          }`}
+        >
+          <div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
+          <span className="text-gray-800">{member}</span>
+        </div>
+      ))}
 
 
 
