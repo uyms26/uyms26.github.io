@@ -93,7 +93,7 @@ const ProgramKomitesi = () => {
                   <svg className="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
                   </svg>
-                  Program Komitesi Eş Başkanları
+                  Program Komitesi Başkanları
                 </h2>
                  <div className="space-y-2">
                   <div className="flex items-center p-3 bg-blue-50 rounded-l-lg">

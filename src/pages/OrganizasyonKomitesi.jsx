@@ -25,7 +25,7 @@ const OrganizasyonKomitesi = () => {
                   <svg className="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
                   </svg>
-                  Organizasyon Komitesi Eş Başkanları
+                  Organizasyon Komitesi Başkanları
                 </h2>
                 <div className="space-y-2">
                   <div className="flex items-center p-3 bg-blue-50 rounded-lg">
@@ -56,6 +56,10 @@ const OrganizasyonKomitesi = () => {
                   <div className="flex items-center p-3 bg-green-50 rounded-lg">
                     <div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
                     <span className="text-gray-800">Selim Yılmaz, Muğla Sıtkı Koçman Üniversitesi</span>
+                  </div>
+                    <div className="flex items-center p-3 bg-green-50 rounded-lg">
+                    <div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
+                    <span className="text-gray-800">Osman Özkaraca, Muğla Sıtkı Koçman Üniversitesi</span>
                   </div>
                   <div className="flex items-center p-3 bg-green-50 rounded-lg">
                     <div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
