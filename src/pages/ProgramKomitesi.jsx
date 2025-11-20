@@ -48,8 +48,7 @@ const ProgramKomitesi = () => {
     "Altan Kocyigit, Orta Doğu Teknik Üniversitesi",
     "Ayça Kolukısa, Hacettepe Üniversitesi",
     "Hasan Konya, ASELSAN",
-    
-,
+    "Yavuz Köroğlu, İstanbul Teknik Üniversitesi",
     "Neslihan Küçükateş Ömüral, Borgwarner",
     "Alptekin Küpçü, Koç Üniversitesi",
     "Emel Küpçü, Istanbul Bilgi Üniversitesi",
