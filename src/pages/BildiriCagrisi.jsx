@@ -18,48 +18,59 @@ const BildiriCagrisi = () => {
            
            <div className='bg-white rounded-2xl shadow-lg p-8 mb-32'>
              <p className="mb-6 text-justify" >
-              Ulusal Yazılım Mühendisliği Sempozyumu (UYMS), Türkiye yazılım sektörü ile yazılım alanında çalışmalar yapan akademisyenleri bir araya getirerek yazılım mühendisliğindeki son gelişmelerin ve araştırmaların paylaşılmasını sağlayan bir platformdur. 2003 yılından bu yana gerçekleştirilen UYMS, araştırma sonuçlarının paylaşıldığı bir ortam sağlamasının ötesinde, ulusal yazılım mühendisliği araştırmalarının geleceğinin şekillenmesinde etkin rol oynamaktadır. Sempozyumun bu sene de tüm katılımcıların yararlanacağı geniş bir içerik taşıması hedeflenmektedir. 17. UYMS, 14-16 Mayıs 2026 tarihleri arasında Muğla Sıtkı Koçman Üniversitesi merkez yerleşkesinde gerçekleştirilecektir.
-              <br /><br />
-            Sempozyumun bildiri ve sunum dili Türkçe olup, bildirilere İngilizce özet de dahil edilecektir. Sempozyuma Yazılım Mühendisliği alanına ilişkin, özgün sonuçlar içeren tüm kavramsal, kuramsal ve uygulamalı çalışmalar davetlidir. UYMS 2026’nın ana ilgi alanları, tartışılabilecek konular bunlarla sınırlı olmamakla birlikte, aşağıda listelenmiştir:
-            </p>
+Ulusal Yazılım Mühendisliği Sempozyumu (UYMS), yazılım sektörü ile bu alanda çalışmalar yapan akademisyenleri bir
+araya getirerek yazılım mühendisliğindeki son gelişmelerin ve araştırmaların paylaşılmasını sağlayan bir platformdur.
+2003 yılından bu yana yazılım mühendisliği alanında gerçekleştirilen, Türkiye'nin en köklü akademik etkinliklerinden
+biri olan UYMS, alanındaki akademik ve sektörel birikimi bir araya getirmeyi amaçlarken, yazılım mühendisliği
+çalışmalarının şekillenmesinde de önemli bir rol oynamaktadır.
+14 – 16 Mayıs 2026’da Muğla Sıtkı Koçman Üniversitesi ev sahipliğinde gerçekleştirilecek olan 17. UYMS, yazılım
+mühendisliğine dair güncel gelişmelerin, yenilikçi araştırmaların ve uygulamaya dönük çalışmaların çok-disiplinli bir
+bakış açısıyla tartışılacağı bir ortam sunmayı hedeflemektedir. Akademi ve sektör arasında güçlü bir köprü kurmayı,
+yenilikçi araştırmaları görünür kılmayı ve geleceğin yazılım mühendisliğini şekillendirecek tartışmalara zemin
+oluşturmayı amaçlayan 2026 UYMS’ye, Yazılım Mühendisliği alanına ilişkin, özgün sonuçlar içeren tüm kavramsal,
+kuramsal ve uygulamalı çalışmalar davetlidir. Bu kapsamda, yazılım mühendisliğinin kuramsal temellerinden,
+uygulamalı örneklerine kadar geniş bir yelpazede oluşturulacak bildiriler, alanında uzman en az üç hakem tarafından
+akademik titizlikle değerlendirilerek, sempozyum süresince katılımcılarla paylaşılacaktır.              <br /><br />
+Sempozyumun bildiri ve sunum dili Türkçe ya da İngilizce olup, bildirilerin başına İngilizce ve Türkçe başlık ile özetlerin
+eklenmesi beklenmektedir. Kabul edilip sunulan bildiriler çevrimiçi yayımlanmak üzere CEUR-WS.org’a gönderilecektir.   
+<br /> <br />UYMS 2026’nın ana ilgi alanları ve tartışılabilecek konular bunlarla sınırlı olmamakla birlikte, aşağıda listelenmiştir:   </p>
            </div>
 
             <h2 className="text-2xl font-semibold mb-4 text-center">UYMS 2026’nın ana ilgi alanları</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-2xl mt-16">
               <div className='bg-white rounded-2xl shadow-lg p-8'>
                 <ul className="list-disc pl-6 space-y-1 text-gray-800">
-        <li>Yazılım Gereksinim Mühendisliği</li>
-  <li>Yazılım Tasarımı</li>
-  <li>Yazılım Mimarisi</li>
-  <li>Model Güdümlü Yazılım Geliştirme</li>
-  <li>Nesneye Dayalı Teknolojiler</li>
-  <li>İlgiye (Aspect) Yönelik Yazılım Geliştirme</li>
-  <li>Gömülü ve Gerçek Zamanlı Yazılım Sistemleri Mühendisliği</li>
-  <li>Dağıtık Yazılım Mühendisliği</li>
-  <li>Çevik Yaklaşımlar ve Çevik Yazılım Geliştirme</li>
-  <li>Yenilikçi Yazılım Uygulamaları ve Çözümleri</li>
-  <li>Yazılım Çerçeveleri ve Desenleri</li>
-  <li>Yazılım Bileşenleri ve Tekrar Kullanım</li>
-  <li>Yazılım Üretim Hatları</li>
-  <li>Yazılım Geliştirme Araçları</li>
+
+                <li>Yazılım Gereksinim Mühendisliği</li>
+                <li>Yazılım Tasarımı ve Mimarisi</li>
+                <li>Yazılım Geliştirme Süreçleri</li>
+                <li>Yazılım Analitiği ve Ölçümleme</li>
+          <li>Yazılım Modellemesi</li>
+          <li>Yazılım Test Mühendisliği</li>
+         <li>Yazılım Evrimi ve Bakımı</li>
+          <li>Yazılım Süreçleri ve Süreç İyileştirme Modelleri</li>
+            <li>Çevik Yaklaşımlar ve Çevik Yazılım Geliştirme</li>
+            <li>Gömülü ve Gerçek Zamanlı Yazılım Geliştirme</li>
+            <li>Web Teknolojileri</li>
+
+
+    
               </ul>
               </div>
               <div className='bg-white rounded-2xl shadow-lg p-8'>
               <ul className="list-disc pl-6 space-y-1 text-gray-800">
                 
-                 <li>Yazılım Proje Yönetimi</li>
-  <li>Yazılım Süreçleri, Süreç İyileştirme Modelleri</li>
-  <li>Yazılım Sınama ve Doğrulama</li>
-  <li>Yazılım Kalite Güvencesi ve Yönetimi</li>
-  <li>Konfigürasyon Yönetimi</li>
-  <li>Yazılım Ölçümleri</li>
-  <li>Deneysel Yazılım Mühendisliği</li>
-  <li>Yazılım Bakımı</li>
-  <li>Servise Yönelik Yöntemler</li>
-  <li>Web Teknolojileri</li>
-  <li>Yazılım Mühendisliği Eğitimi</li>
-  <li>Yazılım Politikaları ve Yazılım Etiği</li>
-  <li>İnsan Bilgisayar Etkileşimi</li>
+
+            <li>Yazılımda Yapay Zekâ Uygulamaları</li>
+            <li>Yazılım Mühendisliği Eğitimi</li>
+            <li>Deneysel Yazılım Mühendisliği</li>
+            <li>Yenilikçi Yazılım Uygulamaları ve Çözümleri</li>
+            <li>İnsan-Bilgisayar Etkileşimleri</li>
+            <li>Açık Kaynak Yazılım Teknolojileri</li>
+            <li>Yazılım Ürün Hatları</li>
+            <li>Yazılım Proje Yönetimi</li>
+            <li>Yazılım Kalite Güvencesi ve Yönetimi</li>
+            <li>Yazılım Güvenliği</li>
               </ul>
               </div>
             </div>

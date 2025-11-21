@@ -27,42 +27,47 @@ const ProgramKomitesi = () => {
                   Yönlendirme Komitesi
                 </h2>
                 <div className="space-y-2">
-                  <div className="flex items-center p-3 bg-green-50 rounded-lg">
+                    <div className="flex items-center p-3 bg-green-50 rounded-lg">
                     <div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
-                    <span className="text-gray-800">Ali Doğru, ODTÜ & University of Texas at San Antonia</span>
+                    <span className="text-gray-800">Onur Demirörs, İzmir Yüksek Teknoloji Enstitüsü</span>
                   </div>
-                  <div className="flex items-center p-3 bg-green-50 rounded-lg">
-                    <div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
-                    <span className="text-gray-800">⁠Ayça Kolukısa Tarhan, Hacettepe Üniversitesi</span>
-                  </div>
-                  <div className="flex items-center p-3 bg-green-50 rounded-lg">
-                    <div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
-                    <span className="text-gray-800">⁠Cemal Yılmaz, Sabancı Üniversitesi</span>
-                  </div>
-                  <div className="flex items-center p-3 bg-green-50 rounded-lg">
-                    <div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
-                    <span className="text-gray-800">⁠Geylani Kardaş, Ege Üniversitesi</span>
-                  </div>
-                  <div className="flex items-center p-3 bg-green-50 rounded-lg">
-                    <div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
-                    <span className="text-gray-800">⁠Murat Yılmaz, Gazi Üniversitesi</span>
-                  </div>
-                  <div className="flex items-center p-3 bg-green-50 rounded-lg">
+                              <div className="flex items-center p-3 bg-green-50 rounded-lg">
                     <div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
                     <span className="text-gray-800">Oğuz Dikenelli, Ege Üniversitesi</span>
                   </div>
                   <div className="flex items-center p-3 bg-green-50 rounded-lg">
                     <div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
-                    <span className="text-gray-800">Onur Demirörs, İzmir Yüksek Teknoloji Enstitüsü</span>
+                    <span className="text-gray-800">Ali Doğru, ODTÜ & University of Texas at San Antonia</span>
                   </div>
-                  <div className="flex items-center p-3 bg-green-50 rounded-lg">
+                      <div className="flex items-center p-3 bg-green-50 rounded-lg">
+                    <div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
+                    <span className="text-gray-800">⁠Geylani Kardaş, Ege Üniversitesi</span>
+                  </div>
+                    <div className="flex items-center p-3 bg-green-50 rounded-lg">
                     <div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
                     <span className="text-gray-800">Oya Kalıpsız, Yıldız Teknik Üniversitesi</span>
                   </div>
                   <div className="flex items-center p-3 bg-green-50 rounded-lg">
                     <div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
+                    <span className="text-gray-800">⁠Ayça Kolukısa Tarhan, Hacettepe Üniversitesi</span>
+                  </div>
+
+                  <div className="flex items-center p-3 bg-green-50 rounded-lg">
+                    <div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
                     <span className="text-gray-800">Yasemin Topaloğlu, Ege Üniversitesi</span>
                   </div>
+                  <div className="flex items-center p-3 bg-green-50 rounded-lg">
+                    <div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
+                    <span className="text-gray-800">⁠Cemal Yılmaz, Sabancı Üniversitesi</span>
+                  </div>
+              
+                  <div className="flex items-center p-3 bg-green-50 rounded-lg">
+                    <div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
+                    <span className="text-gray-800">⁠Murat Yılmaz, Gazi Üniversitesi</span>
+                  </div>
+      
+                
+                
                 </div>
               </div>
 

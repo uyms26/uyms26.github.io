@@ -49,14 +49,8 @@ const OrganizasyonKomitesi = () => {
                   Organizasyon Komitesi
                 </h2>
                 <div className="space-y-2">
-                  <div className="flex items-center p-3 bg-green-50 rounded-lg">
-                    <div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
-                    <span className="text-gray-800">Cihat Çetinkaya, Muğla Sıtkı Koçman Üniversitesi</span>
-                  </div>
-                  <div className="flex items-center p-3 bg-green-50 rounded-lg">
-                    <div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
-                    <span className="text-gray-800">Selim Yılmaz, Muğla Sıtkı Koçman Üniversitesi</span>
-                  </div>
+                 
+  
                     <div className="flex items-center p-3 bg-green-50 rounded-lg">
                     <div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
                     <span className="text-gray-800">Osman Özkaraca, Muğla Sıtkı Koçman Üniversitesi</span>
