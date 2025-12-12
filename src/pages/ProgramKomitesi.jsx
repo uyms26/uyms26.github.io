@@ -65,6 +65,7 @@ const ProgramKomitesi = () => {
     "Eray Tuzun, Bilkent Üniversitesi",
     "Murat Osman Ünalır, Ege Üniversitesi",
     "Hüseyin Ünlü, İzmir Yüksek Teknoloji Enstitüsü",
+    "Filiz Yeşildoruk, DefineX",
     "Ali Yazıcı, Atılım Üniversitesi",
     "Cemal Yılmaz, Sabancı Üniversitesi",
     "Murat Yılmaz, Gazi Üniversitesi",
