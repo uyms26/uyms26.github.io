@@ -1,5 +1,6 @@
 import React from "react";
 import UYMSLogo from "../assets/UYMS-logo-150x150.png";
+import { NavLink } from "react-router-dom";
 const Footer = () => (
   <footer className="bg-gradient-to-r font-serif from-gray-900 via-blue-900 to-gray-900 text-gray-200">
     {/* Main Footer Content */}
@@ -50,29 +51,30 @@ const Footer = () => (
           <h3 className="text-lg font-bold text-white border-b border-blue-600 pb-2">Hızlı Erişim</h3>
           <ul className="space-y-2">
             <li>
-              <a href="/" className="text-gray-300 hover:text-blue-400 transition-colors text-sm">
+              <NavLink to="/" className="text-gray-300 hover:text-blue-400 transition-colors text-sm">
                 Ana Sayfa
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a href="/kayit" className="text-gray-300 hover:text-blue-400 transition-colors text-sm">
+              
+              <NavLink to="/kayit" className="text-gray-300 hover:text-blue-400 transition-colors text-sm">
                 Kayıt
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a href="/organizasyon" className="text-gray-300 hover:text-blue-400 transition-colors text-sm">
+              <NavLink to="/organizasyon-komitesi" className="text-gray-300 hover:text-blue-400 transition-colors text-sm">
                 Organizasyon
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a href="/bildiri-cagrisi" className="text-gray-300 hover:text-blue-400 transition-colors text-sm">
+              <NavLink to="/bildiri-cagrisi" className="text-gray-300 hover:text-blue-400 transition-colors text-sm">
                 Bildiri Çağrısı
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a href="/ulasim" className="text-gray-300 hover:text-blue-400 transition-colors text-sm">
+              <NavLink to="/ulasim" className="text-gray-300 hover:text-blue-400 transition-colors text-sm">
                 Ulaşım
-              </a>
+              </NavLink>
             </li>
           </ul>
         </div>
