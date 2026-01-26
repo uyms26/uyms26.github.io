@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 
 const Iletisim = () => {
-  const [form, setForm] = useState({ 
-    ad: "", 
-    email: "", 
-    konu: "", 
-    mesaj: "" 
+  const [form, setForm] = useState({
+    ad: "",
+    email: "",
+    konu: "",
+    mesaj: ""
   });
   const [sent, setSent] = useState(false);
   const [error, setError] = useState("");
@@ -50,7 +50,7 @@ const Iletisim = () => {
         </svg>
       ),
       title: "E-posta",
-  content: <a href="mailto:uyms26@mu.edu.tr" className="text-blue-700 underline hover:text-blue-900">uyms26@mu.edu.tr</a>,
+      content: <a href="mailto:uyms26@mu.edu.tr" className="text-blue-700 underline hover:text-blue-900">uyms26@mu.edu.tr</a>,
       color: "green"
     },
     {
@@ -171,11 +171,10 @@ const Iletisim = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className={`w-full py-4 px-8 rounded-xl font-bold text-lg text-white transition-all duration-200 transform ${
-                    isSubmitting 
-                      ? 'bg-gray-400 cursor-not-allowed' 
+                  className={`w-full py-4 px-8 rounded-xl font-bold text-lg text-white transition-all duration-200 transform ${isSubmitting
+                      ? 'bg-gray-400 cursor-not-allowed'
                       : 'bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 hover:scale-105 shadow-lg'
-                  }`}
+                    }`}
                 >
                   {isSubmitting ? (
                     <div className="flex items-center justify-center">
@@ -274,7 +273,7 @@ const Iletisim = () => {
                     Bildiri gönderimi için son tarih nedir?
                   </h3>
                   <p className="text-gray-600">
-                    Bildiri gönderimi için son tarih 27 Ocak 2026'dır.
+                    Bildiri gönderimi için son tarih 8 Şubat 2026'dır.
                   </p>
                 </div>
                 <div className="border-l-4 border-orange-500 pl-6">

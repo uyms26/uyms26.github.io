@@ -9,9 +9,9 @@ const Footer = () => (
         {/* UYMS 26 Info */}
         <div className="space-y-4">
           <div className="flex items-center space-x-3">
-            <img 
+            <img
               src={UYMSLogo}
-              alt="UYMS Logo" 
+              alt="UYMS Logo"
               className="w-12 h-12 rounded-full"
             />
             <div>
@@ -22,7 +22,7 @@ const Footer = () => (
           <p className="text-gray-300 text-sm leading-relaxed">
             17. Ulusal Yazılım Mühendisliği Sempozyumu
           </p>
-         
+
         </div>
 
         {/* Quick Links */}
@@ -35,7 +35,7 @@ const Footer = () => (
               </NavLink>
             </li>
             <li>
-              
+
               <NavLink to="/kayit" className="text-gray-300 hover:text-blue-400 transition-colors text-sm">
                 Kayıt
               </NavLink>
@@ -92,7 +92,7 @@ const Footer = () => (
           <div className="space-y-3">
             <div className="bg-gray-800 rounded-lg p-3">
               <p className="text-xs text-blue-400 font-semibold">Bildiri Gönderimi Son Tarihi</p>
-              <p className="text-sm text-gray-300">27 Ocak 2026</p>
+              <p className="text-sm text-gray-300">8 Şubat 2026</p>
             </div>
 
             <div className="bg-gray-800 rounded-lg p-3">
@@ -120,7 +120,7 @@ const Footer = () => (
               Muğla Sıtkı Koçman Üniversitesi Yazılım Mühendisliği Bölümü tarafından düzenlenmektedir.
             </p>
           </div>
-          
+
         </div>
       </div>
     </div>
