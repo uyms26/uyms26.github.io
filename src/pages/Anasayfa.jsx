@@ -140,7 +140,7 @@ const Anasayfa = () => {
 
   const importantDates = [
 
-    { event: "Bildiri Gönderimi Son Günü", date: <><span className="line-through text-gray-400">27 Ocak 2026</span><br />8 Şubat 2026</>, status: "upcoming" },
+    { event: "Bildiri Gönderimi Son Günü", date: <><span className="line-through text-gray-400">27 Ocak 2026</span><br /><span className="text-red-600">8 Şubat 2026</span></>, status: "upcoming" },
     { event: "Bildiri Kabul Bildirimi", date: "20 Mart 2026", status: "upcoming" },
     { event: "Kayıtların Son Günü", date: "1 Nisan 2026", status: "upcoming" },
     // { event: "Program Yayınlanması", date: "1 Mart 2026", status: "upcoming" },
