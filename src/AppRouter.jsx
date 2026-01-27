@@ -12,6 +12,7 @@ import Ulasim from "./pages/Ulasim";
 import Konaklama from "./pages/Konaklama";
 import MuglaHakkinda from "./pages/MuglaHakkinda";
 import Program from "./pages/Program";
+import DavetliKonusmacilar from "./pages/DavetliKonusmacilar";
 import Anasayfa from "./pages/Anasayfa";
 import Iletisim from "./pages/Iletisim";
 import Tarihce from "./pages/Tarihce";
@@ -24,7 +25,8 @@ function App() {
         <Route path="/kayit" element={<Kayıt />} />
         <Route path="/bildiri-cagrisi" element={<BildiriCagrisi />} />
         <Route path="/bildiri-gonderimi" element={<BildiriGonderimi />} />
-        <Route path="/program" element={<Program />} />
+        <Route path="/sempozyum-programi" element={<Program />} />
+        <Route path="/davetli-konusmacilar" element={<DavetliKonusmacilar />} />
         <Route path="/organizasyon-komitesi" element={<OrganizasyonKomitesi />} />
         <Route path="/program-komitesi" element={<ProgramKomitesi />} />
         <Route path="/yonlendirme-komitesi" element={<YonlendirmeKomitesi />} />

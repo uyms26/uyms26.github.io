@@ -30,12 +30,12 @@ const Navbar = () => {
                 <div className="flex items-center justify-between h-20 md:h-24 lg:h-32">
                     {/* Logo Section */}
                     <div className="flex items-center space-x-3">
-                       <a href="https://www.mu.edu.tr" className="flex items-center">
-                        <img 
-                            src={UniLogo} 
-                            alt="University Logo" 
-                            className="h-14 md:h-16 lg:h-24 w-auto transition-transform hover:scale-105" 
-                        /></a>
+                        <a href="https://www.mu.edu.tr" className="flex items-center">
+                            <img
+                                src={UniLogo}
+                                alt="University Logo"
+                                className="h-14 md:h-16 lg:h-24 w-auto transition-transform hover:scale-105"
+                            /></a>
                         <div className="hidden md:block">
                             <div className="h-6 w-px bg-gradient-to-b from-transparent via-gray-300 to-transparent"></div>
                         </div>
@@ -46,7 +46,7 @@ const Navbar = () => {
                         <NavLink to="/" onClick={closeMenu}>
                             Anasayfa
                         </NavLink>
-                        
+
                         {/* Bildiri Dropdown */}
                         <div className="relative group">
                             <button
@@ -70,10 +70,29 @@ const Navbar = () => {
                             </div>
                         </div>
 
-                        <NavLink to="/program" onClick={closeMenu}>
-                            Program
-                        </NavLink>
-                        
+                        {/* Program Dropdown */}
+                        <div className="relative group">
+                            <button
+                                onClick={() => toggleDropdown('program')}
+                                className="px-4 py-2 rounded-lg font-medium transition-all duration-200 text-gray-700 hover:text-blue-600 hover:bg-blue-50 flex items-center space-x-1"
+                            >
+                                <span>Program</span>
+                                <svg className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === 'program' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+                            <div className={`absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 ${activeDropdown === 'program' ? 'opacity-100 visible' : ''}`}>
+                                <div className="py-2">
+                                    <DropdownLink to="/sempozyum-programi" onClick={closeMenu}>
+                                        Sempozyum Programı
+                                    </DropdownLink>
+                                    <DropdownLink to="/davetli-konusmacilar" onClick={closeMenu}>
+                                        Davetli Konuşmacı
+                                    </DropdownLink>
+                                </div>
+                            </div>
+                        </div>
+
                         {/* Organizasyon Dropdown */}
                         <div className="relative group">
                             <button
@@ -103,7 +122,7 @@ const Navbar = () => {
                         <NavLink to="/kayit" onClick={closeMenu}>
                             Kayıt
                         </NavLink>
-                        
+
                         {/* Ulaşım & Konaklama Dropdown */}
                         <div className="relative group">
                             <button
@@ -140,12 +159,12 @@ const Navbar = () => {
 
                     {/* Right Logo */}
                     <div className="flex items-center space-x-3">
-                        <img 
-                            src={UYMSLogo} 
-                            alt="UYMS Logo" 
-                            className="h-10 md:h-16 lg:h-24 w-auto transition-transform hover:scale-105" 
+                        <img
+                            src={UYMSLogo}
+                            alt="UYMS Logo"
+                            className="h-10 md:h-16 lg:h-24 w-auto transition-transform hover:scale-105"
                         />
-                        
+
                         {/* Mobile Menu Button */}
                         <button
                             onClick={toggleMenu}
@@ -167,12 +186,12 @@ const Navbar = () => {
                 </div>
 
                 {/* Mobile Navigation */}
-                <div className={`lg:hidden transition-all duration-300 ease-in-out ${isMenuOpen ? 'max-h-[80vh] opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}> 
+                <div className={`lg:hidden transition-all duration-300 ease-in-out ${isMenuOpen ? 'max-h-[80vh] opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
                     <div className="px-2 pt-2 pb-3 space-y-1 bg-white/95 backdrop-blur-md rounded-lg mt-2 shadow-lg border border-gray-100 max-h-[70vh] overflow-y-auto">
                         <MobileNavLink to="/" onClick={closeMenu}>
                             Anasayfa
                         </MobileNavLink>
-                        
+
                         {/* Mobile Bildiri Section */}
                         <div className="space-y-1">
                             <button
@@ -196,10 +215,29 @@ const Navbar = () => {
                             )}
                         </div>
 
-                        <MobileNavLink to="/program" onClick={closeMenu}>
-                            Program
-                        </MobileNavLink>
-                        
+                        {/* Mobile Program Section */}
+                        <div className="space-y-1">
+                            <button
+                                onClick={() => toggleDropdown('program-mobile')}
+                                className="w-full text-left px-4 py-3 rounded-lg font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 flex items-center justify-between"
+                            >
+                                <span>Program</span>
+                                <svg className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === 'program-mobile' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+                            {activeDropdown === 'program-mobile' && (
+                                <div className="ml-4 space-y-1">
+                                    <MobileNavLink to="/sempozyum-programi" onClick={closeMenu}>
+                                        Sempozyum Programı
+                                    </MobileNavLink>
+                                    <MobileNavLink to="/davetli-konusmacilar" onClick={closeMenu}>
+                                        Davetli Konuşmacılar
+                                    </MobileNavLink>
+                                </div>
+                            )}
+                        </div>
+
                         {/* Mobile Organizasyon Section */}
                         <div className="space-y-1">
                             <button
@@ -229,7 +267,7 @@ const Navbar = () => {
                         <MobileNavLink to="/kayit" onClick={closeMenu}>
                             Kayıt
                         </MobileNavLink>
-                        
+
                         {/* Mobile Ulaşım & Konaklama Section */}
                         <div className="space-y-1">
                             <button
@@ -264,12 +302,12 @@ const Navbar = () => {
                         </MobileNavLink>
                     </div>
                 </div>
-         
+
 
             </div>
-            
+
         </nav>
-        
+
     );
 };
 
@@ -279,11 +317,10 @@ const NavLink = ({ to, children, onClick, isActive = false }) => {
         return (
             <button
                 onClick={onClick}
-                className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 relative group ${
-                    isActive 
-                        ? 'text-blue-600 bg-blue-50 border border-blue-200' 
-                        : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50'
-                }`}
+                className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 relative group ${isActive
+                    ? 'text-blue-600 bg-blue-50 border border-blue-200'
+                    : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50'
+                    }`}
             >
                 {children}
                 {!isActive && (
@@ -297,11 +334,10 @@ const NavLink = ({ to, children, onClick, isActive = false }) => {
         <Link
             to={to}
             onClick={onClick}
-            className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 relative group ${
-                isActive 
-                    ? 'text-blue-600 bg-blue-50 border border-blue-200' 
-                    : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50'
-            }`}
+            className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 relative group ${isActive
+                ? 'text-blue-600 bg-blue-50 border border-blue-200'
+                : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50'
+                }`}
         >
             {children}
             {!isActive && (
@@ -330,11 +366,10 @@ const MobileNavLink = ({ to, children, onClick, isActive = false }) => {
         return (
             <button
                 onClick={onClick}
-                className={`w-full text-left px-4 py-3 rounded-lg font-medium transition-all duration-200 ${
-                    isActive 
-                        ? 'text-blue-600 bg-blue-50 border border-blue-200' 
-                        : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50'
-                }`}
+                className={`w-full text-left px-4 py-3 rounded-lg font-medium transition-all duration-200 ${isActive
+                    ? 'text-blue-600 bg-blue-50 border border-blue-200'
+                    : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50'
+                    }`}
             >
                 {children}
             </button>
@@ -345,11 +380,10 @@ const MobileNavLink = ({ to, children, onClick, isActive = false }) => {
         <Link
             to={to}
             onClick={onClick}
-            className={`block w-full text-left px-4 py-3 rounded-lg font-medium transition-all duration-200 ${
-                isActive 
-                    ? 'text-blue-600 bg-blue-50 border border-blue-200' 
-                    : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50'
-            }`}
+            className={`block w-full text-left px-4 py-3 rounded-lg font-medium transition-all duration-200 ${isActive
+                ? 'text-blue-600 bg-blue-50 border border-blue-200'
+                : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50'
+                }`}
         >
             {children}
         </Link>
