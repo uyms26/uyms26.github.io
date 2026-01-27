@@ -34,7 +34,7 @@ const DavetliKonusmacilar = () => {
 
                         {/* Biography Section */}
                         <div className="bg-white rounded-3xl shadow-xl p-8 md:p-10 border border-gray-100 flex flex-col justify-center lg:col-span-3">
-                            <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                            <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center">
                                 <span className="w-10 h-10 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center mr-4">
                                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5z" />
@@ -44,7 +44,7 @@ const DavetliKonusmacilar = () => {
                                 </span>
                                 Biyografi
                             </h3>
-                            <div className="space-y-4 text-gray-700 leading-relaxed text-lg">
+                            <div className="space-y-4 text-gray-700 leading-relaxed text-md">
                                 <p>
                                     Profesör Bedir Tekinerdoğan, yazılım mühendisliği, sistem mühendisliği ve bilgi teknolojisi alanlarında 30 yılı aşkın deneyime sahip bir bilgisayar bilimcisidir. Yüksek lisans ve doktora derecelerini Hollanda'daki Twente Üniversitesi'nden Bilgisayar Bilimleri alanında almıştır. Şu anda Wageningen Üniversitesi ve Araştırma Merkezi'nde tam profesör ve Bilgi Teknolojisi Grubu Başkanı olarak görev yapmaktadır.                                </p>
                                 <p>
@@ -58,7 +58,7 @@ const DavetliKonusmacilar = () => {
                     {/* Row 2: Abstract Section (Full Width) */}
                     <div className="bg-white rounded-3xl shadow-xl p-8 md:p-12 border border-gray-100">
                         <div className="mb-8 border-b border-gray-100 pb-8">
-                            <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                            <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
                                 <span className="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mr-4">
                                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
@@ -66,12 +66,12 @@ const DavetliKonusmacilar = () => {
                                 </span>
                                 Konuşma Başlığı
                             </h3>
-                            <p className="text-2xl font-semibold text-blue-600 italic leading-relaxed">
+                            <p className="text-xl font-semibold text-blue-600 italic leading-relaxed">
                                 "Yazılımdan Sistemlere: Karmaşık Bir Dünya İçin Mühendisliği Yeniden Düşünmek"
                             </p>
                         </div>
 
-                        <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                        <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center">
                             <span className="w-10 h-10 bg-green-100 text-green-600 rounded-xl flex items-center justify-center mr-4">
                                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -79,7 +79,7 @@ const DavetliKonusmacilar = () => {
                             </span>
                             Özet
                         </h3>
-                        <div className="space-y-6 text-gray-700 leading-relaxed text-lg">
+                        <div className="space-y-6 text-gray-700 leading-relaxed text-md">
                             <p>
                                 Modern dijital çözümler artık bağımsız yazılım ürünleri değildir. Yazılım, yapay zeka, veri, donanım, insan, organizasyonlar ve düzenleyici kısıtlamaları entegre eden karmaşık, yazılım yoğun sistemlerdir. Bu sistemler ölçek olarak büyüdükçe ve daha bağımlı hale geldikçe, kırılgan mimariler, entegrasyon karmaşıklığı, uzun vadeli evrim için sınırlı destek, yaşam döngüsü yönetimindeki zorluklar ve artan yönetim ve uyumluluk gereksinimleri gibi tekrarlayan zorluklar ortaya çıkmaktadır. Bu sorunların ele alınması, geleneksel yazılım mühendisliği uygulamalarının kapsamının ötesine geçmektedir.                            </p>
                             <p>
