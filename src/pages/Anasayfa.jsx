@@ -12,7 +12,7 @@ const Anasayfa = () => {
     minutes: 0,
     seconds: 0
   });
-  const [showPopup, setShowPopup] = useState(true);
+  const [showPopup, setShowPopup] = useState(false);
   const [countdown, setCountdown] = useState(5);
 
   // Sempozyum tarihi: 14-16 Mayıs 2026
