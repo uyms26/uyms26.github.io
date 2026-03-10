@@ -2,6 +2,7 @@ import React from 'react';
 
 const ProgramKomitesi = () => {
   const members = [
+    "Ferit Akova, RuyaSoft",
     "Mehmet Aksit, University of Twente (Emeritus) & Waddem",
     "Mehmet Aktaş, Yıldız Teknik Üniversitesi & Finnet",
     "Baris Aktemur, Intel",
@@ -43,6 +44,7 @@ const ProgramKomitesi = () => {
     "Pinar Karagoz, Orta Doğu Teknik Üniversitesi",
     "Geylani Kardas, Ege Üniversitesi",
     "Karani Kardaş, Udemy",
+    "Fırat Kart, Apple Inc.",
     "Kamer Kaya, Sabancı Üniversitesi",
     "Onur Kilincceker, University of Antwerp",
     "Altan Kocyigit, Orta Doğu Teknik Üniversitesi",
