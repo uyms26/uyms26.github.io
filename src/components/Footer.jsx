@@ -114,7 +114,7 @@ const Footer = () => (
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="text-center md:text-left mb-4 md:mb-0">
             <p className="text-sm text-gray-400">
-              © {new Date().getFullYear()} Virtus Arge Yazılım A.Ş. Tüm hakları saklıdır.
+              © {new Date().getFullYear()} <a href="https://virtusrnd.github.io/" className="text-blue-400 hover:underline">Virtus Arge Yazılım A.Ş. Tüm hakları saklıdır.</a>
             </p>
             <p className="text-xs text-gray-500 mt-1">
               Muğla Sıtkı Koçman Üniversitesi Yazılım Mühendisliği Bölümü tarafından düzenlenmektedir.
