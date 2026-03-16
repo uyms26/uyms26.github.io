@@ -97,7 +97,7 @@ const Footer = () => (
 
             <div className="bg-gray-800 rounded-lg p-3">
               <p className="text-xs text-blue-400 font-semibold">Kayıt</p>
-              <p className="text-sm text-gray-300">1 Nisan 2026</p>
+              <p className="text-sm text-gray-300">3 Nisan 2026</p>
             </div>
             <div className="bg-gray-800 rounded-lg p-3">
               <p className="text-xs text-blue-400 font-semibold">Sempozyum</p>
