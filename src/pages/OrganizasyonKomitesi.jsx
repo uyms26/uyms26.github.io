@@ -9,10 +9,10 @@ const OrganizasyonKomitesi = () => {
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Organizasyon Komitesi
           </h1>
-           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             UYMS 26 Sempozyumu'nun başarıyla gerçekleştirilmesi için çalışan değerli komite üyelerimiz
           </p>
-          
+
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-24">
@@ -36,7 +36,7 @@ const OrganizasyonKomitesi = () => {
                     <div className="w-3 h-3 bg-blue-500 rounded-full mr-3"></div>
                     <span className="text-gray-800">Selim Yılmaz, Muğla Sıtkı Koçman Üniversitesi</span>
                   </div>
-                  
+
                 </div>
               </div>
 
@@ -49,17 +49,26 @@ const OrganizasyonKomitesi = () => {
                   Organizasyon Komitesi
                 </h2>
                 <div className="space-y-2">
-                 
-  
-                    <div className="flex items-center p-3 bg-green-50 rounded-lg">
+
+
+                  <div className="flex items-center p-3 bg-green-50 rounded-lg">
                     <div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
                     <span className="text-gray-800">Osman Özkaraca, Muğla Sıtkı Koçman Üniversitesi</span>
                   </div>
                   <div className="flex items-center p-3 bg-green-50 rounded-lg">
                     <div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
+                    <span className="text-gray-800">Eralp Doğu, Muğla Sıtkı Koçman Üniversitesi</span>
+                  </div>
+                  <div className="flex items-center p-3 bg-green-50 rounded-lg">
+                    <div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
                     <span className="text-gray-800">Emine Elif Tülay, Muğla Sıtkı Koçman Üniversitesi</span>
                   </div>
-                     <div className="flex items-center p-3 bg-green-50 rounded-lg">
+                  <div className="flex items-center p-3 bg-green-50 rounded-lg">
+                    <div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
+                    <span className="text-gray-800">Yasemin Özdem Yılmaz, Muğla Sıtkı Koçman Üniversitesi</span>
+                  </div>
+
+                  <div className="flex items-center p-3 bg-green-50 rounded-lg">
                     <div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
                     <span className="text-gray-800">Zeynep Filiz Eren, Muğla Sıtkı Koçman Üniversitesi</span>
                   </div>
@@ -67,7 +76,7 @@ const OrganizasyonKomitesi = () => {
                     <div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
                     <span className="text-gray-800">Hasan Ali Özkan, Muğla Sıtkı Koçman Üniversitesi</span>
                   </div>
-                
+
                 </div>
               </div>
 
@@ -208,7 +217,7 @@ const OrganizasyonKomitesi = () => {
                 </svg>
                 İletişim
               </h2>
-              
+
               <div className="space-y-6">
                 <div className="flex items-start">
                   <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
@@ -248,7 +257,7 @@ const OrganizasyonKomitesi = () => {
                 </div>
               </div>
 
-             
+
             </div>
           </div>
         </div>

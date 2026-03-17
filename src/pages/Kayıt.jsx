@@ -41,7 +41,7 @@ const Kayıt = () => {
 								<tr className="bg-gray-50 border-b border-gray-200">
 									<th className="px-6 py-6 text-sm font-bold text-gray-900 uppercase tracking-wider">Kayıt Türü</th>
 									<th className="px-6 py-6 text-sm font-bold text-blue-700 uppercase tracking-wider">
-										İndirimli Erken Kayıt
+										İndİrİmlİ Erken Kayıt
 										<span className="block text-xs font-normal text-gray-500 mt-1">(03.04.2026 öncesi)</span>
 									</th>
 									<th className="px-6 py-6 text-sm font-bold text-indigo-700 uppercase tracking-wider">
@@ -142,26 +142,26 @@ const Kayıt = () => {
 						</div>
 						<h2 className="text-2xl font-bold text-gray-800">Hesap ve Kayıt Bilgileri</h2>
 					</div>
-					
+
 					<div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
 						<div className="space-y-4">
 							<p className="text-gray-700 leading-relaxed">
 								Kayıt işleminizi tamamlamak için kayıt ücretini aşağıdaki hesaba yatırmanız ve ödeme dekontunuzla birlikte yandaki formu doldurmanız gerekmektedir.
 							</p>
-							
+
 							<div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
 								<div className="space-y-3">
 									<div>
 										<p className="text-sm text-gray-500 font-semibold mb-1">Hesap Sahibi</p>
-										<p className="text-gray-900 font-medium">Yakında eklenecektir</p>
+										<p className="text-gray-900 font-medium">Virtus Arge A.Ş.</p>
 									</div>
 									<div>
 										<p className="text-sm text-gray-500 font-semibold mb-1">Banka Adı</p>
-										<p className="text-gray-900 font-medium">Yakında eklenecektir</p>
+										<p className="text-gray-900 font-medium">Türkiye İş Bankası A.Ş.</p>
 									</div>
 									<div>
 										<p className="text-sm text-gray-500 font-semibold mb-1">IBAN</p>
-										<p className="text-gray-900 font-mono text-lg font-medium tracking-wider">TR00 0000 0000 0000 0000 0000 00</p>
+										<p className="text-gray-900 font-mono text-lg font-medium tracking-wider">TR66 0006 4000 0013 6001 7956 38</p>
 									</div>
 								</div>
 							</div>
@@ -177,9 +177,9 @@ const Kayıt = () => {
 							<p className="text-gray-600 text-center text-sm px-4">
 								Ödemenizi yaptıktan sonra dekontunuzu hazırlayıp lütfen aşağıdaki kayıt formunu doldurunuz.
 							</p>
-							<a 
-								href="https://forms.gle/6vX4Dd53ZerpWj9K8" 
-								target="_blank" 
+							<a
+								href="https://forms.gle/6vX4Dd53ZerpWj9K8"
+								target="_blank"
 								rel="noopener noreferrer"
 								className="mt-4 inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white text-lg font-bold rounded-xl transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1"
 							>
