@@ -4,6 +4,9 @@ import { useState, useEffect } from 'react';
 
 
 import LandingHero from '../assets/banner.png';
+import { NavLink } from 'react-router-dom';
+import AselsanLogo from '../assets/aselsan-png-logo.png';
+import VirtusLogo from '../assets/virtusrndlogo.png';
 
 const Anasayfa = () => {
   const [timeLeft, setTimeLeft] = useState({
@@ -96,47 +99,55 @@ const Anasayfa = () => {
     }
   ];
 
-  const supporters = [
-    {
-      name: "Muğla Sıtkı Koçman Üniversitesi", logo: (
-        <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5z" />
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
-        </svg>
-      )
-    },
-    {
-      name: "TÜBİTAK", logo: (
-        <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-        </svg>
-      )
-    },
-    {
-      name: "Bilim Akademisi", logo: (
-        <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5z" />
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
-        </svg>
-      )
-    },
-    {
-      name: "Yazılım Mühendisliği Derneği", logo: (
-        <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-        </svg>
-      )
-    },
-    {
-      name: "IEEE", logo: (
-        <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-        </svg>
-      )
-    }
-  ];
+  const sponsors = {
+    main: [
+      {
+        name: "Aselsan", 
+        url: "https://www.aselsan.com/tr",
+        logo: (
+          <img src={AselsanLogo} alt="Aselsan Logo" className="w-auto h-16 object-contain" />
+        )
+      }
+    ],
+    others: [
+      {
+        name: "TÜBİTAK", logo: (
+          <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+          </svg>
+        )
+      },
+      {
+        name: "Bilim Akademisi", logo: (
+          <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5z" />
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+          </svg>
+        )
+      },
+      {
+        name: "Virtus R&D", 
+        url: "https://virtusrnd.com/",
+        logo: (
+          <img src={VirtusLogo} alt="Virtus R&D Logo" className="w-auto h-12 object-contain" />
+        )
+      },
+      {
+        name: "Yazılım Mühendisliği Derneği", logo: (
+          <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+          </svg>
+        )
+      },
+      {
+        name: "IEEE", logo: (
+          <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+        )
+      }
+    ]
+  };
 
   const importantDates = [
 
@@ -170,10 +181,10 @@ const Anasayfa = () => {
             </div>
             <h3 className="text-2xl font-bold text-gray-800 mb-2">DUYURU</h3>
             <p className="text-xl text-blue-600 font-semibold mb-4">
-              Bildiri Gönderimi
+              Kayıtlar Açıldı!
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
-              Yoğun istek üzerine bildiri gönderimi süresi <span className="font-bold text-blue-700">8 Şubat 2026</span> tarihine kadar ertelenmiştir.
+              Kayıtlar açılmıştır. <span className="font-bold text-blue-700">3 Nisan 2026</span> tarihine kadar  <NavLink to='/kayit' className="text-blue-600 underline"> buradan </NavLink>  erken kayıt olabilirsiniz.
             </p>
             <div className="mt-6 text-sm text-gray-400 italic">
               (Bu bildirim {countdown} saniye içinde kapanacaktır)
@@ -184,7 +195,7 @@ const Anasayfa = () => {
 
       <div className="bg-cover bg-center bg-no-repeat min-h-[300px] sm:min-h-[400px] md:min-h-[500px] lg:min-h-[600px] xl:min-h-[800px]" style={{ backgroundImage: `url(${LandingHero})` }}>
         <div className="absolute  top-7/11 left-5/12">
-          {/* Hero Section 
+          {/*Hero Section 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             
             <NavLink to="/kayit">
@@ -222,21 +233,60 @@ const Anasayfa = () => {
               </div>
             </div>
 
-            {/* Supporters Section 
             <div className="bg-white rounded-2xl shadow-xl p-8">
               <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">
                 Destekleyenler
               </h2>
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-                {supporters.map((supporter, index) => (
-                  <div key={index} className="text-center p-4 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl border border-blue-200 hover:shadow-lg transition-all duration-200">
-                    <div className="text-4xl mb-3">{supporter.logo}</div>
-                    <h3 className="font-semibold text-gray-800 text-sm">{supporter.name}</h3>
+              <div className="space-y-12">
+                
+                {/* Ana Sponsor */}
+                <div className="mb-10">
+                  <h3 className="text-xl font-bold text-center text-blue-800 mb-6 uppercase tracking-wider relative inline-block left-1/2 transform -translate-x-1/2">
+                    Ana Sponsor
+                    <span className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-blue-400 to-indigo-600 rounded-full"></span>
+                  </h3>
+                  <div className="flex justify-center flex-wrap gap-8">
+                    {sponsors.main.map((supporter, index) => (
+                      supporter.url ? (
+                        <a key={index} href={supporter.url} target="_blank" rel="noopener noreferrer" className="block w-full sm:w-80">
+                          <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl border-2 border-blue-200 shadow-md hover:shadow-xl transition-all duration-300 w-full h-full cursor-pointer">
+                            <div className="flex justify-center text-blue-600 mb-4">{supporter.logo}</div>
+                            <h4 className="font-bold text-gray-800 text-lg">{supporter.name}</h4>
+                          </div>
+                        </a>
+                      ) : (
+                        <div key={index} className="text-center p-6 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl border-2 border-blue-200 shadow-md hover:shadow-xl transition-all duration-300 w-full sm:w-80">
+                          <div className="flex justify-center text-blue-600 mb-4">{supporter.logo}</div>
+                          <h4 className="font-bold text-gray-800 text-lg">{supporter.name}</h4>
+                        </div>
+                      )
+                    ))}
                   </div>
-                ))}
+                </div>
+
+                {/* Diğer Destekleyenler (Başlıksız) */}
+                <div>
+                  <div className="flex justify-center flex-wrap gap-6">
+                    {sponsors.others.map((supporter, index) => (
+                      supporter.url ? (
+                        <a key={index} href={supporter.url} target="_blank" rel="noopener noreferrer" className="block w-48 sm:w-56">
+                          <div className="text-center p-5 bg-gradient-to-br from-gray-50 to-slate-50 rounded-xl border border-gray-200 hover:shadow-lg transition-all duration-300 w-full h-full cursor-pointer">
+                            <div className="flex justify-center text-gray-600 mb-3">{supporter.logo}</div>
+                            <h4 className="font-semibold text-gray-800 text-sm">{supporter.name}</h4>
+                          </div>
+                        </a>
+                      ) : (
+                        <div key={index} className="text-center p-5 bg-gradient-to-br from-gray-50 to-slate-50 rounded-xl border border-gray-200 hover:shadow-lg transition-all duration-300 w-48 sm:w-56">
+                          <div className="flex justify-center text-gray-600 mb-3">{supporter.logo}</div>
+                          <h4 className="font-semibold text-gray-800 text-sm">{supporter.name}</h4>
+                        </div>
+                      )
+                    ))}
+                  </div>
+                </div>
+
               </div>
             </div>
-*/}
             {/* Announcements Section 
             <div className="bg-white rounded-2xl shadow-xl p-8">
               <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">
