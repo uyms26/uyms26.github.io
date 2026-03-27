@@ -7,6 +7,7 @@ import LandingHero from '../assets/banner.png';
 import { NavLink } from 'react-router-dom';
 import AselsanLogo from '../assets/aselsan-png-logo.png';
 import VirtusLogo from '../assets/virtusrndlogo.png';
+import AkademikLogo from '../assets/akademik.png';
 
 const Anasayfa = () => {
   const [timeLeft, setTimeLeft] = useState({
@@ -110,21 +111,7 @@ const Anasayfa = () => {
       }
     ],
     others: [
-      {
-        name: "TÜBİTAK", logo: (
-          <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-          </svg>
-        )
-      },
-      {
-        name: "Bilim Akademisi", logo: (
-          <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5z" />
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
-          </svg>
-        )
-      },
+      
       {
         name: "Virtus R&D", 
         url: "https://virtusrnd.com/",
@@ -132,18 +119,12 @@ const Anasayfa = () => {
           <img src={VirtusLogo} alt="Virtus R&D Logo" className="w-auto h-12 object-contain" />
         )
       },
+
       {
-        name: "Yazılım Mühendisliği Derneği", logo: (
-          <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-          </svg>
-        )
-      },
-      {
-        name: "IEEE", logo: (
-          <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-          </svg>
+        name: "Akademik Sanal Ofis",
+        url:"https://akademiksanalofis.com.tr",
+        logo: (
+           <img src={AkademikLogo} alt="Akademik Sanal Ofis Logo" className="w-auto h-16 object-contain" />
         )
       }
     ]
@@ -266,6 +247,9 @@ const Anasayfa = () => {
 
                 {/* Diğer Destekleyenler (Başlıksız) */}
                 <div>
+                   <h3 className="text-l font-bold text-center text-blue-800 mb-6 uppercase tracking-wider relative inline-block left-1/2 transform -translate-x-1/2">
+                    Dİğer Sponsorlar
+                    </h3>
                   <div className="flex justify-center flex-wrap gap-6">
                     {sponsors.others.map((supporter, index) => (
                       supporter.url ? (
