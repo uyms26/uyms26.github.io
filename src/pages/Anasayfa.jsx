@@ -4,6 +4,10 @@ import { useState, useEffect } from 'react';
 
 
 import LandingHero from '../assets/banner.png';
+import MskuPhoto from '../assets/mskü.jpg';
+import AselsanBanner from '../assets/aselsan_banner_real.png';
+import BedirPhoto from '../assets/bedir_tekinerdogan.jpg';
+import AkyakaPhoto from '../assets/akyaka.jpg';
 import { NavLink } from 'react-router-dom';
 import AselsanLogo from '../assets/aselsan-png-logo.png';
 import VirtusLogo from '../assets/virtusrndlogo.png';
@@ -18,6 +22,76 @@ const Anasayfa = () => {
   });
   const [showPopup, setShowPopup] = useState(false);
   const [countdown, setCountdown] = useState(5);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(true);
+
+  const heroSlides = [
+    {
+      id: 1,
+      image: LandingHero,
+      title: "",
+      subtitle: ""
+    },
+    {
+      id: 2,
+      image: AselsanBanner,
+      title: "",
+      subtitle: ""
+    },
+    {
+      id: 3,
+      image: BedirPhoto,
+      title: "Prof. Dr. Ir. Bedir Tekinerdogan",
+      subtitle: "Sempozyumumuzun Ana Konuşmacısı",
+      description: "Wageningen Üniversitesi Bilgi Teknolojileri Grubu Başkanı olan değerli hocamız; araştırma vizyonuyla yazılım mimarisi, sistem mühendisliği ve karmaşık sistemler alanlarında çığır açan tecrübelerini sempozyumumuzda bizlerle paylaşacak.",
+      talkTitle: "Konuşma Başlığı:\n\"Yazılımdan Sistemlere: Karmaşık Bir Dünya İçin Mühendisliği Yeniden Düşünmek\"",
+      bgClass: "bg-[length:auto_50%] sm:bg-[length:auto_60%] lg:bg-[length:auto_80%] bg-[position:center_10%] lg:bg-[position:10%_30%] bg-no-repeat bg-[rgb(14,235,255)]",
+      layoutClass: "absolute inset-0 flex flex-col items-center lg:items-end justify-end lg:justify-center px-4 sm:px-8 lg:px-24 xl:px-32 text-center pb-10 sm:pb-16 lg:pb-0"
+    },
+    {
+      id: 4,
+      image: MskuPhoto,
+      title: "Muğla Sıtkı Koçman Üniversitesi",
+      subtitle: "Sizleri Muğla'nın eşsiz doğasında ağırlamaktan onur duyarız"
+    },
+    {
+      id: 5,
+      image: AkyakaPhoto,
+      title: "Sakin Şehir Akyaka",
+      subtitle: "Doğanın, tarihin ve denizin eşsiz bir uyumla buluştuğu nokta",
+      description: "Kadın Azmağı'nın serin suları ve geleneksel Muğla mimarisinin büyüleyici dokusu eşliğinde unutulmaz bir deneyime davetlisiniz."
+    }
+  ];
+
+  // sonsuz kayma için orijinal slaytlara ilk slaytı ekliyoruz
+  const extendedSlides = [...heroSlides, heroSlides[0]];
+
+  // Hero Slider otomatik geçiş
+  useEffect(() => {
+    const slideTimer = setInterval(() => {
+      if (isTransitioning) {
+        setCurrentSlide((prev) => prev + 1);
+      }
+    }, 4000); // Kullanıcı isteğiyle 4 saniyeye çekildi
+    return () => clearInterval(slideTimer);
+  }, [isTransitioning]);
+
+  useEffect(() => {
+    if (currentSlide === heroSlides.length) {
+      // Sona geldiğimizde (kopya slayta), transition bitmesini bekleyip 0'a atla
+      const resetTimer = setTimeout(() => {
+        setIsTransitioning(false);
+        setCurrentSlide(0);
+      }, 1000); // 1000ms transition süresi
+      return () => clearTimeout(resetTimer);
+    } else if (!isTransitioning && currentSlide === 0) {
+      // 0'a atladıktan sonra tekrar transition'ı açabilmek için küçük bir bekleme
+      const enableTimer = setTimeout(() => {
+        setIsTransitioning(true);
+      }, 50);
+      return () => clearTimeout(enableTimer);
+    }
+  }, [currentSlide, isTransitioning, heroSlides.length]);
 
   // Sempozyum tarihi: 14-16 Mayıs 2026
   const symposiumDate = new Date('2026-05-14T09:00:00');
@@ -100,35 +174,33 @@ const Anasayfa = () => {
     }
   ];
 
-  const sponsors = {
-    main: [
-      {
-        name: "Aselsan", 
-        url: "https://www.aselsan.com/tr",
-        logo: (
-          <img src={AselsanLogo} alt="Aselsan Logo" className="w-auto h-16 object-contain" />
-        )
-      }
-    ],
-    others: [
-      
-      {
-        name: "Virtus R&D", 
-        url: "https://virtusrnd.com/",
-        logo: (
-          <img src={VirtusLogo} alt="Virtus R&D Logo" className="w-auto h-12 object-contain" />
-        )
-      },
-
-      {
-        name: "Akademik Sanal Ofis",
-        url:"https://akademiksanalofis.com.tr",
-        logo: (
-           <img src={AkademikLogo} alt="Akademik Sanal Ofis Logo" className="w-auto h-16 object-contain" />
-        )
-      }
-    ]
-  };
+  const allSponsors = [
+    {
+      name: "Aselsan",
+      url: "https://www.aselsan.com/tr",
+      isMain: true,
+      logo: (
+        <div className="flex flex-col items-center justify-center gap-3">
+          <span className="text-xs font-bold text-blue-700 bg-blue-100 px-3 py-1 rounded-full border border-blue-300 shadow-sm whitespace-nowrap">
+            🌟 ANA SPONSOR
+          </span>
+          <img src={AselsanLogo} alt="Aselsan Teknoloji" className="w-auto h-20 sm:h-28 object-contain drop-shadow-[0_0_15px_rgba(59,130,246,0.3)] hover:scale-105 transition-transform duration-500" />
+        </div>
+      )
+    },
+    {
+      name: "Virtus R&D",
+      url: "https://virtusrnd.com/",
+      isMain: false,
+      logo: <img src={VirtusLogo} alt="Virtus R&D Logo" className="w-auto h-12 sm:h-16 object-contain hover:scale-105 transition-transform duration-300" />
+    },
+    {
+      name: "Akademik Sanal Ofis",
+      url: "https://akademiksanalofis.com.tr",
+      isMain: false,
+      logo: <img src={AkademikLogo} alt="Akademik Sanal Ofis Logo" className="w-auto h-16 sm:h-20 object-contain hover:scale-105 transition-transform duration-300" />
+    }
+  ];
 
   const importantDates = [
 
@@ -174,23 +246,154 @@ const Anasayfa = () => {
         </div>
       )}
 
-      <div className="bg-cover bg-center bg-no-repeat min-h-[300px] sm:min-h-[400px] md:min-h-[500px] lg:min-h-[600px] xl:min-h-[800px]" style={{ backgroundImage: `url(${LandingHero})` }}>
-        <div className="absolute  top-7/11 left-5/12">
-          {/*Hero Section 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            
-            <NavLink to="/kayit">
-                <button className="bg-white text-blue-600 px-8 py-3 rounded-xl font-bold text-lg hover:bg-gray-50 transition-all transform hover:scale-105 shadow-lg">
-                  Hemen Kayıt Ol
-                </button>
-            </NavLink>
-            <NavLink to="/bildiri-gonderimi">
-                <button className="border-2 border-white text-white px-8 py-3 rounded-xl font-bold text-lg hover:bg-white hover:text-blue-600 transition-all transform hover:scale-105">
-                  Bildiri Gönder
-                </button>
-            </NavLink>
+      {/* Hero Section with Slider */}
+      <div className="relative overflow-hidden min-h-[300px] sm:min-h-[400px] md:min-h-[500px] lg:min-h-[600px] xl:min-h-[800px] bg-slate-900 group">
+
+        {/* Sliding Track */}
+        <div
+          className={`flex h-full ease-in-out absolute inset-0 ${isTransitioning ? 'transition-transform duration-1000' : 'transition-none duration-0'}`}
+          style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+        >
+          {extendedSlides.map((slide, index) => {
+            const isActive = index === currentSlide || (currentSlide === heroSlides.length && index === 0);
+            return (
+              <div
+                key={`${slide.id}-${index}`}
+                className="min-w-full h-full relative flex-shrink-0"
+              >
+                {/* Image Sub-layer */}
+                <div
+                  className={`absolute inset-0 ${slide.bgClass || 'bg-cover bg-center bg-no-repeat'}`}
+                  style={{ backgroundImage: `url(${slide.image})` }}
+                ></div>
+
+                {/* Gradient Overlay for Text Readability (Sadece içerik varsa göster) */}
+                {(slide.title || slide.subtitle) && (
+                  <div className="absolute inset-0 bg-black/40 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                )}
+
+                {/* Slide Content (Sadece içerik varsa göster) */}
+                {(slide.title || slide.subtitle || slide.talkTitle) && (
+                  <div className={slide.layoutClass || `absolute inset-0 flex flex-col items-center ${slide.textPos || 'justify-center'} px-4 sm:px-8 text-center pt-10 sm:pt-0`}>
+                    <div className={`transition-all duration-1000 transform ${isActive ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'} delay-300 w-full max-w-4xl ${slide.layoutClass && slide.layoutClass.includes('items-end') ? 'ml-auto' : 'mx-auto'}`}>
+                      {slide.title && (
+                        <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-5xl font-bold text-white mb-2 sm:mb-4 drop-shadow-[0_4px_8px_rgba(0,0,0,0.8)] font-sans tracking-tight">
+                          {slide.title}
+                        </h1>
+                      )}
+                      {slide.subtitle && (
+                        <p className={`text-base sm:text-lg md:text-xl text-gray-200 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] font-medium ${slide.layoutClass && slide.layoutClass.includes('text-right') ? 'ml-auto' : 'mx-auto'}`}>
+                          {slide.subtitle}
+                        </p>
+                      )}
+                      {slide.description && (
+                        <p className={`mt-4 text-sm sm:text-base md:text-lg text-gray-100 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] max-w-2xl leading-relaxed ${slide.layoutClass && slide.layoutClass.includes('text-right') ? 'ml-auto' : 'mx-auto'}`}>
+                          {slide.description}
+                        </p>
+                      )}
+                      {slide.talkTitle && (
+                        <div className={`mt-6 inline-block bg-black/30 px-5 py-4 rounded-xl border border-white/10 backdrop-blur-md shadow-2xl ${slide.layoutClass && slide.layoutClass.includes('text-right') ? 'text-right' : 'text-center'}`}>
+                          <p className={`text-sm sm:text-base md:text-lg text-blue-100 drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] font-semibold whitespace-pre-line inline-block ${slide.layoutClass && slide.layoutClass.includes('text-right') ? 'text-right' : 'text-center'}`}>
+                            {slide.talkTitle}
+                          </p>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Carousel Navigation Arrows */}
+        <button
+          onClick={() => {
+            if (currentSlide === 0) {
+              setIsTransitioning(false);
+              setCurrentSlide(heroSlides.length);
+              setTimeout(() => {
+                setIsTransitioning(true);
+                setCurrentSlide(heroSlides.length - 1);
+              }, 50);
+            } else {
+              setCurrentSlide((prev) => prev - 1);
+            }
+          }}
+          className="absolute left-2 sm:left-6 top-1/2 -translate-y-1/2 z-20 p-2 sm:p-3 text-white/50 hover:text-white bg-black/20 hover:bg-black/50 rounded-full transition-all duration-300 opacity-0 group-hover:opacity-100 backdrop-blur-sm"
+          aria-label="Önceki Slayt"
+        >
+          <svg className="w-8 h-8 sm:w-10 sm:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
+        </button>
+        <button
+          onClick={() => setCurrentSlide((prev) => prev + 1)}
+          className="absolute right-2 sm:right-6 top-1/2 -translate-y-1/2 z-20 p-2 sm:p-3 text-white/50 hover:text-white bg-black/20 hover:bg-black/50 rounded-full transition-all duration-300 opacity-0 group-hover:opacity-100 backdrop-blur-sm"
+          aria-label="Sonraki Slayt"
+        >
+          <svg className="w-8 h-8 sm:w-10 sm:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+        </button>
+
+        {/* Carousel Indicators */}
+        <div className="absolute bottom-12 sm:bottom-16 z-20 flex space-x-2 sm:space-x-3">
+          {heroSlides.map((_, index) => {
+            const isActive = index === currentSlide || (currentSlide === heroSlides.length && index === 0);
+            return (
+              <button
+                key={index}
+                onClick={() => {
+                  if (!isTransitioning) return; // Geçiş sırasında tıklamayı engelle
+                  setCurrentSlide(index);
+                }}
+                className={`transition-all duration-300 rounded-full shadow-lg ${isActive ? 'w-8 sm:w-12 h-2 sm:h-2 bg-white' : 'w-2 sm:w-3 h-2 sm:h-2 bg-white/50 hover:bg-white/80'}`}
+                aria-label={`${index + 1}. Slayta Git`}
+              />
+            );
+          })}
+        </div>
+      </div>
+
+      {/* Infinite Marquee Sponsorship Banner */}
+      <div className="relative py-16 sm:py-24 overflow-hidden bg-gradient-to-r from-blue-50 via-white to-blue-50 border-y border-blue-200/60 shadow-inner">
+        <style>{`
+          @keyframes marquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+          }
+          .animate-marquee {
+            animation: marquee 30s linear infinite;
+          }
+          .animate-marquee:hover {
+            animation-play-state: paused;
+          }
+          .fade-mask {
+             -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+             mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+          }
+        `}</style>
+
+        {/* Background Effects */}
+        <div className="absolute inset-0 opacity-5 mix-blend-overlay pointer-events-none" style={{ backgroundImage: "url('data:image/svg+xml,%3Csvg viewBox=\"0 0 200 200\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cfilter id=\"noiseFilter\"%3E%3CfeTurbulence type=\"fractalNoise\" baseFrequency=\"0.65\" numOctaves=\"3\" stitchTiles=\"stitch\"/%3E%3C/filter%3E%3Crect width=\"100%25\" height=\"100%25\" filter=\"url(%23noiseFilter)\"/%3E%3C/svg%3E')" }}></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-5xl h-full bg-blue-300/10 blur-[100px] rounded-full pointer-events-none"></div>
+
+        <div className="relative w-full text-center mb-12 flex justify-center">
+          <div className="inline-flex items-center justify-center gap-3 px-6 py-2 rounded-full bg-white/80 border border-blue-200 text-blue-800 shadow-sm text-sm sm:text-base font-medium backdrop-blur-md">
+            <span className="relative flex h-3 w-3">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-3 w-3 bg-blue-500"></span>
+            </span>
+            DESTEKLEYENLER VE SPONSORLAR
           </div>
-          */}
+        </div>
+
+        <div className="relative w-full overflow-hidden fade-mask py-4">
+          <div className="flex w-max animate-marquee space-x-16 sm:space-x-24 items-center hover:cursor-pointer">
+            {/* Array is duplicated to create a seamless loop (we slide by 50% so 2 groups needed for infinite effect, but we put more to fill screen) */}
+            {[...allSponsors, ...allSponsors, ...allSponsors, ...allSponsors, ...allSponsors, ...allSponsors].map((sponsor, index) => (
+              <a key={index} href={sponsor.url} target="_blank" rel="noopener noreferrer" className={`flex-shrink-0 flex items-center justify-center p-6 sm:p-8 rounded-2xl border shadow-sm hover:shadow-md transition-all duration-300 ${sponsor.isMain ? 'bg-white hover:bg-blue-50/50 border-blue-100' : 'bg-gradient-to-br from-indigo-50/60 to-purple-50/60 hover:from-indigo-100/60 hover:to-purple-100/60 border-indigo-200/50 backdrop-blur-sm'}`}>
+                {sponsor.logo}
+              </a>
+            ))}
+          </div>
         </div>
       </div>
 
@@ -214,63 +417,7 @@ const Anasayfa = () => {
               </div>
             </div>
 
-            <div className="bg-white rounded-2xl shadow-xl p-8">
-              <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">
-                Destekleyenler
-              </h2>
-              <div className="space-y-12">
-                
-                {/* Ana Sponsor */}
-                <div className="mb-10">
-                  <h3 className="text-xl font-bold text-center text-blue-800 mb-6 uppercase tracking-wider relative inline-block left-1/2 transform -translate-x-1/2">
-                    Ana Sponsor
-                    <span className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-blue-400 to-indigo-600 rounded-full"></span>
-                  </h3>
-                  <div className="flex justify-center flex-wrap gap-8">
-                    {sponsors.main.map((supporter, index) => (
-                      supporter.url ? (
-                        <a key={index} href={supporter.url} target="_blank" rel="noopener noreferrer" className="block w-full sm:w-80">
-                          <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl border-2 border-blue-200 shadow-md hover:shadow-xl transition-all duration-300 w-full h-full cursor-pointer">
-                            <div className="flex justify-center text-blue-600 mb-4">{supporter.logo}</div>
-                            <h4 className="font-bold text-gray-800 text-lg">{supporter.name}</h4>
-                          </div>
-                        </a>
-                      ) : (
-                        <div key={index} className="text-center p-6 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl border-2 border-blue-200 shadow-md hover:shadow-xl transition-all duration-300 w-full sm:w-80">
-                          <div className="flex justify-center text-blue-600 mb-4">{supporter.logo}</div>
-                          <h4 className="font-bold text-gray-800 text-lg">{supporter.name}</h4>
-                        </div>
-                      )
-                    ))}
-                  </div>
-                </div>
 
-                {/* Diğer Destekleyenler (Başlıksız) */}
-                <div>
-                   <h3 className="text-l font-bold text-center text-blue-800 mb-6 uppercase tracking-wider relative inline-block left-1/2 transform -translate-x-1/2">
-                    Dİğer Sponsorlar
-                    </h3>
-                  <div className="flex justify-center flex-wrap gap-6">
-                    {sponsors.others.map((supporter, index) => (
-                      supporter.url ? (
-                        <a key={index} href={supporter.url} target="_blank" rel="noopener noreferrer" className="block w-48 sm:w-56">
-                          <div className="text-center p-5 bg-gradient-to-br from-gray-50 to-slate-50 rounded-xl border border-gray-200 hover:shadow-lg transition-all duration-300 w-full h-full cursor-pointer">
-                            <div className="flex justify-center text-gray-600 mb-3">{supporter.logo}</div>
-                            <h4 className="font-semibold text-gray-800 text-sm">{supporter.name}</h4>
-                          </div>
-                        </a>
-                      ) : (
-                        <div key={index} className="text-center p-5 bg-gradient-to-br from-gray-50 to-slate-50 rounded-xl border border-gray-200 hover:shadow-lg transition-all duration-300 w-48 sm:w-56">
-                          <div className="flex justify-center text-gray-600 mb-3">{supporter.logo}</div>
-                          <h4 className="font-semibold text-gray-800 text-sm">{supporter.name}</h4>
-                        </div>
-                      )
-                    ))}
-                  </div>
-                </div>
-
-              </div>
-            </div>
             {/* Announcements Section 
             <div className="bg-white rounded-2xl shadow-xl p-8">
               <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">
