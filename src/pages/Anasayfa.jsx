@@ -4,10 +4,10 @@ import { useState, useEffect } from 'react';
 
 
 import LandingHero from '../assets/banner.png';
-import MskuPhoto from '../assets/mskü.jpg';
+import MskuPhoto from '../assets/msku.jpg';
 import AselsanBanner from '../assets/aselsan_banner_real.png';
 import BedirPhoto from '../assets/bedir_tekinerdogan.jpg';
-import AkyakaPhoto from '../assets/akyaka.jpg';
+import AkyakaPhoto from '../assets/akyaka_yeni.jpeg';
 import { NavLink } from 'react-router-dom';
 import AselsanLogo from '../assets/aselsan-png-logo.png';
 import VirtusLogo from '../assets/virtusrndlogo.png';
@@ -57,9 +57,9 @@ const Anasayfa = () => {
     {
       id: 5,
       image: AkyakaPhoto,
-      title: "Sakin Şehir Akyaka",
-      subtitle: "Doğanın, tarihin ve denizin eşsiz bir uyumla buluştuğu nokta",
-      description: "Kadın Azmağı'nın serin suları ve geleneksel Muğla mimarisinin büyüleyici dokusu eşliğinde unutulmaz bir deneyime davetlisiniz."
+      title: "Akyaka",
+      subtitle: "Muğla Sıtkı Koçman Üniversitesi'ndeki bu akademik buluşmanın hemen yanı başında, doğanın teknolojiyle harmanlandığı özel bir durak sizi bekliyor: Akyaka.",
+      description: "Gökova’nın turkuaz suları ve eşsiz doğasıyla Akyaka, zihninizi tazelemek için ideal bir durak. Sempozyum arasında bu masmavi manzaranın tadını çıkarmanız dileğiyle."
     }
   ];
 
