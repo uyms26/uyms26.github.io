@@ -1,157 +1,299 @@
-
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import UYMSLogo from '../assets/UYMS-logo-150x150.png';
-import LandingHero from '../assets/landinghero.png';
 
 const Program = () => {
+  const [activeTab, setActiveTab] = useState(0);
+
+  const legend = [
+    { code: "YSvD", name: "Yazılım Sınama ve Doğrulama", color: "bg-gray-100" },
+    { code: "YS", name: "Yazılım Süreçleri", color: "bg-gray-100" },
+    { code: "YYUvÇ", name: "Yenilikçi Yazılım Uygulamaları ve Çözümleri", color: "bg-gray-100" },
+    { code: "YGM", name: "Yazılım Gereksinim Mühendisliği", color: "bg-gray-100" },
+    { code: "DSİYM", name: "Dağıtık Sistemler için Yazılım Mühendisliği", color: "bg-gray-100" },
+    { code: "YKGvY", name: "Yazılım Kalite Güvencesi ve Yönetimi", color: "bg-gray-100" },
+    { code: "DYM", name: "Deneysel Yazılım Mühendisliği", color: "bg-gray-100" }
+  ];
+
+  const scheduleData = [
+    {
+      date: "14 Mayıs 2026",
+      dayName: "Perşembe",
+      events: [
+        { time: "08:45 - 09:00", type: "single", content: "Kayıt", bg: "bg-slate-200 text-slate-800" },
+        { time: "09:00 - 09:45", type: "single", content: "Saygı Duruşu & İstiklal Marşı & Açılış Konuşmaları", bg: "bg-slate-200 text-slate-800" },
+        { 
+          time: "09:45 - 11:00", 
+          type: "single", 
+          content: (
+            <Link to="/davetli-konusmacilar" className="block w-full h-full hover:opacity-80 hover:scale-[1.01] transition-all">
+              Yazılımdan Sistemlere: Karmaşık Bir Dünya İçin Mühendisliği Yeniden Düşünmek{"\n\n"}Prof. Dr. Bedir Tekinerdoğan
+              <span className="block mt-2 text-sm opacity-80 font-normal">(Detaylar için tıklayınız)</span>
+            </Link>
+          ), 
+          bg: "bg-orange-300 font-semibold cursor-pointer hover:bg-orange-400 border-none !p-4" 
+        },
+        { time: "11:00 - 11:15", type: "single", content: "Çay / Kahve Arası", bg: "bg-yellow-300 font-semibold text-yellow-900" },
+        {
+          time: "11:15 - 12:45",
+          type: "split",
+          session1: {
+            title: "Oturum 1 (Salon B)",
+            code: "YSvD",
+            color: "bg-gray-100",
+            papers: ["71 numaralı bildiri (11:15-11:45)", "109 numaralı bildiri (11:45-12:15)", "50 numaralı bildiri (12:15-12:45)"]
+          },
+          session2: {
+            title: "Oturum 2 (Salon C)",
+            code: "YS",
+            color: "bg-gray-100",
+            papers: ["77 numaralı bildiri (11:15-11:45)", "105 numaralı bildiri (11:45-12:15)"]
+          }
+        },
+        { time: "12:45 - 14:00", type: "single", content: "Öğle Yemeği", bg: "bg-yellow-300 font-semibold" },
+        {
+          time: "14:00 - 15:30",
+          type: "split",
+          session1: {
+            title: "Oturum 3 (Salon B)",
+            code: "YYUvÇ",
+            color: "bg-gray-100",
+            papers: ["69 numaralı bildiri (14:00-14:30)", "80 numaralı bildiri (14:30-15:00)", "83 numaralı bildiri (15:00-15:30)"]
+          },
+          session2: {
+            title: "Oturum 4 (Salon C)",
+            code: "YGM",
+            color: "bg-gray-100",
+            papers: ["38 numaralı bildiri (14:00-14:30)", "68 numaralı bildiri (14:30-15:00)", "87 numaralı bildiri (15:00-15:30)"]
+          }
+        },
+        { time: "15:30 - 15:45", type: "single", content: "Çay / Kahve Arası", bg: "bg-yellow-300 font-semibold text-yellow-900" },
+        {
+          time: "15:45 - 17:15",
+          type: "split",
+          session1: {
+            title: "Oturum 5 (Salon B)",
+            code: "DSİYM",
+            color: "bg-gray-100",
+            papers: ["85 numaralı bildiri (15:45-16:15)", "89 numaralı bildiri (16:15-16:45)", "98 numaralı bildiri (16:45-17:15)"]
+          },
+          session2: {
+            title: "Oturum 6 (Salon C)",
+            code: "YKGvY",
+            color: "bg-gray-100",
+            papers: ["10 numaralı bildiri (15:45-16:15)", "107 numaralı bildiri (16:15-16:45)", "110 numaralı bildiri (16:45-17:15)"]
+          }
+        },
+        { time: "18:00", type: "single", content: "Açılış Kokteyli", bg: "bg-purple-200 font-semibold" }
+      ]
+    },
+    {
+      date: "15 Mayıs 2026",
+      dayName: "Cuma",
+      events: [
+        {
+          time: "09:15 - 11:00",
+          type: "split",
+          session1: {
+            title: "Oturum 7 (Salon B)",
+            code: "YYUvÇ",
+            color: "bg-gray-100",
+            papers: ["72 numaralı bildiri (09:15-09:45)", "73 numaralı bildiri (09:45-10:15)", "76 numaralı bildiri (10:15-11:00)"]
+          },
+          session2: {
+            title: "Oturum 8 (Salon C)",
+            code: "DYM",
+            color: "bg-gray-100",
+            papers: ["40 numaralı bildiri (09:15-09:45)", "102 numaralı bildiri (09:45-10:15)", "111 numaralı bildiri (10:15-11:00)"]
+          }
+        },
+        { time: "11:00 - 11:15", type: "single", content: "Çay / Kahve Arası", bg: "bg-yellow-300 font-semibold text-yellow-900" },
+        {
+          time: "11:15 - 12:45",
+          type: "split",
+          session1: {
+            title: "Oturum 9 (Salon B)",
+            code: "YYUvÇ",
+            color: "bg-gray-100",
+            papers: ["41 numaralı bildiri (11:15-11:45)", "47 numaralı bildiri (11:45-12:15)", "48 numaralı bildiri (12:15-12:45)"]
+          },
+          session2: {
+            title: "Oturum 10 (Salon C)",
+            code: "YSvD",
+            color: "bg-gray-100",
+            papers: ["13 numaralı bildiri (11:15-11:45)", "28 numaralı bildiri (11:45-12:15)", "106 numaralı bildiri (12:15-12:45)"]
+          }
+        },
+        { time: "12:45 - 14:00", type: "single", content: "Öğle Yemeği", bg: "bg-yellow-300 font-semibold" },
+        {
+          time: "14:00 - 15:30",
+          type: "split",
+          session1: {
+            title: "Oturum 11 (Salon B)",
+            code: "YYUvÇ",
+            color: "bg-gray-100",
+            papers: ["29 numaralı bildiri (14:00-14:30)", "74 numaralı bildiri (14:30-15:00)", "79 numaralı bildiri (15:00-15:30)"]
+          },
+          session2: {
+            title: "Oturum 12 (Salon C)",
+            code: "YKGvY",
+            color: "bg-gray-100",
+            papers: ["25 numaralı bildiri (14:00-14:30)", "35 numaralı bildiri (14:30-15:00)", "75 numaralı bildiri (15:00-15:30)"]
+          }
+        },
+        { time: "15:30 - 15:45", type: "single", content: "Çay / Kahve Arası", bg: "bg-yellow-300 font-semibold text-yellow-900" },
+        { 
+          time: "15:45 - 17:15", 
+          type: "single", 
+          content: (
+            <Link to="/panel" className="block w-full h-full hover:opacity-80 hover:scale-[1.01] transition-all">
+              Panel Oturumu: Üretken Yapay Zeka Çağında Yazılım Mühendisliği{"\n\n"}Prof. Dr. Onur Demirörs & Dr. Görkem Giray
+              <span className="block mt-2 text-sm opacity-80 font-normal">(Detaylar için tıklayınız)</span>
+            </Link>
+          ), 
+          bg: "bg-orange-300 font-semibold cursor-pointer hover:bg-orange-400 border-none !p-4" 
+        },
+        { time: "18:00 - 19:00", type: "single", content: "Sosyal Program Tarihi Arasta Gezisi", bg: "bg-purple-200" },
+        { time: "19:00", type: "single", content: "Gala Yemeği & En İyi Bildiri Ödülü", bg: "bg-purple-300 font-semibold" }
+      ]
+    },
+    {
+      date: "16 Mayıs 2026",
+      dayName: "Cumartesi",
+      events: [
+        { time: "09:00 - 11:00", type: "single", content: "Kısa Toplantılar & İşbirlikleri\n\n* Önceden planlanan ve aniden gelişebilecek toplantılar için Organizasyon Komitesi ile iletişime geçebilirsiniz.", bg: "bg-slate-100" },
+        { time: "11:15 - 12:00", type: "single", content: "Öz Değerlendirme & Geri bildirim\nKapanış", bg: "bg-slate-200" }
+      ]
+    }
+  ];
+
   return (
-    <div className="min-h-screen font-serif bg-gradient-to-br from-blue-50 to-indigo-100 py-8 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen font-serif bg-gradient-to-br from-blue-50 to-indigo-100 py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        <h1 className="text-center text-4xl sm:text-5xl font-bold text-gray-800 mb-4 drop-shadow-sm">
+          Sempozyum Programı
+        </h1>
+        <p className="text-center text-lg text-gray-600 mb-10 max-w-2xl mx-auto">
+          Bildirilerin isimleri ve yazar bilgileri yakında paylaşılacaktır.
+        </p>
 
+        {/* Legend */}
+        <div className="bg-white rounded-2xl shadow-md p-6 mb-10">
+          <h3 className="text-xl font-bold text-gray-800 mb-4 text-center border-b pb-2">Oturum Konuları</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 text-sm">
+            {legend.map((item, idx) => (
+              <div key={idx} className={`flex items-center p-3 rounded-lg shadow-sm border border-gray-100 ${item.color.includes('bg-') ? item.color : 'bg-gray-100'}`}>
+                <span className="font-bold mr-2 whitespace-nowrap">{item.code}:</span>
+                <span className={item.color.includes('text-white') ? 'text-white/90' : 'text-gray-800'}>{item.name}</span>
+              </div>
+            ))}
+          </div>
+        </div>
 
-		<h1 className="text-center text-4xl  font-bold text-gray-800 mb-4">
-					Program
-				</h1>
-				<p className="text-3xl text-center sm:text-2xl text-gray-600 mt-32 max-w-4xl mx-auto">
-					UYMS 26 Sempozyumunun programı yakında duyurulacaktır 
-				</p>
-    
-   
-      
-{/**
-      
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">
-            Önemli Tarihler
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-2xl border-l-4 border-blue-500">
-              
-              <h3 className="text-xl font-bold text-gray-800 mb-2">Bildiri Gönderimi</h3>
-              <p className="text-2xl font-bold text-blue-600">15 Şubat 2026</p>
-              <p className="text-gray-600 mt-2">Son bildiri gönderim tarihi</p>
-            </div>
-            <div className="text-center p-6 bg-gradient-to-br from-green-50 to-emerald-100 rounded-2xl border-l-4 border-green-500">
-              
-              <h3 className="text-xl font-bold text-gray-800 mb-2">Kayıt</h3>
-              <p className="text-2xl font-bold text-green-600">1 Mart 2026</p>
-              <p className="text-gray-600 mt-2">Son kayıt tarihi</p>
-            </div>
-            <div className="text-center p-6 bg-gradient-to-br from-purple-50 to-pink-100 rounded-2xl border-l-4 border-purple-500">
-              
-              <h3 className="text-xl font-bold text-gray-800 mb-2">Sempozyum</h3>
-              <p className="text-2xl font-bold text-purple-600">14-16 Mayıs 2026</p>
-              <p className="text-gray-600 mt-2">Ana etkinlik tarihleri</p>
+        {/* Tabs */}
+        <div className="flex flex-wrap justify-center gap-2 mb-8">
+          {scheduleData.map((day, idx) => (
+            <button
+              key={idx}
+              onClick={() => setActiveTab(idx)}
+              className={`px-6 py-3 rounded-xl font-bold text-lg transition-all shadow-sm ${activeTab === idx
+                ? 'bg-blue-600 text-white shadow-blue-500/30 scale-105'
+                : 'bg-white text-gray-600 hover:bg-blue-50 hover:text-blue-600'
+                }`}
+            >
+              <div className="flex flex-col items-center">
+                <span>{day.date}</span>
+                <span className={`text-sm ${activeTab === idx ? 'text-blue-200' : 'text-gray-400'}`}>{day.dayName}</span>
+              </div>
+            </button>
+          ))}
+        </div>
+
+        {/* Schedule Content */}
+        <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 relative">
+          <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-500"></div>
+
+          <div className="p-4 sm:p-8">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-8 pb-4 border-b text-center">
+              {scheduleData[activeTab].date} - {scheduleData[activeTab].dayName} Programı
+            </h2>
+
+            {/* Desktop Column Headers for Split Track */}
+            {activeTab !== 2 && (
+              <div className="hidden md:flex flex-row gap-4 mb-6">
+                <div className="lg:w-40 flex-shrink-0"></div>
+                <div className="flex-1 grid grid-cols-2 gap-4">
+                  <div className="bg-slate-100 text-slate-700 font-bold text-xl py-3 rounded-xl border border-slate-200 shadow-sm text-center uppercase tracking-wide">
+                    Salon B
+                  </div>
+                  <div className="bg-slate-100 text-slate-700 font-bold text-xl py-3 rounded-xl border border-slate-200 shadow-sm text-center uppercase tracking-wide">
+                    Salon C
+                  </div>
+                </div>
+              </div>
+            )}
+
+            <div className="space-y-6">
+              {scheduleData[activeTab].events.map((event, idx) => (
+                <div key={idx} className="flex flex-col lg:flex-row gap-4">
+                  {/* Time Block */}
+                  <div className="lg:w-40 flex-shrink-0 flex items-center lg:justify-end">
+                    <div className="bg-blue-50 text-blue-700 font-bold px-4 py-2 rounded-lg border border-blue-100 shadow-sm w-full lg:w-auto text-center">
+                      {event.time}
+                    </div>
+                  </div>
+
+                  {/* Content Block */}
+                  <div className="flex-1">
+                    {event.type === 'single' ? (
+                      <div className={`p-4 rounded-xl shadow-sm border border-gray-100 flex items-center justify-center min-h-[4rem] text-center whitespace-pre-line ${event.bg}`}>
+                        <span>{event.content}</span>
+                      </div>
+                    ) : (
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        {/* Session 1 */}
+                        <div className={`p-5 rounded-xl shadow-sm border border-gray-100 flex flex-col ${event.session1.color}`}>
+                          <div className="flex justify-between items-center mb-4 pb-3 border-b border-black/10">
+                            <span className="md:hidden font-bold text-slate-500 bg-slate-200/60 px-2 py-1 rounded text-xs uppercase tracking-wider mr-auto">Salon B</span>
+                            <span className="font-extrabold text-gray-700 px-3 py-1.5 bg-black/5 rounded-lg text-sm inline-block md:mx-auto shadow-sm">{event.session1.code}</span>
+                          </div>
+                          <ul className="space-y-3 text-sm flex-1">
+                            {event.session1.papers.map((paper, pIdx) => (
+                              <li key={pIdx} className="flex items-start">
+                                <span className={paper === '-' ? 'hidden' : 'mr-2 text-slate-400 font-bold'}>•</span>
+                                <span className="font-medium text-gray-800">{paper}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+
+                        {/* Session 2 */}
+                        <div className={`p-5 rounded-xl shadow-sm border border-gray-100 flex flex-col ${event.session2.color}`}>
+                          <div className="flex justify-between items-center mb-4 pb-3 border-b border-black/10">
+                            <span className="md:hidden font-bold text-slate-500 bg-slate-200/60 px-2 py-1 rounded text-xs uppercase tracking-wider mr-auto">Salon C</span>
+                            <span className="font-extrabold text-gray-700 px-3 py-1.5 bg-black/5 rounded-lg text-sm inline-block md:mx-auto shadow-sm">{event.session2.code}</span>
+                          </div>
+                          <ul className="space-y-3 text-sm flex-1">
+                            {event.session2.papers.map((paper, pIdx) => (
+                              <li key={pIdx} className="flex items-start">
+                                <span className={paper === '-' ? 'hidden' : 'mr-2 text-slate-400 font-bold'}>•</span>
+                                <span className="font-medium text-gray-800">{paper}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
-      </section>
 
-      
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
-                UYMS 26 Hakkında
-              </h2>
-              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                Ulusal Yazılım Mühendisliği Sempozyumu (UYMS), Türkiye yazılım sektörü ile yazılım alanında çalışmalar yapan akademisyenleri bir araya getirerek yazılım mühendisliğindeki son gelişmelerin ve araştırmaların paylaşılmasını sağlayan bir platformdur. 2003 yılından bu yana gerçekleştirilen UYMS, araştırma sonuçlarının paylaşıldığı bir ortam sağlamasının ötesinde, ulusal yazılım mühendisliği araştırmalarının geleceğinin şekillenmesinde etkin rol oynamaktadır. Sempozyumun bu sene de tüm katılımcıların yararlanacağı geniş bir içerik taşıması hedeflenmektedir.
-              </p>
-              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                Bu yıl 26. kez düzenlenen sempozyum, Muğla Sıtkı Koçman Üniversitesi ev sahipliğinde, 
-                güzel Muğla şehrinde gerçekleştirilecektir.
-              </p>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="text-center p-4 bg-white rounded-xl shadow-md">
-                  <div className="text-2xl font-bold text-blue-600">500+</div>
-                  <div className="text-sm text-gray-600">Katılımcı</div>
-                </div>
-                <div className="text-center p-4 bg-white rounded-xl shadow-md">
-                  <div className="text-2xl font-bold text-green-600">100+</div>
-                  <div className="text-sm text-gray-600">Bildiri</div>
-                </div>
-              </div>
-            </div>
-            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl p-8 text-white text-center">
-              <div className="text-6xl mb-6">🎓</div>
-              <h3 className="text-2xl font-bold mb-4">Muğla Sıtkı Koçman Üniversitesi</h3>
-              <p className="text-blue-100 mb-6">
-                Kötekli Kampüsü, Muğla'nın kalbinde yer alan modern eğitim kurumu
-              </p>
-              <div className="space-y-3 text-left">
-                <div className="flex items-center">
-                  <span className="text-green-300 mr-3">✓</span>
-                  <span>Modern konferans salonları</span>
-                </div>
-                <div className="flex items-center">
-                  <span className="text-green-300 mr-3">✓</span>
-                  <span>Teknolojik altyapı</span>
-                </div>
-                <div className="flex items-center">
-                  <span className="text-green-300 mr-3">✓</span>
-                  <span>Ulaşım kolaylığı</span>
-                </div>
-                <div className="flex items-center">
-                  <span className="text-green-300 mr-3">✓</span>
-                  <span>Konaklama seçenekleri</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-
-   
-      
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">
-            İletişim
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="text-center p-6 bg-blue-50 rounded-xl">
-              <div className="text-4xl mb-4">
-                    <div className="flex justify-center text-4xl mb-4">
-                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-        </svg>
-        </div>  
-              </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-2">E-posta</h3>
-              <p className="text-blue-600">uyms26@mu.edu.tr</p>
-            </div>
-            <div className="text-center p-6 bg-green-50 rounded-xl">
-              <div className="text-4xl mb-4">
-                  <div className="flex justify-center text-4xl mb-4">
-                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-        </svg>
-        </div>  
-              </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-2">Telefon</h3>
-              <p className="text-green-600">+90 252 211 11 11</p>
-            </div>
-            <div className="text-center p-6 bg-purple-50 rounded-xl">
-              <div className="flex justify-center text-4xl mb-4">
-                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-2">Adres</h3>
-              <p className="text-purple-600">Muğla Sıtkı Koçman Üniversitesi</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-       */}
+      </div>
     </div>
   );
 };
 
 export default Program;
+

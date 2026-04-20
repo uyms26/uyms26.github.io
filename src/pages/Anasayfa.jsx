@@ -20,7 +20,7 @@ const Anasayfa = () => {
     minutes: 0,
     seconds: 0
   });
-  const [showPopup, setShowPopup] = useState(false);
+  const [showPopup, setShowPopup] = useState(true);
   const [countdown, setCountdown] = useState(5);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(true);
@@ -234,10 +234,10 @@ const Anasayfa = () => {
             </div>
             <h3 className="text-2xl font-bold text-gray-800 mb-2">DUYURU</h3>
             <p className="text-xl text-blue-600 font-semibold mb-4">
-              Kayıtlar Açıldı!
+              Sempozyum Programı Yayınlandı!
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
-              Kayıtlar açılmıştır. <span className="font-bold text-blue-700">3 Nisan 2026</span> tarihine kadar  <NavLink to='/kayit' className="text-blue-600 underline"> buradan </NavLink>  erken kayıt olabilirsiniz.
+              Sempozyum programı yayınlanmıştır. <NavLink to='/sempozyum-programi' className="text-blue-600 underline"> Buradan </NavLink>  inceleyebilirsiniz.
             </p>
             <div className="mt-6 text-sm text-gray-400 italic">
               (Bu bildirim {countdown} saniye içinde kapanacaktır)

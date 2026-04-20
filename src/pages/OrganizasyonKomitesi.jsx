@@ -74,11 +74,24 @@ const OrganizasyonKomitesi = () => {
                   </div>
                   <div className="flex items-center p-3 bg-green-50 rounded-lg">
                     <div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
+                    <span className="text-gray-800">Erkut Tekeli, Muğla Sıtkı Koçman Üniversitesi</span>
+                  </div>
+
+                  <div className="flex items-center p-3 bg-green-50 rounded-lg">
+                    <div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
                     <span className="text-gray-800">Hasan Ali Özkan, Muğla Sıtkı Koçman Üniversitesi</span>
                   </div>
-                   <div className="flex items-center p-3 bg-green-50 rounded-lg">
+                  <div className="flex items-center p-3 bg-green-50 rounded-lg">
                     <div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
                     <span className="text-gray-800">Mehmed Emre Özdemir, Muğla Sıtkı Koçman Üniversitesi</span>
+                  </div>
+                  <div className="flex items-center p-3 bg-green-50 rounded-lg">
+                    <div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
+                    <span className="text-gray-800">Hasan Yiğit, Muğla Sıtkı Koçman Üniversitesi</span>
+                  </div>
+                  <div className="flex items-center p-3 bg-green-50 rounded-lg">
+                    <div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
+                    <span className="text-gray-800">Emre Doğu, Muğla Sıtkı Koçman Üniversitesi</span>
                   </div>
 
                 </div>

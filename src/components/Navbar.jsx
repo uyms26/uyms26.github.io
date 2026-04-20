@@ -89,6 +89,9 @@ const Navbar = () => {
                                     <DropdownLink to="/davetli-konusmacilar" onClick={closeMenu}>
                                         Davetli Konuşmacı
                                     </DropdownLink>
+                                    <DropdownLink to="/panel" onClick={closeMenu}>
+                                        Panel
+                                    </DropdownLink>
                                 </div>
                             </div>
                         </div>
@@ -233,6 +236,9 @@ const Navbar = () => {
                                     </MobileNavLink>
                                     <MobileNavLink to="/davetli-konusmacilar" onClick={closeMenu}>
                                         Davetli Konuşmacılar
+                                    </MobileNavLink>
+                                    <MobileNavLink to="/panel" onClick={closeMenu}>
+                                        Panel
                                     </MobileNavLink>
                                 </div>
                             )}
