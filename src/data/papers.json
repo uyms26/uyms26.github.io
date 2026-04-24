@@ -46,9 +46,9 @@
       "time": "11:45-12:15",
       "title": "Birleştirme İsteği Süreç Otomasyonu Deneyimi: Çoklu Repo Mimarisinde Yeniden Temelleme Tabanlı Dal Birleştirme Verimliliğini Artıran Bir Yaklaşım",
       "authors": [
-        "Ahsen İkbal AYTEKİN (HAVELSAN)",
-        "Meral Özkaya KIVCI (HAVELSAN)",
-        "Ahmet Burak ÇOŞTU (HAVELSAN)"
+        "Ahsen İkbal AYTEKİN (HAVELSAN A.Ş.)",
+        "Meral Özkaya KIVCI (HAVELSAN A.Ş.)",
+        "Ahmet Burak ÇOŞTU (HAVELSAN A.Ş.)"
       ],
       "abstract": "Mikroservis mimarisi, çoklu takım ve çoklu kod deposu yapısıyla geliştirilen yazılım ürünlerinde, farklı kaynak kod depoları ve dallarında farklı kod gözden geçirme kuralları uygulanabilmektedir. Geliştirici takımların sayıca fazla olması, kod gözden geçirme ve birleştirme isteklerinin de artışını paralel olarak etkilemektedir. Yazılım işlevsel davranışının korunması ve sürüm geçmişinin yönetilebilirliğinin artırılması için yeniden temelleme (rebase) birleştirme stratejisi kullanıldığında, önemli bir operasyonel yükün ortaya çıktığı gözlemlenmiştir. Her birleştirme isteği işlemi öncesinde hedef dal ile yeniden temelleme yapılmasının sürekli entegrasyon süreçlerini tekrar tetiklediği, inşa sürelerini uzattığı ve onaylanmış birleştirme isteklerinin dahi uzun süre kuyruğa takılmasına neden olduğu belirlenmiştir. Bu sorunlara yönelik olarak bir otomasyon aracı geliştirilmiştir. Araç tarafından belirli ön koşulları yerine getirmiş ve onaylanmış birleştirme istekleri, kullanıcı tarafından belirlenen öncelik sırasına göre otomatik olarak yeniden temellenmiş, sürekli entegrasyon sonuçları denetlenmiş ve başarılı sonuçlananlar hedef dala birleştirilmiştir. Başarısız birleştirme istekleri ise otomatik olarak sıranın dışına alınarak akışın kesintiye uğramaması sağlanmıştır. Böylece elle müdahale gereksiniminin ve tekrarlayan yeniden temelleme çatışmalarının önemli ölçüde azaltıldığı görülmüştür. Aracın kullanılmaya başlanmasının ardından birleştirme isteklerinin bekleme sürelerinde belirgin bir azalma kaydedilmiş, birleşme kuyruğunun daha stabil çalıştığı gözlemlenmiş ve ekiplerin operasyonel yükünde anlamlı bir düşüş elde edilmiştir. Elde edilen sonuçlar, çoklu kod deposu ve yoğun birleştirme isteği trafiğine sahip yazılım geliştirme ekiplerinde, yeniden temelleme tabanlı birleştirme süreçlerinin otomasyon yoluyla etkin biçimde optimize edilebileceğini göstermektedir. Bu çalışma, benzer mimarilere sahip ekipler için ölçeklenebilir ve uygulanabilir bir yaklaşım sunmaktadır."
     }
@@ -148,7 +148,7 @@
       "time": "16:45-17:15",
       "title": "İletişim Ara Katmanında Modern Açık Adreslemeli Hash Tabloları İle Qos-Duyarlı Mesaj Teslimatının İyileştirilmesi",
       "authors": [
-        "Can KORKMAZ (HAVELSAN)",
+        "Can KORKMAZ (HAVELSAN A.Ş.)",
         "İbrahim Onuralp YİĞİT (HAVELSAN A.Ş.)",
         "Selçuk ALTINAY (HAVELSAN A.Ş.)"
       ],
