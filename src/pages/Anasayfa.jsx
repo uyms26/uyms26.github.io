@@ -41,21 +41,21 @@ const Anasayfa = () => {
       subtitle: ""
     },
     {
-          id: 3,
-          image: MenteseBanner,
-          title: "",
-          subtitle: "",
-          customContent: true
-        },
-        {
-          id: 4,
-          image: KonaklamaBanner,
-          title: "Konaklama",
-          subtitle: "UYMS 2026 Konaklama Seçenekleri",
-          description: "Akyaka'nın turkuaz kıyılarında ve Muğla merkezdeki seçkin otellerde konaklama seçeneklerini keşfedin.",
-          link: "/konaklama",
-          linkLabel: "Konaklama Bilgileri →"
-        },
+      id: 3,
+      image: MenteseBanner,
+      title: "",
+      subtitle: "",
+      customContent: true
+    },
+    {
+      id: 4,
+      image: KonaklamaBanner,
+      title: "Konaklama",
+      subtitle: "UYMS 2026 Konaklama Seçenekleri",
+      description: "Akyaka'nın turkuaz kıyılarında ve Muğla merkezdeki seçkin otellerde konaklama seçeneklerini keşfedin.",
+      link: "/konaklama",
+      linkLabel: "Konaklama Bilgileri →"
+    },
     {
       id: 5,
       image: BedirPhoto,
@@ -222,9 +222,9 @@ const Anasayfa = () => {
 
   const importantDates = [
 
-    { event: "Bildiri Gönderimi Son Günü", date: "8 Şubat 2026", status: "upcoming" },
-    { event: "Bildiri Kabul Bildirimi", date: "20 Mart 2026", status: "active" },
-    { event: "Kayıtların Son Günü", date: "3 Nisan 2026", status: "active" },
+    { event: "Bildiri Gönderimi Son Günü", date: "8 Şubat 2026", status: "past" },
+    { event: "Bildiri Kabul Bildirimi", date: "20 Mart 2026", status: "past" },
+    { event: "Kayıtların Son Günü", date: "3 Nisan 2026", status: "past" },
     // { event: "Program Yayınlanması", date: "1 Mart 2026", status: "upcoming" },
     { event: "Sempozyum", date: "14-16 Mayıs 2026", status: "main" }
   ];
