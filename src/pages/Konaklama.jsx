@@ -1,305 +1,264 @@
 import React from 'react';
 
+const hotelData = [
+  {
+    id: 1,
+    name: "Muğla Sıtkı Koçman Üniversitesi Akyaka Uygulama Oteli",
+    location: "Akyaka, Muğla",
+    badge: "🏖️ Akyaka",
+    badgeColor: "bg-cyan-100 text-cyan-800 border-cyan-300",
+    cardBorder: "border-cyan-400",
+    headerGradient: "from-cyan-500 to-teal-600",
+    url: "https://sksd.mu.edu.tr/tr/msku-akyaka-uygulama-oteli-9696",
+    specialNote: "UYMS katılımcılarına özel indirim! Rezervasyon sırasında sempozyum katılımcısı olduğunuzu belirtin.",
+    note: "Kahvaltı dahil fiyatlardır.",
+    description: "MSKÜ bünyesindeki uygulama oteli, Akyaka'nın eşsiz doğasında konforlu bir konaklama imkânı sunmaktadır.",
+    features: ["Kahvaltı dahil", "Denize yakın konum", "Üniversite işletmesi", "Huzurlu ortam"],
+    pricing: [
+      { type: "1 Kişilik Oda", price: "2.100 ₺" },
+      { type: "2 Kişilik Oda", price: "2.880 ₺" },
+      { type: "3 Kişilik Oda", price: "3.600 ₺" },
+      { type: "4 Kişilik Suit Oda", price: "4.400 ₺" },
+    ],
+  },
+  {
+    id: 2,
+    name: "Muğla Sıtkı Koçman Üniversitesi Konukevi",
+    location: "Muğla Merkez",
+    badge: "🏛️ Muğla Merkez",
+    badgeColor: "bg-indigo-100 text-indigo-800 border-indigo-300",
+    cardBorder: "border-indigo-400",
+    headerGradient: "from-indigo-500 to-purple-600",
+    url: "https://sksd.mu.edu.tr/tr/konukevi-1892",
+    specialNote: "UYMS katılımcılarına özel indirim! Rezervasyon sırasında sempozyum katılımcısı olduğunuzu belirtin.",
+    note: "Kahvaltı dahil fiyatlardır.",
+    description: "MSKÜ Konukevi, sempozyum katılımcılarına özel indirimli fiyatlarla üniversite kampüsünde konaklama imkânı sunmaktadır.",
+    features: ["Kahvaltı dahil", "Isıtma & Soğutma", "LCD TV", "Buzdolabı"],
+    pricing: [
+      { type: "Tek Kişilik Oda", price: "1.600 ₺" },
+      { type: "İki Kişilik Oda", price: "2.600 ₺" },
+      { type: "Üç Kişilik Oda", price: "3.300 ₺" },
+      { type: "Dört Kişilik Oda", price: "4.100 ₺" },
+      { type: "Ek Yatak", price: "+800 ₺" },
+    ],
+    email: "konukevi@mu.edu.tr",
+  },
+  {
+    id: 3,
+    name: "Kerme Ottoman Konak",
+    location: "Akyaka — Azmak Nehri Kenarı",
+    badge: "🏖️ Akyaka",
+    badgeColor: "bg-amber-100 text-amber-800 border-amber-300",
+    cardBorder: "border-amber-400",
+    headerGradient: "from-amber-500 to-orange-600",
+    url: "https://www.kermeottomankonak.com/",
+    discount: "%20 İndirim",
+    discountNote: "UYMS katılımcılarına özel %20 indirim uygulanmaktadır.",
+    specialNote: "Rezervasyon sırasında sempozyum katılımcısı olduğunuzu belirtiniz.",
+    description: "Azmak nehri üzerinde bir koyda konumlanan 40 odalı butik otelde nehir ve dağ manzaralı odalar ve büyük yüzme havuzu.",
+    features: ["Nehir & dağ manzarası", "Yüzme havuzu", "Butik hizmet",],
+  },
+  {
+    id: 4,
+    name: "Muğla Yücelen Otel",
+    location: "Kötekli Mah., Menteşe, Muğla",
+    badge: "🏙️ Muğla Merkez",
+    badgeColor: "bg-emerald-100 text-emerald-800 border-emerald-300",
+    cardBorder: "border-emerald-400",
+    headerGradient: "from-emerald-500 to-green-600",
+    url: "https://muglayucelenotel.com/",
+    description: "Merkezi konumda yıl boyunca açık butik otel. Toplantı salonları, restoran & bistro, spor salonu, otopark ve ücretsiz WiFi ile tam donanımlı.",
+    features: ["Standardort: 26 m²", "Suit: 51 m²", "Aile Odası: 42 m²", "Toplantı salonları", "Restoran & Bistro", "WiFi & Otopark"],
+    phone: "0252 223 01 00",
+    email: "info@muglayucelenotel.com",
+  },
+  {
+    id: 5,
+    name: "Tuna Otel Rezidans",
+    location: "Muğla Merkez",
+    badge: "🏙️ Muğla Merkez",
+    badgeColor: "bg-rose-100 text-rose-800 border-rose-300",
+    cardBorder: "border-rose-400",
+    headerGradient: "from-rose-500 to-pink-600",
+    url: "http://www.tunaotelrezidans.com/",
+    description: "Standart odalar, suit odalar, aile odaları ve tam donanımlı rezidans daireler sunan modern otel. Restoran ve kahvaltı salonu mevcut.",
+    features: ["Standart Oda: 30 m²", "Suit Oda: 32 m²", "Aile Odası: 32 m²", "Rezidans: 37 m²"],
+  },
+  {
+    id: 6,
+    name: "Egehan Otel",
+    location: "Muğla Merkez",
+    badge: "🏙️ Muğla Merkez",
+    badgeColor: "bg-violet-100 text-violet-800 border-violet-300",
+    cardBorder: "border-violet-400",
+    headerGradient: "from-violet-500 to-indigo-600",
+    url: "http://www.egehanotel.net/",
+    description: "2005 yılında hizmete giren 50 odalı (4 suit) otel. Dağ ve şehir manzaralı tüm odalarında internet, klima, TV, minibar ve saç kurutma makinesi bulunmaktadır.",
+    features: ["Dağ & Şehir Manzarası", "Restoran & Bar", "Kafeterya", "WiFi"],
+    phone: "+90 252 223 80 02",
+    email: "info@egehanotel.net",
+  },
+];
+
 const Konaklama = () => {
   return (
-    <div className="min-h-screen font-serif bg-gradient-to-br from-blue-50 to-indigo-100 py-8 px-4 sm:px-6 lg:px-8">
-      <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">
+    <div className="min-h-screen font-serif bg-gradient-to-br from-blue-50 to-indigo-100">
+      {/* Hero */}
+      <div className="relative bg-gradient-to-r from-cyan-700 to-indigo-800 py-16 px-4 text-center overflow-hidden">
+        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%23ffffff\" fill-opacity=\"1\"%3E%3Cpath d=\"M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')" }}></div>
+        <div className="relative max-w-3xl mx-auto">
+          <span className="inline-flex items-center gap-2 bg-white/20 text-white text-sm font-medium px-4 py-1.5 rounded-full mb-4 border border-white/30 backdrop-blur-sm">
+            🛏️ UYMS 2026 Konaklama
+          </span>
+          <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4 drop-shadow">
             Konaklama Bilgileri
           </h1>
-          <p className="text-xl sm:text-2xl text-gray-600 mt-32 max-w-4xl mx-auto">
-            UYMS 26 Sempozyumu için  konaklama seçenekleri duyurulacaktır.
+          <p className="text-lg text-cyan-100 max-w-2xl mx-auto">
+            UYMS 2026 Sempozyumu için konaklama seçenekleri
           </p>
         </div>
-     {/**  <div className="w-full max-w-6xl mx-auto">
-        
-        <div className="text-center mb-12">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-800 mb-4">
-            Konaklama Bilgileri
-          </h1>
-          <p className="text-xl sm:text-2xl text-gray-600 max-w-4xl mx-auto">
-            UYMS 26 Sempozyumu için özel fiyatlarla anlaşmalı oteller ve konaklama seçenekleri
-          </p>
-        </div>
+      </div>
 
-        
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        
-          <div className="lg:col-span-2 space-y-8">
-        
-            <div className="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-blue-500">
-              <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-6 flex items-center">
-                                <svg className="w-8 h-8 text-blue-600 mr-3" viewBox="0 0 512 512" fill="currentColor">
-                  <g>
-                    <path d="M407.788,190.202h-92.16V82.62c-0.01-45.642-36.978-82.61-82.62-82.62H104.212 C58.57,0.01,21.602,36.978,21.591,82.62V512H58.6V82.62c0.01-12.65,5.08-23.936,13.363-32.249 c8.314-8.284,19.599-13.353,32.249-13.364h128.796c12.65,0.01,23.936,5.08,32.249,13.364c8.283,8.313,13.353,19.599,13.363,32.249 V512h37.008V227.21h92.16c12.65,0.01,23.936,5.08,32.249,13.364c8.284,8.313,13.353,19.599,13.364,32.249V512h37.008V272.822 C490.398,227.18,453.43,190.212,407.788,190.202z"></path>
-                    <rect x="111.321" y="131.597" width="31.808" height="53.976"></rect>
-                    <rect x="189.975" y="131.597" width="31.808" height="53.976"></rect>
-                    <rect x="111.321" y="254.971" width="31.808" height="53.976"></rect>
-                    <rect x="189.975" y="254.971" width="31.808" height="53.976"></rect>
-                    <rect x="111.321" y="378.345" width="31.808" height="53.976"></rect>
-                    <rect x="189.975" y="378.345" width="31.808" height="53.976"></rect>
-                    <rect x="363.47" y="289.67" width="31.808" height="53.976"></rect>
-                    <rect x="363.47" y="407.903" width="31.808" height="53.976"></rect>
-                  </g>
-                </svg>
-                Anlaşmalı Oteller
-              </h2>
-              <div className="space-y-6">
-        
-                <div className="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl p-6 border border-blue-200">
-                  <div className="flex flex-col md:flex-row md:items-center justify-between">
-                    <div className="flex-1">
-                      <div className="flex items-center mb-3">
-                        
-                        <div>
-                          <h3 className="text-xl font-bold text-gray-800">Muğla Grand Hotel</h3>
-                          
-                        </div>
-                      </div>
-                      <p className="text-gray-700 mb-3">
-                        <strong>Adres:</strong> Atatürk Bulvarı No:123, Muğla Merkez<br />
-                        <strong>Telefon:</strong> +90 252 123 45 67
-                      </p>
-                      
-                      
-                    </div>
-                    <div className="text-right mt-4 md:mt-0">
-                      <div className="text-3xl font-bold text-blue-600 mb-2">₺450</div>
-                      <div className="text-sm text-gray-600 mb-3">gecelik kişi başı</div>
-                    </div>
-                  </div>
-                </div>
-
-                
-                <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl p-6 border border-green-200">
-                  <div className="flex flex-col md:flex-row md:items-center justify-between">
-                    <div className="flex-1">
-                      <div className="flex items-center mb-3">
-                        
-                        <div>
-                          <h3 className="text-xl font-bold text-gray-800">Kötekli Resort Hotel</h3>
-                        
-                        </div>
-                      </div>
-                      <p className="text-gray-700 mb-3">
-                        <strong>Adres:</strong> Kötekli Mahallesi, Muğla Sıtkı Koçman Üniversitesi Yanı<br />
-                        <strong>Telefon:</strong> +90 252 234 56 78
-                      </p>
-                      
-                    </div>
-                    <div className="text-right mt-4 md:mt-0">
-                      <div className="text-3xl font-bold text-green-600 mb-2">₺380</div>
-                      <div className="text-sm text-gray-600 mb-3">gecelik kişi başı</div>
-                      
-                    </div>
-                  </div>
-                </div>
-
-                
-                <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl p-6 border border-purple-200">
-                  <div className="flex flex-col md:flex-row md:items-center justify-between">
-                    <div className="flex-1">
-                      <div className="flex items-center mb-3">
-                        
-                        <div>
-                          <h3 className="text-xl font-bold text-gray-800">Menteşe Business Hotel</h3>
-                          
-                        </div>
-                      </div>
-                      <p className="text-gray-700 mb-3">
-                        <strong>Adres:</strong> Menteşe Mahallesi, İş Merkezi No:45<br />
-                        <strong>Telefon:</strong> +90 252 345 67 89
-                      </p>
-                     
-                    </div>
-                    <div className="text-right mt-4 md:mt-0">
-                      <div className="text-3xl font-bold text-purple-600 mb-2">₺320</div>
-                      <div className="text-sm text-gray-600 mb-3">gecelik kişi başı</div>
-                      
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            
-            <div className="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-green-500">
-              <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-6 flex items-center">
-              <svg className="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                  </svg>
-                Konaklama Paketleri
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                
-                <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 border-2 border-blue-300 text-center">
-                  
-                  <h3 className="text-xl font-bold text-gray-800 mb-2">Üç Kişilik Oda</h3>
-                  <div className="text-3xl font-bold text-blue-600 mb-3">₺1,200</div>
-                  <p className="text-gray-600 mb-4">2 gece konaklama</p>
-                  <ul className="text-left space-y-2 mb-6">
-                    <li className="flex items-center">
-                      <span className="text-green-500 mr-2">✓</span>
-                      <span className="text-sm">Standart oda</span>
-                    </li>
-                    <li className="flex items-center">
-                      <span className="text-green-500 mr-2">✓</span>
-                      <span className="text-sm">Kahvaltı dahil</span>
-                    </li>
-                    <li className="flex items-center">
-                      <span className="text-green-500 mr-2">✓</span>
-                      <span className="text-sm">Ücretsiz WiFi</span>
-                    </li>
-                  </ul>
-                  
-                </div>
-
-                
-                <div className="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-xl p-6 border-2 border-yellow-400 text-center relative">
-                  
-                  
-                  <h3 className="text-xl font-bold text-gray-800 mb-2">İki Kişilik Oda</h3>
-                  <div className="text-3xl font-bold text-yellow-600 mb-3">₺1,800</div>
-                  <p className="text-gray-600 mb-4">2 gece konaklama</p>
-                  <ul className="text-left space-y-2 mb-6">
-                    <li className="flex items-center">
-                      <span className="text-green-500 mr-2">✓</span>
-                      <span className="text-sm">Standart oda</span>
-                    </li>
-                    <li className="flex items-center">
-                      <span className="text-green-500 mr-2">✓</span>
-                      <span className="text-sm">Kahvaltı dahil</span>
-                    </li>
-                    <li className="flex items-center">
-                      <span className="text-green-500 mr-2">✓</span>
-                      <span className="text-sm">Ücretsiz WiFi</span>
-                    </li>
-            
-                  </ul>
-                  
-                </div>
-
-                
-                <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 border-2 border-purple-300 text-center">
-                  
-                  <h3 className="text-xl font-bold text-gray-800 mb-2">Tek Kişilik Oda</h3>
-                  <div className="text-3xl font-bold text-purple-600 mb-3">₺1,500</div>
-                  <p className="text-gray-600 mb-4">2 gece konaklama</p>
-                  <ul className="text-left space-y-2 mb-6">
-                    <li className="flex items-center">
-                      <span className="text-green-500 mr-2">✓</span>
-                      <span className="text-sm">Standart oda</span>
-                    </li>
-                    <li className="flex items-center">
-                      <span className="text-green-500 mr-2">✓</span>
-                      <span className="text-sm">Kahvaltı dahil</span>
-                    </li>
-                    <li className="flex items-center">
-                      <span className="text-green-500 mr-2">✓</span>
-                      <span className="text-sm">Ücretsiz WiFi</span>
-                    </li>
-                    
-                  </ul>
-                  
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-indigo-500">
-              <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-6 flex items-center">
-              <svg className="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                  </svg>
-                Rezervasyon Bilgileri
-              </h2>
-              <div className="space-y-6">
-                <div className="bg-indigo-50 rounded-xl p-6">
-                  <h3 className="text-xl font-bold text-indigo-800 mb-3">🔑 Rezervasyon Koşulları</h3>
-                  <ul className="space-y-2 text-gray-700">
-                    <li className="flex items-start">
-                      <span className="text-indigo-500 mr-3 mt-1">•</span>
-                      <span>Rezervasyonlar en az 30 gün önceden yapılmalıdır</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-indigo-500 mr-3 mt-1">•</span>
-                      <span>Ödeme rezervasyon sırasında yapılmalıdır</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-indigo-500 mr-3 mt-1">•</span>
-                      <span>İptal işlemleri 7 gün önceden bildirilmelidir</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-indigo-500 mr-3 mt-1">•</span>
-                      <span>Erken geliş ve geç çıkış talepleri otel ile koordine edilir</span>
-                    </li>
-                  </ul>
-                </div>
-                
-                <div className="bg-teal-50 rounded-xl p-6">
-                  <h3 className="text-xl font-bold text-teal-800 mb-3">📅 Önemli Tarihler</h3>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div className="bg-white rounded-lg p-4">
-                      <h4 className="font-semibold text-teal-700 mb-2">Son Rezervasyon Tarihi</h4>
-                  <p className="text-sm text-gray-700">15 Şubat 2025</p>
-                    </div>
-                    <div className="bg-white rounded-lg p-4">
-                      <h4 className="font-semibold text-teal-700 mb-2">Check-in</h4>
-                      <p className="text-sm text-gray-700">14 Mart 2025 - 14:00</p>
-                    </div>
-                    <div className="bg-white rounded-lg p-4">
-                      <h4 className="font-semibold text-teal-700 mb-2">Check-out</h4>
-                      <p className="text-sm text-gray-700">17 Mart 2025 - 11:00</p>
-                    </div>
-                    <div className="bg-white rounded-lg p-4">
-                      <h4 className="font-semibold text-teal-700 mb-2">İptal Son Tarihi</h4>
-                      <p className="text-sm text-gray-700">8 Mart 2025</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+      {/* Info Banner */}
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6 mb-8 relative z-10">
+        <div className="bg-white rounded-2xl shadow-lg border border-blue-100 p-5 flex items-start gap-4">
+          <div className="bg-blue-100 rounded-full p-3 flex-shrink-0">
+            <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
           </div>
+          <div>
+            <p className="text-sm font-semibold text-blue-800 mb-1">Rezervasyon Hakkında Önemli Not</p>
+            <p className="text-sm text-gray-600">
+              Bazı otellerde UYMS katılımcısı olduğunuzu belirtmeniz indirim için zorunludur.
+            </p>
+          </div>
+        </div>
+      </div>
 
-          
-          <div className="space-y-8">
-           
-
-            
-            <div className="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-yellow-500">
-              <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-6 flex items-center">
-                <span className="text-yellow-600 mr-3">📞</span>
-                İletişim
-              </h2>
-              <div className="space-y-4">
-                <div className="flex items-center p-3 bg-yellow-50 rounded-lg">
-                  <span className="text-yellow-600 mr-3 text-xl">📱</span>
+      {/* Hotel Cards */}
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {hotelData.map((hotel) => (
+            <div
+              key={hotel.id}
+              className={`bg-white rounded-2xl shadow-xl overflow-hidden border-t-4 ${hotel.cardBorder} flex flex-col hover:shadow-2xl transition-shadow duration-300`}
+            >
+              {/* Card Header */}
+              <div className={`bg-gradient-to-r ${hotel.headerGradient} px-6 py-5`}>
+                <div className="flex items-start justify-between gap-3">
                   <div>
-                    <span className="block text-sm text-gray-600">Telefon</span>
-                    <span className="text-lg font-semibold">+90 252 123 45 67</span>
+                    <span className={`inline-block text-xs font-bold px-3 py-1 rounded-full border bg-white/20 text-white border-white/30 mb-2`}>
+                      {hotel.badge}
+                    </span>
+                    <h2 className="text-xl font-bold text-white leading-tight">{hotel.name}</h2>
+                    <p className="text-white/80 text-sm mt-1 flex items-center gap-1">
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                      </svg>
+                      {hotel.location}
+                    </p>
                   </div>
+                  {hotel.discount && (
+                    <span className="flex-shrink-0 bg-white text-orange-600 font-bold text-sm px-3 py-1.5 rounded-xl shadow-md">
+                      {hotel.discount}
+                    </span>
+                  )}
                 </div>
-                <div className="flex items-center p-3 bg-yellow-50 rounded-lg">
-                  <span className="text-yellow-600 mr-3 text-xl">✉️</span>
-                  <div>
-                    <span className="block text-sm text-gray-600">E-mail</span>
-                    <a
-                      href="mailto:konaklama@uyms26.org"
-                      className="text-lg font-semibold text-blue-600 hover:text-blue-800 underline transition-colors"
-                    >
-                      konaklama@uyms26.org
+              </div>
+
+              {/* Card Body */}
+              <div className="p-6 flex flex-col flex-1">
+                {/* Special notes */}
+                {hotel.specialNote && (
+                  <div className="bg-yellow-50 border border-yellow-200 rounded-xl px-4 py-3 mb-4 flex items-start gap-2">
+                    <span className="text-yellow-600 flex-shrink-0 mt-0.5">⭐</span>
+                    <p className="text-yellow-800 text-sm font-medium">{hotel.specialNote}</p>
+                  </div>
+                )}
+                {hotel.discountNote && (
+                  <div className="bg-orange-50 border border-orange-200 rounded-xl px-4 py-3 mb-4 flex items-start gap-2">
+                    <span className="text-orange-600 flex-shrink-0 mt-0.5">🎉</span>
+                    <p className="text-orange-800 text-sm font-medium">{hotel.discountNote}</p>
+                  </div>
+                )}
+
+                {/* Description */}
+                <p className="text-gray-600 text-sm mb-5 leading-relaxed">{hotel.description}</p>
+
+                {/* Features */}
+                <div className="flex flex-wrap gap-2 mb-5">
+                  {hotel.features.map((feat, i) => (
+                    <span key={i} className="text-xs bg-gray-100 text-gray-700 px-3 py-1 rounded-full border border-gray-200">
+                      ✓ {feat}
+                    </span>
+                  ))}
+                </div>
+
+                {/* Pricing Table */}
+                {hotel.pricing?.length > 0 && (
+                  <div className="bg-gray-50 rounded-xl overflow-hidden border border-gray-200 mb-5 flex-1">
+                    <div className="px-4 py-2.5 bg-gray-100 border-b border-gray-200">
+                      <p className="text-xs font-bold text-gray-600 uppercase tracking-wide">Fiyat Listesi</p>
+                    </div>
+                    <div className="divide-y divide-gray-100">
+                      {hotel.pricing.map((item, i) => (
+                        <div key={i} className="flex items-center justify-between px-4 py-2.5">
+                          <span className="text-sm text-gray-700">{item.type}</span>
+                          <span className="text-sm font-bold text-gray-900">
+                            {item.price}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                    {hotel.note && (
+                      <div className="px-4 py-2 bg-green-50 border-t border-gray-200">
+                        <p className="text-xs text-green-700 font-medium">☕ {hotel.note}</p>
+                      </div>
+                    )}
+                  </div>
+                )}
+
+                {/* Contact & CTA */}
+                <div className="flex flex-col gap-2">
+                  {hotel.phone && (
+                    <a href={`tel:${hotel.phone.replace(/\s/g, '')}`} className="flex items-center gap-2 text-sm text-gray-600 hover:text-blue-700 transition-colors">
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                      </svg>
+                      {hotel.phone}
                     </a>
-                  </div>
+                  )}
+                  {hotel.email && (
+                    <a href={`mailto:${hotel.email}`} className="flex items-center gap-2 text-sm text-gray-600 hover:text-blue-700 transition-colors">
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
+                      {hotel.email}
+                    </a>
+                  )}
+                  <a
+                    href={hotel.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`mt-2 w-full text-center text-sm font-semibold py-2.5 px-4 rounded-xl transition-all duration-200 bg-gradient-to-r ${hotel.headerGradient} text-white hover:opacity-90 hover:shadow-md`}
+                  >
+                    Otelin Web Sitesini Ziyaret Et →
+                  </a>
                 </div>
-             
               </div>
             </div>
-
-            
-          </div>
+          ))}
         </div>
 
-        
-      </div>*/}
+        {/* Bottom Note */}
+        <div className="mt-10 bg-white rounded-2xl shadow-lg p-6 border border-gray-100 text-center">
+          <p className="text-gray-500 text-sm">
+            Konaklama ile ilgili sorularınız için sempozyum organizasyon komitesiyle iletişime geçebilirsiniz.
+          </p>
+        </div>
+      </div>
     </div>
   );
 };

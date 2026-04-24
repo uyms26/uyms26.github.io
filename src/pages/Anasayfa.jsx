@@ -1,17 +1,19 @@
 
 import { useState, useEffect } from 'react';
 
-
-
 import LandingHero from '../assets/banner.png';
 import MskuPhoto from '../assets/msku.jpg';
 import AselsanBanner from '../assets/aselsan_banner_real.png';
 import BedirPhoto from '../assets/bedir_tekinerdogan.jpg';
 import AkyakaPhoto from '../assets/akyaka_yeni.jpeg';
+import KonaklamaBanner from '../assets/konaklama_banner.png';
+import MenteseBanner from '../assets/mentese_belediyesi_banner.png';
+import MenteseLogo from '../assets/20240916-mentese-belediyesi-kamuoyu-bilgilendirmesi-707825-d950fdc06ca88521a5e6.jpg';
 import { NavLink } from 'react-router-dom';
 import AselsanLogo from '../assets/aselsan-png-logo.png';
 import VirtusLogo from '../assets/virtusrndlogo.png';
 import AkademikLogo from '../assets/akademik.png';
+
 
 const Anasayfa = () => {
   const [timeLeft, setTimeLeft] = useState({
@@ -39,7 +41,23 @@ const Anasayfa = () => {
       subtitle: ""
     },
     {
-      id: 3,
+          id: 3,
+          image: MenteseBanner,
+          title: "",
+          subtitle: "",
+          customContent: true
+        },
+        {
+          id: 4,
+          image: KonaklamaBanner,
+          title: "Konaklama",
+          subtitle: "UYMS 2026 Konaklama Seçenekleri",
+          description: "Akyaka'nın turkuaz kıyılarında ve Muğla merkezdeki seçkin otellerde konaklama seçeneklerini keşfedin.",
+          link: "/konaklama",
+          linkLabel: "Konaklama Bilgileri →"
+        },
+    {
+      id: 5,
       image: BedirPhoto,
       title: "Prof. Dr. Ir. Bedir Tekinerdogan",
       subtitle: "Sempozyumumuzun Ana Konuşmacısı",
@@ -49,13 +67,13 @@ const Anasayfa = () => {
       layoutClass: "absolute inset-0 flex flex-col items-center lg:items-end justify-end lg:justify-center px-4 sm:px-8 lg:px-24 xl:px-32 text-center pb-10 sm:pb-16 lg:pb-0"
     },
     {
-      id: 4,
+      id: 6,
       image: MskuPhoto,
       title: "Muğla Sıtkı Koçman Üniversitesi",
       subtitle: "Sizleri Muğla'nın eşsiz doğasında ağırlamaktan onur duyarız"
     },
     {
-      id: 5,
+      id: 72,
       image: AkyakaPhoto,
       title: "Akyaka",
       subtitle: "Muğla Sıtkı Koçman Üniversitesi'ndeki bu akademik buluşmanın hemen yanı başında, doğanın teknolojiyle harmanlandığı özel bir durak sizi bekliyor: Akyaka.",
@@ -82,7 +100,7 @@ const Anasayfa = () => {
       const resetTimer = setTimeout(() => {
         setIsTransitioning(false);
         setCurrentSlide(0);
-      }, 1000); // 1000ms transition süresi
+      }, 500); // 1000ms transition süresi
       return () => clearTimeout(resetTimer);
     } else if (!isTransitioning && currentSlide === 0) {
       // 0'a atladıktan sonra tekrar transition'ı açabilmek için küçük bir bekleme
