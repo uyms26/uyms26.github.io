@@ -282,15 +282,19 @@ const Program = () => {
           <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-500"></div>
 
           <div className="p-4 sm:p-8">
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-8 pb-4 border-b text-center">
-              {scheduleData[activeTab].date} - {scheduleData[activeTab].dayName} Programı
-            </h2>
-
-            <div className="space-y-6">
-              {scheduleData[activeTab].events.map((event, idx) => {
-                let header = null;
-                if (activeTab !== 2) {
-                  const isFirstSplit = event.type === 'split' && scheduleData[activeTab].events.findIndex(e => e.type === 'split') === idx;
+            {scheduleData.map((dayData, tabIdx) => (
+              <div 
+                key={tabIdx}
+                className={`${activeTab === tabIdx ? 'block' : 'hidden print:block'} print:min-h-screen break-before-page first:break-before-auto`}
+              >
+                <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-8 pb-4 border-b text-center">
+                  {dayData.date} - {dayData.dayName} Programı
+                </h2>
+                <div className="space-y-6">
+                  {dayData.events.map((event, idx) => {
+                    let header = null;
+                    if (tabIdx !== 2) {
+                      const isFirstSplit = event.type === 'split' && dayData.events.findIndex(e => e.type === 'split') === idx;
 
                   if (idx === 0) {
                     if (event.type === 'single') {
@@ -383,7 +387,9 @@ const Program = () => {
                   </React.Fragment>
                 );
               })}
+              </div>
             </div>
+            ))}
           </div>
         </div>
 
