@@ -15,30 +15,6 @@ const Panel = () => {
                 {/* Content Container */}
                 <div className="space-y-8">
                     {/* Row 1: Photos and Info of Panelists */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
-
-                        {/* Panelist 1 */}
-                        <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 p-6 md:p-8 flex flex-col">
-                            <h2 className="text-2xl font-bold text-gray-900 mb-2">Prof. Dr. Onur Demirörs</h2>
-                            <p className="text-blue-600 font-medium mb-4">İzmir Yüksek Teknoloji Enstitüsü / Bilgisayar Mühendisliği</p>
-                            <p className="text-gray-600 leading-relaxed text-md text-justify">
-                                Profesör Dr. Onur Demirörs yazılım mühendisliği ve süreç yönetimi alanlarında önde gelen bilim insanıdır. Halen İzmir Yüksek Teknoloji Enstitüsü (İYTE) Bilgisayar Mühendisliği Bölümü Başkanıdır. Aynı zamanda Bilgi Grubu A. Ş. Strateji Direktörü olarak çalışmaktadır. İYTE'ye katılmadan önce yaklaşık yirmi yıl boyunca Orta Doğu Teknik Üniversitesi'nde (ODTÜ) profesör olarak görev yapmıştır.
-                                Bilgisayar Mühendisliği alanında, ODTÜ'den lisans, Ege Üniversitesi'nden yüksek lisans ve hem ikinci yüksek lisans hem de doktora derecelerini Southern Methodist Üniversitesi'nden almıştır.
-                                Çalışmaları, yazılım geliştirmeyi daha ölçülebilir ve verimli hale getirmeye odaklanmıştır. Yazılım Süreç İyileştirme, Yazılım Ölçümü, Süreç Modelleme konularında araştırmaları yoğunlaşmıştır. Son yıllarda, yazılım mühendisliği ve DevOps uygulamalarında Üretken Yapay Zeka ve Dağıtık Mikroservis Tabanlı mimariler üzerinde odaklanmıştır.
-                                Onlarca şirkete ölçüm altyapıları kurma ve organizasyonel süreçleri iyileştirme konusunda danışmanlık yapmıştır. ScholarGPS tarafından "Yazılım Geliştirme Süreci” (dünya çapında 11.), “İş Süreci Modelleme” (dünya çapında 25.) ve “Yazılım Büyüklük Ölçümü“ (dünya çapında 61.)alanlarında en başarılı akademisyenler arasında gösterilmiştir. 300’ün üzerinde makale ve bildirisi uluslararası saygın dergi ve konferanslarda yayınlanmıştır. Euromicro ve Cosmic Direktorler Kurulu, IWSM-Mensura, Euromicro-SEAA ve UYMS Yönlendirme Kurulu üyesidir.
-                            </p>
-                        </div>
-
-                        {/* Panelist 2 */}
-                        <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 p-6 md:p-8 flex flex-col">
-                            <h2 className="text-2xl font-bold text-gray-900 mb-2">Dr. Görkem Giray</h2>
-                            <p className="text-blue-600 font-medium mb-4">İzmir Yüksek Teknoloji Enstitüsü </p>
-                            <p className="text-gray-600 leading-relaxed text-md text-justify">
-                                Dr. Görkem Giray Bilgisayar Mühendisliği alanında lisans ve doktora derecelerini Ege Üniversitesi Bilgisayar Mühendisliği Bölümünden sırasıyla 1999 ve 2011 yıllarında almıştır. Koç Üniversitesinde İşletme Yüksek Lisans programını 2001 yılında tamamlamıştır. Yirmi beş yılı aşkın sektör deneyiminde yazılım mühendisinden bölgesel bilgi teknoloji direktörlüğüne uzanan çeşitli teknik ve liderlik rollerinde görev almıştır. Profesyonel kariyerinin yanında üniversitelerde yazılım mühendisliği ve proje yönetimi dersleri vermiştir. Ekim 2025’ten bu yana, İzmir Yüksek Teknoloji Enstitüsü’nde Doktora Sonrası Araştırmacı ve Eindhoven University of Technology bünyesindeki Software Engineering & Technology (SET) grubunda Misafir Araştırmacı olarak görev yapmaktadır.
-                            </p>
-                        </div>
-
-                    </div>
 
                     {/* Row 2: Abstract Section (Full Width) */}
                     <div className="bg-white rounded-3xl shadow-xl p-8 md:p-12 border border-gray-100">
@@ -70,6 +46,33 @@ const Panel = () => {
                             </p>
                         </div>
                     </div>
+
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+
+                        {/* Panelist 1 */}
+                        <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 p-6 md:p-8 flex flex-col">
+                            <h2 className="text-2xl font-bold text-gray-900 mb-2">Prof. Dr. Onur Demirörs</h2>
+                            <p className="text-blue-600 font-medium mb-4">İzmir Yüksek Teknoloji Enstitüsü / Bilgisayar Mühendisliği</p>
+                            <p className="text-gray-600 leading-relaxed text-md text-justify">
+                                Profesör Dr. Onur Demirörs yazılım mühendisliği ve süreç yönetimi alanlarında önde gelen bilim insanıdır. Halen İzmir Yüksek Teknoloji Enstitüsü (İYTE) Bilgisayar Mühendisliği Bölümü Başkanıdır. Aynı zamanda Bilgi Grubu A. Ş. Strateji Direktörü olarak çalışmaktadır. İYTE'ye katılmadan önce yaklaşık yirmi yıl boyunca Orta Doğu Teknik Üniversitesi'nde (ODTÜ) profesör olarak görev yapmıştır.
+                                Bilgisayar Mühendisliği alanında, ODTÜ'den lisans, Ege Üniversitesi'nden yüksek lisans ve hem ikinci yüksek lisans hem de doktora derecelerini Southern Methodist Üniversitesi'nden almıştır.
+                                Çalışmaları, yazılım geliştirmeyi daha ölçülebilir ve verimli hale getirmeye odaklanmıştır. Yazılım Süreç İyileştirme, Yazılım Ölçümü, Süreç Modelleme konularında araştırmaları yoğunlaşmıştır. Son yıllarda, yazılım mühendisliği ve DevOps uygulamalarında Üretken Yapay Zeka ve Dağıtık Mikroservis Tabanlı mimariler üzerinde odaklanmıştır.
+                                Onlarca şirkete ölçüm altyapıları kurma ve organizasyonel süreçleri iyileştirme konusunda danışmanlık yapmıştır. ScholarGPS tarafından "Yazılım Geliştirme Süreci” (dünya çapında 11.), “İş Süreci Modelleme” (dünya çapında 25.) ve “Yazılım Büyüklük Ölçümü“ (dünya çapında 61.)alanlarında en başarılı akademisyenler arasında gösterilmiştir. 300’ün üzerinde makale ve bildirisi uluslararası saygın dergi ve konferanslarda yayınlanmıştır. Euromicro ve Cosmic Direktorler Kurulu, IWSM-Mensura, Euromicro-SEAA ve UYMS Yönlendirme Kurulu üyesidir.
+                            </p>
+                        </div>
+
+                        {/* Panelist 2 */}
+                        <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 p-6 md:p-8 flex flex-col">
+                            <h2 className="text-2xl font-bold text-gray-900 mb-2">Dr. Görkem Giray</h2>
+                            <p className="text-blue-600 font-medium mb-4">İzmir Yüksek Teknoloji Enstitüsü </p>
+                            <p className="text-gray-600 leading-relaxed text-md text-justify">
+                                Dr. Görkem Giray Bilgisayar Mühendisliği alanında lisans ve doktora derecelerini Ege Üniversitesi Bilgisayar Mühendisliği Bölümünden sırasıyla 1999 ve 2011 yıllarında almıştır. Koç Üniversitesinde İşletme Yüksek Lisans programını 2001 yılında tamamlamıştır. Yirmi beş yılı aşkın sektör deneyiminde yazılım mühendisinden bölgesel bilgi teknoloji direktörlüğüne uzanan çeşitli teknik ve liderlik rollerinde görev almıştır. Profesyonel kariyerinin yanında üniversitelerde yazılım mühendisliği ve proje yönetimi dersleri vermiştir. Ekim 2025’ten bu yana, İzmir Yüksek Teknoloji Enstitüsü’nde Doktora Sonrası Araştırmacı ve Eindhoven University of Technology bünyesindeki Software Engineering & Technology (SET) grubunda Misafir Araştırmacı olarak görev yapmaktadır.
+                            </p>
+                        </div>
+
+                    </div>
+
                 </div>
             </div>
         </div>
