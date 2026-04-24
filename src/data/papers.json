@@ -23,7 +23,7 @@
     },
     {
       "time": "12:15-12:45",
-      "title": "Structured Pruning Performance Evaluation İn Deep Learning: An Experimental Study With Cleanaı+",
+      "title": "Structured Pruning Performance Evaluation in Deep Learning: An Experimental Study With Cleanaı+",
       "authors": [
         "Osman ÇAĞLAR (Eskişehir Osmangazi Üniversitesi)",
         "Uğur YAYAN (Eskişehir Osmangazi Üniversitesi)",
@@ -65,7 +65,7 @@
     },
     {
       "time": "14:30-15:00",
-      "title": "Hybrid Entity Resolution İn Logistics: Llm-As-A-Judge For Offline Heuristic Improvement",
+      "title": "Hybrid Entity Resolution in Logistics: Llm-As-A-Judge For Offline Heuristic Improvement",
       "authors": [
         "Ahmet CAY (Hepsijet)",
         "Ali ÇILTIK (Hepsijet)",
@@ -78,7 +78,7 @@
       "time": "15:00-15:30",
       "title": "Gömülü Gerçek Zamanlı Sistemler İçin Düşük Maliyetli Ölçümleme Aracı Tasarımı Ve Uygulaması",
       "authors": [
-        "Yiğit ARISOY (Aselsan)"
+        "Yiğit ARISOY (ASELSAN)"
       ],
       "abstract": "Gerçek zamanlı gömülü sistemlerde, yazılımın katı zaman limitlerini karşılaması gerekmektedir. Yazılımın\nbu gerçek zamanlı çalışma gereksinimlerini karşılayamadığı durumlar oluşmaktadır. Bu durumlarda darboğaz\noluşturan yerlerin bulunması içi ölçümleme yapılması gerekmektedir. Ölçümleme işlemlerinin de yazılım akışını\nve sürelerini etkilemeden yapılması gerekmektedir. Bu makale, VxWorks üzerinde çalışan C++ uygulamaları için\ngeliştirilmiş özel bir ölçümleme aracını tanımlamaktadır. Tasarımımız verileri kaydetmek için herhangi bir yazılım\nkilidi kullanmadan ve ana uygulamanın performansını etkilemeden ölçümleme yapmayı sağlar. Verileri analiz\netmek için, milyonlarca mesajı donmadan işleyebilen, Web Workers kullanan web tabanlı bir araç geliştirdik.\n12 çekirdekli Intel Xeon işlemcisinde yapılan testler, aracımızın mesaj başına yaklaşık 133 nanosaniyelik bir\ngecikmeye sahip olduğunu ve aktif kullanımda sürelerin %1’den az arttığını göstermektedir. Bu, gerçek zaman\nsınırlarımızı kaçırmadan sistemlerimizde yüksek doğruluklu performans verileri yakalamamızı sağladı."
     }
@@ -86,7 +86,7 @@
   "Oturum 4": [
     {
       "time": "14:00-14:30",
-      "title": "Yazılım Gereksinimi Tanımlamada Akış Odaklı Yaklaşım: Aselsan’Da Kullanım Durumu Dönüşümü Deneyimi",
+      "title": "Yazılım Gereksinimi Tanımlamada Akış Odaklı Yaklaşım: ASELSAN’Da Kullanım Durumu Dönüşümü Deneyimi",
       "authors": [
         "Süleyman ARIKAN (ASELSAN)",
         "Adnan KALAY (ASELSAN)",
@@ -263,7 +263,7 @@
     },
     {
       "time": "11:45-12:15",
-      "title": "Graph Neural Network-Augmented Retrieval For A Domain Expert Chatbot İn R&I Intelligence",
+      "title": "Graph Neural Network-Augmented Retrieval For A Domain Expert Chatbot in R&I Intelligence",
       "authors": [
         "Tolga AYAV (Izmir Yüksek Teknoloji Enstitüsü)",
         "Burak KORCUKLU (İzmir Yüksek Teknoloji Enstitüsü)"
@@ -316,7 +316,7 @@
   "Oturum 11": [
     {
       "time": "14:00-14:30",
-      "title": "A Centralized And Scalable Software Architecture İn Satellite Integration And Egse Test Infrastructures",
+      "title": "A Centralized And Scalable Software Architecture in Satellite Integration And Egse Test Infrastructures",
       "authors": [
         "Talha Sezer CAKİR (Türk Havacılık ve Uzay Sanayii A.Ş.)",
         "Mert İLERİ (Türk Havacılık ve Uzay Sanayii A.Ş.)",
@@ -354,7 +354,7 @@
     },
     {
       "time": "14:30-15:00",
-      "title": "An Aı-Assisted Automated Testing Framework For Ring Redundancy Validation İn Industrial Networks",
+      "title": "An Aı-Assisted Automated Testing Framework For Ring Redundancy Validation in Industrial Networks",
       "authors": [
         "Müjde CEYLAN (SIEMENS)",
         "Selin GÜNDÜZ (SIEMENS)"
