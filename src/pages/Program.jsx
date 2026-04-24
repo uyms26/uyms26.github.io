@@ -1,8 +1,43 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import papersData from '../data/papers.json';
+
+const renderPaper = (paper, pIdx, onClickPaper) => {
+  if (!paper) return null;
+
+  const { title, authors, time, abstract } = paper;
+
+  return (
+    <div
+      key={pIdx}
+      onClick={() => onClickPaper({ title, authorsList: authors, time, abstract })}
+      className="bg-white rounded-xl shadow-[0_2px_8px_rgb(0,0,0,0.04)] border border-slate-100 flex flex-col overflow-hidden transition-all hover:shadow-md hover:border-blue-200 group cursor-pointer w-full text-justify"
+    >
+      {time && (
+        <div className="bg-blue-600 w-full text-center text-white font-bold px-3 py-2 text-[13px] border-b border-blue-700/50 group-hover:bg-blue-700 transition-colors">
+          {time}
+        </div>
+      )}
+      <div className="flex-1 w-full flex flex-col p-4 pt-4">
+        <h4 className="font-bold text-gray-800 text-[14px] sm:text-[15px] leading-snug mb-2 w-full">{title}</h4>
+        {authors && authors.length > 0 && (
+          <>
+            <hr className="w-full border-t border-gray-600 mb-2" />
+            <ul className="list-disc pl-4 space-y-1 text-gray-600 text-[13px] leading-relaxed w-full">
+              {authors.map((author, idx) => (
+                <li key={idx} className="w-full">{author}</li>
+              ))}
+            </ul>
+          </>
+        )}
+      </div>
+    </div>
+  );
+};
 
 const Program = () => {
   const [activeTab, setActiveTab] = useState(0);
+  const [selectedPaper, setSelectedPaper] = useState(null);
 
   const legend = [
     { code: "YSvD", name: "Yazılım Sınama ve Doğrulama", color: "bg-gray-100" },
@@ -40,20 +75,13 @@ const Program = () => {
             title: "Oturum 1 (Salon B)",
             code: "Yazılım Sınama ve Doğrulama",
             color: "bg-gray-100",
-            papers: [
-              "11:15-11:45 | European Accessibility Act (Eaa) Uyumunun Test Edilebilirliği: Sürekli Teslim Süreçlerine Entegre Edilmiş Wcag Tabanlı Test Otomasyonu Üzerine Bir Vaka Çalışması\nMiraç Emektar (Virgosol); Fatih HARMANCI (VİRGOSOL BİLİŞİM VE YAZILIM ÇÖZÜMLERİ A.Ş.)*; Yasin Aktepe (Virgosol); İrem Yarar (Virgosol)",
-              "11:45-12:15 | An Empirical Evaluation Of Using Large Language Models For Automated Model-Based Test Generation\nHafize Sanlı (Muğla Sıtkı Koçman Üniversitesi)*; Onur Kılınççeker (University of Antwerpen and Flanders Make vzw); Cihat Çetinkaya (Muğla Sıtkı Koçman Üniversitesi)",
-              "12:15-12:45 | Structured Pruning Performance Evaluation İn Deep Learning: An Experimental Study With Cleanaı+\nOsman Çağlar (Eskişehir Osmangazi University)*; Uğur Yayan (Eskişehir Osmangazi University); Ahmet Yazıcı (Eskişehir Osmangazi University)"
-            ]
+            papers: papersData["Oturum 1"] || []
           },
           session2: {
             title: "Oturum 2 (Salon C)",
             code: "Yazılım Süreçleri",
             color: "bg-gray-100",
-            papers: [
-              "11:15-11:45 | Beyond Practices: The Nature, Significance, And Possible Future Trajectory Of The Agile Mindset\nNecmettin Özkan (Gebze Teknik Üniversitesi)*; Mehmet Şahin Gök (Gebze Teknik Üniversitesi)",
-              "11:45-12:15 | Birleştirme İsteği Süreç Otomasyonu Deneyimi: Çoklu Repo Mimarisinde Yeniden Temelleme Tabanlı Dal Birleştirme Verimliliğini Artıran Bir Yaklaşım\nAhsen İkbal Aytekin (HAVELSAN)*; Meral Özkaya Kıvcı (HAVELSAN); Ahmet Burak Çoştu (HAVELSAN)"
-            ]
+            papers: papersData["Oturum 2"] || []
           }
         },
         { time: "12:45 - 14:00", type: "single", content: "Öğle Yemeği", bg: "bg-yellow-300 font-semibold" },
@@ -64,21 +92,13 @@ const Program = () => {
             title: "Oturum 3 (Salon B)",
             code: "Yenilikçi Yazılım Uygulamaları ve Çözümleri",
             color: "bg-gray-100",
-            papers: [
-              "14:00-14:30 | Habokado Smart Automated Turkish News Summary Platform Software\nEmel Küpçü (Xtinge Teknoloji A.Ş.); Alptekin Küpçü (Koç University)*",
-              "14:30-15:00 | Hybrid Entity Resolution İn Logistics: Llm-As-A-Judge For Offline Heuristic Improvement\nAhmet Cay (Hepsijet)*; Ali Çıltık (Hepsijet); Mücahit Kılınç (Hepsijet); İhsan Demirel (Hepsijet)",
-              "15:00-15:30 | Gömülü Gerçek Zamanlı Sistemler İçin Düşük Maliyetli Ölçümleme Aracı Tasarımı Ve Uygulaması\nYiğit Arısoy (Aselsan)*"
-            ]
+            papers: papersData["Oturum 3"] || []
           },
           session2: {
             title: "Oturum 4 (Salon C)",
             code: "Yazılım Gereksinim Mühendisliği",
             color: "bg-gray-100",
-            papers: [
-              "14:00-14:30 | Yazılım Gereksinimi Tanımlamada Akış Odaklı Yaklaşım: Aselsan’Da Kullanım Durumu Dönüşümü Deneyimi\nSüleyman Arıkan (ASELSAN)*; Adnan Kalay (ASELSAN); Ahmet Dikici (ASELSAN); Fehim Göler (ASELSAN); Yaşar Barış Ulu (ASELSAN); Levend Mehmet Mert (ASELSAN); Mustafa Kurt (ASELSAN); İbrahim Sıcakyüz (ASELSAN)",
-              "14:30-15:00 | The Impact Of Stakeholder Participation On Software Requirements Elicitation Processes\nnebi yılmaz (Hacettepe University)*; Ezgi Ataker (Hacettepe university); Orçun Altındal (Hacettepe university); Metin Önder Cenk (Hacettepe university)",
-              "15:00-15:30 | Analyzing Functional And Non-Functional Requirements: An Exploratory Literature Review\nnebi yilmaz (UYMS)*; yeliz yaylacı (uyms); selin kurucay (UYMS); ece omurtay (UYMS); elif aksoy (uyms)"
-            ]
+            papers: papersData["Oturum 4"] || []
           }
         },
         { time: "15:30 - 15:45", type: "single", content: "Çay / Kahve Arası", bg: "bg-yellow-300 font-semibold text-yellow-900" },
@@ -89,21 +109,13 @@ const Program = () => {
             title: "Oturum 5 (Salon B)",
             code: "Dağıtık Sistemler için Yazılım Mühendisliği",
             color: "bg-gray-100",
-            papers: [
-              "15:45-16:15 | Yayınla-Abone Ol Tabanlı Dağıtık Sistemlerde Yapısal Etkileşim Örüntülerinin Çizge Tabanlı Statik Analiz İle İncelenmesi\nMustafa Can Çalışkan (HAVELSAN A.Ş.)*; İbrahim Onuralp Yiğit (HAVELSAN A.Ş.); Feza Buzluca (İTÜ)",
-              "16:15-16:45 | Cdc Based Event-Driven Architecture: State-Of-The-Practice And ”Zero-Touch” Extension\nAytunç Kurtoğlu (Hacettepe University)*; Ayça Kolukısa (Hacettepe University); Mehmet Söylemez (Ufuk University)",
-              "16:45-17:15 | İletişim Ara Katmanında Modern Açık Adreslemeli Hash Tabloları İle Qos-Duyarlı Mesaj Teslimatının İyileştirilmesi\nCan Korkmaz (HAVELSAN)*; İbrahim Onuralp Yiğit (HAVELSAN A.Ş.); Selçuk Altınay (HAVELSAN A.Ş.)"
-            ]
+            papers: papersData["Oturum 5"] || []
           },
           session2: {
             title: "Oturum 6 (Salon C)",
             code: "Yazılım Kalite Güvencesi ve Yönetimi",
             color: "bg-gray-100",
-            papers: [
-              "15:45-16:15 | A Root-Cause Analysis Approach On E-Commerce Customer Reviews Using Deep Learning\nAli Diriker (Bahçeşehir)*; Selami Bağrıyanık (Istanbul Health and Technology University)",
-              "16:15-16:45 | Yapay Zeka İle Kaynak Verimli Sistem Günlüğü Analiz Sistemi\nEmre Ceyhan (GAZİ ÜNİVERSİTESİ)*; Kutlu Türkücü (GAZİ ÜNİVERSİTESİ); Murat Yılmaz (GAZİ ÜNİVERSİTESİ); Kürşat İnce (HAVELSAN A.Ş.)",
-              "16:45-17:15 | Early Detection Of Executable-Quality Commits: An Empirical Study Using Lightweight And Semi-Supervised Learning\nEren İzgi (Hacettepe University); Tugba Gurgen Erdogan (Hacettepe University)*"
-            ]
+            papers: papersData["Oturum 6"] || []
           }
         },
         { time: "18:00", type: "single", content: "Açılış Kokteyli", bg: "bg-purple-200 font-semibold" }
@@ -120,21 +132,13 @@ const Program = () => {
             title: "Oturum 7 (Salon B)",
             code: "Yenilikçi Yazılım Uygulamaları ve Çözümleri",
             color: "bg-gray-100",
-            papers: [
-              "09:15-09:45 | Visualization Of Distributed Publish-Subscribe Systems Using Graph Models For Analysis\nOnurcan Erşen (HAVELSAN)*; Mustafa Can Çalışkan (HAVELSAN); İbrahim Onuralp Yiğit (HAVELSAN); Feza Buzluca (İTÜ)",
-              "09:45-10:15 | Multi-Agent Large Language Model Architecture For Structural And Semantically Compatible Legal Contract Production (Akıtera)\nEmre Yiğit Öztürk (Architecht Bilişim Sistemleri ve Pazarlama Ticaret A.Ş)*; Mustafa Zeybek (Architecht Bilişim Sistemleri ve Pazarlama Ticaret A.Ş); Zehra Esgil (Architecht Bilişim Sistemleri ve Pazarlama Ticaret A.Ş); Ahmet Arslan (ENELSİS Endüstriyel Elektronik Sistemler Araştırma Geliştirme Bilişim ve Danışmanlık Sanayi ve Ticaret Limited Şirketi)",
-              "10:15-11:00 | Local-First Multi-Agent Architecture For Industrial Edge Computing\nMehmet Uzunkonak (Siemens)*"
-            ]
+            papers: papersData["Oturum 7"] || []
           },
           session2: {
             title: "Oturum 8 (Salon C)",
             code: "Deneysel Yazılım Mühendisliği",
             color: "bg-gray-100",
-            papers: [
-              "09:15-09:45 | Oltalama Tespiti İçin Salt Kodlayıcı Ve Üretici Büyük Dil Modellerinin Karşılaştırmalı Performans Analizi\nSoner Üzeyir Akar (Gebze Technical University)*; Mehmet Göktürk (Gebze Technical University)",
-              "09:45-10:15 | Gnss Tabanlı Navigasyonda Çok Katmanlı Bütünlük İzleme: Klasik Raım, Araım Ve Makine Öğrenimi Yaklaşımlarının Simülasyon Ortamında Değerlendirilmesi\nBetul YENİTOPCU (Muğla Sıtkı Koçman Üniversitesi)*; Eda Taşkan (Muğla Sıtkı Koçman Üniversitesi); Mert Keleşoğlu (Muğla Sıtkı Koçman Üniversitesi); Mesut Erol (Türk Havacılık ve Uzay Sanayii A.Ş.); Cihat Çetinkaya (Muğla Sıtkı Koçman Üniversitesi)",
-              "10:15-11:00 | Evaluating The Robustness Of Vulnerability Detection Models Under Semantic-Preserving Code Transformations\nİbrahim Tarakcı (Middle East Technical University)*; Selma Nazlıoğlu (Atılım University); Halit Oğuztüzün (Middle East Technical University)"
-            ]
+            papers: papersData["Oturum 8"] || []
           }
         },
         { time: "11:00 - 11:15", type: "single", content: "Çay / Kahve Arası", bg: "bg-yellow-300 font-semibold text-yellow-900" },
@@ -145,21 +149,13 @@ const Program = () => {
             title: "Oturum 9 (Salon B)",
             code: "Yenilikçi Yazılım Uygulamaları ve Çözümleri",
             color: "bg-gray-100",
-            papers: [
-              "11:15-11:45 | Hibrit Zorluk Tabanlı Veri Seçimi İle Daha Az Veri Kullanarak Talimat Takip Yeteneğinin İyileştirilmesi\nAli Ünaldı (Gazi University)*; Murat Yılmaz (Gazi University)",
-              "11:45-12:15 | Graph Neural Network-Augmented Retrieval For A Domain Expert Chatbot İn R&I Intelligence\nTolga Ayav (Izmir Yüksek Teknoloji Enstitüsü)*; Burak Korcuklu (İzmir Yüksek Teknoloji Enstitüsü)",
-              "12:15-12:45 | Yüksek Yoğunluklu Finansal İşlemlerde İzolasyon Ormanlarıyla Düşük Gecikmeli Anomali Tespiti İçin Veri İşleme Başarımına Yönelik Ödünleşmeler\nBatuhan Can (İTÜ); Tolga Ovatman (İTÜ)*; Hikmet Mazmanoğlu (H3M); Utku Görkem Ketenci (H3M)"
-            ]
+            papers: papersData["Oturum 9"] || []
           },
           session2: {
             title: "Oturum 10 (Salon C)",
             code: "Yazılım Sınama ve Doğrulama",
             color: "bg-gray-100",
-            papers: [
-              "11:15-11:45 | Siber-Fiziksel Sistemlerde Anomali Tespiti: Büyük Dil Modelleri Üzerine Karşılaştırmalı Bir Çalışma\nEşrefhan Kadıoğlu (ASELSAN); Mustafa Mert Sağlam (ASELSAN); Onur Göksel (ASELSAN)*; Bahadır Çeliktaş (ASELSAN)",
-              "11:45-12:15 | Geminix Tabanlı Avrupa Hayati Bilgisayar (Evc) Sistemlerinde Hata Enjeksiyonu Yöntemi İle Emniyet-Kritik Yazılım Doğrulaması\nYUSUF ÇAĞLAYAN (ASELSAN)*",
-              "12:15-12:45 | Open-Source Software Quality Comparison With Derived Quality Model\nM. Aslı Taşgetiren (Hacettepe University)*; Nebi Yılmaz (Hacettepe University); Ayça Kolukısa (Hacettepe University)"
-            ]
+            papers: papersData["Oturum 10"] || []
           }
         },
         { time: "12:45 - 14:00", type: "single", content: "Öğle Yemeği", bg: "bg-yellow-300 font-semibold" },
@@ -170,21 +166,13 @@ const Program = () => {
             title: "Oturum 11 (Salon B)",
             code: "Yenilikçi Yazılım Uygulamaları ve Çözümleri",
             color: "bg-gray-100",
-            papers: [
-              "14:00-14:30 | A Centralized And Scalable Software Architecture İn Satellite Integration And Egse Test Infrastructures\nTalha Sezer Cakir (Turkish Aerospace Industries Inc. )*; Mert İleri (Turkish Aerospace Industries Inc.); Necdet Engin Öztuna (Turkish Aerospace Industries Inc.)",
-              "14:30-15:00 | Erişim Destekli Üretim Tabanlı Akıllı Asistan Yöntemi İle Savunma Sanayi Projelerinde Bilişsel Yükün Azaltılması İçin Bir Durum Çalışması: Bilge\nOnur Tekik (ASELSAN)*",
-              "15:00-15:30 | Medimem: A Hybrid Conversational Personal Health Data Analysis Platform Based On Small Expert Models And Mcp\nCaner Tunç (Muğla Sıtkı Koçman University)*"
-            ]
+            papers: papersData["Oturum 11"] || []
           },
           session2: {
             title: "Oturum 12 (Salon C)",
             code: "Yazılım Kalite Güvencesi ve Yönetimi",
             color: "bg-gray-100",
-            papers: [
-              "14:00-14:30 | Assessing Llms For Automated Test Reporting And Test Closure: A Controlled Multi-Model Evaluation\nCem Bağlum (Eskisehir Osmangazi University)*; Uğur Yayan (Eskisehir Osmangazi University); Ahmet Yazıcı ( Eskisehir Osmangazi University)",
-              "14:30-15:00 | An Aı-Assisted Automated Testing Framework For Ring Redundancy Validation İn Industrial Networks\nMüjde CEYLAN (Siemens Türkiye)*; Selin GÜNDÜZ (Siemens Türkiye)",
-              "15:00-15:30 | Do-178C Uyumlu Yazılım Yükleme Kontrolü\nYusuf Tıkman (TUSAŞ)*; İbrahim Seyfullah Babaarslan (TUSAŞ)"
-            ]
+            papers: papersData["Oturum 12"] || []
           }
         },
         { time: "15:30 - 15:45", type: "single", content: "Çay / Kahve Arası", bg: "bg-yellow-300 font-semibold text-yellow-900" },
@@ -214,7 +202,52 @@ const Program = () => {
   ];
 
   return (
-    <div className="min-h-screen font-serif bg-gradient-to-br from-blue-50 to-indigo-100 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen font-serif bg-gradient-to-br from-blue-50 to-indigo-100 py-12 px-4 sm:px-6 lg:px-8 relative">
+      {/* Modal */}
+      {selectedPaper && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm" onClick={() => setSelectedPaper(null)}>
+          <div
+            className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full p-6 sm:p-8 relative max-h-[90vh] overflow-y-auto"
+            onClick={e => e.stopPropagation()}
+          >
+            <button
+              className="absolute top-4 right-4 text-gray-400 hover:text-gray-800 transition-colors p-2 rounded-full hover:bg-gray-100"
+              onClick={() => setSelectedPaper(null)}
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+
+            <div className="flex items-center gap-3 mb-4 mt-2">
+              {selectedPaper.time && (
+                <span className="bg-blue-50 text-blue-700 font-bold px-3 py-1 rounded-md text-sm border border-blue-100/50">
+                  {selectedPaper.time}
+                </span>
+              )}
+            </div>
+
+            <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6 leading-tight">{selectedPaper.title}</h3>
+
+            <div className="mb-6">
+              <h4 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3 border-b pb-1">Yazarlar</h4>
+              <ul className="list-disc pl-5 space-y-1 text-gray-700">
+                {selectedPaper.authorsList.map((author, idx) => (
+                  <li key={idx}>{author}</li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3 border-b pb-1">Özet</h4>
+              <p className="text-gray-600 leading-relaxed italic text-justify bg-gray-50 p-4 rounded-xl border border-gray-100">
+                {selectedPaper.abstract || "Bu bildiri için henüz bir özet metni sisteme girilmemiştir."}
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
+
       <div className="max-w-7xl mx-auto">
         <h1 className="text-center text-4xl sm:text-5xl font-bold text-gray-800 mb-4 drop-shadow-sm">
           Sempozyum Programı
@@ -253,75 +286,103 @@ const Program = () => {
               {scheduleData[activeTab].date} - {scheduleData[activeTab].dayName} Programı
             </h2>
 
-            {/* Desktop Column Headers for Split Track */}
-            {activeTab !== 2 && (
-              <div className="hidden md:flex flex-row gap-4 mb-6">
-                <div className="lg:w-40 flex-shrink-0"></div>
-                <div className="flex-1 grid grid-cols-2 gap-4">
-                  <div className="bg-slate-100 text-slate-700 font-bold text-xl py-3 rounded-xl border border-slate-200 shadow-sm text-center uppercase tracking-wide">
-                    Salon B
-                  </div>
-                  <div className="bg-slate-100 text-slate-700 font-bold text-xl py-3 rounded-xl border border-slate-200 shadow-sm text-center uppercase tracking-wide">
-                    Salon C
-                  </div>
-                </div>
-              </div>
-            )}
-
             <div className="space-y-6">
-              {scheduleData[activeTab].events.map((event, idx) => (
-                <div key={idx} className="flex flex-col lg:flex-row gap-4">
-                  {/* Time Block */}
-                  <div className="lg:w-40 flex-shrink-0 flex items-center lg:justify-end">
-                    <div className="bg-blue-50 text-blue-700 font-bold px-4 py-2 rounded-lg border border-blue-100 shadow-sm w-full lg:w-auto text-center">
-                      {event.time}
+              {scheduleData[activeTab].events.map((event, idx) => {
+                let header = null;
+                if (activeTab !== 2) {
+                  const isFirstSplit = event.type === 'split' && scheduleData[activeTab].events.findIndex(e => e.type === 'split') === idx;
+
+                  if (idx === 0) {
+                    if (event.type === 'single') {
+                      header = (
+                        <div className="hidden md:flex flex-row gap-4 mb-6">
+                          <div className="lg:w-40 flex-shrink-0"></div>
+                          <div className="flex-1">
+                            <div className="bg-slate-100 text-slate-700 font-bold text-xl py-3 rounded-xl border border-slate-200 shadow-sm text-center uppercase tracking-wide">
+                              Salon B
+                            </div>
+                          </div>
+                        </div>
+                      );
+                    } else if (event.type === 'split') {
+                      header = (
+                        <div className="hidden md:flex flex-row gap-4 mb-6">
+                          <div className="lg:w-40 flex-shrink-0"></div>
+                          <div className="flex-1 grid grid-cols-2 gap-4">
+                            <div className="bg-slate-100 text-slate-700 font-bold text-xl py-3 rounded-xl border border-slate-200 shadow-sm text-center uppercase tracking-wide">
+                              Salon B
+                            </div>
+                            <div className="bg-slate-100 text-slate-700 font-bold text-xl py-3 rounded-xl border border-slate-200 shadow-sm text-center uppercase tracking-wide">
+                              Salon C
+                            </div>
+                          </div>
+                        </div>
+                      );
+                    }
+                  } else if (isFirstSplit) {
+                    header = (
+                      <div className="hidden md:flex flex-row gap-4 mb-6 mt-8">
+                        <div className="lg:w-40 flex-shrink-0"></div>
+                        <div className="flex-1 grid grid-cols-2 gap-4">
+                          <div className="bg-slate-100 text-slate-700 font-bold text-xl py-3 rounded-xl border border-slate-200 shadow-sm text-center uppercase tracking-wide">
+                            Salon B
+                          </div>
+                          <div className="bg-slate-100 text-slate-700 font-bold text-xl py-3 rounded-xl border border-slate-200 shadow-sm text-center uppercase tracking-wide">
+                            Salon C
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  }
+                }
+
+                return (
+                  <React.Fragment key={idx}>
+                    {header}
+                    <div className="flex flex-col lg:flex-row gap-4">
+                      {/* Time Block */}
+                      <div className="lg:w-40 flex-shrink-0 flex items-center lg:justify-end">
+                        <div className="bg-blue-50 text-blue-700 font-bold px-4 py-2 rounded-lg border border-blue-100 shadow-sm w-full lg:w-auto text-center">
+                          {event.time}
+                        </div>
+                      </div>
+
+                      {/* Content Block */}
+                      <div className="flex-1">
+                        {event.type === 'single' ? (
+                          <div className={`p-4 rounded-xl shadow-sm border border-gray-100 flex items-center justify-center min-h-[4rem] text-center whitespace-pre-line ${event.bg}`}>
+                            <span>{event.content}</span>
+                          </div>
+                        ) : (
+                          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            {/* Session 1 */}
+                            <div className={`p-5 rounded-xl shadow-sm border border-gray-100 flex flex-col ${event.session1.color}`}>
+                              <div className="flex justify-between items-center mb-4 pb-3 border-b border-black/10">
+                                <span className="md:hidden font-bold text-slate-500 bg-slate-200/60 px-2 py-1 rounded text-xs uppercase tracking-wider mr-auto">Salon B</span>
+                                <span className="font-extrabold text-gray-700 px-3 py-1.5 bg-black/5 rounded-lg text-sm inline-block md:mx-auto shadow-sm">{event.session1.code}</span>
+                              </div>
+                              <div className="space-y-3 flex-1 mt-2">
+                                {event.session1.papers.map((paper, pIdx) => renderPaper(paper, pIdx, setSelectedPaper))}
+                              </div>
+                            </div>
+
+                            {/* Session 2 */}
+                            <div className={`p-5 rounded-xl shadow-sm border border-gray-100 flex flex-col ${event.session2.color}`}>
+                              <div className="flex justify-between items-center mb-4 pb-3 border-b border-black/10">
+                                <span className="md:hidden font-bold text-slate-500 bg-slate-200/60 px-2 py-1 rounded text-xs uppercase tracking-wider mr-auto">Salon C</span>
+                                <span className="font-extrabold text-gray-700 px-3 py-1.5 bg-black/5 rounded-lg text-sm inline-block md:mx-auto shadow-sm">{event.session2.code}</span>
+                              </div>
+                              <div className="space-y-3 flex-1 mt-2">
+                                {event.session2.papers.map((paper, pIdx) => renderPaper(paper, pIdx, setSelectedPaper))}
+                              </div>
+                            </div>
+                          </div>
+                        )}
+                      </div>
                     </div>
-                  </div>
-
-                  {/* Content Block */}
-                  <div className="flex-1">
-                    {event.type === 'single' ? (
-                      <div className={`p-4 rounded-xl shadow-sm border border-gray-100 flex items-center justify-center min-h-[4rem] text-center whitespace-pre-line ${event.bg}`}>
-                        <span>{event.content}</span>
-                      </div>
-                    ) : (
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        {/* Session 1 */}
-                        <div className={`p-5 rounded-xl shadow-sm border border-gray-100 flex flex-col ${event.session1.color}`}>
-                          <div className="flex justify-between items-center mb-4 pb-3 border-b border-black/10">
-                            <span className="md:hidden font-bold text-slate-500 bg-slate-200/60 px-2 py-1 rounded text-xs uppercase tracking-wider mr-auto">Salon B</span>
-                            <span className="font-extrabold text-gray-700 px-3 py-1.5 bg-black/5 rounded-lg text-sm inline-block md:mx-auto shadow-sm">{event.session1.code}</span>
-                          </div>
-                          <ul className="space-y-4 text-sm flex-1">
-                            {event.session1.papers.map((paper, pIdx) => (
-                              <li key={pIdx} className="flex items-start">
-                                <span className={paper === '-' ? 'hidden' : 'mr-2 text-slate-400 font-bold mt-0.5'}>•</span>
-                                <span className="font-medium text-gray-800 whitespace-pre-line">{paper}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-
-                        {/* Session 2 */}
-                        <div className={`p-5 rounded-xl shadow-sm border border-gray-100 flex flex-col ${event.session2.color}`}>
-                          <div className="flex justify-between items-center mb-4 pb-3 border-b border-black/10">
-                            <span className="md:hidden font-bold text-slate-500 bg-slate-200/60 px-2 py-1 rounded text-xs uppercase tracking-wider mr-auto">Salon C</span>
-                            <span className="font-extrabold text-gray-700 px-3 py-1.5 bg-black/5 rounded-lg text-sm inline-block md:mx-auto shadow-sm">{event.session2.code}</span>
-                          </div>
-                          <ul className="space-y-4 text-sm flex-1">
-                            {event.session2.papers.map((paper, pIdx) => (
-                              <li key={pIdx} className="flex items-start">
-                                <span className={paper === '-' ? 'hidden' : 'mr-2 text-slate-400 font-bold mt-0.5'}>•</span>
-                                <span className="font-medium text-gray-800 whitespace-pre-line">{paper}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      </div>
-                    )}
-                  </div>
-                </div>
-              ))}
+                  </React.Fragment>
+                );
+              })}
             </div>
           </div>
         </div>

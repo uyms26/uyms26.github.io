@@ -1,0 +1,374 @@
+{
+  "Oturum 1": [
+    {
+      "time": "11:15-11:45",
+      "title": "European Accessibility Act (Eaa) Uyumunun Test Edilebilirliği: Sürekli Teslim Süreçlerine Entegre Edilmiş Wcag Tabanlı Test Otomasyonu Üzerine Bir Vaka Çalışması",
+      "authors": [
+        "Miraç EMEKTAR (VİRGOSOL BİLİŞİM VE YAZILIM ÇÖZÜMLERİ A.Ş.)",
+        "Fatih HARMANCI (VİRGOSOL BİLİŞİM VE YAZILIM ÇÖZÜMLERİ A.Ş.)",
+        "Yasin AKTEPE (VİRGOSOL BİLİŞİM VE YAZILIM ÇÖZÜMLERİ A.Ş.)",
+        "İrem YARAR (VİRGOSOL BİLİŞİM VE YAZILIM ÇÖZÜMLERİ A.Ş.)"
+      ],
+      "abstract": "Dijital bankacılık ekosisteminde kapsayıcılığı zorunlu kılan Avrupa Erişilebilirlik Yasası (European Accessibility Act - EAA) ve Almanya Federal Erişilebilirlik Yasası (BFSG), Haziran 2025 itibarıyla yürürlüğe girmiştir. Bu yasal düzenlemeler, finansal kuruluşların yazılım geliştirme süreçlerinde erişilebilirliği sonradan yapılan bir kontrolden ziyade, sürekli bir kalite standardı olarak benimsemesini zorunlu kılmıştır. Bu çalışma, EAA uyumluluk gereksinimlerinin Sürekli Teslim (Continuous Delivery) süreçlerine entegre edilmiş WCAG tabanlı test otomasyonu ile ne ölçüde karşılanabileceğini inceleyen bir vaka çalışması sunmaktadır.\nAlmanya merkezli bir finans kuruluşunun web ve mobil kanalları üzerinde yürütülen çalışmada, kural tabanlı otomasyon araçları ve manuel uzman testlerinin bir arada kullanıldığı hibrit bir metodoloji izlenmiştir. Beş haftalık test döngüsü sonucunda elde edilen veriler, otomasyonun özellikle \"Algılanabilir\" ve \"Sağlam\" prensiplerine ait yapısal ihlalleri tespit etmede yüksek başarı gösterdiğini, ancak \"Kullanılabilirlik\" prensibi kapsamındaki senaryolar için insan doğrulamasının zorunlu olduğunu ortaya koymuştur. Çalışma sonucunda, \"Kalite Kapıları\" (Quality Gates) ile desteklenen CI/CD entegrasyonu sayesinde, tespit edilen 177 kritik hatanın %91’i ürün canlı ortama alınmadan çözülmüştür. Bulgular, otomasyon destekli süreçlerin regülasyon risklerini azalttığını, ancak üçüncü parti UI kütüphanelerinden kaynaklanan teknik kısıtların hibrit doğrulama modellerini kaçınılmaz kıldığını göstermektedir."
+    },
+    {
+      "time": "11:45-12:15",
+      "title": "An Empirical Evaluation Of Using Large Language Models For Automated Model-Based Test Generation",
+      "authors": [
+        "Hafize SANLI (Muğla Sıtkı Koçman Üniversitesi)",
+        "Onur KILINÇÇEKER (Üniversitesi of Antwerpen and Flanders Make vzw)",
+        "Cihat ÇETİNKAYA (Muğla Sıtkı Koçman Üniversitesi)"
+      ],
+      "abstract": "Large language models (LLMs) have shown strong potential for automating, analysing, and interpreting software engineering tasks, such as software testing. Model-based testing (MBT) is a software testing technique that poses a broad scalability challenge for industrial adoption. This paper proposes an empirical evaluation of Large Language Models (LLMs) for automated model-based test generation to address scalability challenges, compared with a state-of-the-art model-based testing tool and its built-in algorithms. Our evaluation indicates strong potential to optimize and shorten test paths and step sizes using recent state-of-the-art LLMs on four realistic systems: two web applications and two hardware applications."
+    },
+    {
+      "time": "12:15-12:45",
+      "title": "Structured Pruning Performance Evaluation İn Deep Learning: An Experimental Study With Cleanaı+",
+      "authors": [
+        "Osman ÇAĞLAR (Eskişehir Osmangazi Üniversitesi)",
+        "Uğur YAYAN (Eskişehir Osmangazi Üniversitesi)",
+        "Ahmet YAZICI (Eskişehir Osmangazi Üniversitesi)"
+      ],
+      "abstract": "Deep learning models pose significant implementation challenges on energy- and resource-constrained systems due to their high memory consumption and intensive computational requirements. This situation particularly limits the widespread deployment of such models in embedded systems and edge devices. Model compression techniques aim to reduce these costs while minimizing the compromise on accuracy performance. This study introduces CleanAI+, a model compression framework that achieves substantial reductions in model size, memory usage, and inference time with only limited impact on accuracy. In addition to established pruning methods such as WANDA, Magnitude-Based Pruning, and Taylor Gradient-Based Pruning, CleanAI+ proposes a novel pruning approach based on Neuron Coverage. Furthermore, a hybrid compression strategy is adopted by integrating pruning operations with quantization. The proposed framework was experimentally evaluated on ResNet and EfficientNet architectures, highlighting the novel Neuron Coverage-based criterion as a robust behavioral metric for aggressive optimization. Experimental results indicate that this behavior-aware approach can achieve structural simplification by reducing model size and FLOPs by up to 27.6%, particularly in memory-efficient designs like EfficientNet-B4. Furthermore, the hybrid combination of structured pruning and FP16 quantization successfully halved model sizes and reduced inference latency by over 50% decreasing ResNet-50 latency to as low as 0.412 ms while maintaining a negligible accuracy loss of approximately 0.1%. These findings demonstrate that CleanAI+ provides significant hardware-independent acceleration and memory savings, making high-parameterized models highly accessible for resource-constrained edge environments."
+    }
+  ],
+  "Oturum 2": [
+    {
+      "time": "11:15-11:45",
+      "title": "Beyond Practices: The Nature, Significance, And Possible Future Trajectory Of The Agile Mindset",
+      "authors": [
+        "Necmettin ÖZKAN (Gebze Teknik Üniversitesi)",
+        "Mehmet Şahin GÖK (Gebze Teknik Üniversitesi)"
+      ],
+      "abstract": "The benefits of agility, which offers many advantages in today's business world compared to traditional methods, are undeniable. However, the widespread adoption of Agile practices by organizations seeking these benefits has introduced a new challenge: Agile methods, tools, and practices, all stemming from the same or similar sources, no longer provide a competitive advantage on their own. At this stage, Agile Mindset comes into play, promising unique and inimitable capabilities for individuals and, through them, organizations. Despite its power, there is still a long way to go for it, which entered both literature and practice much later than the practices. At the beginning of this journey, our study examines significance, nature, and potential future trajectory of this concept. To do so, we conducted interviews with thirty-seven participants using the Grounded Theory method. The study's findings reinforce the existing literature on the significance and nature of Agile Mindset, while its focus on the potential future trajectory of the concept positions this work among the first of its kind in the literature."
+    },
+    {
+      "time": "11:45-12:15",
+      "title": "Birleştirme İsteği Süreç Otomasyonu Deneyimi: Çoklu Repo Mimarisinde Yeniden Temelleme Tabanlı Dal Birleştirme Verimliliğini Artıran Bir Yaklaşım",
+      "authors": [
+        "Ahsen İkbal AYTEKİN (HAVELSAN)",
+        "Meral Özkaya KIVCI (HAVELSAN)",
+        "Ahmet Burak ÇOŞTU (HAVELSAN)"
+      ],
+      "abstract": "Mikroservis mimarisi, çoklu takım ve çoklu kod deposu yapısıyla geliştirilen yazılım ürünlerinde, farklı kaynak kod depoları ve dallarında farklı kod gözden geçirme kuralları uygulanabilmektedir. Geliştirici takımların sayıca fazla olması, kod gözden geçirme ve birleştirme isteklerinin de artışını paralel olarak etkilemektedir. Yazılım işlevsel davranışının korunması ve sürüm geçmişinin yönetilebilirliğinin artırılması için yeniden temelleme (rebase) birleştirme stratejisi kullanıldığında, önemli bir operasyonel yükün ortaya çıktığı gözlemlenmiştir. Her birleştirme isteği işlemi öncesinde hedef dal ile yeniden temelleme yapılmasının sürekli entegrasyon süreçlerini tekrar tetiklediği, inşa sürelerini uzattığı ve onaylanmış birleştirme isteklerinin dahi uzun süre kuyruğa takılmasına neden olduğu belirlenmiştir. Bu sorunlara yönelik olarak bir otomasyon aracı geliştirilmiştir. Araç tarafından belirli ön koşulları yerine getirmiş ve onaylanmış birleştirme istekleri, kullanıcı tarafından belirlenen öncelik sırasına göre otomatik olarak yeniden temellenmiş, sürekli entegrasyon sonuçları denetlenmiş ve başarılı sonuçlananlar hedef dala birleştirilmiştir. Başarısız birleştirme istekleri ise otomatik olarak sıranın dışına alınarak akışın kesintiye uğramaması sağlanmıştır. Böylece elle müdahale gereksiniminin ve tekrarlayan yeniden temelleme çatışmalarının önemli ölçüde azaltıldığı görülmüştür. Aracın kullanılmaya başlanmasının ardından birleştirme isteklerinin bekleme sürelerinde belirgin bir azalma kaydedilmiş, birleşme kuyruğunun daha stabil çalıştığı gözlemlenmiş ve ekiplerin operasyonel yükünde anlamlı bir düşüş elde edilmiştir. Elde edilen sonuçlar, çoklu kod deposu ve yoğun birleştirme isteği trafiğine sahip yazılım geliştirme ekiplerinde, yeniden temelleme tabanlı birleştirme süreçlerinin otomasyon yoluyla etkin biçimde optimize edilebileceğini göstermektedir. Bu çalışma, benzer mimarilere sahip ekipler için ölçeklenebilir ve uygulanabilir bir yaklaşım sunmaktadır."
+    }
+  ],
+  "Oturum 3": [
+    {
+      "time": "14:00-14:30",
+      "title": "Habokado Smart Automated Turkish News Summary Platform Software",
+      "authors": [
+        "Emel KÜPÇÜ (Xtinge Teknoloji A.Ş.)",
+        "Alptekin KÜPÇÜ (Koç Üniversitesi)"
+      ],
+      "abstract": "The rapid expansion of digital news content has necessitated automated solutions to combat information overload and the phenomenon of selective news avoidance. This manuscript presents the software engineering challenges and architectural decisions involved in developing Habokado, a novel smart automated Turkish news summarization platform with a detailed architecture including automated web scraping, clustering, and classification. Addressing the unique morphological complexities of the Turkish language and the critical requirement for factual consistency, the system prioritizes extractive summarization over abstractive Large Language Models (LLMs) to mitigate hallucination risks and ensure legal compliance. The platform’s architecture integrates a Python-based backend (Django, Scrapy) with Java-based morphological analysis tools (Zemberek) and MariaDB to manage real-time data ingestion and normalization from heterogeneous sources. We also briefly discuss the scalability on Microsoft Azure and query optimizations that reduced web scraping latencies from 30000 seconds to 300 seconds. Furthermore, this experience report highlights features designed to enhance\nuser engagement, such as on-device text-to-speech and automated news clustering, enabling the delivery of personalized summaries within 10 minutes of publication. We note that this report is not a report on natural language processing documenting the summarization quality, but rather an experience report on the platform as a whole."
+    },
+    {
+      "time": "14:30-15:00",
+      "title": "Hybrid Entity Resolution İn Logistics: Llm-As-A-Judge For Offline Heuristic Improvement",
+      "authors": [
+        "Ahmet CAY (Hepsijet)",
+        "Ali ÇILTIK (Hepsijet)",
+        "Mücahit KILINÇ (Hepsijet)",
+        "İhsan DEMİREL (Hepsijet)"
+      ],
+      "abstract": "Address Entity Resolution, identifying and linking records that refer to the same physical location, is a fundamental challenge in logistics, directly impacting routing efficiency and operational costs. While Large Language Models (LLMs) demonstrate significant semantic understanding for such tasks, their high inference latency and operational costs often render them unsuitable for real-time, high-throughput production environments. This study presents a novel hybrid methodology where Generative AI is utilized not as a runtime engine, but as an intelligent offline benchmark and diagnostic tool to refine conventional heuristic-based systems.\nWe conducted an iterative experiment using a diverse dataset of real-world address records across 10 metropolitan and rural districts (ilçe). In the initial phase, an LLM-driven gap analysis revealed the semantic limitations of our existing rule-based algorithm, baseline heuristic system (BHS). The results drove the development of an optimized algorithm, Judge-Optimized Heuristic (JOH). Using an \"LLM-as-a-Judge\" evaluation framework, results demonstrate that the refined JOH achieved a 5% average improvement in resolution accuracy over the baseline BHS without incurring the runtime latency associated with direct LLM calls. This improvement means less misdelivery and reduced Cost Per Delivery (CPD) by using LLMs as effective quality assurance agents in industrial software engineering."
+    },
+    {
+      "time": "15:00-15:30",
+      "title": "Gömülü Gerçek Zamanlı Sistemler İçin Düşük Maliyetli Ölçümleme Aracı Tasarımı Ve Uygulaması",
+      "authors": [
+        "Yiğit ARISOY (Aselsan)"
+      ],
+      "abstract": "Gerçek zamanlı gömülü sistemlerde, yazılımın katı zaman limitlerini karşılaması gerekmektedir. Yazılımın\nbu gerçek zamanlı çalışma gereksinimlerini karşılayamadığı durumlar oluşmaktadır. Bu durumlarda darboğaz\noluşturan yerlerin bulunması içi ölçümleme yapılması gerekmektedir. Ölçümleme işlemlerinin de yazılım akışını\nve sürelerini etkilemeden yapılması gerekmektedir. Bu makale, VxWorks üzerinde çalışan C++ uygulamaları için\ngeliştirilmiş özel bir ölçümleme aracını tanımlamaktadır. Tasarımımız verileri kaydetmek için herhangi bir yazılım\nkilidi kullanmadan ve ana uygulamanın performansını etkilemeden ölçümleme yapmayı sağlar. Verileri analiz\netmek için, milyonlarca mesajı donmadan işleyebilen, Web Workers kullanan web tabanlı bir araç geliştirdik.\n12 çekirdekli Intel Xeon işlemcisinde yapılan testler, aracımızın mesaj başına yaklaşık 133 nanosaniyelik bir\ngecikmeye sahip olduğunu ve aktif kullanımda sürelerin %1’den az arttığını göstermektedir. Bu, gerçek zaman\nsınırlarımızı kaçırmadan sistemlerimizde yüksek doğruluklu performans verileri yakalamamızı sağladı."
+    }
+  ],
+  "Oturum 4": [
+    {
+      "time": "14:00-14:30",
+      "title": "Yazılım Gereksinimi Tanımlamada Akış Odaklı Yaklaşım: Aselsan’Da Kullanım Durumu Dönüşümü Deneyimi",
+      "authors": [
+        "Süleyman ARIKAN (ASELSAN)",
+        "Adnan KALAY (ASELSAN)",
+        "Ahmet DİKİCİ (ASELSAN)",
+        "Fehim GÖLER (ASELSAN)",
+        "Yaşar Barış ULU (ASELSAN)",
+        "Levend Mehmet MERT (ASELSAN)",
+        "Mustafa KURT (ASELSAN)",
+        "İbrahim SICAKYÜZ (ASELSAN)"
+      ],
+      "abstract": "Karmaşık ve büyük ölçekli görev-kritik yazılımların geliştirilmesinde, gereksinimlerin doğru ve ortak bir anlayışla ifade edilmesi ürün başarısı açısından kritik öneme sahiptir. Ancak geleneksel metin tabanlı gereksinim tanımlama yaklaşımları, yazılım davranışının bütüncül olarak ifade edilmesinde ve heterojen paydaşlar arasında ortak anlayış oluşturmakta yetersiz kalabilmektedir. Bu çalışmada, ASELSAN’da yürütülen ve kurumsal “verimlilik” odağıyla başlatılan bir süreç iyileştirme faaliyeti kapsamında, gereksinimlerin tanımlanmasında akış odaklı kullanım durumu yaklaşımı geliştirilmesinde ve uygulanmasında elde edilen deneyim paylaşılmaktadır. Çalışma kapsamında kullanım durumlarının sistematik biçimde tanımlanabilmesi amacıyla özgün bir kullanım durumu şablonu ve dönüşüm rehberi geliştirilmiştir. Önerilen yaklaşım, büyük ölçekli görev-kritik bir yazılım projesinde pilot olarak uygulanmış ve mevcut gereksinimler kullanım durumlarına dönüştürülmüştür. Elde edilen gözlemler yaklaşımın, gereksinimlerin anlaşılabilirliğini artırdığını, senaryo/bağlam temelli değerlendirmeyi kolaylaştırdığını ve paydaşlar arası iletişimi güçlendirdiğini göstermektedir. Çalışma, kullanım durumu tabanlı gereksinim tanımlama yaklaşımını değerlendirmek isteyen ekipler için pratik bir yol haritası ve çıkarımlar sunmaktadır."
+    },
+    {
+      "time": "14:30-15:00",
+      "title": "The Impact Of Stakeholder Participation On Software Requirements Elicitation Processes",
+      "authors": [
+        "Nebi YILMAZ (Hacettepe Üniversitesi)",
+        "Ezgi ATAKER (Hacettepe Üniversitesi)",
+        "Orçun ALTINDAL (Hacettepe Üniversitesi)",
+        "Metin Önder CENK (Hacettepe Üniversitesi)"
+      ],
+      "abstract": "One of the most important reasons for failure in software projects is the incomplete, incorrect, or ambiguous definition of requirements. In this context, stakeholder participation emerges as a critical factor that directly affects the effectiveness of the requirements engineering process and the quality of its output. This study aims to examine the effects of stakeholder participation, stakeholder identification accuracy, and stakeholder commitment on the software requirements elicitation process. As part of the research, the relevant literature was first systematically analyzed, followed by a survey conducted with the participation of 85 professionals playing an active role in software projects. The findings reveal that stakeholder participation has a significant impact on the clarity, completeness, and early validation of requirements. Furthermore, it was found that correct stakeholder identification methods and high levels of stakeholder commitment increase communication effectiveness and process efficiency by reducing perception gaps. The results show that stakeholder participation is not merely a supporting element but an indispensable component for the success of requirements engineering."
+    },
+    {
+      "time": "15:00-15:30",
+      "title": "Analyzing Functional And Non-Functional Requirements: An Exploratory Literature Review",
+      "authors": [
+        "Nebi YİLMAZ (UYMS)",
+        "Yeliz YAYLACI (uyms)",
+        "Selin KURUCAY (UYMS)",
+        "Ece OMURTAY (UYMS)",
+        "Elif AKSOY (uyms)"
+      ],
+      "abstract": "This study presents an exploratory literature review examining how functional requirements (FRs) and non-functional requirements (NFRs) are addressed in the software engineering literature, the fundamental problems encountered in relation to these requirement types, and their implications for testing and verification processes. The primary objective of the study is to reveal how the FR–NFR distinction is applied in literature and to identify structural gaps in the literature, particularly in terms of testability and verifiability. To this end, widely used academic databases in the fields of requirements engineering and software testing were searched, and representative studies that relate FRs and NFRs to analysis, testing, or verification processes were selected and examined using a thematic analysis approach. The findings indicate that functional requirements are generally addressed at early stages of the development lifecycle and are effectively integrated into testing processes. In contrast, non-functional requirements are often defined using abstract, context-dependent, and non-measurable expressions, which leads to late validation and increased quality risks. The study also demonstrates that the FR–NFR distinction is domain-dependent in many cases and that static classifications are insufficient. In this context, the study concludes that integrated approaches centered on domain context and AI-supported requirements analysis methods represent an important research direction for requirements engineering and software testing."
+    }
+  ],
+  "Oturum 5": [
+    {
+      "time": "15:45-16:15",
+      "title": "Yayınla-Abone Ol Tabanlı Dağıtık Sistemlerde Yapısal Etkileşim Örüntülerinin Çizge Tabanlı Statik Analiz İle İncelenmesi",
+      "authors": [
+        "Mustafa Can ÇALIŞKAN (HAVELSAN A.Ş.)",
+        "İbrahim Onuralp YİĞİT (HAVELSAN A.Ş.)",
+        "Feza BUZLUCA (İTÜ)"
+      ],
+      "abstract": "Yayınla–abone ol mimarileri, çalışma zamanında gevşek bağlanma sağlarken uygulamalar arası etkileşimlerin örtük kalmasına neden olmakta ve mimari analizi güçleştirmektedir. Bu çalışma, bu örtük yapısal örüntüleri ortaya çıkarmak üzere statik analiz destekli, çizge ve kural tabanlı bir yaklaşım sunmaktadır. Mesajlaşma ilişkileri statik analiz ile çıkarılarak çizge tabanlı bir temsil oluşturulmakta; türetilen metrikler göreli ve kural tabanlı biçimde değerlendirilerek yapısal olarak aykırı bileşenler belirlenmektedir. Yaklaşım, HAVELSAN ADVENT Savaş Yönetim Sistemi üzerinde uygulanmış ve bulgular alan uzmanı değerlendirmeleriyle tutarlı bulunmuştur."
+    },
+    {
+      "time": "16:15-16:45",
+      "title": "Cdc Based Event-Driven Architecture: State-Of-The-Practice And ”Zero-Touch” Extension",
+      "authors": [
+        "Aytunç KURTOĞLU (Hacettepe Üniversitesi)",
+        "Ayça KOLUKISA (Hacettepe Üniversitesi)",
+        "Mehmet SÖYLEMEZ (Ufuk Üniversitesi)"
+      ],
+      "abstract": "With the widespread adoption of microservice architectures (MSA), Event-Driven Architecture (EDA) has become a key design choice to improve system performance and scalability. However, in traditional application-level EDA approaches, broker SDKs (Software Development Kit), retry logic, and delivery semantics leak into business logic, increasing development costs in polyglot environments and causing vendor lock-in. This study positions Change Data Capture (CDC) not merely as a data replication tool, but as a “Broker Abstraction Layer” that fully decouples services from the message broker infrastructure. Through the analysis of industrial cases, it examines how externalizing infrastructure details from the application layer increases architectural flexibility. As the\nstudy’s original contribution, the proposed ’Zero-Touch’ integration model enables legacy or immutable systems to be incorporated into an EDA ecosystem without sacrificing data consistency, by leveraging database-level unique constraints and producer-consumer based CDC flows."
+    },
+    {
+      "time": "16:45-17:15",
+      "title": "İletişim Ara Katmanında Modern Açık Adreslemeli Hash Tabloları İle Qos-Duyarlı Mesaj Teslimatının İyileştirilmesi",
+      "authors": [
+        "Can KORKMAZ (HAVELSAN)",
+        "İbrahim Onuralp YİĞİT (HAVELSAN A.Ş.)",
+        "Selçuk ALTINAY (HAVELSAN A.Ş.)"
+      ],
+      "abstract": "Modern dağıtık kontrol sistemleri, milisaniyenin altında gecikme hedeflerini korurken yüksek ileti\nyoğunluğunu sürdürebilen mesajlaşma ara katmanlarına giderek daha fazla bağımlıdır. Bu ortamlarda gözle-\nnen gecikmenin kayda değer bir bölümü, abone tarafındaki istemci-bağlamında (client context) gerçekleşen\nson-kilometre teslim hattında birikir: alınan örneklerin QoS kısıtları altında saklanması, anahtara göre üzer-\nine yazılması, sorgulanması ve uygulamaya teslim edilmesi. Anahtar-temelli akış güncellemeleri (örn. en-\ntity/track/state/log kimlikleri) bu etkiyi büyütür; çünkü yeni örnekler çoğu zaman eskileri geçersiz kılar ve\nanahtara göre üzerine yazma (overwrite) ile verimli taramalar (scan) performansın merkezine oturur. Buna\nkarşın pek çok istemci, işaretçi takibi ve zayıf önbellek yerelliği nedeniyle yüksek erişilebilirlikte ölçeklenmekte\nzorlanan düğüm-tabanlı sıralı kaplar (örn. std::map) kullanmaktadır.\nBu çalışmada, düğüm-tabanlı sıralı depolamayı açık adreslemeli bir hash tablosu (Robin Hood hashing)\nile değiştiren, QoS-farkındalıklı bir okuyucu tamponu olan DenseReaderCache sunulmaktadır. Önerilen yapı;\nanahtara göre overwrite, koşullu sorgular, sınırlı elde tutma (retention) ve son-tarih/TTL temelli tahliye gibi\npolitikaları destekler. Sunucu donanımında (x86_64 Intel Xeon Platinum 8160, DDR4) yaptığımız kontrollü\nuygulama-seviyesi kıyaslamada DenseReaderCache, uçtan uca (yayıncıdan erişiciye) gecikmeyi raporlanan tüm\nölçütlerde (ortalama, standart sapma, medyan ve p99) azaltmaktadır. 1000 Hz (üretici başına) hızında p99\ngecikme, 32 KiB iletilerde 87 090 μs seviyesinden 4612 μs seviyesine düşerek ∼ 19× iyileşmektedir. Bu sonuçlar,\nistemci-bağlamı optimizasyonlarının (özellikle veri yapısı seçiminin) uygulamaya-görünür teslim gecikmesinde\nanlamlı kazanımlar sağlayabildiğini göstermektedir."
+    }
+  ],
+  "Oturum 6": [
+    {
+      "time": "15:45-16:15",
+      "title": "A Root-Cause Analysis Approach On E-Commerce Customer Reviews Using Deep Learning",
+      "authors": [
+        "Ali DİRİKER (Bahçeşehir Üniversitesi)",
+        "Selami BAĞRIYANIK (İstanbul Sağlık ve Teknoloji Üniversitesi)"
+      ],
+      "abstract": "E-Commerce is continually growing in revenue as a sector and the data which is being produced by the customers is considered as big data due to its large volume and velocity. The data produced by the customers is becoming more and more important for companies to make sense of and root-cause analysis is one of the main problems to solve for gaining such insight on customer behavior. Long Short-Term Memory (LSTM) models are one of the most popular and capable models to handle problems inherent to Natural Language Processing (NLP). This study considers two such models using LSTMs with differences in architectural design and application, and the comparison of the results are shared. The first model uses a simple LSTM model where the results are divided into a 10 categorical multi-class solution and the model runs the solution to all 10 at the same time. The second model attempts the same problem with one of the 10 separate smaller models running for each of the 10 different categories. It’s been found that the second approach produces better results by a large margin."
+    },
+    {
+      "time": "16:15-16:45",
+      "title": "Yapay Zeka İle Kaynak Verimli Sistem Günlüğü Analiz Sistemi",
+      "authors": [
+        "Emre CEYHAN (GAZİ ÜNİVERSİTESİ)",
+        "Kutlu TÜRKÜCÜ (GAZİ ÜNİVERSİTESİ)",
+        "Murat YILMAZ (GAZİ ÜNİVERSİTESİ)",
+        "Kürşat İNCE (HAVELSAN A.Ş.)"
+      ],
+      "abstract": "Modern savunma ve havacılık platformlarında görev yapan askeri personel, yüksek stresli ve zaman-kritik senaryolarda, karmaşık sistemleri yönetmekle görevlendirilmektedir. Büyük boyutlu teknik kılavuzlarda ihtiyaç duyulan bilgilere hızlı erişimde yaşanan zorluklar hem bilişsel yükü artırmakta hem de sahada prosedürel hatalara yol açabilmektedir. Bu bildiri, spesifik bilgiye anında erişememe sonucunda ortaya çıkabilecek zorlukları aşmak amacıyla geliştirilen, gömülü sistem platformunun kullanıcı arayüzüne doğrudan bağlı olan Erişim Destekli Üretim (ing., Retrieval-Augmented Generation) tabanlı bir yapay zekâ asistanı sistemi olan BİLGE ürününü anlatmakta ve bu çözüm önerisinin sağladığı faydaları aktarmaktadır."
+    },
+    {
+      "time": "16:45-17:15",
+      "title": "Early Detection Of Executable-Quality Commits: An Empirical Study Using Lightweight And Semi-Supervised Learning",
+      "authors": [
+        "Eren İZGİ (Hacettepe Üniversitesi)",
+        "Tugba Gurgen ERDOGAN (Hacettepe Üniversitesi)"
+      ],
+      "abstract": "Large-scale mining of software repositories often requires processing vast numbers of commits, many of which do not contain executable source code changes and therefore provide little value for downstream code quality analysis. Including such commits increases dataset noise, annotation effort, and computational cost. This study investigates whether commits can be pre-classified as executable quality analyzable (EQA) or non-EQA at an early stage, before large-scale dataset construction. We propose a lightweight hybrid classification approach that combines sentence-level embeddings derived from commit messages and diffs with structured commit metadata, such as file types and change statistics. To improve robustness under limited labeled data, we employ a consensus-based semi-supervised labeling strategy using multiple embedding models. Experiments on manually labeled commit datasets show that early EQA pre-classification is feasible and achieves high precision for analyzable commits, while substantially reducing irrelevant data. The results indicate that metadata-driven and embedding-based signals align well with human judgment and can effectively support scalable, noise-aware repository mining."
+    }
+  ],
+  "Oturum 7": [
+    {
+      "time": "09:15-09:45",
+      "title": "Visualization Of Distributed Publish-Subscribe Systems Using Graph Models For Analysis",
+      "authors": [
+        "Onurcan ERŞEN (HAVELSAN A.Ş.)",
+        "Mustafa Can ÇALIŞKAN (HAVELSAN A.Ş.)",
+        "İbrahim Onuralp YİĞİT (HAVELSAN A.Ş.)",
+        "Feza BUZLUCA (İstanbul Teknik Üniversitesi)"
+      ],
+      "abstract": "Publish-subscribe architecture has become a cornerstone of modern distributed systems. This study presents a comprehensive web platform for representing and interactively visualizing publish-subscribe-based distributed systems using graph models. The proposed approach transforms the system topology into a weighted, directed graph that models complex dependency relationships among applications, brokers, topics, libraries, and infrastructure nodes. The criticality levels of components are determined by computing topological metrics, such as PageRank, betweenness centrality, and articulation point analysis, complemented by BoxPlot-based statistical classification. The platform provides an enterprise-grade solution with a Next.js/React-based modern web interface, FastAPI backend services, and integration with the Neo4j graph database. Users can access interactive network visualizations (2D and 3D views), statistical charts, and comprehensive analytical dashboards. Experimental results demonstrate that the proposed approach reliably identifies critical components across the system's reliability, maintainability, availability, and vulnerability."
+    },
+    {
+      "time": "09:45-10:15",
+      "title": "Multi-Agent Large Language Model Architecture For Structural And Semantically Compatible Legal Contract Production (Akıtera)",
+      "authors": [
+        "Emre Yiğit ÖZTÜRK (Architecht Bilişim Sistemleri ve Pazarlama Ticaret A.Ş)",
+        "Mustafa ZEYBEK (Architecht Bilişim Sistemleri ve Pazarlama Ticaret A.Ş)",
+        "Zehra ESGİL (Architecht Bilişim Sistemleri ve Pazarlama Ticaret A.Ş)",
+        "Ahmet ARSLAN (ENELSİS Endüstriyel Elektronik Sistemler Araştırma Geliştirme Bilişim ve Danışmanlık Sanayi ve Ticaret Limited Şirketi)"
+      ],
+      "abstract": "The automatic generation of legal contracts is a challenging natural language processing problem that requires both structural alignment with corporate templates and \nsemantic compliance with current legislation. In this study, \nwe present Akitera, a large language model (LLM)-based multi-agent system for the automatic generation of contracts compliant with Turkish law. The developed system consists of a ContractGeneratorAgent that performs semantic template selection, a LegalControlAgent that validates clauses using key phrase clustering, and a calibration mechanism that utilizes expert feedback.\nOur system enables the processing of contract templates as full text without summarization by using LMMs with a context window capacity of 131,072 tokens.\nOur experimental evaluations show that the proposed approach provides meaningful improvements in structural alignment, clause coverage, and legal consistency compared to baseline methods."
+    },
+    {
+      "time": "10:15-11:00",
+      "title": "Local-First Multi-Agent Architecture For Industrial Edge Computing",
+      "authors": [
+        "Mehmet UZUNKONAK (SIEMENS)"
+      ],
+      "abstract": "Industrial network reliability is crucial for manufacturing operations, as network failures can result in substantial production downtime and pose significant safety risks. Ring redundancy protocols provide fault tolerance by enabling alternate data paths in the event of primary connection failures. This paper presents a novel, fully automated testing framework for validating ring redundancy configuration in Siemens Scalance industrial network devices. The proposed approach integrates the TIA Portal (Totally Integrated Automation Portal) Openness API (Application Programming Interface) with the NUnit testing framework to achieve comprehensive validation, including dependency rule enforcement, constraint verification, and multi-device integration testing. The framework incorporates automated test cases for both positive and negative scenarios, achieving 95% parameter coverage across ring redundancy configurations. The development of the testing framework is supported by GitHub Copilot, an AI-assisted (Artificial Intelligence–assisted) coding tool, to enhance development efficiency and consistency. This research advances the field of industrial automation testing by introducing a scalable and standardized automated framework for ring redundancy validation through TIA Portal integration, enhancing network device reliability across diverse automation systems and operational contexts."
+    }
+  ],
+  "Oturum 8": [
+    {
+      "time": "09:15-09:45",
+      "title": "Oltalama Tespiti İçin Salt Kodlayıcı Ve Üretici Büyük Dil Modellerinin Karşılaştırmalı Performans Analizi",
+      "authors": [
+        "Soner Üzeyir AKAR (Gebze Teknik Üniversitesi)",
+        "Mehmet GÖKTÜRK (Gebze Teknik Üniversitesi)"
+      ],
+      "abstract": "Oltalama saldırıları, etkili ve doğru tespit mekanizmaları gerektiren kritik bir siber güvenlik tehdidi olmaya devam etmektedir. Büyük Dil Modelleri (BDM’ler) üretken görevlerde dikkate değer yetenekler sergilese de, ikili sınıflandırma (binary classification) görevlerinde geleneksel kodlayıcı tabanlı (encoder-only) mimarilere kıyasla verimlilikleri yeterince araştırılmamıştır. Bu çalışma, BERT ailesi modelleri (BERT, DistilBERT, RoBERTa, DeBERTa-v3) ile modern parametre verimli ince ayar (PEFT) uygulanmış BDM’ler (Qwen2.5-7B, Phi-3-mini, Gemma-2-2B) ve sıfır atışlı (zero-shot) ticari temel model (GPT-4.1-mini) arasında kapsamlı bir karşılaştırma sunmaktadır. Tabakalı örnekleme ile oluşturulan 64.329 e-postalık veri seti kullanılarak modeller; tespit doğruluğu, F1-skoru ve tüketici sınıfı donanım (RTX 4070 Ti) üzerindeki hesaplama verimliliği açısından değerlendirilmiştir. Sonuçlar, bu alanda kodlayıcı tabanlı modellerin üretken BDM’lerden önemli ölçüde daha iyi performans gösterdiğini ortaya koymaktadır. DeBERTa-v3 en yüksek doğruluğa (%99,69) ulaşırken, DistilBERT sadece 12 dakikalık eğitim süresiyle en iyi verimlilik-performans oranını sunmuştur. Buna karşın, ince ayar yapılmış BDM’ler yüksek değişkenlik göstermiştir: Qwen2.5-7B rekabetçi bir doğruluk (%99,44) elde etmesine rağmen 70 saatin üzerinde eğitim gerektirmiş, Gemma-2-2B gibi daha küçük talimat ayarlı (instruction-tuned) modeller ise yakınsama (convergence) başarısızlığı yaşamıştır. Bu bulgular, oltalama tespiti gibi özelleşmiş ikili sınıflandırma görevlerinde, hafif kodlayıcı modellerin hem performans hem de kaynak kullanımı açısından üretken BDM’lere göre üstünlüğünü koruduğunu göstermektedir."
+    },
+    {
+      "time": "09:45-10:15",
+      "title": "Gnss Tabanlı Navigasyonda Çok Katmanlı Bütünlük İzleme: Klasik Raım, Araım Ve Makine Öğrenimi Yaklaşımlarının Simülasyon Ortamında Değerlendirilmesi",
+      "authors": [
+        "Betul YENİTOPCU (Muğla Sıtkı Koçman Üniversitesi)",
+        "Eda TAŞKAN (Muğla Sıtkı Koçman Üniversitesi)",
+        "Mert KELEŞOĞLU (Muğla Sıtkı Koçman Üniversitesi)",
+        "Mesut EROL (Türk Havacılık ve Uzay Sanayii A.Ş.)",
+        "Cihat ÇETİNKAYA (Muğla Sıtkı Koçman Üniversitesi)"
+      ],
+      "abstract": "Güvenlik açısından kritik uygulamalar için GNSS bütünlük izleme hayati öneme sahiptir. Bu çalışmada, GPS\nve Galileo ortamında beş tamamlayıcı algoritmayı (Ki-kare/W testi tabanlı Geleneksel RAIM, MHSS tabanlı\nARAIM, AIME, IRLS tabanlı Dayanıklı RAIM ve K-NN/Naive Bayes/Fisher LDA sınıflandırıcıları kullanan Makine\nÖğrenmesi Destekli RAIM) entegre eden çok katmanlı bir simülatör sunulmaktadır. Çalışmanın temel katkısı,\nliteratürde bağımsız incelenen bu yöntemleri tek bir platformda birleştirerek jamming, spoofing ve uydu arızası\nsenaryolarındaki etkinliklerini doğrudan karşılaştırmaktır. MATLAB ortamında geliştirilen sistemin test sonuçları;\nki-kare gibi geleneksel testlerin uydu arızalarını başarıyla tespit etmesine (𝜒2=51.6 > eşik=33.1) rağmen spoofing\nsaldırılarında yetersiz kaldığını (𝜒2=7.8 < eşik=33.1) göstermektedir. Bu bulgular, karmaşık tehditlere karşı her\nkatmanın diğerinin sınırlarını tamamladığı çok katmanlı bir mimarinin zorunluluğunu doğrulamaktadır."
+    },
+    {
+      "time": "10:15-11:00",
+      "title": "Evaluating The Robustness Of Vulnerability Detection Models Under Semantic-Preserving Code Transformations",
+      "authors": [
+        "İbrahim TARAKCI (Orta Doğu Teknik Üniversitesi)",
+        "Selma NAZLIOĞLU (Atılım Üniversitesi)",
+        "Halit OĞUZTÜZÜN (Orta Doğu Teknik Üniversitesi)"
+      ],
+      "abstract": "Software vulnerability detection models are typically evaluated on original source code, while their robustness to semantic-preserving code modifications remains largely unexplored. In this study, we evaluate the robustness of vulnerability detection models under semantic-preserving code transformations using the SySeVR dataset, covering arithmetic expression, API function call, array usage, and pointer usage categories. We consider whitespace perturbation, dead code injection, and their sequential combination, all of which preserve program semantics while altering surface-level code characteristics. The evaluation includes classical machine learning models with TF-IDF representations (Random Forest, Support Vector Machine), deep learning models with Word2Vec embeddings (BiLSTM, TextCNN), and large language models (CodeBERT, GraphCodeBERT, and Qwen2.5-Coder). Model performance is assessed primarily using F1-score for detection effectiveness and training time for efficiency analysis. The results show that although several models achieve strong performance on original code, detection performance generally degrades under semantic-preserving transformations, with the combined application of transformations causing the most pronounced impact. Training efficiency is also affected, but the effect varies by transformation and model family. These findings highlight the need for robustness-aware and efficiency-aware evaluation of vulnerability detection models beyond clean code settings."
+    }
+  ],
+  "Oturum 9": [
+    {
+      "time": "11:15-11:45",
+      "title": "Hibrit Zorluk Tabanlı Veri Seçimi İle Daha Az Veri Kullanarak Talimat Takip Yeteneğinin İyileştirilmesi",
+      "authors": [
+        "Ali ÜNALDI (Gazi Üniversitesi)",
+        "Murat YILMAZ (Gazi Üniversitesi)"
+      ],
+      "abstract": "Büyük Dil Modellerinin (BDM) eğitiminde artan maliyetler ve veri kalitesi darboğazları, araştırma odağını veri miktarından veri verimliliğine kaydırmıştır. Mevcut veri seçimi yöntemleri, çeşitlilik ile öğreticilik arasında etkili bir denge kurmakta yetersiz kalmaktadır. Bu çalışmada, bu soruna çözüm olarak “Hibrit Zorluk Tabanlı Veri Seçimi” (Hybrid-Mix) stratejisi önerilmektedir. Önerilen yöntem, eğitim verisini öncelikle gömme uzayında kümeleyerek anlamsal kapsayıcılığı garanti altına almakta, ardından her bir küme içerisinden model için en öğretici örnekleri kayıp (cross-entropy loss) tabanlı olarak seçmektedir.\n\nLlama-3-8B modeli ve Alpaca veri seti üzerinde yapılan deneylerde, tam eğitim setinin yalnızca %10.6’sını (5.000 örnek) kullanan Hybrid-Mix yaklaşımının, özellikle talimat takip ve muhakeme görevlerinde güçlü bir performans sergilediği gözlemlenmiştir. Jüri tabanlı kör değerlendirmelerde, önerilen yöntem, tam veri ile eğitilen modele kıyasla istatistiksel olarak anlamlı iyileşmeler sağlamıştır (𝑝 < 0.05).\n\nElde edilen bulgular, eğitim verisinin niceliğinden ziyade niteliğinin model performansı üzerinde belirleyici olduğunu göstermekte ve veri seçimi stratejilerinin, büyük ölçekli model eğitim maliyetlerini azaltmada kritik bir rol oynayabileceğine işaret etmektedir."
+    },
+    {
+      "time": "11:45-12:15",
+      "title": "Graph Neural Network-Augmented Retrieval For A Domain Expert Chatbot İn R&I Intelligence",
+      "authors": [
+        "Tolga AYAV (Izmir Yüksek Teknoloji Enstitüsü)",
+        "Burak KORCUKLU (İzmir Yüksek Teknoloji Enstitüsü)"
+      ],
+      "abstract": "We present a software architecture oriented retrieval augmented generation (RAG) system that integrates graph based representation learning into a production grade domain expert chatbot. The proposed architecture augments conventional text embeddings with structure aware graph semantic embeddings learned from a heterogeneous Neo4j based knowledge graph. Our core contribution is SemanticGNNEmbedding: a structure aware embedding trained with message passing and fused with sentence transformer embeddings to support relational similarity search in production. We describe the end-to-end software design, including data preparation workflows, GNN training, embedding generation, Neo4j vector indexing, and query time retrieval strategies. To evaluate the effectiveness of the proposed architecture, we conduct controlled experiments on realistic retrieval tasks and report standard information retrieval metrics, providing empirical evidence of the impact of graph aware embeddings on retrieval quality. The results demonstrate that incorporating structural knowledge into the embedding layer improves retrieval performance in scenarios where textual descriptions are sparse, without degrading performance in text rich settings. Overall, this work contributes a reusable architectural pattern and an experimentally validated software solution for integrating graph neural networks into AI-driven information systems."
+    },
+    {
+      "time": "12:15-12:45",
+      "title": "Yüksek Yoğunluklu Finansal İşlemlerde İzolasyon Ormanlarıyla Düşük Gecikmeli Anomali Tespiti İçin Veri İşleme Başarımına Yönelik Ödünleşmeler",
+      "authors": [
+        "Batuhan CAN (İstanbul Teknik Üniversitesi)",
+        "Tolga OVATMAN (İstanbul Teknik Üniversitesi)",
+        "Hikmet MAZMANOĞLU (H3M)",
+        "Utku Görkem KETENCİ (H3M)"
+      ],
+      "abstract": "Yüksek yoğunluklu finansal işlemlerde anomali tespiti, finansal işlemlerin gün geçtikte daha fazla elektronik ortamlara kaydığı günümüz dünyasında gittikçe zorlaşan bir problem olarak karşımıza çıkmaktadır. Bu problem genelde, daha kapsamlı analizlerle gevşek zaman ihtiyaçlarına sahip ve yüksek doğruluklu biçimde ya da kural tabanlı gibi hafif sıklet yaklaşımlarla gerçek zamanlı ancak daha gevşek doğruluk ihtiyaçlarına sahip şekilde gerçekleştirilmektedir. Bu çalışmada, gerçek zamanlı biçimde anomali tespiti için kullanılabilecek makina öğrenmesi yöntemlerinden biri olan izolasyon ormanı (\"isolation forest\") yönetimi basit bir veri işleme mimarisinde gerçekleştirilerek, gerçek bir veri kümesi üzerinde performansı etkileyen ödünleşmeler irdelenmektedir. Çalışma sonucunda, izolasyon ormanına özel olarak, işlenen verilerin yığın boyutlarıyla işlenen verilerin kabul sıklığı arasındaki ödünleşme ortaya çıkarılmıştır."
+    }
+  ],
+  "Oturum 10": [
+    {
+      "time": "11:15-11:45",
+      "title": "Siber-Fiziksel Sistemlerde Anomali Tespiti: Büyük Dil Modelleri Üzerine Karşılaştırmalı Bir Çalışma",
+      "authors": [
+        "Eşrefhan KADIOĞLU (ASELSAN)",
+        "Mustafa Mert SAĞLAM (ASELSAN)",
+        "Onur GÖKSEL (ASELSAN)",
+        "Bahadır ÇELİKTAŞ (ASELSAN)"
+      ],
+      "abstract": "Siber-Fiziksel Sistemlerde anomali tespiti kritik bir gereksinimdir. Bu bildiride sistem akışını değiştirmeden kontrol yazılımından küçültülmüş log pencereleri alarak çalışan bir Anomali Tespit Yazılımı (ATY) geliştirilmiştir. ATY log pencerelerini gömme (embedding) modeli ile vektör uzaya taşımaktadır. ATY, Retrieval-Augmented Generation (RAG) kullanarak, ilgili bağlamı geri getirmekte ve yerel bilgisayarda çevrimdışı çalışan büyük dil modelleri ile anomali kararını üretmektedir. Canlı kayıt verisi geri oynatım ile tekrar çalıştırılarak gpt-oss:20b, deepseek-r1:32b, qwen3:14b ve qwen3:8b modelleri karşılaştırılmıştır. Bu büyük dil modellerinin performans ve hesaplama maliyeti açısından dengeli çözümler sunduğu altyapılar tespit edilmiştir. Elde edilen bulgular, test ve doğrulama süreçlerinin etkinliğini artırmaya yönelik önemli katkılar sunmaktadır."
+    },
+    {
+      "time": "11:45-12:15",
+      "title": "Geminix Tabanlı Avrupa Hayati Bilgisayar (Evc) Sistemlerinde Hata Enjeksiyonu Yöntemi İle Emniyet-Kritik Yazılım Doğrulaması",
+      "authors": [
+        "Yusuf ÇAĞLAYAN (ASELSAN)"
+      ],
+      "abstract": "Tren üstü kontrol sistemi (OBCS) mimarisinin kritik bir bileşeni olan Avrupa Hayati Bilgisayarı (EVC), SIL4 (Yazılım Bütünlüğü Seviyesi 4) emniyet gereksinimlerine uyarken, bir arıza durumunda deterministik ve güvenli bir davranış sergilemelidir. Bu çalışma, ASELSAN A.Ş. tarafından geliştirilen, GeminiX tabanlı tren üstü donanım platformu olan EVC için hata enjeksiyonu testleri için sistematik bir test yaklaşımı sunmaktadır. Önerilen yöntem, CPU, bellek, kayıt ve iletişim seviyelerinde kontrollü hata enjeksiyonu yoluyla sistemin kritik arızalar sırasındaki davranışını gözlemlemeyi amaçlamaktadır. Testler, tekrarlayan senaryolar ve otomatik test altyapısı kullanılarak gerçekleştirilmiştir. Elde edilen sonuçlar, EVC sisteminin hata toleransı mekanizmalarının etkinliğini ve hata durumlarında güvenli davranış üretme yeteneğini ortaya koymaktadır."
+    },
+    {
+      "time": "12:15-12:45",
+      "title": "Open-Source Software Quality Comparison With Derived Quality Model",
+      "authors": [
+        "M. Aslı TAŞGETİREN (Hacettepe Üniversitesi)",
+        "Nebi YILMAZ (Hacettepe Üniversitesi)",
+        "Ayça KOLUKISA (Hacettepe Üniversitesi)"
+      ],
+      "abstract": "Open Source Software (OSS) is widely used in modern software systems, making reliable and systematic quality evaluation increasingly important. Although numerous OSS quality models have been proposed, differences in terminology, structure, and conceptual foundations limit their comparability and reuse. To address this issue, the OSS Quality Meta-Model (OSS-QMM) was introduced to provide a unified and standardized framework for the evaluation of OSS quality. While previous studies have validated OSS-QMM conceptually and empirically, further evidence is needed to demonstrate its ability to systematically derive existing quality evaluation methods and apply them in practice. This study aims to demonstrate that a previously proposed, metric-based OSS quality evaluation method can be systematically derived from OSS-QMM and that the derived model remains usable in real-world scenarios. The derivation is performed through explicit term mapping and diagram-based modeling, ensuring conceptual alignment between the reference method and the meta-model without extending or modifying OSS-QMM. To evaluate the practical usability of the derived model, a multiple-case study with embedded units is conducted. The case study compares two widely used Java build automation tools using code-based maintainability and reliability characteristics. The evaluation process is structured using the Goal-Question-Metric (GQM) approach, and metrics are collected through automated static code analysis. The results demonstrate that OSS-QMM effectively supports model derivation and that the derived quality model can be successfully applied in practice. These findings highlight OSS-QMM’s potential to improve homogeneity, comparability, and applicability in OSS quality evaluation."
+    }
+  ],
+  "Oturum 11": [
+    {
+      "time": "14:00-14:30",
+      "title": "A Centralized And Scalable Software Architecture İn Satellite Integration And Egse Test Infrastructures",
+      "authors": [
+        "Talha Sezer CAKİR (Türk Havacılık ve Uzay Sanayii A.Ş.)",
+        "Mert İLERİ (Türk Havacılık ve Uzay Sanayii A.Ş.)",
+        "Necdet Engin ÖZTUNA (Türk Havacılık ve Uzay Sanayii A.Ş.)"
+      ],
+      "abstract": "The success of satellite missions depends not only on spacecraft design but also on the reliability of ground\nsegment software utilized in the ground station. This study emphasizes the critical role of ground software\nin mission preparation, integration testing, and the verification of failure scenarios, specifically focusing on\ntelecommand transmission and telemetry reception/processing. Furthermore, it addresses the inefficiencies and\nmanagement challenges posed by currently prevalent distributed test infrastructures in coordinating multiple\nElectronic Ground Support Equipment (EGSE) units and software components. Driven by this necessity, the\nCentralized Control and Test Software (CCTS) project, indigenously developed at Turkish Aerospace Industries\n(TUSAŞ), is proposed. The CCTS coordinates diverse EGSE and test software through a centralized, modular,\nand scalable approach. The proposed architecture focuses on repeatable test scenarios, centralized management,\nprotocol compatibility, and the enhancement of operational reliability, aiming to improve the efficiency of test\nprocesses and the integrity of mission preparation. This paper presents the architectural design principles and\nthe contributions of the system to satellite testing processes in detail."
+    },
+    {
+      "time": "14:30-15:00",
+      "title": "Erişim Destekli Üretim Tabanlı Akıllı Asistan Yöntemi İle Savunma Sanayi Projelerinde Bilişsel Yükün Azaltılması İçin Bir Durum Çalışması: Bilge",
+      "authors": [
+        "Onur TEKİK (ASELSAN)"
+      ],
+      "abstract": "Otonom yapay zekâ ajanlarının Operasyonel Teknoloji (OT) ortamlarında konumlandırılması giderek daha\ncazip hale gelmekle birlikte, bulut merkezli mimariler ağ gecikmesi, veri egemenliği kaygıları ve monolitik ajan\ntasarımlarının hesaplama yükü gibi önemli engeller dayatmaktadır. Bu çalışma, kaynak kısıtlı uç ortamlar için\ntasarlanmış bir Yerel Öncelikli çok ajanlı yazılım mimarisi önermektedir.\nÜç temel katkı sunulmaktadır. Birincisi, Ajan-Araç-Olarak (Agent-as-a-Tool) tasarım kalıbını uygulayan\nmodüler bir orkestrasyon çerçevesidir: her biri belirli bir alan yetkinliğinden sorumlu uzman ajanlar, çağrılabilir\naraçlar olarak kapsüllenerek merkezi bir orkestratör tarafından dinamik biçimde çağrılır. İkincisi, Model Bağlam\nProtokolü (MCP) üzerine inşa edilen bir protokol soyutlama katmanı, ajan mantığını eski endüstriyel iletişim\narayüzlerinden ayırarak heterojen donanım uç noktalarını tekdüze, modelden bağımsız araç tanımları olarak\nsunmaktadır. Üçüncüsü, Erişimle Zenginleştirilmiş Üretim (RAG) ile gerçek zamanlı veri elde etmeyi birleştiren\nkarma bir bilgi entegrasyon stratejisidir.\nMimari, endüstriyel değişken frekanslı sürücü sistemlerini hedefleyen bir kavram kanıtı aracılığıyla doğrulanmıştır.\nTüketici sınıfı Apple Silicon donanımı üzerinde çalışan nicelenmiş 4 milyar parametreli bir Küçük\nDil Modeli (KDM), 2–7 saniyelik uçtan uca yanıt süreleriyle çok adımlı tanılama iş akışlarını yürütürken tüm\noperasyonel veriler yerel ağ sınırı içinde kalmaktadır. Sonuçlar, endüstriyel uçta modüler ve mahremiyet koruyucu\najan tabanlı yapay zekânın uygulanabilirliğini ortaya koymaktadır."
+    },
+    {
+      "time": "15:00-15:30",
+      "title": "Medimem: A Hybrid Conversational Personal Health Data Analysis Platform Based On Small Expert Models And Mcp",
+      "authors": [
+        "Caner TUNÇ (Muğla Sıtkı Koçman Üniversitesi)"
+      ],
+      "abstract": "MediMem is an AI-powered conversational healthcare platform that employs a hybrid LLM router and Small Language Model (SLM) architecture for blood test analysis, lifestyle assessment, cardiovascular risk evaluation, and chest X-ray classification. Secure inter-task communication is enabled via the Model Context Protocol (MCP). Expert models are trained using 44,000 synthetic blood test records and 20,000 lifestyle data samples with LoRA/QLoRA fine-tuning. The cardiovascular risk prediction model achieves 91.2% AUC using a CatBoost classifier, while the image analysis module achieves 99.5% accuracy with a MobileNetV3 Gatekeeper model and 95.39% accuracy with a ResNet50 backbone. The system operates in both English and Turkish and was designed with privacy-preserving safeguards for KVKK/GDPR-sensitive deployment settings."
+    }
+  ],
+  "Oturum 12": [
+    {
+      "time": "14:00-14:30",
+      "title": "Assessing Llms For Automated Test Reporting And Test Closure: A Controlled Multi-Model Evaluation",
+      "authors": [
+        "Cem BAĞLUM (Eskişehir Osmangazi Üniversitesi)",
+        "Uğur YAYAN (Eskişehir Osmangazi Üniversitesi)",
+        "Ahmet YAZICI ( Eskişehir Osmangazi Üniversitesi)"
+      ],
+      "abstract": "Test reporting and test closure play a central role in software testing by transforming raw test execution results into structured summaries and final assessments that support quality evaluation and release decisions. In practice, these activities are still largely performed manually, making the process time-consuming, inconsistent, and difficult to standardize. Recent advances in Large Language Models (LLMs) have enabled the automated generation of test reports and test closure summaries. However, systematic and reproducible evaluation of LLM performance across these phases remains an open challenge, particularly with respect to objectivity and comparability. This study presents a controlled multi-model comparative evaluation of LLMs for automated test reporting and test closure. Multiple LLMs generate test reports and test closure statements from identical test data using a fixed report structure and uniform prompt templates. The quality of test reports and test closure outputs is evaluated using a predefined set of observable metrics, such as completeness, coverage, clarity, analytical depth, and internal consistency. The evaluation focuses on completeness, coverage, clarity, analytical depth, and internal consistency, each computed using data-driven methods. Experimental results show that different LLMs exhibit distinct performance characteristics when assessed using the same model-agnostic evaluation framework. The proposed approach provides a reproducible and model-agnostic foundation for systematically benchmarking LLM-based test reporting and test closure in modern software testing practices."
+    },
+    {
+      "time": "14:30-15:00",
+      "title": "An Aı-Assisted Automated Testing Framework For Ring Redundancy Validation İn Industrial Networks",
+      "authors": [
+        "Müjde CEYLAN (SIEMENS)",
+        "Selin GÜNDÜZ (SIEMENS)"
+      ],
+      "abstract": "Modern yazılım sistemleri, operasyonel görünürlük ve\narıza yönetimi için büyük hacimli ve heterojen sistem günlüğü\nverisi üretmektedir. Son dönemde Büyük Dil Modelleri, sistem\ngünlüğü ayrıştırma, anomali tespiti ve kök neden analizi gibi\ngörevlerde güçlü performans gösterse de yüksek gecikme\n(latency), maliyet ve dağıtım gereksinimleri çevrimiçi\nsenaryolarında önemli bir engel oluşturmaktadır. Bu çalışma,\nliteratürdeki sistem günlüğü analizi yöntemlerini görev ve yöntem\neksenlerinde sentezleyerek; verimlilik raporlaması, uçtan uca\nentegrasyon, güvenilirlik/kanıt gösterimi ve kestirimci bakım\nentegrasyonu gibi kritik boşlukları ortaya koymaktadır. Bu\nboşluklara dayanarak, varsayılan olarak Küçük Dil Modelleri ile\nçalışan; mikro-yığın paketleme, hızlı ayrıştırma, vektör temsili\ntabanlı hafıza, anomali tespiti, kanıta dayalı özet/kök neden\nanalizi desteği ve kestirimci bakım erken uyarı modülünü tek\nakış üzerinde birleştiren kavramsal bir mimari önerilmektedir.\nÇalışma, deneysel bir uygulama sunmaktan ziyade, literatürdeki\neksiklikleri teorik bir çerçeveye oturtmayı ve Küçük Dil Modeli\ntabanlı bir yaklaşım oluşturmayı hedeflemektedir."
+    },
+    {
+      "time": "15:00-15:30",
+      "title": "Do-178C Uyumlu Yazılım Yükleme Kontrolü",
+      "authors": [
+        "Yusuf TIKMAN (Türk Havacılık ve Uzay Sanayii A.Ş.)",
+        "İbrahim Seyfullah BABAARSLAN (Türk Havacılık ve Uzay Sanayii A.Ş.)"
+      ],
+      "abstract": "Günümüzün gelişmiş aviyonik sistemlerinde yazılım, uçuş güvenliğinin en önemli unsurlarından biri olarak öne çıkmaktadır. Bu sebeple, yazılımın sadece geliştirme ve test süreçleri değil, aynı zamanda donanıma aktarılma aşaması da sertifikasyon açısından büyük bir önem arz etmektedir. DO-178C rehber dokümanında belirtilen Yazılım Yükleme Kontrolü (SLC), çalıştırılabilir kodun hatasız, doğru sürümde ve uygun donanıma yüklenmesini temin etmeyi hedefler. Bu çalışma, DO-178C Kısım 7.5 ve Tablo A-8'de zorunlu tutulan SLC gereksinimlerini, konfigürasyon tanımlama, sürüm ve donanım uygunluğu ile veri bütünlüğü çerçevesinde incelemektedir. Emniyet açısından kritik öneme sahip aviyonik sistemlerde, CRC temelli bütünlük doğrulama yöntemlerinin, checksum yöntemlerine göre neden daha çok tercih edildiğinin teknik nedenleri açıklanmıştır. Ek olarak, ARINC 615A ve TFTP esaslı yükleme protokollerinin, denetlenebilir ve izlenebilir bir yazılım aktarım süreci sağlamadaki önemi değerlendirilmiştir. Çalışma, yazılımın kullanım ömrü boyunca bütünlüğünün nasıl korunduğunu, yükleme sonrasında donanım seviyesinde gerçekleştirilen CRC doğrulamaları, çalışma anındaki bütünlük denetimleri ve yeniden başlatma sonrası testler (PBIT/CBIT) ile göstermektedir. Son olarak, bakım yetkilileri, insan faktörü ve siber güvenlik ihtiyaçları bağlamında yazılım yükleme sürecinin uygulama yönü değerlendirilerek, Yazılım Yükleme Kontrolü'nün sadece basit bir lojistik işlem olmadığı, uçuş güvenliğinin vazgeçilmez bir parçası olduğu vurgulanmaktadır."
+    }
+  ]
+}
