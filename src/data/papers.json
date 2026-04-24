@@ -78,7 +78,7 @@
       "time": "15:00-15:30",
       "title": "Gömülü Gerçek Zamanlı Sistemler İçin Düşük Maliyetli Ölçümleme Aracı Tasarımı Ve Uygulaması",
       "authors": [
-        "Yiğit ARISOY (ASELSAN)"
+        "Yiğit ARISOY (ASELSAN A.Ş.)"
       ],
       "abstract": "Gerçek zamanlı gömülü sistemlerde, yazılımın katı zaman limitlerini karşılaması gerekmektedir. Yazılımın\nbu gerçek zamanlı çalışma gereksinimlerini karşılayamadığı durumlar oluşmaktadır. Bu durumlarda darboğaz\noluşturan yerlerin bulunması içi ölçümleme yapılması gerekmektedir. Ölçümleme işlemlerinin de yazılım akışını\nve sürelerini etkilemeden yapılması gerekmektedir. Bu makale, VxWorks üzerinde çalışan C++ uygulamaları için\ngeliştirilmiş özel bir ölçümleme aracını tanımlamaktadır. Tasarımımız verileri kaydetmek için herhangi bir yazılım\nkilidi kullanmadan ve ana uygulamanın performansını etkilemeden ölçümleme yapmayı sağlar. Verileri analiz\netmek için, milyonlarca mesajı donmadan işleyebilen, Web Workers kullanan web tabanlı bir araç geliştirdik.\n12 çekirdekli Intel Xeon işlemcisinde yapılan testler, aracımızın mesaj başına yaklaşık 133 nanosaniyelik bir\ngecikmeye sahip olduğunu ve aktif kullanımda sürelerin %1’den az arttığını göstermektedir. Bu, gerçek zaman\nsınırlarımızı kaçırmadan sistemlerimizde yüksek doğruluklu performans verileri yakalamamızı sağladı."
     }
@@ -86,18 +86,18 @@
   "Oturum 4": [
     {
       "time": "14:00-14:30",
-      "title": "Yazılım Gereksinimi Tanımlamada Akış Odaklı Yaklaşım: ASELSAN’Da Kullanım Durumu Dönüşümü Deneyimi",
+      "title": "Yazılım Gereksinimi Tanımlamada Akış Odaklı Yaklaşım: ASELSAN A.Ş.’Da Kullanım Durumu Dönüşümü Deneyimi",
       "authors": [
-        "Süleyman ARIKAN (ASELSAN)",
-        "Adnan KALAY (ASELSAN)",
-        "Ahmet DİKİCİ (ASELSAN)",
-        "Fehim GÖLER (ASELSAN)",
-        "Yaşar Barış ULU (ASELSAN)",
-        "Levend Mehmet MERT (ASELSAN)",
-        "Mustafa KURT (ASELSAN)",
-        "İbrahim SICAKYÜZ (ASELSAN)"
+        "Süleyman ARIKAN (ASELSAN A.Ş.)",
+        "Adnan KALAY (ASELSAN A.Ş.)",
+        "Ahmet DİKİCİ (ASELSAN A.Ş.)",
+        "Fehim GÖLER (ASELSAN A.Ş.)",
+        "Yaşar Barış ULU (ASELSAN A.Ş.)",
+        "Levend Mehmet MERT (ASELSAN A.Ş.)",
+        "Mustafa KURT (ASELSAN A.Ş.)",
+        "İbrahim SICAKYÜZ (ASELSAN A.Ş.)"
       ],
-      "abstract": "Karmaşık ve büyük ölçekli görev-kritik yazılımların geliştirilmesinde, gereksinimlerin doğru ve ortak bir anlayışla ifade edilmesi ürün başarısı açısından kritik öneme sahiptir. Ancak geleneksel metin tabanlı gereksinim tanımlama yaklaşımları, yazılım davranışının bütüncül olarak ifade edilmesinde ve heterojen paydaşlar arasında ortak anlayış oluşturmakta yetersiz kalabilmektedir. Bu çalışmada, ASELSAN’da yürütülen ve kurumsal “verimlilik” odağıyla başlatılan bir süreç iyileştirme faaliyeti kapsamında, gereksinimlerin tanımlanmasında akış odaklı kullanım durumu yaklaşımı geliştirilmesinde ve uygulanmasında elde edilen deneyim paylaşılmaktadır. Çalışma kapsamında kullanım durumlarının sistematik biçimde tanımlanabilmesi amacıyla özgün bir kullanım durumu şablonu ve dönüşüm rehberi geliştirilmiştir. Önerilen yaklaşım, büyük ölçekli görev-kritik bir yazılım projesinde pilot olarak uygulanmış ve mevcut gereksinimler kullanım durumlarına dönüştürülmüştür. Elde edilen gözlemler yaklaşımın, gereksinimlerin anlaşılabilirliğini artırdığını, senaryo/bağlam temelli değerlendirmeyi kolaylaştırdığını ve paydaşlar arası iletişimi güçlendirdiğini göstermektedir. Çalışma, kullanım durumu tabanlı gereksinim tanımlama yaklaşımını değerlendirmek isteyen ekipler için pratik bir yol haritası ve çıkarımlar sunmaktadır."
+      "abstract": "Karmaşık ve büyük ölçekli görev-kritik yazılımların geliştirilmesinde, gereksinimlerin doğru ve ortak bir anlayışla ifade edilmesi ürün başarısı açısından kritik öneme sahiptir. Ancak geleneksel metin tabanlı gereksinim tanımlama yaklaşımları, yazılım davranışının bütüncül olarak ifade edilmesinde ve heterojen paydaşlar arasında ortak anlayış oluşturmakta yetersiz kalabilmektedir. Bu çalışmada, ASELSAN A.Ş.’da yürütülen ve kurumsal “verimlilik” odağıyla başlatılan bir süreç iyileştirme faaliyeti kapsamında, gereksinimlerin tanımlanmasında akış odaklı kullanım durumu yaklaşımı geliştirilmesinde ve uygulanmasında elde edilen deneyim paylaşılmaktadır. Çalışma kapsamında kullanım durumlarının sistematik biçimde tanımlanabilmesi amacıyla özgün bir kullanım durumu şablonu ve dönüşüm rehberi geliştirilmiştir. Önerilen yaklaşım, büyük ölçekli görev-kritik bir yazılım projesinde pilot olarak uygulanmış ve mevcut gereksinimler kullanım durumlarına dönüştürülmüştür. Elde edilen gözlemler yaklaşımın, gereksinimlerin anlaşılabilirliğini artırdığını, senaryo/bağlam temelli değerlendirmeyi kolaylaştırdığını ve paydaşlar arası iletişimi güçlendirdiğini göstermektedir. Çalışma, kullanım durumu tabanlı gereksinim tanımlama yaklaşımını değerlendirmek isteyen ekipler için pratik bir yol haritası ve çıkarımlar sunmaktadır."
     },
     {
       "time": "14:30-15:00",
@@ -287,10 +287,10 @@
       "time": "11:15-11:45",
       "title": "Siber-Fiziksel Sistemlerde Anomali Tespiti: Büyük Dil Modelleri Üzerine Karşılaştırmalı Bir Çalışma",
       "authors": [
-        "Eşrefhan KADIOĞLU (ASELSAN)",
-        "Mustafa Mert SAĞLAM (ASELSAN)",
-        "Onur GÖKSEL (ASELSAN)",
-        "Bahadır ÇELİKTAŞ (ASELSAN)"
+        "Eşrefhan KADIOĞLU (ASELSAN A.Ş.)",
+        "Mustafa Mert SAĞLAM (ASELSAN A.Ş.)",
+        "Onur GÖKSEL (ASELSAN A.Ş.)",
+        "Bahadır ÇELİKTAŞ (ASELSAN A.Ş.)"
       ],
       "abstract": "Siber-Fiziksel Sistemlerde anomali tespiti kritik bir gereksinimdir. Bu bildiride sistem akışını değiştirmeden kontrol yazılımından küçültülmüş log pencereleri alarak çalışan bir Anomali Tespit Yazılımı (ATY) geliştirilmiştir. ATY log pencerelerini gömme (embedding) modeli ile vektör uzaya taşımaktadır. ATY, Retrieval-Augmented Generation (RAG) kullanarak, ilgili bağlamı geri getirmekte ve yerel bilgisayarda çevrimdışı çalışan büyük dil modelleri ile anomali kararını üretmektedir. Canlı kayıt verisi geri oynatım ile tekrar çalıştırılarak gpt-oss:20b, deepseek-r1:32b, qwen3:14b ve qwen3:8b modelleri karşılaştırılmıştır. Bu büyük dil modellerinin performans ve hesaplama maliyeti açısından dengeli çözümler sunduğu altyapılar tespit edilmiştir. Elde edilen bulgular, test ve doğrulama süreçlerinin etkinliğini artırmaya yönelik önemli katkılar sunmaktadır."
     },
@@ -298,9 +298,9 @@
       "time": "11:45-12:15",
       "title": "Geminix Tabanlı Avrupa Hayati Bilgisayar (Evc) Sistemlerinde Hata Enjeksiyonu Yöntemi İle Emniyet-Kritik Yazılım Doğrulaması",
       "authors": [
-        "Yusuf ÇAĞLAYAN (ASELSAN)"
+        "Yusuf ÇAĞLAYAN (ASELSAN A.Ş.)"
       ],
-      "abstract": "Tren üstü kontrol sistemi (OBCS) mimarisinin kritik bir bileşeni olan Avrupa Hayati Bilgisayarı (EVC), SIL4 (Yazılım Bütünlüğü Seviyesi 4) emniyet gereksinimlerine uyarken, bir arıza durumunda deterministik ve güvenli bir davranış sergilemelidir. Bu çalışma, ASELSAN A.Ş. tarafından geliştirilen, GeminiX tabanlı tren üstü donanım platformu olan EVC için hata enjeksiyonu testleri için sistematik bir test yaklaşımı sunmaktadır. Önerilen yöntem, CPU, bellek, kayıt ve iletişim seviyelerinde kontrollü hata enjeksiyonu yoluyla sistemin kritik arızalar sırasındaki davranışını gözlemlemeyi amaçlamaktadır. Testler, tekrarlayan senaryolar ve otomatik test altyapısı kullanılarak gerçekleştirilmiştir. Elde edilen sonuçlar, EVC sisteminin hata toleransı mekanizmalarının etkinliğini ve hata durumlarında güvenli davranış üretme yeteneğini ortaya koymaktadır."
+      "abstract": "Tren üstü kontrol sistemi (OBCS) mimarisinin kritik bir bileşeni olan Avrupa Hayati Bilgisayarı (EVC), SIL4 (Yazılım Bütünlüğü Seviyesi 4) emniyet gereksinimlerine uyarken, bir arıza durumunda deterministik ve güvenli bir davranış sergilemelidir. Bu çalışma, ASELSAN A.Ş.. tarafından geliştirilen, GeminiX tabanlı tren üstü donanım platformu olan EVC için hata enjeksiyonu testleri için sistematik bir test yaklaşımı sunmaktadır. Önerilen yöntem, CPU, bellek, kayıt ve iletişim seviyelerinde kontrollü hata enjeksiyonu yoluyla sistemin kritik arızalar sırasındaki davranışını gözlemlemeyi amaçlamaktadır. Testler, tekrarlayan senaryolar ve otomatik test altyapısı kullanılarak gerçekleştirilmiştir. Elde edilen sonuçlar, EVC sisteminin hata toleransı mekanizmalarının etkinliğini ve hata durumlarında güvenli davranış üretme yeteneğini ortaya koymaktadır."
     },
     {
       "time": "12:15-12:45",
@@ -328,7 +328,7 @@
       "time": "14:30-15:00",
       "title": "Erişim Destekli Üretim Tabanlı Akıllı Asistan Yöntemi İle Savunma Sanayi Projelerinde Bilişsel Yükün Azaltılması İçin Bir Durum Çalışması: Bilge",
       "authors": [
-        "Onur TEKİK (ASELSAN)"
+        "Onur TEKİK (ASELSAN A.Ş.)"
       ],
       "abstract": "Otonom yapay zekâ ajanlarının Operasyonel Teknoloji (OT) ortamlarında konumlandırılması giderek daha\ncazip hale gelmekle birlikte, bulut merkezli mimariler ağ gecikmesi, veri egemenliği kaygıları ve monolitik ajan\ntasarımlarının hesaplama yükü gibi önemli engeller dayatmaktadır. Bu çalışma, kaynak kısıtlı uç ortamlar için\ntasarlanmış bir Yerel Öncelikli çok ajanlı yazılım mimarisi önermektedir.\nÜç temel katkı sunulmaktadır. Birincisi, Ajan-Araç-Olarak (Agent-as-a-Tool) tasarım kalıbını uygulayan\nmodüler bir orkestrasyon çerçevesidir: her biri belirli bir alan yetkinliğinden sorumlu uzman ajanlar, çağrılabilir\naraçlar olarak kapsüllenerek merkezi bir orkestratör tarafından dinamik biçimde çağrılır. İkincisi, Model Bağlam\nProtokolü (MCP) üzerine inşa edilen bir protokol soyutlama katmanı, ajan mantığını eski endüstriyel iletişim\narayüzlerinden ayırarak heterojen donanım uç noktalarını tekdüze, modelden bağımsız araç tanımları olarak\nsunmaktadır. Üçüncüsü, Erişimle Zenginleştirilmiş Üretim (RAG) ile gerçek zamanlı veri elde etmeyi birleştiren\nkarma bir bilgi entegrasyon stratejisidir.\nMimari, endüstriyel değişken frekanslı sürücü sistemlerini hedefleyen bir kavram kanıtı aracılığıyla doğrulanmıştır.\nTüketici sınıfı Apple Silicon donanımı üzerinde çalışan nicelenmiş 4 milyar parametreli bir Küçük\nDil Modeli (KDM), 2–7 saniyelik uçtan uca yanıt süreleriyle çok adımlı tanılama iş akışlarını yürütürken tüm\noperasyonel veriler yerel ağ sınırı içinde kalmaktadır. Sonuçlar, endüstriyel uçta modüler ve mahremiyet koruyucu\najan tabanlı yapay zekânın uygulanabilirliğini ortaya koymaktadır."
     },
