@@ -1,27 +1,5 @@
-import React from 'react';
-import { MapContainer, TileLayer, Marker, Popup, Circle } from 'react-leaflet';
-import L from 'leaflet';
-import 'leaflet/dist/leaflet.css';
+import React, { useState } from 'react';
 
-// Fix Leaflet default icon issue in React
-delete L.Icon.Default.prototype._getIconUrl;
-L.Icon.Default.mergeOptions({
-  iconRetinaUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-icon-2x.png',
-  iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-icon.png',
-  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-shadow.png',
-});
-
-const redIcon = new L.Icon({
-  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
-  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-shadow.png',
-  iconSize: [25, 41], iconAnchor: [12, 41], popupAnchor: [1, -34], shadowSize: [41, 41],
-});
-
-const blueIcon = new L.Icon({
-  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png',
-  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-shadow.png',
-  iconSize: [25, 41], iconAnchor: [12, 41], popupAnchor: [1, -34], shadowSize: [41, 41],
-});
 
 const hotelData = [
   {
@@ -124,7 +102,154 @@ const hotelData = [
   },
 ];
 
+const MAP_LOCATIONS = [
+  {
+    id: 'akm',
+    name: 'MSKÜ AKM',
+    label: 'Sempozyum Yeri',
+    emoji: '🎓',
+    color: 'blue',
+    mapSrc: 'https://maps.google.com/maps?q=Mu%C4%9Fla+S%C4%B1tk%C4%B1+Ko%C3%A7man+%C3%9Cniversitesi+Atat%C3%BCrk+K%C3%BClt%C3%BCr+Merkezi&output=embed&z=17',
+    mapsUrl: 'https://maps.google.com/?q=Mu\u011fla+S\u0131tk\u0131+Ko\u00e7man+\u00dcniversitesi+Atat\u00fcrk+K\u00fclt\u00fcr+Merkezi',
+  },
+  {
+    id: 'akyaka-otel',
+    name: 'MSKÜ Akyaka Uygulama Oteli',
+    label: 'Akyaka, Mu\u011fla',
+    emoji: '🏖️',
+    color: 'red',
+    mapSrc: 'https://maps.google.com/maps?q=MSKU+Akyaka+Uygulama+Oteli&output=embed&z=16',
+    mapsUrl: 'https://maps.google.com/?q=MSKU+Akyaka+Uygulama+Oteli',
+  },
+  {
+    id: 'konukevi',
+    name: 'MSKÜ Konukevi',
+    label: 'Mu\u011fla Merkez',
+    emoji: '🏛️',
+    color: 'red',
+    mapSrc: 'https://maps.google.com/maps?q=37.20898,28.3708&output=embed&z=17',
+    mapsUrl: 'https://maps.google.com/?q=37.20898,28.3708',
+  },
+  {
+    id: 'kerme',
+    name: 'Kerme Ottoman Konak',
+    label: 'Azmak Nehri, Akyaka',
+    emoji: '🏖️',
+    color: 'red',
+    mapSrc: 'https://maps.google.com/maps?q=Kerme+Ottoman+Konak+Akyaka&output=embed&z=16',
+    mapsUrl: 'https://maps.google.com/?q=Kerme+Ottoman+Konak+Akyaka',
+  },
+  {
+    id: 'yucelen',
+    name: 'Mu\u011fla Y\u00fccelen Otel',
+    label: 'K\u00f6tekli Mah., Mente\u015fe',
+    emoji: '🏙️',
+    color: 'red',
+    mapSrc: 'https://maps.google.com/maps?q=Mu%C4%9Fla+Y%C3%BCcelen+Otel&output=embed&z=17',
+    mapsUrl: 'https://maps.google.com/?q=Mu\u011fla+Y\u00fccelen+Otel',
+  },
+  {
+    id: 'tuna',
+    name: 'Tuna Otel Rezidans',
+    label: 'Mu\u011fla Merkez',
+    emoji: '🏙️',
+    color: 'red',
+    mapSrc: 'https://maps.google.com/maps?q=Tuna+Otel+Rezidans+Mu%C4%9Fla&output=embed&z=17',
+    mapsUrl: 'https://maps.google.com/?q=Tuna+Otel+Rezidans+Mu\u011fla',
+  },
+  {
+    id: 'egehan',
+    name: 'Egehan Otel',
+    label: 'Mu\u011fla Merkez',
+    emoji: '🏙️',
+    color: 'red',
+    mapSrc: 'https://maps.google.com/maps?q=Egehan+Otel+Mu%C4%9Fla&output=embed&z=17',
+    mapsUrl: 'https://maps.google.com/?q=Egehan+Otel+Mu\u011fla',
+  },
+];
+
+const KonaklamaHarita = () => {
+  const [activeId, setActiveId] = useState('akm');
+  const active = MAP_LOCATIONS.find(l => l.id === activeId);
+
+  return (
+    <div className="mt-10 bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
+      {/* Başlık */}
+      <div className="px-6 py-4 border-b border-gray-100 flex items-center gap-3">
+        <span className="text-2xl">🗺️</span>
+        <div>
+          <h2 className="text-xl font-bold text-gray-800">Konaklama &amp; Sempozyum Haritası</h2>
+          <p className="text-sm text-gray-500">Konumu görmek için aşağıdan bir yer seçin</p>
+        </div>
+      </div>
+
+      {/* Lokasyon Seçici */}
+      <div className="px-4 pt-4 pb-2 flex flex-wrap gap-2 bg-gray-50 border-b border-gray-100">
+        {MAP_LOCATIONS.map(loc => (
+          <button
+            key={loc.id}
+            onClick={() => setActiveId(loc.id)}
+            className={`flex items-center gap-1.5 text-sm px-3 py-1.5 rounded-full border transition-all duration-150 font-medium ${
+              activeId === loc.id
+                ? loc.color === 'blue'
+                  ? 'bg-blue-600 text-white border-blue-600 shadow-md'
+                  : 'bg-red-600 text-white border-red-600 shadow-md'
+                : 'bg-white text-gray-600 border-gray-200 hover:border-gray-400'
+            }`}
+          >
+            <span>{loc.emoji}</span>
+            <span>{loc.name}</span>
+          </button>
+        ))}
+      </div>
+
+      {/* Seçilen Konumun Bilgisi */}
+      <div className="px-6 py-3 flex items-center justify-between border-b border-gray-100">
+        <div className="flex items-center gap-2 flex-wrap">
+          <span className={`w-2.5 h-2.5 rounded-full flex-shrink-0 ${active.color === 'blue' ? 'bg-blue-500' : 'bg-red-500'}`}></span>
+          <span className="font-semibold text-gray-800">{active.emoji} {active.name}</span>
+          <span className="text-gray-400 text-sm">·</span>
+          <span className="text-sm text-gray-500">{active.label}</span>
+          {active.color === 'blue' && (
+            <span className="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full font-semibold">Sempozyum Yeri</span>
+          )}
+        </div>
+        <a
+          href={active.mapsUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-xs text-blue-600 hover:underline flex items-center gap-1 flex-shrink-0 ml-4"
+        >
+          Google Maps'te Aç ↗
+        </a>
+      </div>
+
+      {/* Google Maps iframe */}
+      <div style={{ height: '450px', width: '100%' }}>
+        <iframe
+          key={active.id}
+          src={active.mapSrc}
+          width="100%"
+          height="100%"
+          style={{ border: 0 }}
+          allowFullScreen=""
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          title={active.name}
+        />
+      </div>
+
+      {/* Alt Açıklama */}
+      <div className="px-6 py-3 bg-gray-50 border-t border-gray-100 flex flex-wrap gap-4 text-sm text-gray-600">
+        <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded-full bg-red-500 inline-block"></span> Konaklama otelleri</span>
+        <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded-full bg-blue-500 inline-block"></span> MSKÜ AKM — Sempozyum yeri</span>
+      </div>
+    </div>
+  );
+};
+
 const Konaklama = () => {
+
   return (
     <div className="min-h-screen font-serif bg-gradient-to-br from-blue-50 to-indigo-100">
       {/* Hero */}
@@ -276,95 +401,7 @@ const Konaklama = () => {
           ))}
         </div>
 
-        {/* Harita */}
-        <div className="mt-10 bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
-          <div className="px-6 py-4 border-b border-gray-100 flex items-center gap-3">
-            <span className="text-2xl">🗺️</span>
-            <div>
-              <h2 className="text-xl font-bold text-gray-800">Konaklama & Sempozyum Haritası</h2>
-              <p className="text-sm text-gray-500">🔴 Konaklama otel konumları &nbsp;·&nbsp; 🔵 MSKÜ AKM (Sempozyum Yeri)</p>
-            </div>
-          </div>
-          <div style={{ height: '500px', width: '100%' }}>
-            <MapContainer
-              center={[37.155, 28.365]}
-              zoom={11}
-              style={{ height: '100%', width: '100%' }}
-              scrollWheelZoom={false}
-            >
-              <TileLayer
-                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-              />
-
-              {/* Sempozyum Yeri - Mavi */}
-              <Marker position={[37.1624, 28.3720]} icon={blueIcon}>
-                <Popup>
-                  <strong>🎓 MSKÜ AKM</strong><br />
-                  Muğla Sıtkı Koçman Üniversitesi<br />
-                  Atatürk Kültür Merkezi<br />
-                  <em>Sempozyum Yeri</em>
-                </Popup>
-              </Marker>
-
-              {/* MSKÜ Akyaka Uygulama Oteli - Kırmızı */}
-              <Marker position={[37.0520, 28.3247]} icon={redIcon}>
-                <Popup>
-                  <strong>🏖️ MSKÜ Akyaka Uygulama Oteli</strong><br />
-                  Akyaka, Muğla
-                </Popup>
-              </Marker>
-
-              {/* MSKÜ Konukevi - Kırmızı */}
-              <Marker position={[37.2171, 28.3654]} icon={redIcon}>
-                <Popup>
-                  <strong>🏛️ MSKÜ Konukevi</strong><br />
-                  Muğla Merkez
-                </Popup>
-              </Marker>
-
-              {/* Kerme Ottoman Konak - Kırmızı */}
-              <Marker position={[37.0508, 28.3219]} icon={redIcon}>
-                <Popup>
-                  <strong>🏖️ Kerme Ottoman Konak</strong><br />
-                  Azmak Nehri Kenarı, Akyaka<br />
-                  📞 +90 530 697 57 79
-                </Popup>
-              </Marker>
-
-              {/* Muğla Yücelen Otel - Kırmızı */}
-              <Marker position={[37.2158, 28.3621]} icon={redIcon}>
-                <Popup>
-                  <strong>🏙️ Muğla Yücelen Otel</strong><br />
-                  Kötekli Mah., Menteşe, Muğla<br />
-                  📞 0252 223 01 00
-                </Popup>
-              </Marker>
-
-              {/* Tuna Otel Rezidans - Kırmızı */}
-              <Marker position={[37.2143, 28.3641]} icon={redIcon}>
-                <Popup>
-                  <strong>🏙️ Tuna Otel Rezidans</strong><br />
-                  Muğla Merkez
-                </Popup>
-              </Marker>
-
-              {/* Egehan Otel - Kırmızı */}
-              <Marker position={[37.2175, 28.3669]} icon={redIcon}>
-                <Popup>
-                  <strong>🏙️ Egehan Otel</strong><br />
-                  Muğla Merkez<br />
-                  📞 +90 252 223 80 02
-                </Popup>
-              </Marker>
-            </MapContainer>
-          </div>
-          <div className="px-6 py-3 bg-gray-50 border-t border-gray-100 flex flex-wrap gap-4 text-sm text-gray-600">
-            <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded-full bg-red-500 inline-block"></span> Konaklama otelleri</span>
-            <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded-full bg-blue-500 inline-block"></span> MSKÜ AKM — Sempozyum yeri</span>
-            <span className="text-gray-400 ml-auto">İşaretçilere tıklayarak detay görüntüleyebilirsiniz</span>
-          </div>
-        </div>
+        <KonaklamaHarita />
 
         {/* Bottom Note */}
         <div className="mt-10 bg-white rounded-2xl shadow-lg p-6 border border-gray-100 text-center">
