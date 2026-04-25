@@ -23,11 +23,9 @@ const renderPaper = (paper, pIdx, onClickPaper) => {
         {authors && authors.length > 0 && (
           <>
             <hr className="w-full border-t border-gray-600 mb-2" />
-            <ul className="list-disc pl-4 space-y-1 text-gray-600 text-[13px] leading-relaxed w-full">
-              {authors.map((author, idx) => (
-                <li key={idx} className="w-full">{author}</li>
-              ))}
-            </ul>
+            <p className="text-gray-600 text-[13px] leading-relaxed w-full">
+              {authors.join(', ')}
+            </p>
           </>
         )}
       </div>
@@ -231,11 +229,9 @@ const Program = () => {
 
             <div className="mb-6">
               <h4 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3 border-b pb-1">Yazarlar</h4>
-              <ul className="list-disc pl-5 space-y-1 text-gray-700">
-                {selectedPaper.authorsList.map((author, idx) => (
-                  <li key={idx}>{author}</li>
-                ))}
-              </ul>
+              <p className="text-gray-700">
+                {selectedPaper.authorsList.join(', ')}
+              </p>
             </div>
 
             <div>
@@ -283,7 +279,7 @@ const Program = () => {
 
           <div className="p-4 sm:p-8">
             {scheduleData.map((dayData, tabIdx) => (
-              <div 
+              <div
                 key={tabIdx}
                 className={`${activeTab === tabIdx ? 'block' : 'hidden print:block'} print:min-h-screen break-before-page first:break-before-auto`}
               >
@@ -296,99 +292,99 @@ const Program = () => {
                     if (tabIdx !== 2) {
                       const isFirstSplit = event.type === 'split' && dayData.events.findIndex(e => e.type === 'split') === idx;
 
-                  if (idx === 0) {
-                    if (event.type === 'single') {
-                      header = (
-                        <div className="hidden md:flex flex-row gap-4 mb-6">
-                          <div className="lg:w-40 flex-shrink-0"></div>
-                          <div className="flex-1">
-                            <div className="bg-slate-100 text-slate-700 font-bold text-xl py-3 rounded-xl border border-slate-200 shadow-sm text-center uppercase tracking-wide">
-                              Salon B
+                      if (idx === 0) {
+                        if (event.type === 'single') {
+                          header = (
+                            <div className="hidden md:flex flex-row gap-4 mb-6">
+                              <div className="lg:w-40 flex-shrink-0"></div>
+                              <div className="flex-1">
+                                <div className="bg-slate-100 text-slate-700 font-bold text-xl py-3 rounded-xl border border-slate-200 shadow-sm text-center uppercase tracking-wide">
+                                  Salon B
+                                </div>
+                              </div>
+                            </div>
+                          );
+                        } else if (event.type === 'split') {
+                          header = (
+                            <div className="hidden md:flex flex-row gap-4 mb-6">
+                              <div className="lg:w-40 flex-shrink-0"></div>
+                              <div className="flex-1 grid grid-cols-2 gap-4">
+                                <div className="bg-slate-100 text-slate-700 font-bold text-xl py-3 rounded-xl border border-slate-200 shadow-sm text-center uppercase tracking-wide">
+                                  Salon B
+                                </div>
+                                <div className="bg-slate-100 text-slate-700 font-bold text-xl py-3 rounded-xl border border-slate-200 shadow-sm text-center uppercase tracking-wide">
+                                  Salon C
+                                </div>
+                              </div>
+                            </div>
+                          );
+                        }
+                      } else if (isFirstSplit) {
+                        header = (
+                          <div className="hidden md:flex flex-row gap-4 mb-6 mt-8">
+                            <div className="lg:w-40 flex-shrink-0"></div>
+                            <div className="flex-1 grid grid-cols-2 gap-4">
+                              <div className="bg-slate-100 text-slate-700 font-bold text-xl py-3 rounded-xl border border-slate-200 shadow-sm text-center uppercase tracking-wide">
+                                Salon B
+                              </div>
+                              <div className="bg-slate-100 text-slate-700 font-bold text-xl py-3 rounded-xl border border-slate-200 shadow-sm text-center uppercase tracking-wide">
+                                Salon C
+                              </div>
                             </div>
                           </div>
-                        </div>
-                      );
-                    } else if (event.type === 'split') {
-                      header = (
-                        <div className="hidden md:flex flex-row gap-4 mb-6">
-                          <div className="lg:w-40 flex-shrink-0"></div>
-                          <div className="flex-1 grid grid-cols-2 gap-4">
-                            <div className="bg-slate-100 text-slate-700 font-bold text-xl py-3 rounded-xl border border-slate-200 shadow-sm text-center uppercase tracking-wide">
-                              Salon B
-                            </div>
-                            <div className="bg-slate-100 text-slate-700 font-bold text-xl py-3 rounded-xl border border-slate-200 shadow-sm text-center uppercase tracking-wide">
-                              Salon C
-                            </div>
-                          </div>
-                        </div>
-                      );
+                        );
+                      }
                     }
-                  } else if (isFirstSplit) {
-                    header = (
-                      <div className="hidden md:flex flex-row gap-4 mb-6 mt-8">
-                        <div className="lg:w-40 flex-shrink-0"></div>
-                        <div className="flex-1 grid grid-cols-2 gap-4">
-                          <div className="bg-slate-100 text-slate-700 font-bold text-xl py-3 rounded-xl border border-slate-200 shadow-sm text-center uppercase tracking-wide">
-                            Salon B
+
+                    return (
+                      <React.Fragment key={idx}>
+                        {header}
+                        <div className="flex flex-col lg:flex-row gap-4">
+                          {/* Time Block */}
+                          <div className="lg:w-40 flex-shrink-0 flex items-center lg:justify-end">
+                            <div className="bg-blue-50 text-blue-700 font-bold px-4 py-2 rounded-lg border border-blue-100 shadow-sm w-full lg:w-auto text-center">
+                              {event.time}
+                            </div>
                           </div>
-                          <div className="bg-slate-100 text-slate-700 font-bold text-xl py-3 rounded-xl border border-slate-200 shadow-sm text-center uppercase tracking-wide">
-                            Salon C
+
+                          {/* Content Block */}
+                          <div className="flex-1">
+                            {event.type === 'single' ? (
+                              <div className={`p-4 rounded-xl shadow-sm border border-gray-100 flex items-center justify-center min-h-[4rem] text-center whitespace-pre-line ${event.bg}`}>
+                                <span>{event.content}</span>
+                              </div>
+                            ) : (
+                              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                {/* Session 1 */}
+                                <div className={`p-5 rounded-xl shadow-sm border border-gray-100 flex flex-col ${event.session1.color}`}>
+                                  <div className="flex justify-between items-center mb-4 pb-3 border-b border-black/10">
+                                    <span className="md:hidden font-bold text-slate-500 bg-slate-200/60 px-2 py-1 rounded text-xs uppercase tracking-wider mr-auto">Salon B</span>
+                                    <span className="font-extrabold text-gray-700 px-3 py-1.5 bg-black/5 rounded-lg text-sm inline-block md:mx-auto shadow-sm">{event.session1.code}</span>
+                                  </div>
+                                  <div className="space-y-3 flex-1 mt-2">
+                                    {event.session1.papers.map((paper, pIdx) => renderPaper(paper, pIdx, setSelectedPaper))}
+                                  </div>
+                                </div>
+
+                                {/* Session 2 */}
+                                <div className={`p-5 rounded-xl shadow-sm border border-gray-100 flex flex-col ${event.session2.color}`}>
+                                  <div className="flex justify-between items-center mb-4 pb-3 border-b border-black/10">
+                                    <span className="md:hidden font-bold text-slate-500 bg-slate-200/60 px-2 py-1 rounded text-xs uppercase tracking-wider mr-auto">Salon C</span>
+                                    <span className="font-extrabold text-gray-700 px-3 py-1.5 bg-black/5 rounded-lg text-sm inline-block md:mx-auto shadow-sm">{event.session2.code}</span>
+                                  </div>
+                                  <div className="space-y-3 flex-1 mt-2">
+                                    {event.session2.papers.map((paper, pIdx) => renderPaper(paper, pIdx, setSelectedPaper))}
+                                  </div>
+                                </div>
+                              </div>
+                            )}
                           </div>
                         </div>
-                      </div>
+                      </React.Fragment>
                     );
-                  }
-                }
-
-                return (
-                  <React.Fragment key={idx}>
-                    {header}
-                    <div className="flex flex-col lg:flex-row gap-4">
-                      {/* Time Block */}
-                      <div className="lg:w-40 flex-shrink-0 flex items-center lg:justify-end">
-                        <div className="bg-blue-50 text-blue-700 font-bold px-4 py-2 rounded-lg border border-blue-100 shadow-sm w-full lg:w-auto text-center">
-                          {event.time}
-                        </div>
-                      </div>
-
-                      {/* Content Block */}
-                      <div className="flex-1">
-                        {event.type === 'single' ? (
-                          <div className={`p-4 rounded-xl shadow-sm border border-gray-100 flex items-center justify-center min-h-[4rem] text-center whitespace-pre-line ${event.bg}`}>
-                            <span>{event.content}</span>
-                          </div>
-                        ) : (
-                          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            {/* Session 1 */}
-                            <div className={`p-5 rounded-xl shadow-sm border border-gray-100 flex flex-col ${event.session1.color}`}>
-                              <div className="flex justify-between items-center mb-4 pb-3 border-b border-black/10">
-                                <span className="md:hidden font-bold text-slate-500 bg-slate-200/60 px-2 py-1 rounded text-xs uppercase tracking-wider mr-auto">Salon B</span>
-                                <span className="font-extrabold text-gray-700 px-3 py-1.5 bg-black/5 rounded-lg text-sm inline-block md:mx-auto shadow-sm">{event.session1.code}</span>
-                              </div>
-                              <div className="space-y-3 flex-1 mt-2">
-                                {event.session1.papers.map((paper, pIdx) => renderPaper(paper, pIdx, setSelectedPaper))}
-                              </div>
-                            </div>
-
-                            {/* Session 2 */}
-                            <div className={`p-5 rounded-xl shadow-sm border border-gray-100 flex flex-col ${event.session2.color}`}>
-                              <div className="flex justify-between items-center mb-4 pb-3 border-b border-black/10">
-                                <span className="md:hidden font-bold text-slate-500 bg-slate-200/60 px-2 py-1 rounded text-xs uppercase tracking-wider mr-auto">Salon C</span>
-                                <span className="font-extrabold text-gray-700 px-3 py-1.5 bg-black/5 rounded-lg text-sm inline-block md:mx-auto shadow-sm">{event.session2.code}</span>
-                              </div>
-                              <div className="space-y-3 flex-1 mt-2">
-                                {event.session2.papers.map((paper, pIdx) => renderPaper(paper, pIdx, setSelectedPaper))}
-                              </div>
-                            </div>
-                          </div>
-                        )}
-                      </div>
-                    </div>
-                  </React.Fragment>
-                );
-              })}
+                  })}
+                </div>
               </div>
-            </div>
             ))}
           </div>
         </div>
