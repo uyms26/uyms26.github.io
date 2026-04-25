@@ -1,4 +1,27 @@
 import React from 'react';
+import { MapContainer, TileLayer, Marker, Popup, Circle } from 'react-leaflet';
+import L from 'leaflet';
+import 'leaflet/dist/leaflet.css';
+
+// Fix Leaflet default icon issue in React
+delete L.Icon.Default.prototype._getIconUrl;
+L.Icon.Default.mergeOptions({
+  iconRetinaUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-icon-2x.png',
+  iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-icon.png',
+  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-shadow.png',
+});
+
+const redIcon = new L.Icon({
+  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
+  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-shadow.png',
+  iconSize: [25, 41], iconAnchor: [12, 41], popupAnchor: [1, -34], shadowSize: [41, 41],
+});
+
+const blueIcon = new L.Icon({
+  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png',
+  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-shadow.png',
+  iconSize: [25, 41], iconAnchor: [12, 41], popupAnchor: [1, -34], shadowSize: [41, 41],
+});
 
 const hotelData = [
   {
@@ -57,6 +80,7 @@ const hotelData = [
     specialNote: "Rezervasyon sırasında sempozyum katılımcısı olduğunuzu belirtiniz.",
     description: "Azmak nehri üzerinde bir koyda konumlanan 40 odalı butik otelde nehir ve dağ manzaralı odalar ve büyük yüzme havuzu.",
     features: ["Nehir & dağ manzarası", "Yüzme havuzu", "Butik hizmet",],
+    phone: "+90 530 697 57 79",
   },
   {
     id: 4,
@@ -250,6 +274,96 @@ const Konaklama = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Harita */}
+        <div className="mt-10 bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
+          <div className="px-6 py-4 border-b border-gray-100 flex items-center gap-3">
+            <span className="text-2xl">🗺️</span>
+            <div>
+              <h2 className="text-xl font-bold text-gray-800">Konaklama & Sempozyum Haritası</h2>
+              <p className="text-sm text-gray-500">🔴 Konaklama otel konumları &nbsp;·&nbsp; 🔵 MSKÜ AKM (Sempozyum Yeri)</p>
+            </div>
+          </div>
+          <div style={{ height: '500px', width: '100%' }}>
+            <MapContainer
+              center={[37.155, 28.365]}
+              zoom={11}
+              style={{ height: '100%', width: '100%' }}
+              scrollWheelZoom={false}
+            >
+              <TileLayer
+                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+              />
+
+              {/* Sempozyum Yeri - Mavi */}
+              <Marker position={[37.1624, 28.3720]} icon={blueIcon}>
+                <Popup>
+                  <strong>🎓 MSKÜ AKM</strong><br />
+                  Muğla Sıtkı Koçman Üniversitesi<br />
+                  Atatürk Kültür Merkezi<br />
+                  <em>Sempozyum Yeri</em>
+                </Popup>
+              </Marker>
+
+              {/* MSKÜ Akyaka Uygulama Oteli - Kırmızı */}
+              <Marker position={[37.0520, 28.3247]} icon={redIcon}>
+                <Popup>
+                  <strong>🏖️ MSKÜ Akyaka Uygulama Oteli</strong><br />
+                  Akyaka, Muğla
+                </Popup>
+              </Marker>
+
+              {/* MSKÜ Konukevi - Kırmızı */}
+              <Marker position={[37.2171, 28.3654]} icon={redIcon}>
+                <Popup>
+                  <strong>🏛️ MSKÜ Konukevi</strong><br />
+                  Muğla Merkez
+                </Popup>
+              </Marker>
+
+              {/* Kerme Ottoman Konak - Kırmızı */}
+              <Marker position={[37.0508, 28.3219]} icon={redIcon}>
+                <Popup>
+                  <strong>🏖️ Kerme Ottoman Konak</strong><br />
+                  Azmak Nehri Kenarı, Akyaka<br />
+                  📞 +90 530 697 57 79
+                </Popup>
+              </Marker>
+
+              {/* Muğla Yücelen Otel - Kırmızı */}
+              <Marker position={[37.2158, 28.3621]} icon={redIcon}>
+                <Popup>
+                  <strong>🏙️ Muğla Yücelen Otel</strong><br />
+                  Kötekli Mah., Menteşe, Muğla<br />
+                  📞 0252 223 01 00
+                </Popup>
+              </Marker>
+
+              {/* Tuna Otel Rezidans - Kırmızı */}
+              <Marker position={[37.2143, 28.3641]} icon={redIcon}>
+                <Popup>
+                  <strong>🏙️ Tuna Otel Rezidans</strong><br />
+                  Muğla Merkez
+                </Popup>
+              </Marker>
+
+              {/* Egehan Otel - Kırmızı */}
+              <Marker position={[37.2175, 28.3669]} icon={redIcon}>
+                <Popup>
+                  <strong>🏙️ Egehan Otel</strong><br />
+                  Muğla Merkez<br />
+                  📞 +90 252 223 80 02
+                </Popup>
+              </Marker>
+            </MapContainer>
+          </div>
+          <div className="px-6 py-3 bg-gray-50 border-t border-gray-100 flex flex-wrap gap-4 text-sm text-gray-600">
+            <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded-full bg-red-500 inline-block"></span> Konaklama otelleri</span>
+            <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded-full bg-blue-500 inline-block"></span> MSKÜ AKM — Sempozyum yeri</span>
+            <span className="text-gray-400 ml-auto">İşaretçilere tıklayarak detay görüntüleyebilirsiniz</span>
+          </div>
         </div>
 
         {/* Bottom Note */}
