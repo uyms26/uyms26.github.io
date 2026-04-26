@@ -7,7 +7,7 @@ import AselsanBanner from '../assets/aselsan_banner_real.png';
 import BedirPhoto from '../assets/bedir_tekinerdogan.jpg';
 import AkyakaPhoto from '../assets/akyaka_yeni.jpeg';
 import KonaklamaBanner from '../assets/konaklama_banner.png';
-import MenteseBanner from '../assets/mentese_belediyesi_banner.png';
+import MenteseBanner from '../assets/gala.png';
 import MenteseLogo from '../assets/20240916-mentese-belediyesi-kamuoyu-bilgilendirmesi-707825-d950fdc06ca88521a5e6.jpg';
 import { NavLink } from 'react-router-dom';
 import AselsanLogo from '../assets/aselsan-png-logo.png';
@@ -264,109 +264,147 @@ const Anasayfa = () => {
         </div>
       )}
 
-      {/* Hero Section with Slider */}
-      <div className="relative overflow-hidden min-h-[300px] sm:min-h-[400px] md:min-h-[500px] lg:min-h-[600px] xl:min-h-[800px] bg-slate-900 group">
+      {/* Hero Section with Slider — overflow-hidden hem dışta hem içte */}
+      <div className="w-full overflow-hidden">
+        <div className="relative overflow-hidden h-[260px] sm:h-[380px] md:h-[480px] lg:h-[560px] xl:h-[700px] max-h-screen bg-slate-900 group">
 
-        {/* Sliding Track */}
-        <div
-          className={`flex h-full ease-in-out absolute inset-0 ${isTransitioning ? 'transition-transform duration-1000' : 'transition-none duration-0'}`}
-          style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-        >
-          {extendedSlides.map((slide, index) => {
-            const isActive = index === currentSlide || (currentSlide === heroSlides.length && index === 0);
-            return (
-              <div
-                key={`${slide.id}-${index}`}
-                className="min-w-full h-full relative flex-shrink-0"
-              >
-                {/* Image Sub-layer */}
+          {/* Sliding Track */}
+          <div
+            className={`flex h-full ease-in-out absolute inset-0 ${isTransitioning ? 'transition-transform duration-1000' : 'transition-none duration-0'}`}
+            style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+          >
+            {extendedSlides.map((slide, index) => {
+              const isActive = index === currentSlide || (currentSlide === heroSlides.length && index === 0);
+              return (
                 <div
-                  className={`absolute inset-0 ${slide.bgClass || 'bg-cover bg-center bg-no-repeat'}`}
-                  style={{ backgroundImage: `url(${slide.image})` }}
-                ></div>
+                  key={`${slide.id}-${index}`}
+                  className="min-w-full h-full relative flex-shrink-0"
+                >
+                  {/* Image Sub-layer */}
+                  <div
+                    className={`absolute inset-0 ${slide.bgClass || 'bg-cover bg-center bg-no-repeat'}`}
+                    style={{ backgroundImage: `url(${slide.image})` }}
+                  ></div>
 
-                {/* Gradient Overlay for Text Readability (Sadece içerik varsa göster) */}
-                {(slide.title || slide.subtitle) && (
-                  <div className="absolute inset-0 bg-black/40 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
-                )}
+                  {/* Gradient Overlay for Text Readability (Sadece içerik varsa göster) */}
+                  {(slide.title || slide.subtitle) && (
+                    <div className="absolute inset-0 bg-black/40 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                  )}
 
-                {/* Slide Content (Sadece içerik varsa göster) */}
-                {(slide.title || slide.subtitle || slide.talkTitle) && (
-                  <div className={slide.layoutClass || `absolute inset-0 flex flex-col items-center ${slide.textPos || 'justify-center'} px-4 sm:px-8 text-center pt-10 sm:pt-0`}>
-                    <div className={`transition-all duration-1000 transform ${isActive ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'} delay-300 w-full max-w-4xl ${slide.layoutClass && slide.layoutClass.includes('items-end') ? 'ml-auto' : 'mx-auto'}`}>
-                      {slide.title && (
-                        <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-5xl font-bold text-white mb-2 sm:mb-4 drop-shadow-[0_4px_8px_rgba(0,0,0,0.8)] font-sans tracking-tight">
-                          {slide.title}
-                        </h1>
-                      )}
-                      {slide.subtitle && (
-                        <p className={`text-base sm:text-lg md:text-xl text-gray-200 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] font-medium ${slide.layoutClass && slide.layoutClass.includes('text-right') ? 'ml-auto' : 'mx-auto'}`}>
-                          {slide.subtitle}
-                        </p>
-                      )}
-                      {slide.description && (
-                        <p className={`mt-4 text-sm sm:text-base md:text-lg text-gray-100 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] max-w-2xl leading-relaxed ${slide.layoutClass && slide.layoutClass.includes('text-right') ? 'ml-auto' : 'mx-auto'}`}>
-                          {slide.description}
-                        </p>
-                      )}
-                      {slide.talkTitle && (
-                        <div className={`mt-6 inline-block bg-black/30 px-5 py-4 rounded-xl border border-white/10 backdrop-blur-md shadow-2xl ${slide.layoutClass && slide.layoutClass.includes('text-right') ? 'text-right' : 'text-center'}`}>
-                          <p className={`text-sm sm:text-base md:text-lg text-blue-100 drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] font-semibold whitespace-pre-line inline-block ${slide.layoutClass && slide.layoutClass.includes('text-right') ? 'text-right' : 'text-center'}`}>
-                            {slide.talkTitle}
+                  {/* Slide Content (Sadece içerik varsa göster) */}
+                  {(slide.title || slide.subtitle || slide.talkTitle) && (
+                    <div className={slide.layoutClass || `absolute inset-0 flex flex-col items-center ${slide.textPos || 'justify-center'} px-4 sm:px-8 text-center pt-10 sm:pt-0`}>
+                      <div className={`transition-all duration-1000 transform ${isActive ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'} delay-300 w-full max-w-4xl ${slide.layoutClass && slide.layoutClass.includes('items-end') ? 'ml-auto' : 'mx-auto'}`}>
+                        {slide.title && (
+                          <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-5xl font-bold text-white mb-2 sm:mb-4 drop-shadow-[0_4px_8px_rgba(0,0,0,0.8)] font-sans tracking-tight">
+                            {slide.title}
+                          </h1>
+                        )}
+                        {slide.subtitle && (
+                          <p className={`text-base sm:text-lg md:text-xl text-gray-200 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] font-medium ${slide.layoutClass && slide.layoutClass.includes('text-right') ? 'ml-auto' : 'mx-auto'}`}>
+                            {slide.subtitle}
+                          </p>
+                        )}
+                        {slide.description && (
+                          <p className={`mt-4 text-sm sm:text-base md:text-lg text-gray-100 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] max-w-2xl leading-relaxed ${slide.layoutClass && slide.layoutClass.includes('text-right') ? 'ml-auto' : 'mx-auto'}`}>
+                            {slide.description}
+                          </p>
+                        )}
+                        {slide.talkTitle && (
+                          <div className={`mt-6 inline-block bg-black/30 px-5 py-4 rounded-xl border border-white/10 backdrop-blur-md shadow-2xl ${slide.layoutClass && slide.layoutClass.includes('text-right') ? 'text-right' : 'text-center'}`}>
+                            <p className={`text-sm sm:text-base md:text-lg text-blue-100 drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] font-semibold whitespace-pre-line inline-block ${slide.layoutClass && slide.layoutClass.includes('text-right') ? 'text-right' : 'text-center'}`}>
+                              {slide.talkTitle}
+                            </p>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Menteşe Belediyesi — Gala Yemeği Teşekkür İçeriği */}
+                  {slide.customContent && (
+                    <div className="absolute inset-0 flex flex-col items-center justify-end pb-10 sm:pb-14 px-4 sm:px-8">
+                      <div className={`transition-all duration-1000 transform ${isActive ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'} delay-300 w-full max-w-2xl mx-auto`}>
+                        <div className="relative bg-black/40 backdrop-blur-md border border-white/20 rounded-2xl px-6 py-5 sm:px-10 sm:py-7 shadow-2xl text-center overflow-hidden">
+                          {/* Dekoratif parıltı */}
+                          <div className="absolute -top-6 -left-6 w-28 h-28 bg-amber-400/20 rounded-full blur-2xl pointer-events-none"></div>
+                          <div className="absolute -bottom-6 -right-6 w-28 h-28 bg-orange-400/20 rounded-full blur-2xl pointer-events-none"></div>
+
+                          {/* Logo + başlık */}
+                          <div className="flex items-center justify-center gap-3 mb-3">
+                            <img
+                              src={MenteseLogo}
+                              alt="Menteşe Belediyesi"
+                              className="h-10 sm:h-12 w-auto object-contain rounded-full drop-shadow-lg"
+                            />
+                            <span className="text-amber-300 text-xs sm:text-sm font-semibold tracking-widest uppercase drop-shadow">
+                              Gala Yemeği Sponsoru
+                            </span>
+                          </div>
+
+                          <h2 className="text-xl sm:text-3xl md:text-4xl font-extrabold text-white drop-shadow-[0_3px_6px_rgba(0,0,0,0.9)] leading-tight">
+                            Menteşe Belediyesi'ne
+                            <br />
+                            <span className="text-amber-300">Teşekkürlerimizi Sunarız</span>
+                          </h2>
+
+                          <p className="mt-3 text-sm sm:text-base text-gray-200 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] leading-relaxed max-w-lg mx-auto">
+                            UYMS 2026 Gala Yemeği'ne verdiği değerli destek için<br />
+                            <span className="font-semibold text-white">Menteşe Belediyesi</span>'ne içtenlikle teşekkür ederiz.
                           </p>
                         </div>
-                      )}
+                      </div>
                     </div>
-                  </div>
-                )}
-              </div>
-            );
-          })}
-        </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
 
-        {/* Carousel Navigation Arrows */}
-        <button
-          onClick={() => {
-            if (currentSlide === 0) {
-              setIsTransitioning(false);
-              setCurrentSlide(heroSlides.length);
-              setTimeout(() => {
-                setIsTransitioning(true);
-                setCurrentSlide(heroSlides.length - 1);
-              }, 50);
-            } else {
-              setCurrentSlide((prev) => prev - 1);
-            }
-          }}
-          className="absolute left-2 sm:left-6 top-1/2 -translate-y-1/2 z-20 p-2 sm:p-3 text-white/50 hover:text-white bg-black/20 hover:bg-black/50 rounded-full transition-all duration-300 opacity-0 group-hover:opacity-100 backdrop-blur-sm"
-          aria-label="Önceki Slayt"
-        >
-          <svg className="w-8 h-8 sm:w-10 sm:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
-        </button>
-        <button
-          onClick={() => setCurrentSlide((prev) => prev + 1)}
-          className="absolute right-2 sm:right-6 top-1/2 -translate-y-1/2 z-20 p-2 sm:p-3 text-white/50 hover:text-white bg-black/20 hover:bg-black/50 rounded-full transition-all duration-300 opacity-0 group-hover:opacity-100 backdrop-blur-sm"
-          aria-label="Sonraki Slayt"
-        >
-          <svg className="w-8 h-8 sm:w-10 sm:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
-        </button>
+          {/* Carousel Navigation Arrows */}
+          <button
+            onClick={() => {
+              if (currentSlide === 0) {
+                setIsTransitioning(false);
+                setCurrentSlide(heroSlides.length);
+                setTimeout(() => {
+                  setIsTransitioning(true);
+                  setCurrentSlide(heroSlides.length - 1);
+                }, 50);
+              } else {
+                setCurrentSlide((prev) => prev - 1);
+              }
+            }}
+            className="absolute left-2 sm:left-6 top-1/2 -translate-y-1/2 z-20 p-2 sm:p-3 text-white/50 hover:text-white bg-black/20 hover:bg-black/50 rounded-full transition-all duration-300 opacity-0 group-hover:opacity-100 backdrop-blur-sm"
+            aria-label="Önceki Slayt"
+          >
+            <svg className="w-8 h-8 sm:w-10 sm:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
+          </button>
+          <button
+            onClick={() => setCurrentSlide((prev) => prev + 1)}
+            className="absolute right-2 sm:right-6 top-1/2 -translate-y-1/2 z-20 p-2 sm:p-3 text-white/50 hover:text-white bg-black/20 hover:bg-black/50 rounded-full transition-all duration-300 opacity-0 group-hover:opacity-100 backdrop-blur-sm"
+            aria-label="Sonraki Slayt"
+          >
+            <svg className="w-8 h-8 sm:w-10 sm:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+          </button>
 
-        {/* Carousel Indicators */}
-        <div className="absolute bottom-12 sm:bottom-16 left-1/2 -translate-x-1/2 z-20 flex space-x-2 sm:space-x-3">
-          {heroSlides.map((_, index) => {
-            const isActive = index === currentSlide || (currentSlide === heroSlides.length && index === 0);
-            return (
-              <button
-                key={index}
-                onClick={() => {
-                  if (!isTransitioning) return; // Geçiş sırasında tıklamayı engelle
-                  setCurrentSlide(index);
-                }}
-                className={`transition-all duration-300 rounded-full shadow-lg ${isActive ? 'w-8 sm:w-12 h-2 sm:h-2 bg-white' : 'w-2 sm:w-3 h-2 sm:h-2 bg-white/50 hover:bg-white/80'}`}
-                aria-label={`${index + 1}. Slayta Git`}
-              />
-            );
-          })}
+          {/* Carousel Indicators */}
+          <div className="absolute bottom-12 sm:bottom-16 left-1/2 -translate-x-1/2 z-20 flex space-x-2 sm:space-x-3">
+            {heroSlides.map((_, index) => {
+              const isActive = index === currentSlide || (currentSlide === heroSlides.length && index === 0);
+              return (
+                <button
+                  key={index}
+                  onClick={() => {
+                    if (!isTransitioning) return; // Geçiş sırasında tıklamayı engelle
+                    setCurrentSlide(index);
+                  }}
+                  className={`transition-all duration-300 rounded-full shadow-lg ${isActive ? 'w-8 sm:w-12 h-2 sm:h-2 bg-white' : 'w-2 sm:w-3 h-2 sm:h-2 bg-white/50 hover:bg-white/80'}`}
+                  aria-label={`${index + 1}. Slayta Git`}
+                />
+              );
+            })}
+          </div>
         </div>
       </div>
 
