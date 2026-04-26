@@ -5,15 +5,15 @@ const ProgramKomitesi = () => {
     "Ferit Akova, RuyaSoft",
     "Mehmet Aksit, University of Twente (Emeritus) & Waddem",
     "Mehmet Aktaş, Yıldız Teknik Üniversitesi & Finnet",
-    "Baris Aktemur, Intel",
-    "Onur Aktuğ, ASELSAN",
+    "Barış Aktemur, Intel",
+    "Onur Aktuğ, ASELSAN A.Ş.",
     "Haluk Altunel, Dgpays",
     "Merve Astekin, SINTEF",
     "Tolga Ayav, İzmir Yüksek Teknoloji Enstitüsü",
-    "Fatma Basak Aydemir, Utrecht University",
+    "Fatma Başak Aydemir, Utrecht University",
     "Önder Babur, Wageningen University & Research",
     "Selami Bağrıyanık, İstanbul Sağlık ve Teknoloji Üniversitesi",
-    "Tuna Başıbüyük, ASELSAN",
+    "Tuna Başıbüyük, ASELSAN A.Ş.",
     "Fevzi Belli, İzmir Yüksek Teknoloji Enstitüsü",
     "Aysu Betin Can, Colorado School of Mines",
     "Feza Buzluca, İstanbul Teknik Üniversitesi",
@@ -22,34 +22,34 @@ const ProgramKomitesi = () => {
     "Ahmet Coşkunçay, Atatürk Üniversitesi",
     "Cihat Çetinkaya, Muğla Sıtkı Koçman Üniversitesi",
     "Onur Demirors, İzmir Yüksek Teknoloji Enstitüsü",
-    "Ali Dogru, Orta Doğu Teknik Üniversitesi & UT San Antonio",
-    "Mustafa Dursun, ASELSAN",
+    "Ali Doğru, Orta Doğu Teknik Üniversitesi & UT San Antonio",
+    "Mustafa Dursun, ASELSAN A.Ş.",
     "Ferhat Erata, Yale University",
     "R. Cenk Erdur, Ege Üniversitesi",
     "Ersin Ersoy, Paycell & Alanya Üniversitesi",
     "Yusuf Erten, İzmir Ekonomi Üniversitesi",
     "Vahid Garousi, Queen's University Belfast",
-    "Cagdas Gerede, Ankara Yıldırım Beyazıt Üniversitesi",
+    "Çağdaş Gerede, Ankara Yıldırım Beyazıt Üniversitesi",
     "Sinem Getir Yaman, Ege Üniversitesi, University of York",
     "Bahar Gezici Geçer, Osmaniye Korkut Ata Üniversitesi",
     "Görkem Giray, Independent Researcher",
-    "Arda Goknil, SINTEF",
+    "Arda Göknil, SINTEF",
     "Mehmet Göktürk, Gebze Teknik Üniversitesi",
-    "Tugba Gurgen Erdogan, Hacettepe Üniversitesi",
-    "Selçuk Güceğlioğlu, T.C. Başbakanlık",
+    "Tuğba Gürgen Erdoğan, Hacettepe Üniversitesi",
+    "Selçuk Güceğlioğlu, Mühendislik",
     "Önder Gürcan, NORCE",
-    "Tuna Hacaloglu, ETS",
-    "Emrah Inan, İzmir Yüksek Teknoloji Enstitüsü",
+    "Tuna Hacaloğlu, ETS",
+    "Emrah İnan, İzmir Yüksek Teknoloji Enstitüsü",
     "Oya Kalıpsız, Yıldız Teknik Üniversitesi",
-    "Pinar Karagoz, Orta Doğu Teknik Üniversitesi",
-    "Geylani Kardas, Ege Üniversitesi",
+    "Pınar Karagöz, Orta Doğu Teknik Üniversitesi",
+    "Geylani Kardaş, Ege Üniversitesi",
     "Karani Kardaş, Udemy",
     "Fırat Kart, Apple Inc.",
     "Kamer Kaya, Sabancı Üniversitesi",
-    "Onur Kilincceker, University of Antwerp",
-    "Altan Kocyigit, Orta Doğu Teknik Üniversitesi",
+    "Onur Kılınççeker, University of Antwerp",
+    "Altan Koçyiğit, Orta Doğu Teknik Üniversitesi",
     "Ayça Kolukısa, Hacettepe Üniversitesi",
-    "Hasan Konya, ASELSAN",
+    "Hasan Konya, ASELSAN A.Ş.",
     "Yavuz Köroğlu, İstanbul Teknik Üniversitesi",
     "Neslihan Küçükateş Ömüral, Borgwarner",
     "Alptekin Küpçü, Koç Üniversitesi",
@@ -60,10 +60,9 @@ const ProgramKomitesi = () => {
     "Bilge Say, Independent Researcher",
     "Alper Şen, Boğaziçi Üniversitesi",
     "Bedir Tekinerdogan, Wageningen University and Research",
-    "Barış Tezel, Dokuz Eylül Üniversitesi",
-    "Yasemin Topaloglu, Ege Üniversitesi",
-    "Ayse Tosun, İstanbul Teknik Üniversitesi",
-    "Tugkan Tuglular, İzmir Yüksek Teknoloji Enstitüsü",
+    "Yasemin Topaloğlu, Ege Üniversitesi",
+    "Ayşe Tosun, İstanbul Teknik Üniversitesi",
+    "Tuğkan Tuğlular, İzmir Yüksek Teknoloji Enstitüsü",
     "Eray Tuzun, Bilkent Üniversitesi",
     "Murat Osman Ünalır, Ege Üniversitesi",
     "Hüseyin Ünlü, İzmir Yüksek Teknoloji Enstitüsü",
@@ -71,7 +70,6 @@ const ProgramKomitesi = () => {
     "Filiz Yeşildoruk, DefineX",
     "Cemal Yılmaz, Sabancı Üniversitesi",
     "Murat Yılmaz, Gazi Üniversitesi",
-    "Gokcen Yilmaz, University of Exeter",
     "Celal Ziftci, Google",
   ];
   return (
@@ -91,7 +89,7 @@ const ProgramKomitesi = () => {
           {/* Main Content - Committee Structure */}
           <div className="lg:col-span-2">
             <div className="bg-white rounded-2xl shadow-xl p-8">
-              
+
               <div className="mb-8">
                 <h2 className="text-2xl font-bold text-blue-600 mb-4 flex items-center">
                   <svg className="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20">
@@ -99,7 +97,7 @@ const ProgramKomitesi = () => {
                   </svg>
                   Program Komitesi Başkanları
                 </h2>
-                 <div className="space-y-2">
+                <div className="space-y-2">
                   <div className="flex items-center p-3 bg-blue-50 rounded-l-lg">
                     <div className="w-3 h-3 bg-blue-500 rounded-full mr-3"></div>
                     <span className="text-gray-800">Deniz Akdur, Aselsan</span>
@@ -109,10 +107,10 @@ const ProgramKomitesi = () => {
                     <span className="text-gray-800">Hasan Sözer, Özyeğin Üniversitesi</span>
                   </div>
                 </div>
-                
+
               </div>
 
-              
+
               <div className="mb-8">
                 <h2 className="text-2xl font-bold text-green-600 mb-4 flex items-center">
                   <svg className="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20">
@@ -121,17 +119,16 @@ const ProgramKomitesi = () => {
                   Program Komitesi
                 </h2>
                 <div className="space-y-2 grid grid-cols-2">
-    {members.map((member, index) => (
-        <div
-          key={index}
-          className={`flex items-center p-3 bg-green-50 ${
-            index % 2 === 0 ? "rounded-l-lg" : "rounded-r-lg"
-          }`}
-        >
-          <div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
-          <span className="text-gray-800">{member}</span>
-        </div>
-      ))}
+                  {members.map((member, index) => (
+                    <div
+                      key={index}
+                      className={`flex items-center p-3 bg-green-50 ${index % 2 === 0 ? "rounded-l-lg" : "rounded-r-lg"
+                        }`}
+                    >
+                      <div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
+                      <span className="text-gray-800">{member}</span>
+                    </div>
+                  ))}
 
 
 
@@ -140,12 +137,12 @@ const ProgramKomitesi = () => {
                 </div>
               </div>
 
-          
-
-            
 
 
-             
+
+
+
+
             </div>
           </div>
 
