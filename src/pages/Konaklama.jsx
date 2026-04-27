@@ -160,8 +160,8 @@ const MAP_LOCATIONS = [
     label: 'K\u00f6tekli Mah., Mente\u015fe',
     emoji: '🏙️',
     color: 'red',
-    mapSrc: 'https://maps.google.com/maps?q=Mu%C4%9Fla+Y%C3%BCcelen+Otel&output=embed&z=17',
-    mapsUrl: 'https://maps.google.com/?q=Mu\u011fla+Y\u00fccelen+Otel',
+    mapSrc: 'https://maps.google.com/maps?cid=7654256211362547149&output=embed&z=17',
+    mapsUrl: 'https://www.google.com/maps?cid=7654256211362547149',
   },
   {
     id: 'tuna',
