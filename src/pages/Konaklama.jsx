@@ -100,6 +100,21 @@ const hotelData = [
     phone: "+90 252 223 80 02",
     email: "info@egehanotel.net",
   },
+  {
+    id: 7,
+    name: "Kerme Ottoman Palace",
+    location: "Akyaka, Muğla",
+    badge: "🏖️ Akyaka",
+    badgeColor: "bg-pink-100 text-pink-800 border-pink-300",
+    cardBorder: "border-pink-400",
+    headerGradient: "from-pink-500 to-rose-600",
+    url: "https://www.kermeottoman.com.tr/palace.html",
+    discount: "%20 İndirim",
+    discountNote: "UYMS 2026 katılımcılarına özel %20 indirim uygulanmaktadır.",
+    specialNote: "Rezervasyon sırasında UYMS 2026 sempozyum katılımcısı olduğunuzu belirtiniz.",
+    description: "Akyaka'nın eşsiz doğasında, Kerme Ottoman ailesinin zarifliğine yakışan lüks bir deneyim sunan Palace, UYMS 2026 katılımcılarına özel %20 indirimle kapılarını açıyor.",
+    features: ["Akyaka konumu", "Lüks odalar", "Özel katılımcı indirimi", "Otantik Osmanlı mimarisi"],
+  },
 ];
 
 const MAP_LOCATIONS = [
@@ -165,6 +180,15 @@ const MAP_LOCATIONS = [
     color: 'red',
     mapSrc: 'https://maps.google.com/maps?q=Egehan+Otel+Mu%C4%9Fla&output=embed&z=17',
     mapsUrl: 'https://maps.google.com/?q=Egehan+Otel+Mu\u011fla',
+  },
+  {
+    id: 'kerme-palace',
+    name: 'Kerme Ottoman Palace',
+    label: 'Akyaka, Mu\u011fla',
+    emoji: '🏖️',
+    color: 'red',
+    mapSrc: 'https://maps.google.com/maps?q=Kerme+Ottoman+Palace+Akyaka&output=embed&z=16',
+    mapsUrl: 'https://maps.google.com/?q=Kerme+Ottoman+Palace+Akyaka',
   },
 ];
 

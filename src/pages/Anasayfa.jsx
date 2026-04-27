@@ -24,6 +24,8 @@ const Anasayfa = () => {
   });
   const [showPopup, setShowPopup] = useState(true);
   const [countdown, setCountdown] = useState(5);
+  const [showGalaPopup, setShowGalaPopup] = useState(false);
+  const [galaCountdown, setGalaCountdown] = useState(8);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(true);
 
@@ -140,6 +142,8 @@ const Anasayfa = () => {
         if (prev <= 1) {
           setShowPopup(false);
           clearInterval(interval);
+          // İlk popup kapanınca Gala popup'ını göster
+          setTimeout(() => setShowGalaPopup(true), 400);
           return 0;
         }
         return prev - 1;
@@ -148,6 +152,23 @@ const Anasayfa = () => {
 
     return () => clearInterval(interval);
   }, [showPopup]);
+
+  useEffect(() => {
+    if (!showGalaPopup) return;
+
+    const interval = setInterval(() => {
+      setGalaCountdown((prev) => {
+        if (prev <= 1) {
+          setShowGalaPopup(false);
+          clearInterval(interval);
+          return 0;
+        }
+        return prev - 1;
+      });
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [showGalaPopup]);
 
   const announcements = [
     {
@@ -236,7 +257,7 @@ const Anasayfa = () => {
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm transition-all duration-500">
           <div className="bg-white rounded-2xl shadow-2xl p-8 max-w-sm w-full animate-in fade-in zoom-in duration-300 text-center border-t-8 border-blue-600 relative">
             <button
-              onClick={() => setShowPopup(false)}
+              onClick={() => { setShowPopup(false); setTimeout(() => setShowGalaPopup(true), 400); }}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -259,6 +280,62 @@ const Anasayfa = () => {
             </p>
             <div className="mt-6 text-sm text-gray-400 italic">
               (Bu bildirim {countdown} saniye içinde kapanacaktır)
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Gala Yemeği Popup */}
+      {showGalaPopup && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm transition-all duration-500">
+          <div className="relative bg-white rounded-2xl shadow-2xl p-8 max-w-md w-full text-center border-t-8 border-amber-500 overflow-hidden">
+            {/* Dekoratif arka plan parıltıları */}
+            <div className="absolute -top-8 -left-8 w-40 h-40 bg-amber-300/20 rounded-full blur-3xl pointer-events-none"></div>
+            <div className="absolute -bottom-8 -right-8 w-40 h-40 bg-orange-300/20 rounded-full blur-3xl pointer-events-none"></div>
+
+            <button
+              onClick={() => setShowGalaPopup(false)}
+              className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors z-10"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+
+            {/* Logo */}
+            <div className="flex items-center justify-center mb-4">
+              <div className="relative">
+                <div className="absolute inset-0 bg-amber-300/30 rounded-full blur-md"></div>
+                <img
+                  src={MenteseLogo}
+                  alt="Menteşe Belediyesi"
+                  className="relative w-20 h-20 rounded-full object-cover border-4 border-amber-400 shadow-lg"
+                />
+              </div>
+            </div>
+
+            {/* Rozet */}
+            <span className="inline-block bg-amber-100 text-amber-700 text-xs font-bold px-3 py-1 rounded-full border border-amber-300 mb-4 tracking-widest uppercase">
+              🍽️ Gala Yemeği Duyurusu
+            </span>
+
+            <h3 className="text-2xl font-extrabold text-gray-800 mb-3 leading-tight">
+              Gala Yemeği
+            </h3>
+            <p className="text-base text-gray-700 leading-relaxed mb-3">
+              UYMS 2026 Gala Yemeği,{' '}
+              <span className="font-bold text-amber-600">kayıtlı tüm katılımcılara</span>{' '}
+              <span className="font-bold text-gray-800">Menteşe Belediyesi</span>{' '}
+              tarafından ücretsiz olarak ikram edilecektir.
+            </p>
+            <p className="text-sm text-gray-500 leading-relaxed">
+              Bu özel geceyi sizinle paylaşmaktan mutluluk duyuyoruz. Menteşe Belediyesi'ne destekleri için teşekkür ederiz.
+            </p>
+
+            <div className="mt-6 flex items-center justify-center gap-2">
+              <div className="h-px flex-1 bg-amber-200"></div>
+              <span className="text-xs text-gray-400 italic">{galaCountdown} saniye içinde kapanacaktır</span>
+              <div className="h-px flex-1 bg-amber-200"></div>
             </div>
           </div>
         </div>
