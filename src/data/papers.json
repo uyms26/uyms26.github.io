@@ -16,7 +16,7 @@
       "title": "An Empirical Evaluation Of Using Large Language Models For Automated Model-Based Test Generation",
       "authors": [
         "Hafize SANLI (Muğla Sıtkı Koçman Üniversitesi)",
-        "Onur KILINÇÇEKER (Üniversitesi of Antwerpen and Flanders Make vzw)",
+        "Onur KILINÇÇEKER (University of Antwerpen and Flanders Make vzw)",
         "Cihat ÇETİNKAYA (Muğla Sıtkı Koçman Üniversitesi)"
       ],
       "abstract": "Large language models (LLMs) have shown strong potential for automating, analysing, and interpreting software engineering tasks, such as software testing. Model-based testing (MBT) is a software testing technique that poses a broad scalability challenge for industrial adoption. This paper proposes an empirical evaluation of Large Language Models (LLMs) for automated model-based test generation to address scalability challenges, compared with a state-of-the-art model-based testing tool and its built-in algorithms. Our evaluation indicates strong potential to optimize and shorten test paths and step sizes using recent state-of-the-art LLMs on four realistic systems: two web applications and two hardware applications."
@@ -114,11 +114,11 @@
       "time": "15:00-15:30",
       "title": "Analyzing Functional And Non-Functional Requirements: An Exploratory Literature Review",
       "authors": [
-        "Nebi YİLMAZ (UYMS)",
-        "Yeliz YAYLACI (uyms)",
-        "Selin KURUCAY (UYMS)",
-        "Ece OMURTAY (UYMS)",
-        "Elif AKSOY (uyms)"
+        "Nebi YILMAZ (Hacettepe Üniversitesi)",
+        "Yeliz YAYLACI (Hacettepe Üniversitesi)",
+        "Selin KURUCAY (Hacettepe Üniversitesi)",
+        "Ece OMURTAY (Hacettepe Üniversitesi)",
+        "Elif AKSOY (Hacettepe Üniversitesi)"
       ],
       "abstract": "This study presents an exploratory literature review examining how functional requirements (FRs) and non-functional requirements (NFRs) are addressed in the software engineering literature, the fundamental problems encountered in relation to these requirement types, and their implications for testing and verification processes. The primary objective of the study is to reveal how the FR–NFR distinction is applied in literature and to identify structural gaps in the literature, particularly in terms of testability and verifiability. To this end, widely used academic databases in the fields of requirements engineering and software testing were searched, and representative studies that relate FRs and NFRs to analysis, testing, or verification processes were selected and examined using a thematic analysis approach. The findings indicate that functional requirements are generally addressed at early stages of the development lifecycle and are effectively integrated into testing processes. In contrast, non-functional requirements are often defined using abstract, context-dependent, and non-measurable expressions, which leads to late validation and increased quality risks. The study also demonstrates that the FR–NFR distinction is domain-dependent in many cases and that static classifications are insufficient. In this context, the study concludes that integrated approaches centered on domain context and AI-supported requirements analysis methods represent an important research direction for requirements engineering and software testing."
     }
