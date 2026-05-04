@@ -52,7 +52,7 @@ const hotelData = [
     badgeColor: "bg-amber-100 text-amber-800 border-amber-300",
     cardBorder: "border-amber-400",
     headerGradient: "from-amber-500 to-orange-600",
-    url: "https://www.kermeottomankonak.com/",
+    url: "https://kermeottomankonak.com/",
     discount: "%20 İndirim",
     discountNote: "UYMS katılımcılarına özel %20 indirim uygulanmaktadır.",
     specialNote: "Rezervasyon sırasında sempozyum katılımcısı olduğunuzu belirtiniz.",
