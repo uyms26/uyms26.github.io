@@ -3,14 +3,14 @@ import { useState, useEffect } from 'react';
 
 import LandingHero from '../assets/banner.png';
 import MskuPhoto from '../assets/msku.jpg';
-import AselsanBanner from '../assets/aselsan_banner_real.png';
+import AselsanBanner from '../assets/aselsan_new_logo.png';
 import BedirPhoto from '../assets/bedir_tekinerdogan.jpg';
 import AkyakaPhoto from '../assets/akyaka_yeni.jpeg';
 import KonaklamaBanner from '../assets/konaklama_banner.png';
 import MenteseBanner from '../assets/gala.png';
 import MenteseLogo from '../assets/20240916-mentese-belediyesi-kamuoyu-bilgilendirmesi-707825-d950fdc06ca88521a5e6.jpg';
 import { NavLink } from 'react-router-dom';
-import AselsanLogo from '../assets/aselsan-png-logo.png';
+import AselsanLogo from '../assets/aselsan_new_logo.png';
 import VirtusLogo from '../assets/virtusrndlogo.png';
 import AkademikLogo from '../assets/akademik.png';
 
@@ -39,8 +39,10 @@ const Anasayfa = () => {
     {
       id: 2,
       image: AselsanBanner,
-      title: "",
-      subtitle: ""
+      title: "Ana Sponsorumuz ASELSAN'a",
+      subtitle: "Teşekkür Ederiz",
+      bgClass: "bg-contain bg-center bg-no-repeat bg-white",
+      layoutClass: "absolute inset-0 flex flex-col items-center justify-end px-4 sm:px-8 text-center pb-12 sm:pb-20"
     },
     {
       id: 3,
