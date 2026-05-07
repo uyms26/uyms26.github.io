@@ -92,6 +92,15 @@ const Navbar = () => {
                                     <DropdownLink to="/panel" onClick={closeMenu}>
                                         Panel
                                     </DropdownLink>
+                                    <a
+                                        href="/UYMS26 Bildiri Özet Kitapçığı.pdf"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        onClick={closeMenu}
+                                        className="block px-4 py-2 text-sm text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200"
+                                    >
+                                        Bildiri Kitapçığı
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -240,6 +249,15 @@ const Navbar = () => {
                                     <MobileNavLink to="/panel" onClick={closeMenu}>
                                         Panel
                                     </MobileNavLink>
+                                    <a
+                                        href="/UYMS26 Bildiri Özet Kitapçığı.pdf"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        onClick={closeMenu}
+                                        className="block w-full text-left px-4 py-3 rounded-lg font-medium transition-all duration-200 text-gray-700 hover:text-blue-600 hover:bg-blue-50"
+                                    >
+                                        Bildiri Kitapçığı
+                                    </a>
                                 </div>
                             )}
                         </div>
