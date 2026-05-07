@@ -1,5 +1,5 @@
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 
 import LandingHero from '../assets/banner.png';
 import MskuPhoto from '../assets/msku.jpg';
@@ -13,6 +13,7 @@ import { NavLink } from 'react-router-dom';
 import AselsanLogo from '../assets/aselsan_new_logo.png';
 import VirtusLogo from '../assets/virtusrndlogo.png';
 import AkademikLogo from '../assets/akademik.png';
+import MenteseBelLogo from '../assets/menetese_belediye.png';
 
 
 const Anasayfa = () => {
@@ -28,6 +29,10 @@ const Anasayfa = () => {
   const [galaCountdown, setGalaCountdown] = useState(8);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(true);
+  // Uçuşta olan timer'ları takip etmek için ref'ler
+  const resetTimerRef = useRef(null);
+  const enableTimerRef = useRef(null);
+  const autoPlayRef = useRef(null);
 
   const heroSlides = [
     {
@@ -87,33 +92,62 @@ const Anasayfa = () => {
 
   // sonsuz kayma için orijinal slaytlara ilk slaytı ekliyoruz
   const extendedSlides = [...heroSlides, heroSlides[0]];
+  const totalSlides = heroSlides.length;
 
-  // Hero Slider otomatik geçiş
-  useEffect(() => {
-    const slideTimer = setInterval(() => {
-      if (isTransitioning) {
-        setCurrentSlide((prev) => prev + 1);
-      }
-    }, 4000); // Kullanıcı isteğiyle 4 saniyeye çekildi
-    return () => clearInterval(slideTimer);
-  }, [isTransitioning]);
+  /**
+   * Tüm slider geçişlerini yöneten merkezi fonksiyon.
+   * Her çağrıda önceki bekleyen timer'ları iptal eder — hızlı
+   * tıklamalarda timer'ların üst üste gelmesini önler.
+   */
+  const goToSlide = useCallback((index) => {
+    // Uçuşta olan tüm timer'ları temizle
+    clearTimeout(resetTimerRef.current);
+    clearTimeout(enableTimerRef.current);
 
-  useEffect(() => {
-    if (currentSlide === heroSlides.length) {
-      // Sona geldiğimizde (kopya slayta), transition bitmesini bekleyip 0'a atla
-      const resetTimer = setTimeout(() => {
-        setIsTransitioning(false);
+    if (index >= totalSlides) {
+      // Son slide'dan (kopya) gerçek 0'a animasyonlu geçiş
+      setIsTransitioning(true);
+      setCurrentSlide(totalSlides); // kopya slide'a git
+      resetTimerRef.current = setTimeout(() => {
+        setIsTransitioning(false); // anlık sıfırla
         setCurrentSlide(0);
-      }, 500); // 1000ms transition süresi
-      return () => clearTimeout(resetTimer);
-    } else if (!isTransitioning && currentSlide === 0) {
-      // 0'a atladıktan sonra tekrar transition'ı açabilmek için küçük bir bekleme
-      const enableTimer = setTimeout(() => {
+        enableTimerRef.current = setTimeout(() => {
+          setIsTransitioning(true); // tekrar animasyonu aç
+        }, 50);
+      }, 700);
+    } else if (index < 0) {
+      // İlk slide'dan sona geri dön
+      setIsTransitioning(false);
+      setCurrentSlide(totalSlides); // kopya slide'a anında atla
+      enableTimerRef.current = setTimeout(() => {
         setIsTransitioning(true);
+        setCurrentSlide(totalSlides - 1);
       }, 50);
-      return () => clearTimeout(enableTimer);
+    } else {
+      setIsTransitioning(true);
+      setCurrentSlide(index);
     }
-  }, [currentSlide, isTransitioning, heroSlides.length]);
+  }, [totalSlides]);
+
+  // Otomatik geçiş
+  useEffect(() => {
+    autoPlayRef.current = setInterval(() => {
+      setCurrentSlide((prev) => {
+        const next = prev + 1;
+        if (next >= totalSlides) {
+          // Kopya slide'a git, sonra resetle
+          clearTimeout(resetTimerRef.current);
+          resetTimerRef.current = setTimeout(() => {
+            setIsTransitioning(false);
+            setCurrentSlide(0);
+            enableTimerRef.current = setTimeout(() => setIsTransitioning(true), 50);
+          }, 700);
+        }
+        return next;
+      });
+    }, 4000);
+    return () => clearInterval(autoPlayRef.current);
+  }, [totalSlides]);
 
   // Sempozyum tarihi: 14-16 Mayıs 2026
   const symposiumDate = new Date('2026-05-14T09:00:00');
@@ -240,6 +274,12 @@ const Anasayfa = () => {
       url: "https://akademiksanalofis.com.tr",
       isMain: false,
       logo: <img src={AkademikLogo} alt="Akademik Sanal Ofis Logo" className="w-auto h-16 sm:h-20 object-contain hover:scale-105 transition-transform duration-300" />
+    },
+    {
+      name: "Menteşe Belediyesi",
+      url: "https://www.mentese.bel.tr",
+      isMain: false,
+      logo: <img src={MenteseBelLogo} alt="Menteşe Belediyesi Logo" className="w-auto h-16 sm:h-20 object-contain hover:scale-105 transition-transform duration-300" />
     }
   ];
 
@@ -349,8 +389,11 @@ const Anasayfa = () => {
 
           {/* Sliding Track */}
           <div
-            className={`flex h-full ease-in-out absolute inset-0 ${isTransitioning ? 'transition-transform duration-1000' : 'transition-none duration-0'}`}
-            style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+            className={`flex h-full absolute inset-0 ${isTransitioning ? 'transition-transform duration-[700ms]' : 'transition-none'}`}
+            style={{
+              transform: `translateX(-${currentSlide * 100}%)`,
+              transitionTimingFunction: isTransitioning ? 'cubic-bezier(0.4, 0, 0.2, 1)' : 'unset'
+            }}
           >
             {extendedSlides.map((slide, index) => {
               const isActive = index === currentSlide || (currentSlide === heroSlides.length && index === 0);
@@ -442,25 +485,14 @@ const Anasayfa = () => {
 
           {/* Carousel Navigation Arrows */}
           <button
-            onClick={() => {
-              if (currentSlide === 0) {
-                setIsTransitioning(false);
-                setCurrentSlide(heroSlides.length);
-                setTimeout(() => {
-                  setIsTransitioning(true);
-                  setCurrentSlide(heroSlides.length - 1);
-                }, 50);
-              } else {
-                setCurrentSlide((prev) => prev - 1);
-              }
-            }}
+            onClick={() => goToSlide(currentSlide - 1)}
             className="absolute left-2 sm:left-6 top-1/2 -translate-y-1/2 z-20 p-2 sm:p-3 text-white/50 hover:text-white bg-black/20 hover:bg-black/50 rounded-full transition-all duration-300 opacity-0 group-hover:opacity-100 backdrop-blur-sm"
             aria-label="Önceki Slayt"
           >
             <svg className="w-8 h-8 sm:w-10 sm:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
           </button>
           <button
-            onClick={() => setCurrentSlide((prev) => prev + 1)}
+            onClick={() => goToSlide(currentSlide + 1)}
             className="absolute right-2 sm:right-6 top-1/2 -translate-y-1/2 z-20 p-2 sm:p-3 text-white/50 hover:text-white bg-black/20 hover:bg-black/50 rounded-full transition-all duration-300 opacity-0 group-hover:opacity-100 backdrop-blur-sm"
             aria-label="Sonraki Slayt"
           >
@@ -474,10 +506,7 @@ const Anasayfa = () => {
               return (
                 <button
                   key={index}
-                  onClick={() => {
-                    if (!isTransitioning) return; // Geçiş sırasında tıklamayı engelle
-                    setCurrentSlide(index);
-                  }}
+                  onClick={() => goToSlide(index)}
                   className={`transition-all duration-300 rounded-full shadow-lg ${isActive ? 'w-8 sm:w-12 h-2 sm:h-2 bg-white' : 'w-2 sm:w-3 h-2 sm:h-2 bg-white/50 hover:bg-white/80'}`}
                   aria-label={`${index + 1}. Slayta Git`}
                 />
