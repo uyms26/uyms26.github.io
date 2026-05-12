@@ -1,6 +1,10 @@
 {
   "Oturum 1": [
     {
+      "isChair": true,
+      "title": "Oturum Başkanı: Dr. Cihat Çetinkaya"
+    },
+    {
       "time": "11:15-11:45",
       "title": "European Accessibility Act (Eaa) Uyumunun Test Edilebilirliği: Sürekli Teslim Süreçlerine Entegre Edilmiş Wcag Tabanlı Test Otomasyonu Üzerine Bir Vaka Çalışması",
       "authors": [
@@ -34,6 +38,10 @@
   ],
   "Oturum 2": [
     {
+      "isChair": true,
+      "title": "Oturum Başkanı: Prof. Dr. Oya Kalıpsız"
+    },
+    {
       "time": "11:15-11:45",
       "title": "Beyond Practices: The Nature, Significance, And Possible Future Trajectory Of The Agile Mindset",
       "authors": [
@@ -54,6 +62,10 @@
     }
   ],
   "Oturum 3": [
+    {
+      "isChair": true,
+      "title": "Oturum Başkanı: Prof. Dr. Geylani Kardaş"
+    },
     {
       "time": "14:00-14:30",
       "title": "Habokado Smart Automated Turkish News Summary Platform Software",
@@ -84,6 +96,10 @@
     }
   ],
   "Oturum 4": [
+    {
+      "isChair": true,
+      "title": "Oturum Başkanı: Prof. Dr. Yasemin Topaloğlu"
+    },
     {
       "time": "14:00-14:30",
       "title": "Yazılım Gereksinimi Tanımlamada Akış Odaklı Yaklaşım: ASELSAN A.Ş.’Da Kullanım Durumu Dönüşümü Deneyimi",
@@ -125,6 +141,10 @@
   ],
   "Oturum 5": [
     {
+      "isChair": true,
+      "title": "Oturum Başkanı: Prof. Dr. Onur Demirörs"
+    },
+    {
       "time": "15:45-16:15",
       "title": "Yayınla-Abone Ol Tabanlı Dağıtık Sistemlerde Yapısal Etkileşim Örüntülerinin Çizge Tabanlı Statik Analiz İle İncelenmesi",
       "authors": [
@@ -156,6 +176,10 @@
     }
   ],
   "Oturum 6": [
+    {
+      "isChair": true,
+      "title": "Oturum Başkanı: Prof. Dr. Oya Kalıpsız"
+    },
     {
       "time": "15:45-16:15",
       "title": "A Root-Cause Analysis Approach On E-Commerce Customer Reviews Using Deep Learning",
@@ -191,6 +215,10 @@
   ],
   "Oturum 7": [
     {
+      "isChair": true,
+      "title": "Oturum Başkanı: Prof. Dr. Onur Demirörs"
+    },
+    {
       "time": "09:15-09:45",
       "title": "Visualization Of Distributed Publish-Subscribe Systems Using Graph Models For Analysis",
       "authors": [
@@ -222,6 +250,10 @@
     }
   ],
   "Oturum 8": [
+    {
+      "isChair": true,
+      "title": "Oturum Başkanı: Prof. Dr. Cemal Yılmaz"
+    },
     {
       "time": "09:15-09:45",
       "title": "Oltalama Tespiti İçin Salt Kodlayıcı Ve Üretici Büyük Dil Modellerinin Karşılaştırmalı Performans Analizi",
@@ -256,6 +288,10 @@
   ],
   "Oturum 9": [
     {
+      "isChair": true,
+      "title": "Oturum Başkanı: Prof. Dr. Ayça Kolukısa"
+    },
+    {
       "time": "11:15-11:45",
       "title": "Hibrit Zorluk Tabanlı Veri Seçimi İle Daha Az Veri Kullanarak Talimat Takip Yeteneğinin İyileştirilmesi",
       "authors": [
@@ -287,6 +323,10 @@
   ],
   "Oturum 10": [
     {
+      "isChair": true,
+      "title": "Oturum Başkanı: Prof. Dr. Cemal Yılmaz"
+    },
+    {
       "time": "11:15-11:45",
       "title": "Siber-Fiziksel Sistemlerde Anomali Tespiti: Büyük Dil Modelleri Üzerine Karşılaştırmalı Bir Çalışma",
       "authors": [
@@ -317,6 +357,10 @@
   ],
   "Oturum 11": [
     {
+      "isChair": true,
+      "title": "Oturum Başkanı: Prof. Dr. Geylani Kardaş"
+    },
+    {
       "time": "14:00-14:30",
       "title": "A Centralized And Scalable Software Architecture in Satellite Integration And Egse Test Infrastructures",
       "authors": [
@@ -344,6 +388,10 @@
     }
   ],
   "Oturum 12": [
+    {
+      "isChair": true,
+      "title": "Oturum Başkanı: Prof. Dr. Yasemin Topaloğlu"
+    },
     {
       "time": "14:00-14:30",
       "title": "Assessing Llms For Automated Test Reporting And Test Closure: A Controlled Multi-Model Evaluation",

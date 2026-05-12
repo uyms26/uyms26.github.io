@@ -5,6 +5,14 @@ import papersData from '../data/papers.json';
 const renderPaper = (paper, pIdx, onClickPaper) => {
   if (!paper) return null;
 
+  if (paper.isChair) {
+    return (
+      <div key={`chair-${pIdx}`} className="w-full text-center py-2.5 mb-1 bg-blue-50/80 text-blue-800 rounded-lg font-bold border border-blue-100 text-[14px] shadow-sm">
+        {paper.title}
+      </div>
+    );
+  }
+
   const { title, authors, time, abstract } = paper;
 
   return (
