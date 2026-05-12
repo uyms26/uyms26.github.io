@@ -48,29 +48,38 @@ const Panel = () => {
                     </div>
 
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
-
-                        {/* Panelist 1 */}
-                        <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 p-6 md:p-8 flex flex-col">
-                            <h2 className="text-2xl font-bold text-gray-900 mb-2">Prof. Dr. Onur Demirörs</h2>
-                            <p className="text-blue-600 font-medium mb-4">İzmir Yüksek Teknoloji Enstitüsü / Bilgisayar Mühendisliği</p>
-                            <p className="text-gray-600 leading-relaxed text-md text-justify">
-                                Profesör Dr. Onur Demirörs yazılım mühendisliği ve süreç yönetimi alanlarında önde gelen bilim insanıdır. Halen İzmir Yüksek Teknoloji Enstitüsü (İYTE) Bilgisayar Mühendisliği Bölümü Başkanıdır. Aynı zamanda Bilgi Grubu A. Ş. Strateji Direktörü olarak çalışmaktadır. İYTE'ye katılmadan önce yaklaşık yirmi yıl boyunca Orta Doğu Teknik Üniversitesi'nde (ODTÜ) profesör olarak görev yapmıştır.
-                                Bilgisayar Mühendisliği alanında, ODTÜ'den lisans, Ege Üniversitesi'nden yüksek lisans ve hem ikinci yüksek lisans hem de doktora derecelerini Southern Methodist Üniversitesi'nden almıştır.
-                                Çalışmaları, yazılım geliştirmeyi daha ölçülebilir ve verimli hale getirmeye odaklanmıştır. Yazılım Süreç İyileştirme, Yazılım Ölçümü, Süreç Modelleme konularında araştırmaları yoğunlaşmıştır. Son yıllarda, yazılım mühendisliği ve DevOps uygulamalarında Üretken Yapay Zeka ve Dağıtık Mikroservis Tabanlı mimariler üzerinde odaklanmıştır.
-                                Onlarca şirkete ölçüm altyapıları kurma ve organizasyonel süreçleri iyileştirme konusunda danışmanlık yapmıştır. ScholarGPS tarafından "Yazılım Geliştirme Süreci” (dünya çapında 11.), “İş Süreci Modelleme” (dünya çapında 25.) ve “Yazılım Büyüklük Ölçümü“ (dünya çapında 61.)alanlarında en başarılı akademisyenler arasında gösterilmiştir. 300’ün üzerinde makale ve bildirisi uluslararası saygın dergi ve konferanslarda yayınlanmıştır. Euromicro ve Cosmic Direktorler Kurulu, IWSM-Mensura, Euromicro-SEAA ve UYMS Yönlendirme Kurulu üyesidir.
-                            </p>
+                    {/* Moderator Section */}
+                    <div className="mb-12">
+                        <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Moderatör</h3>
+                        <div className="flex justify-center">
+                            <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 p-6 md:p-8 flex flex-col items-center w-full max-w-md text-center">
+                                <h2 className="text-2xl font-bold text-gray-900 mb-2">Onur Demirörs</h2>
+                                <p className="text-blue-600 font-medium">İYTE</p>
+                            </div>
                         </div>
+                    </div>
 
-                        {/* Panelist 2 */}
-                        <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 p-6 md:p-8 flex flex-col">
-                            <h2 className="text-2xl font-bold text-gray-900 mb-2">Dr. Görkem Giray</h2>
-                            <p className="text-blue-600 font-medium mb-4">İzmir Yüksek Teknoloji Enstitüsü </p>
-                            <p className="text-gray-600 leading-relaxed text-md text-justify">
-                                Dr. Görkem Giray Bilgisayar Mühendisliği alanında lisans ve doktora derecelerini Ege Üniversitesi Bilgisayar Mühendisliği Bölümünden sırasıyla 1999 ve 2011 yıllarında almıştır. Koç Üniversitesinde İşletme Yüksek Lisans programını 2001 yılında tamamlamıştır. Yirmi beş yılı aşkın sektör deneyiminde yazılım mühendisinden bölgesel bilgi teknoloji direktörlüğüne uzanan çeşitli teknik ve liderlik rollerinde görev almıştır. Profesyonel kariyerinin yanında üniversitelerde yazılım mühendisliği ve proje yönetimi dersleri vermiştir. Ekim 2025’ten bu yana, İzmir Yüksek Teknoloji Enstitüsü’nde Doktora Sonrası Araştırmacı ve Eindhoven University of Technology bünyesindeki Software Engineering & Technology (SET) grubunda Misafir Araştırmacı olarak görev yapmaktadır.
-                            </p>
+                    {/* Panelists Section */}
+                    <div>
+                        <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Panelistler</h3>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+                            <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 p-6 flex flex-col items-center text-center">
+                                <h2 className="text-xl font-bold text-gray-900 mb-2">Dr. Görkem Giray</h2>
+                                <p className="text-blue-600 font-medium">JTİ & İYTE</p>
+                            </div>
+                            <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 p-6 flex flex-col items-center text-center">
+                                <h2 className="text-xl font-bold text-gray-900 mb-2">Dr. Cemal Yılmaz</h2>
+                                <p className="text-blue-600 font-medium">Sabancı Üniversitesi</p>
+                            </div>
+                            <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 p-6 flex flex-col items-center text-center">
+                                <h2 className="text-xl font-bold text-gray-900 mb-2">Dr. Ersin Ersoy</h2>
+                                <p className="text-blue-600 font-medium">Turkcell Şirketler Grubu</p>
+                            </div>
+                            <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 p-6 flex flex-col items-center text-center">
+                                <h2 className="text-xl font-bold text-gray-900 mb-2">Fahri Kaan Toker</h2>
+                                <p className="text-blue-600 font-medium">Allianz</p>
+                            </div>
                         </div>
-
                     </div>
 
                 </div>
