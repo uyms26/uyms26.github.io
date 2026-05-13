@@ -73,7 +73,7 @@ const Panel = () => {
                             </div>
                             <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 p-6 flex flex-col items-center text-center">
                                 <h2 className="text-xl font-bold text-gray-900 mb-2">Dr. Ersin Ersoy</h2>
-                                <p className="text-blue-600 font-medium">Turkcell Şirketler Grubu</p>
+                                <p className="text-blue-600 font-medium">Paycell, Turkcell Grup</p>
                             </div>
                             <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 p-6 flex flex-col items-center text-center">
                                 <h2 className="text-xl font-bold text-gray-900 mb-2">Fahri Kaan Toker</h2>
