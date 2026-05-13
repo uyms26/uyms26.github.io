@@ -53,8 +53,8 @@ const Panel = () => {
                         <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Moderatör</h3>
                         <div className="flex justify-center">
                             <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 p-6 md:p-8 flex flex-col items-center w-full max-w-md text-center">
-                                <h2 className="text-2xl font-bold text-gray-900 mb-2">Onur Demirörs</h2>
-                                <p className="text-blue-600 font-medium">İYTE</p>
+                                <h2 className="text-2xl font-bold text-gray-900 mb-2">Prof. Dr. Onur Demirörs</h2>
+                                <p className="text-blue-600 font-medium">İzmir Yüksek Teknoloji Enstitüsü</p>
                             </div>
                         </div>
                     </div>
@@ -64,11 +64,11 @@ const Panel = () => {
                         <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Panelistler</h3>
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
                             <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 p-6 flex flex-col items-center text-center">
-                                <h2 className="text-xl font-bold text-gray-900 mb-2">Dr. Görkem Giray</h2>
-                                <p className="text-blue-600 font-medium">JTİ & İYTE</p>
+                                <h2 className="text-xl font-bold text-gray-900 mb-2">Doç. Dr. Görkem Giray</h2>
+                                <p className="text-blue-600 font-medium">JTİ & İzmir Yüksek Teknoloji Enstitüsü</p>
                             </div>
                             <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 p-6 flex flex-col items-center text-center">
-                                <h2 className="text-xl font-bold text-gray-900 mb-2">Dr. Cemal Yılmaz</h2>
+                                <h2 className="text-xl font-bold text-gray-900 mb-2">Prof. Dr. Cemal Yılmaz</h2>
                                 <p className="text-blue-600 font-medium">Sabancı Üniversitesi</p>
                             </div>
                             <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 p-6 flex flex-col items-center text-center">
