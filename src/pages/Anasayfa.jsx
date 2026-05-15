@@ -23,7 +23,7 @@ const Anasayfa = () => {
     minutes: 0,
     seconds: 0
   });
-  const [showServisPopup, setShowServisPopup] = useState(true);
+  const [showOzDegerlendirmePopup, setShowOzDegerlendirmePopup] = useState(true);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(true);
   // Uçuşta olan timer'ları takip etmek için ref'ler
@@ -257,17 +257,17 @@ const Anasayfa = () => {
 
   return (
     <div className="min-h-screen font-serif   bg-gradient-to-br from-blue-50 to-indigo-100">
-      {/* Servis Duyurusu Popup */}
-      {showServisPopup && (
+      {/* Öz Değerlendirme Formu Popup */}
+      {showOzDegerlendirmePopup && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/55 backdrop-blur-sm">
-          <div className="relative bg-white rounded-2xl shadow-2xl max-w-md w-full text-center border-t-8 border-blue-700 overflow-hidden">
+          <div className="relative bg-white rounded-2xl shadow-2xl max-w-md w-full text-center border-t-8 border-indigo-600 overflow-hidden">
             {/* Dekoratif arka plan parıltıları */}
-            <div className="absolute -top-10 -left-10 w-48 h-48 bg-blue-300/20 rounded-full blur-3xl pointer-events-none"></div>
-            <div className="absolute -bottom-10 -right-10 w-48 h-48 bg-cyan-300/20 rounded-full blur-3xl pointer-events-none"></div>
+            <div className="absolute -top-10 -left-10 w-48 h-48 bg-indigo-300/20 rounded-full blur-3xl pointer-events-none"></div>
+            <div className="absolute -bottom-10 -right-10 w-48 h-48 bg-purple-300/20 rounded-full blur-3xl pointer-events-none"></div>
 
             {/* Kapat butonu */}
             <button
-              onClick={() => setShowServisPopup(false)}
+              onClick={() => setShowOzDegerlendirmePopup(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-700 transition-colors z-10"
               aria-label="Kapat"
             >
@@ -278,47 +278,40 @@ const Anasayfa = () => {
 
             <div className="p-8">
               {/* İkon */}
-              <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-5 text-blue-700">
+              <div className="w-20 h-20 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-5 text-indigo-700">
                 <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
               </div>
 
               {/* Rozet */}
-              <span className="inline-block bg-blue-100 text-blue-700 text-xs font-bold px-3 py-1 rounded-full border border-blue-300 mb-4 tracking-widest uppercase">
-                🚌 Servis Duyurusu
+              <span className="inline-block bg-indigo-100 text-indigo-700 text-xs font-bold px-3 py-1 rounded-full border border-indigo-300 mb-4 tracking-widest uppercase">
+                📋 Öz Değerlendirme
               </span>
 
-              <h3 className="text-2xl font-extrabold text-gray-800 mb-4 leading-tight">
-                Sempozyum Servisi
+              <h3 className="text-2xl font-extrabold text-gray-800 mb-3 leading-tight">
+                Sempozyum Geri Bildirimi
               </h3>
 
-              <p className="text-base text-gray-700 leading-relaxed">
-                <span className="font-bold text-blue-800">14–15 Mayıs</span> tarihleri boyunca{' '}
-                <span className="font-semibold text-blue-700">Muğla Sıtkı Koçman Üniversitesi Konuk Evi</span>'nden{' '}
-                <span className="font-semibold text-blue-700">AKM</span>'ye servis düzenlenecektir.
+              <p className="text-base text-gray-600 leading-relaxed mb-6">
+                UYMS 2026'yı daha iyi hale getirebilmemiz için lütfen{' '}
+                <span className="font-semibold text-indigo-700">öz değerlendirme formunu</span>{' '}
+                doldurunuz.
               </p>
 
-              <div className="mt-5 grid grid-cols-3 gap-2 text-sm">
-                <div className="bg-blue-50 rounded-xl p-3 border border-blue-100">
-                  <div className="text-blue-400 text-xs mb-1 font-medium">🕗 Kalkış</div>
-                  <div className="font-extrabold text-gray-800 text-base">08:30</div>
-                </div>
-                <div className="bg-gray-50 rounded-xl p-3 border border-gray-100 flex items-center justify-center">
-                  <span className="text-gray-400 text-lg">→</span>
-                </div>
-                <div className="bg-blue-50 rounded-xl p-3 border border-blue-100">
-                  <div className="text-blue-400 text-xs mb-1 font-medium">🏁 Varış</div>
-                  <div className="font-extrabold text-gray-800 text-base">08:45</div>
-                </div>
-              </div>
-
-              <p className="mt-3 text-xs text-gray-500 italic">⛔ Ara durak yoktur.</p>
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSe_UgO4W9S4G6NpU9sRcAaSMPWI_J_TjROjyutbH68D5wSrHg/viewform"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold transition-colors duration-200 text-base shadow-md hover:shadow-lg"
+              >
+                📝 Öz Değerlendirme Formuna Git
+              </a>
 
               <div className="mt-5 flex items-center justify-center gap-3">
-                <div className="h-px flex-1 bg-blue-100"></div>
+                <div className="h-px flex-1 bg-indigo-100"></div>
                 <span className="text-xs text-gray-400 italic">UYMS 2026</span>
-                <div className="h-px flex-1 bg-blue-100"></div>
+                <div className="h-px flex-1 bg-indigo-100"></div>
               </div>
             </div>
           </div>

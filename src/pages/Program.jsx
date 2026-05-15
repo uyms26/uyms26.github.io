@@ -202,7 +202,22 @@ const Program = () => {
       dayName: "Cumartesi",
       events: [
         { time: "09:00 - 11:00", type: "single", content: "Kısa Toplantılar & İşbirlikleri\n\n* Önceden planlanan ve aniden gelişebilecek toplantılar için Organizasyon Komitesi ile iletişime geçebilirsiniz.", bg: "bg-slate-100" },
-        { time: "11:15 - 12:00", type: "single", content: "Öz Değerlendirme & Geri bildirim\nKapanış", bg: "bg-slate-200" }
+        {
+          time: "11:15 - 12:00",
+          type: "single",
+          content: (
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSe_UgO4W9S4G6NpU9sRcAaSMPWI_J_TjROjyutbH68D5wSrHg/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full h-full hover:opacity-80 hover:scale-[1.01] transition-all"
+            >
+              Öz Değerlendirme &amp; Geri Bildirim · Kapanış
+              <span className="block mt-2 text-sm opacity-80 font-normal">📋 Öz değerlendirme formu için tıklayınız</span>
+            </a>
+          ),
+          bg: "bg-slate-200 cursor-pointer hover:bg-slate-300 border-none !p-4 font-semibold"
+        }
       ]
     }
   ];
