@@ -1,19 +1,19 @@
 
 import { useState, useEffect, useRef, useCallback } from 'react';
 
-import LandingHero from '../assets/banner.png';
+import LandingHero from '../assets/banner.webp';
 import MskuPhoto from '../assets/msku.jpg';
 import AselsanBanner from '../assets/aselsan_new_logo.png';
 import BedirPhoto from '../assets/bedir_tekinerdogan.jpg';
 import AkyakaPhoto from '../assets/akyaka_yeni.jpeg';
-import KonaklamaBanner from '../assets/konaklama_banner.png';
-import MenteseBanner from '../assets/gala.png';
+import KonaklamaBanner from '../assets/konaklama_banner.webp';
+import MenteseBanner from '../assets/gala.webp';
 import MenteseLogo from '../assets/20240916-mentese-belediyesi-kamuoyu-bilgilendirmesi-707825-d950fdc06ca88521a5e6.jpg';
 import { NavLink } from 'react-router-dom';
 import AselsanLogo from '../assets/aselsan_new_logo.png';
 import VirtusLogo from '../assets/virtusrndlogo.png';
 import AkademikLogo from '../assets/akademik.png';
-import MenteseBelLogo from '../assets/menetese_belediye.png';
+import MenteseBelLogo from '../assets/menetese_belediye.webp';
 
 
 const Anasayfa = () => {
